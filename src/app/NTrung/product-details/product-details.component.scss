@@ -1,17 +1,227 @@
+@import '../../../global-style.css';
+// Reuse
+$boxSize:500px;
+$infoWidth:770px;
+$buttonWidth:400px;
+$margin:10px;
+$boxSizeSub:($boxSize - 3 * $margin) / 4;
+$background-color: rgb(222, 222, 222);
+$border:1px solid #707070;
+$red-color:var(--red-color);
+$green-color:var(--green-color);
+$grey-color:var(--gray-color);
+$grey-color-2:#707070;
 
-   
+.layout-box{
+    display: flex;
+    justify-content: center;
+
     .product-details-image{
-        display: flex;
-        width: 50%;
-        height: 200px;
-        background: #333;
-        }
+        width: $boxSize;
+        height: $boxSize;
     
-    .product-details-info{
-        display: flex;
-        width: 50%;
-        height: 200px;
-        background-color: blue;
-        float: right;
+        .image-main{
+            width: $boxSize;
+            height: $boxSize;
+            background: $background-color;
+            background-image: url(https://okdeal.vn/wp-content/uploads/2019/07/xoai-cat-chu-the-one.png);
+            background-size: $boxSize;
+            border-radius: 2px;
+
+            &:hover{
+                cursor: pointer;
+            }
+
+        }
+
+        .layout-box-sub{
+            display: flex;
+
+            .image-sub{
+                border: 0.5px solid $grey-color;
+                border-radius: 2px;
+                margin-top: $margin;
+                width: $boxSizeSub;
+                height: $boxSizeSub;
+                background: $background-color;
+                background-image: url(https://okdeal.vn/wp-content/uploads/2019/07/xoai-cat-chu-the-one.png);
+                background-size: $boxSizeSub;
+                opacity: 0.3;
+                transition: opacity 0.3s ease-out;
+
+                &:hover{
+                    cursor: pointer;
+                    opacity: 1;
+                }
+            }
+
+            .on-selected{
+                border: 1px solid darken($color: $grey-color-2, $amount: 5%);
+                opacity: 1;
+            }
+            
+            .sub-1{
+                margin-right: $margin;
+            }
+            .sub-2{
+                margin-right: $margin;
+            }
+            .sub-2{
+                margin-right: $margin;
+            }
+            .sub-4{
+                margin-left: $margin;
+            }
+        }
     }
+        
+    .product-details-info{
+        margin-left: $margin*2;
+        width: 770px;
+        height: $boxSize + $boxSizeSub + $margin;
+        padding: 10px;
+        
+        .category{
+            font-style: italic;
+        }
+
+        .name-discount{
+            display: flex;
+
+            .name{
+                font-size: 0.1*$boxSize;
+                width: 87%;
+                font:italic;
+            }
+            .discount{
+                margin-top: 30px;
+                text-align: center;
+                width: 13%;
+                height: 50%;
+                color: #fff;
+                background-color: #ffb24c;
+                border-radius: 2px;
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: darken($color: #ffb24c, $amount: 5%);
+                }
+            }
+        }
+        .info{
+            width: $boxSize;
+            margin:auto;
+
+            .tag{
+                display: flex;
+                .tag-name{
+                    width: $boxSize/2;
+                }
+                
+                .price{
+                    width: $boxSize/2 - 50px;
+                    color: $green-color;
+                    font: bold;
+                }
+
+                .discount{
+                    margin: auto;
+                    width: 50px;
+                    font-size: 15px;
+                }
+
+                .description{
+                    width: $boxSize/2;
+                }
+            }
+        }
+        .controls{
+            margin: 20px 0;
+            margin-left: ($infoWidth - $buttonWidth)/2;
+
+            .change-amount{
+                display: flex;
+                margin-bottom: 20px;
+
+                .small-square{
+                    text-align: center;
+                    font-size: 20px;
+                    border:$border;
+                    width: 40px;
+                    height: 40px;
+                    padding-left:7px ;
+                    cursor: pointer;
+                    background: $background-color;
+
+                    background-size: 25px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    opacity: 0.6;
+
+                    &:hover{
+                        opacity: 0.8;
+                    }
+
+                    &:active{
+                        opacity: 1;
+                    }
+
+                }
+                .amount{
+                    width: 40px;
+                    text-align: center;
+                }
+
+                .btn-minus{
+                    border-right:0;
+                    background-image: url(https://cdn0.iconfinder.com/data/icons/typicons-2/24/minus-256.png);
+                    
+                }
+                
+                .btn-plus{
+                    border-left:0;
+                    background-image: url(https://cdn1.iconfinder.com/data/icons/interface-19/32/add-512.png);
+                }
+
+            }
+            .add-to-cart{
+                width: $buttonWidth/2;
+                height: 40px;
+                cursor: pointer;
+                color: #fff;
+                margin-left: $buttonWidth - $buttonWidth / 2 - 120px;
+                background: $red-color;
+                border-radius: 20px;
+
+                &:hover{
+                    background-color: darken($color:#DE6663, $amount: 5%);
+                }
+                &:active{
+                    background-color: darken($color:#DE6663, $amount: 10%);
+                }
+            }
+        }
+
+        .view-cart{
+            color: #fff;
+            margin: auto;
+            width: $buttonWidth;
+            height: 40px;
+            border-radius: 20px;
+            background-color: $green-color;
+          
+            &:hover{
+                background-color: darken($color:#7ab541, $amount: 5%);
+            }
+            &:active{
+                background-color: darken($color:#7ab541, $amount: 10%);
+            }
+        }
+
+        .note{
+            text-align: center;
+        }
+    }
+    
+}
 
