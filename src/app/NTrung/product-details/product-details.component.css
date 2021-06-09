@@ -1,4 +1,4 @@
-@import '../../../global-style.css';
+/* cac mau dc set gia tri o day, khi su dung thi import vao*/
 .layout-box {
   display: flex;
   justify-content: center;
@@ -22,7 +22,6 @@
   display: flex;
 }
 .layout-box .product-details-image .layout-box-sub .image-sub {
-  border: 0.5px solid var(--gray-color);
   border-radius: 2px;
   margin-top: 10px;
   width: 117.5px;
@@ -95,7 +94,7 @@
 }
 .layout-box .product-details-info .info .tag .price {
   width: 200px;
-  color: var(--green-color);
+  color: #7AB541;
   font: bold;
 }
 .layout-box .product-details-info .info .tag .discount {
@@ -152,7 +151,7 @@
   cursor: pointer;
   color: #fff;
   margin-left: 80px;
-  background: var(--red-color);
+  background: #DE6663;
   border-radius: 20px;
 }
 .layout-box .product-details-info .controls .add-to-cart:hover {
@@ -167,7 +166,7 @@
   width: 400px;
   height: 40px;
   border-radius: 20px;
-  background-color: var(--green-color);
+  background-color: #7AB541;
 }
 .layout-box .product-details-info .view-cart:hover {
   background-color: #6da23a;

@@ -1,4 +1,4 @@
-@import '../../../global-style.css';
+@import '../../../global-style.scss';
 // Reuse
 $boxSize:500px;
 $infoWidth:770px;
@@ -7,10 +7,6 @@ $margin:10px;
 $boxSizeSub:($boxSize - 3 * $margin) / 4;
 $background-color: rgb(222, 222, 222);
 $border:1px solid #707070;
-$red-color:var(--red-color);
-$green-color:var(--green-color);
-$grey-color:var(--gray-color);
-$grey-color-2:#707070;
 
 .layout-box{
     display: flex;
@@ -38,7 +34,6 @@ $grey-color-2:#707070;
             display: flex;
 
             .image-sub{
-                border: 0.5px solid $grey-color;
                 border-radius: 2px;
                 margin-top: $margin;
                 width: $boxSizeSub;
@@ -56,7 +51,7 @@ $grey-color-2:#707070;
             }
 
             .on-selected{
-                border: 1px solid darken($color: $grey-color-2, $amount: 5%);
+                border: 1px solid darken(#707070, $amount: 5%);
                 opacity: 1;
             }
             
