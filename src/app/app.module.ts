@@ -13,8 +13,8 @@ import { PagingComponent } from './BTruong/product/paging/paging.component';
 import { FiltersComponent } from './BTruong/product/filters/filters.component';
 import { ProductItemComponent } from './BTruong/product/product-list/product-item/product-item.component';
 
-import { ProductNewsComponent } from './NTrung/product-news/product-news.component';
-import { ProductRelatedComponent } from './NTrung/product-related/product-related.component';
+import { ProductNewsComponent } from './NTrung/product-details/product-news/product-news.component';
+import { ProductRelatedComponent } from './NTrung/product-details/product-related/product-related.component';
 
 
 @NgModule({
