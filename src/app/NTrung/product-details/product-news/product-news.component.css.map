@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../global-style.scss","product-news.component.scss"],"names":[],"mappings":"AAAA,4DAAA;ACMA;EACI,WAAA;AAJJ;;AAMA;EACI,kCAAA;EACA,eAAA;AAHJ;AAMI;EACI,iBAAA;EACA,YAdC;EAeD,aAfC;EAgBD,sBAhBC;EAiBD,4FAAA;EACA,4BAAA;EACA,yBAAA;EACA,qDAjBK;AAab;AAOI;EACI,cAAA;AALR","file":"product-news.component.css"}
