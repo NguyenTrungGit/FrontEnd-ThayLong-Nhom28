@@ -6,13 +6,18 @@ import { AppComponent } from './app.component';
 import { ProductDetailsComponent } from './NTrung/product-details/product-details.component';
 import { HeaderComponent } from './Tuyen/header/header.component';
 import { FooterComponent } from './Tuyen/footer/footer.component';
+import { ProductNewsComponent } from './NTrung/product-news/product-news.component';
+import { ProductRelatedComponent } from './NTrung/product-related/product-related.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductDetailsComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ProductNewsComponent,
+    ProductRelatedComponent
   ],
   imports: [
     BrowserModule,

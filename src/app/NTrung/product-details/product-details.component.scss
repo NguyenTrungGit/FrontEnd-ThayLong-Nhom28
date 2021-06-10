@@ -1,0 +1,309 @@
+@import '../../../global-style.scss';
+// Reuse
+$boxSize:500px;
+$infoWidth:600px;
+$buttonWidth:400px;
+$margin:10px;
+$boxSizeSub:($boxSize - 3 * $margin) / 4;
+$background-color: rgb(222, 222, 222);
+$border:1px solid #707070;
+$box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
+
+.layout-box{
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    margin: 20px auto;
+    border-bottom: 0.5px solid $grey-color;
+
+    .product-details-image{
+        width: $boxSize;
+        height: $boxSize;
+    
+        .image-main{
+            width: $boxSize;
+            height: $boxSize;
+            background: lighten($color: $grey-color, $amount: 50%);;
+            background-image: url(https://okdeal.vn/wp-content/uploads/2019/07/xoai-cat-chu-the-one.png);
+            background-size: $boxSize;
+            border-radius: 2px;
+            box-shadow: $box-shadow;
+
+            .button{
+                border: 0px;
+                width: $buttonWidth/10;
+                height: $buttonWidth / 5;
+                margin-top: ($boxSize - $buttonWidth / 5)/2;
+                opacity: 0.1;
+                background: $grey-color;
+                color: darken($color: $grey-color, $amount: 50%);
+                font-size: 30px;
+
+                &:hover{
+                    opacity: 0.3;
+                }
+
+                &:active{
+                    opacity: 0.6;
+                }
+            }
+
+            .btn-next{
+                float: right;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                
+            }
+
+            .btn-prev{
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+            }
+
+            &:hover{
+                cursor: pointer;
+            }
+
+        }
+
+        .layout-box-sub{
+            display: flex;
+
+            .image-sub{
+                border-radius: 2px;
+                margin-top: $margin;
+                width: $boxSizeSub;
+                height: $boxSizeSub;
+                background: $background-color;
+                background-image: url(https://okdeal.vn/wp-content/uploads/2019/07/xoai-cat-chu-the-one.png);
+                background-size: $boxSizeSub;
+                opacity: 0.3;
+                transition: opacity 0.3s ease-out;
+                box-shadow: $box-shadow;
+
+                &:hover{
+                    cursor: pointer;
+                    opacity: 1;
+                }
+            }
+
+            .on-selected{
+                border: 1px solid darken(#707070, $amount: 5%);
+                opacity: 1;
+            }
+            
+            .sub-1{
+                margin-right: $margin;
+            }
+            .sub-2{
+                margin-right: $margin;
+            }
+            .sub-2{
+                margin-right: $margin;
+            }
+            .sub-4{
+                margin-left: $margin;
+            }
+        }
+    }
+        
+    .product-details-info{
+        width: $infoWidth;
+        height: $boxSize + $boxSizeSub + $margin;
+        padding-left: 2*$margin;
+        
+        .category{
+            font-style: italic;
+        }
+
+        .name-discount{
+            padding: 0px 20px;
+            display: flex;
+            width: $infoWidth;
+            border-bottom: 0.5px solid $grey-color;
+
+            .name{
+                font-size: 0.1 * $boxSize;
+                width: 87%;
+                font:italic;
+            }
+            .discount{
+                margin-top: 30px;
+                text-align: center;
+                width: 13%;
+                height: 50%;
+                color: #fff;
+                background-color: #ffb24c;
+                border-radius: 2px;
+                box-shadow: $box-shadow;
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: darken($color: #ffb24c, $amount: 5%);
+                }
+                &:active{
+                    cursor: pointer;
+                    background-color: darken($color: #ffb24c, $amount: 10%);
+                }
+            }
+        }
+        .info{
+            padding: 20px 0 0 0;
+            width: $boxSize;
+            margin:auto;
+
+            .tag{
+                display: flex;
+                .tag-name{
+                    width: $boxSize/2;
+                }
+                
+                .price{
+                    width: $boxSize/2 - 50px;
+                    color: $green-color;
+                    font: bold;
+                }
+
+                .discount{
+                    margin: auto;
+                    width: 50px;
+                    font-size: 15px;
+                }
+
+                .description{
+                    width: $boxSize/2;
+                }
+            }
+        }
+        .controls{
+            margin: 20px auto;
+            border-top: 0.5px solid $grey-color;
+            padding: 20px 0;
+            border-bottom: 0.5px solid $grey-color;
+            
+            // margin-left: ($infoWidth - $buttonWidth)/2;
+
+            .change-amount{
+                display: flex;
+                margin-bottom: 20px;
+                margin-left: ($infoWidth - $buttonWidth)/2;
+                
+                .small-square{
+                    text-align: center;
+                    font-size: 20px;
+                    border:$border;
+                    width: 40px;
+                    height: 40px;
+                    padding-left:7px ;
+                    cursor: pointer;
+                    background: $background-color;
+
+                    background-size: 25px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    opacity: 0.6;
+
+                    &:hover{
+                        opacity: 0.8;
+                    }
+
+                    &:active{
+                        opacity: 1;
+                    }
+
+                }
+                .amount{
+                    width: 40px;
+                    text-align: center;
+                }
+
+                .btn-minus{
+                    border-right:0;
+                    background-image: url(https://cdn0.iconfinder.com/data/icons/typicons-2/24/minus-256.png);
+                    
+                }
+                
+                .btn-plus{
+                    border-left:0;
+                    background-image: url(https://cdn1.iconfinder.com/data/icons/interface-19/32/add-512.png);
+                }
+
+            }
+            .add-to-cart{
+                width: $buttonWidth/2;
+                height: 40px;
+                cursor: pointer;
+                color: #fff;
+                margin-left: $buttonWidth - $buttonWidth / 2 - 120px;
+                background: $red-color;
+                border-radius: 20px;
+                box-shadow: $box-shadow;
+
+                &:hover{
+                    background-color: darken($color:#DE6663, $amount: 5%);
+                }
+                &:active{
+                    background-color: darken($color:#DE6663, $amount: 10%);
+                }
+            }
+        }
+
+        .view-cart{
+            color: #fff;
+            width: $buttonWidth;
+            height: 40px;
+            border-radius: 20px;
+            background-color: $green-color;
+            margin-left: ($infoWidth - $buttonWidth)/2;
+            box-shadow: $box-shadow;
+          
+            &:hover{
+                background-color: darken($color:#7ab541, $amount: 5%);
+            }
+            &:active{
+                background-color: darken($color:#7ab541, $amount: 10%);
+            }
+        }
+
+        .note{
+            font-size: 15px;
+            text-align: left;
+            margin-left: ($infoWidth - $buttonWidth)/2;
+
+            .note-sub{
+               display: flex;
+               margin-bottom: 5px;
+
+               .note-icon{
+                cursor: pointer;
+                background-position: center;
+                width: 20px;
+                height: 20px;
+                // background-size: 10px;
+                background-repeat: no-repeat;
+                margin-right: 20px;
+               }
+
+               .note-icon-1{
+                    background: url(../../../assets/NTrungData/delivery-truck.svg);
+               }
+               .note-icon-2{
+                    background: url(../../../assets/NTrungData/payment-method.svg);
+               }
+               .note-icon-3{
+                    background: url(../../../assets/NTrungData/history.svg);
+                }
+
+                .note-content{
+                    &:hover{
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            
+        }
+    }
+    
+}
+
