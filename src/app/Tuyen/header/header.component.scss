@@ -8,28 +8,48 @@ $tl: 0.6s; // transition length
     padding-right: 28px;
 }
 
+.navbar .navbar-nav .nav-link {
+    color: #000000;
+    font-size: 1.1em;
+    position: relative;
+}
+
 .nav-item {
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 18px;
     padding: 4px;
-    .nav-link {
-        color: #000;
-        i {
-            font-size: 28px;
-        }
+}
+
+.nav-left .nav-item a {
+    border-bottom: 2px solid transparent
+}
+
+.nav-item a:hover {
+    opacity: 60%;
+}
+
+.nav-left .nav-item a:hover {
+    border-bottom: 2px solid rgb(19, 170, 45);
+}
+
+.nav-link {
+    color: #000;
+    i {
+        font-size: 28px;
     }
-    span {
-        margin-top: 100px;
-        margin-left: 36px;
-        padding-left: 8px;
-        padding-right: 8px;
-        background-color: rgb(94, 199, 23);
-        border-radius: 50%;
-        font-size: 12px;
-        float: left;
-        color: aliceblue;
-        margin-top: -50px;
-    }
+}
+
+.navbar-nav span {
+    margin-top: 100px;
+    margin-left: 36px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: rgb(94, 199, 23);
+    border-radius: 50%;
+    font-size: 12px;
+    float: left;
+    color: aliceblue;
+    margin-top: -50px;
 }
 
 .search-container {
@@ -84,4 +104,71 @@ $tl: 0.6s; // transition length
     color: rgb(0, 0, 0);
     font-weight: 100;
     cursor: pointer;
+}
+
+.container {
+    padding: 2rem 0rem;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #7AB541;
+    border-color: #609133;
+    margin-top: 16px;
+    padding: 6px 24px;
+    border: 2px solid transparent;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #8ace4a;
+    border-color: #609133;
+    margin-top: 16px;
+    padding: 6px 24px;
+    border: 2px solid #5b7940;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #99c470;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem #99c470;
+}
+
+.modal form {
+    font-size: 12px;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 400px;
+    }
+    .modal-dialog .modal-content {
+        padding: 1rem;
+    }
+}
+
+.modal-header .close {
+    margin-top: -1.5rem;
+}
+
+.form-title {
+    margin: -2rem 0rem 2rem;
+}
+
+.btn-round {
+    border-radius: 3rem;
+}
+
+.delimiter {
+    padding: 1rem;
+}
+
+.social-buttons .btn {
+    margin: 0 0.5rem 1rem;
+}
+
+.signup-section {
+    padding: 0.3rem 0rem;
 }
