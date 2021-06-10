@@ -1,0 +1,163 @@
+.is-divider {
+    height: 80px;
+    background: #86ba09;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.menu-danh-muc-san-pham-vertical-menu-container {
+    background: chocolate;
+    margin-top: 0px;
+}
+
+.col {
+    margin-top: 50px;
+    width: 300px;
+    margin-left: 90px;
+}
+
+.menu {
+    position: relative;
+    margin-top: 0px;
+}
+
+.span-font {
+    margin-top: 11px;
+    font-weight: 500;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.menu1 {
+    position: absolute;
+    left: 0px;
+    list-style: none;
+    height: 44px;
+    width: 270px;
+    background: #f8f8f8;
+    border: 1px solid rgb(221, 220, 220);
+}
+
+.menu2 {
+    position: absolute;
+    left: 0px;
+    top: 43px;
+    list-style: none;
+    height: 44px;
+    width: 270px;
+    background: #ffff;
+    border: 1px solid rgb(221, 220, 220);
+}
+
+.menu3 {
+    position: absolute;
+    left: 0px;
+    top: 86px;
+    list-style: none;
+    height: 44px;
+    width: 270px;
+    background: #f8f8f8;
+    border: 1px solid rgb(221, 220, 220);
+}
+
+.menu4 {
+    top: 129px;
+    position: absolute;
+    left: 0px;
+    list-style: none;
+    height: 44px;
+    width: 270px;
+    background: #ffff;
+    border: 1px solid rgb(221, 220, 220);
+}
+
+.col2 {
+    margin-top: 300px;
+    width: 270px;
+    margin-left: 106px;
+}
+
+.col3 {
+    margin-top: 231px;
+    width: 270px;
+    margin-left: 106px;
+}
+
+.slidecontainer {
+    width: 250px;
+    margin-left: 9px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: #e4e4e4;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #86ba09;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+}
+
+.bottom {
+    border: 1px solid #e4e4e4;
+}
+
+.small {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    border-radius: 99px;
+}
+
+.price {
+    font-size: 12px;
+}
+
+.col4 {
+    margin-top: 50px;
+    width: 270px;
+    margin-left: 106px;
+}
+
+.product_list_widget {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.product-title {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-size: 16px;
+}
+
+.flex {
+    padding-left: 15px;
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 12px;
+}

@@ -1,0 +1,49 @@
+.header {
+    height: 200px;
+    width: 1441px;
+}
+
+.title-page {
+    height: 200px;
+    position: relative;
+}
+
+.title-pr {
+    position: absolute;
+    top: 70px;
+    left: 655px;
+}
+
+.bread-crumb {
+    position: absolute;
+    top: 120px;
+    left: 645px;
+}
+
+a {
+    margin-right: 20px;
+    color: #fff;
+}
+
+span {
+    margin-right: 20px;
+    color: #fff;
+}
+
+.page-title-inner {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 110px;
+}
+
+.woocommerce-breadcrumb {
+    color: black;
+}
+
+/flex-col {
+    display: flex;
+}
+
+.shop-page-title {
+    margin-top: 50px;
+}
