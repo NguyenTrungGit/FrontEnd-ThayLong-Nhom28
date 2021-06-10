@@ -1,6 +1,9 @@
-<div class="layout-box">
+<div class="layout-box container">
   <div class="product-details-image">
-    <div class="image-main"></div>
+    <div class="image-main">
+      <button class="btn btn-prev button"><i class="fas fa-chevron-left"></i></button>
+      <button class="btn btn-next button"><i class="fas fa-chevron-right"></i></button>
+    </div>
     <div class="layout-box-sub">
       <div class="image-sub sub-1"></div>
       <div class="image-sub sub-2"></div>
@@ -15,7 +18,6 @@
       <div class="name"><b>Xoài</b></div>
       <div class="discount"><b>-50% </b><i class="fas fa-tags"></i></div>
     </div>
-    <hr color="#707070" />
     <div class="info">
       <div class="tag">
         <div class="tag-name"><b>Giá</b></div>
@@ -37,7 +39,6 @@
         </div>
       </div>
     </div>
-    <hr color="#707070" />
     <div class="controls">
       <div class="change-amount">
         <div class="btn-minus small-square"></div>
@@ -47,11 +48,21 @@
       </div>
       <button class="btn view-cart"><b>Xem giỏ hàng</b></button>
     </div>
-    <hr color="#707070" />
     <div class="note">
-      <b>&#40;&#42;&#41; Thanh toán online sẽ miễn phí giao hàng</b>
+      <div class="note-sub ">
+        <div class="note-icon note-icon-1"></div>
+        <div class="note-content">Đặt online giao tận nhà <b>ĐÚNG GIỜ</b> (nếu trễ tặng PMH 20.000₫)</div>
+      </div> 
+      <div class="note-sub">
+        <div class="note-icon note-icon-2" ></div>
+        <div class="note-content">Thanh toán online miễn phí giao hàng !!!</div>
+      </div> 
+      <div class="note-sub ">
+        <div class="note-icon note-icon-3"></div>
+        <div class="note-content">Đổi, trả sản phẩm miễn phí trong vòng 48h</div>
+      </div> 
     </div>
   </div>
 </div>
-<hr />
 <app-product-news></app-product-news>
+<app-product-related></app-product-related>

@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductDetailsComponent } from './NTrung/product-details/product-details.component';
 import { ProductNewsComponent } from './NTrung/product-news/product-news.component';
+import { ProductRelatedComponent } from './NTrung/product-related/product-related.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductDetailsComponent,
-    ProductNewsComponent
+    ProductNewsComponent,
+    ProductRelatedComponent
   ],
   imports: [
     BrowserModule,

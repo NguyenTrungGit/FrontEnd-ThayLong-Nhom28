@@ -2,6 +2,9 @@
 .layout-box {
   display: flex;
   justify-content: center;
+  padding: 40px 0;
+  margin: 20px auto;
+  border-bottom: 0.5px solid #707070;
 }
 .layout-box .product-details-image {
   width: 500px;
@@ -10,10 +13,36 @@
 .layout-box .product-details-image .image-main {
   width: 500px;
   height: 500px;
-  background: #dedede;
+  background: #f0f0f0;
   background-image: url(https://okdeal.vn/wp-content/uploads/2019/07/xoai-cat-chu-the-one.png);
   background-size: 500px;
   border-radius: 2px;
+  box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
+}
+.layout-box .product-details-image .image-main .button {
+  border: 0px;
+  width: 40px;
+  height: 80px;
+  margin-top: 210px;
+  opacity: 0.1;
+  background: #707070;
+  color: black;
+  font-size: 30px;
+}
+.layout-box .product-details-image .image-main .button:hover {
+  opacity: 0.3;
+}
+.layout-box .product-details-image .image-main .button:active {
+  opacity: 0.6;
+}
+.layout-box .product-details-image .image-main .btn-next {
+  float: right;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.layout-box .product-details-image .image-main .btn-prev {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 .layout-box .product-details-image .image-main:hover {
   cursor: pointer;
@@ -31,6 +60,7 @@
   background-size: 117.5px;
   opacity: 0.3;
   transition: opacity 0.3s ease-out;
+  box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
 }
 .layout-box .product-details-image .layout-box-sub .image-sub:hover {
   cursor: pointer;
@@ -53,16 +83,18 @@
   margin-left: 10px;
 }
 .layout-box .product-details-info {
-  margin-left: 20px;
-  width: 770px;
+  width: 600px;
   height: 627.5px;
-  padding: 10px;
+  padding-left: 20px;
 }
 .layout-box .product-details-info .category {
   font-style: italic;
 }
 .layout-box .product-details-info .name-discount {
+  padding: 0px 20px;
   display: flex;
+  width: 600px;
+  border-bottom: 0.5px solid #707070;
 }
 .layout-box .product-details-info .name-discount .name {
   font-size: 50px;
@@ -77,12 +109,18 @@
   color: #fff;
   background-color: #ffb24c;
   border-radius: 2px;
+  box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
 }
 .layout-box .product-details-info .name-discount .discount:hover {
   cursor: pointer;
   background-color: #ffa733;
 }
+.layout-box .product-details-info .name-discount .discount:active {
+  cursor: pointer;
+  background-color: #ff9c19;
+}
 .layout-box .product-details-info .info {
+  padding: 20px 0 0 0;
   width: 500px;
   margin: auto;
 }
@@ -106,12 +144,15 @@
   width: 250px;
 }
 .layout-box .product-details-info .controls {
-  margin: 20px 0;
-  margin-left: 185px;
+  margin: 20px auto;
+  border-top: 0.5px solid #707070;
+  padding: 20px 0;
+  border-bottom: 0.5px solid #707070;
 }
 .layout-box .product-details-info .controls .change-amount {
   display: flex;
   margin-bottom: 20px;
+  margin-left: 100px;
 }
 .layout-box .product-details-info .controls .change-amount .small-square {
   text-align: center;
@@ -153,6 +194,7 @@
   margin-left: 80px;
   background: #DE6663;
   border-radius: 20px;
+  box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
 }
 .layout-box .product-details-info .controls .add-to-cart:hover {
   background-color: #da514e;
@@ -162,11 +204,12 @@
 }
 .layout-box .product-details-info .view-cart {
   color: #fff;
-  margin: auto;
   width: 400px;
   height: 40px;
   border-radius: 20px;
   background-color: #7AB541;
+  margin-left: 100px;
+  box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
 }
 .layout-box .product-details-info .view-cart:hover {
   background-color: #6da23a;
@@ -175,5 +218,32 @@
   background-color: #618f34;
 }
 .layout-box .product-details-info .note {
-  text-align: center;
+  font-size: 15px;
+  text-align: left;
+  margin-left: 100px;
+}
+.layout-box .product-details-info .note .note-sub {
+  display: flex;
+  margin-bottom: 5px;
+}
+.layout-box .product-details-info .note .note-sub .note-icon {
+  cursor: pointer;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+}
+.layout-box .product-details-info .note .note-sub .note-icon-1 {
+  background: url(../../../assets/NTrungData/delivery-truck.svg);
+}
+.layout-box .product-details-info .note .note-sub .note-icon-2 {
+  background: url(../../../assets/NTrungData/payment-method.svg);
+}
+.layout-box .product-details-info .note .note-sub .note-icon-3 {
+  background: url(../../../assets/NTrungData/history.svg);
+}
+.layout-box .product-details-info .note .note-sub .note-content:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }/*# sourceMappingURL=product-details.component.css.map */

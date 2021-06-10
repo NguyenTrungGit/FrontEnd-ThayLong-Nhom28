@@ -1,4 +1,30 @@
-@import '../../../global-style.css';
-$red-color:var(--red-color);
-$green-color:var(--green-color);
-$grey-color:var(--gray-color);
+@import '../../../global-style.scss';
+
+$box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
+$boxSize:350px;
+
+*{
+    color: $grey-color;
+}
+
+.news-layout{
+    margin: 0 auto;
+    padding:0px 0px 20px 0px;
+    border-bottom: 0.5px solid $grey-color;
+
+    .news-image{
+        margin: 10px 0;
+        margin: auto;
+        width: $boxSize;
+        height: $boxSize;
+        background-size: $boxSize;
+        background-image: url(https://okdeal.vn/wp-content/uploads/2019/07/xoai-cat-chu-the-one.png);
+        background-repeat: no-repeat;
+        background-color: lighten($color: $grey-color, $amount: 50%);
+        box-shadow: $box-shadow;
+    }
+
+    .news-content{
+        margin: 10px 0;
+    }
+}
