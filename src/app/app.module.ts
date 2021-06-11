@@ -18,6 +18,8 @@ import { ProductRelatedComponent } from './NTrung/product-details/product-relate
 import { CartComponent } from './NTrung/cart/cart.component';
 import { CartInfoComponent } from './NTrung/cart/cart-info/cart-info.component';
 import { CartBillComponent } from './NTrung/cart/cart-bill/cart-bill.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
 
 
 @NgModule({
@@ -41,7 +43,9 @@ import { CartBillComponent } from './NTrung/cart/cart-bill/cart-bill.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
