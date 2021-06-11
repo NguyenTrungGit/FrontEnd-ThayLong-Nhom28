@@ -29,7 +29,7 @@ $box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
         .image-main{
             width: $boxSize;
             height: $boxSize;
-            background: lighten($color: $grey-color, $amount: 50%);;
+            background: lighten($color: $grey-color, $amount: 50%);
             background-image: url(https://okdeal.vn/wp-content/uploads/2019/07/xoai-cat-chu-the-one.png);
             background-size: $boxSize;
             border-radius: 2px;
@@ -118,10 +118,6 @@ $box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
         height:$info-size;
         padding-left: 2*$margin;
         
-        // .category{
-        //     font-style: italic;
-        // }
-
         .name-discount{
             padding: 0px 20px;
             display: flex;
