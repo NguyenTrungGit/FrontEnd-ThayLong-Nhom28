@@ -26,14 +26,12 @@ import { CartBillComponent } from './NTrung/cart/cart-bill/cart-bill.component';
     ProductDetailsComponent,
     HeaderComponent,
     FooterComponent,
-
     ProductComponent,
     ProductListComponent,
     PagingComponent,
     FiltersComponent,
     HeaderComponent,
     ProductItemComponent,
-
     ProductNewsComponent,
     ProductRelatedComponent,
     CartComponent,
