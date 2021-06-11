@@ -1,0 +1,23 @@
+$box-size:700px;
+$background-color: #d3d3d3;
+$border:0.5px solid #707070;
+$border-light:0.5px solid #d3d3d3;
+$box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
+
+.layout-box{
+    display: flex;
+    padding: 20px 0;
+
+    .cart-info{
+        width: $box-size;
+        padding: 0px 20px 20px 0px;
+    }
+
+    .cart-bill{
+        height: 500px;
+        width: 1110px - $box-size;
+        padding: 0px 0px 20px 20px;
+        border-left: $border;
+        // margin-top: 20px;
+    }
+}

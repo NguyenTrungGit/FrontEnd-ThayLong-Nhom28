@@ -15,6 +15,9 @@ import { ProductItemComponent } from './BTruong/product/product-list/product-ite
 
 import { ProductNewsComponent } from './NTrung/product-details/product-news/product-news.component';
 import { ProductRelatedComponent } from './NTrung/product-details/product-related/product-related.component';
+import { CartComponent } from './NTrung/cart/cart.component';
+import { CartInfoComponent } from './NTrung/cart/cart-info/cart-info.component';
+import { CartBillComponent } from './NTrung/cart/cart-bill/cart-bill.component';
 
 
 @NgModule({
@@ -32,7 +35,10 @@ import { ProductRelatedComponent } from './NTrung/product-details/product-relate
     ProductItemComponent,
 
     ProductNewsComponent,
-    ProductRelatedComponent
+    ProductRelatedComponent,
+    CartComponent,
+    CartInfoComponent,
+    CartBillComponent
 
   ],
   imports: [
