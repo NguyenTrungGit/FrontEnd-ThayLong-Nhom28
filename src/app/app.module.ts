@@ -20,7 +20,10 @@ import { CartInfoComponent } from './NTrung/cart/cart-info/cart-info.component';
 import { CartBillComponent } from './NTrung/cart/cart-bill/cart-bill.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
-
+import { ProductEvaluateComponent } from './NTrung/product-details/product-evaluate/product-evaluate.component';
+import { EvaluateDialogComponent } from './NTrung/product-details/product-evaluate/evaluate-dialog/evaluate-dialog.component';
+import { EvaluateQuestionComponent } from './Ntrung/product-details/product-evaluate/evaluate-question/evaluate-question.component';
+import { EvaluateAnswerComponent } from './Ntrung/product-details/product-evaluate/evaluate-answer/evaluate-answer.component';
 
 @NgModule({
   declarations: [
@@ -38,16 +41,20 @@ import { MaterialModule } from './material/material.module';
     ProductRelatedComponent,
     CartComponent,
     CartInfoComponent,
-    CartBillComponent
-
+    CartBillComponent,
+    ProductEvaluateComponent,
+    EvaluateDialogComponent,
+    EvaluateQuestionComponent,
+    EvaluateAnswerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [EvaluateDialogComponent],
 })
-export class AppModule { }
+export class AppModule {}

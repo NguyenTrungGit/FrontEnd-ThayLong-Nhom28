@@ -253,4 +253,9 @@
 .layout-box .product-details-info .note .note-sub .note-content:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.evaluate {
+  width: 600px;
+  border-bottom: 0.5px solid #d3d3d3;
 }/*# sourceMappingURL=product-details.component.css.map */

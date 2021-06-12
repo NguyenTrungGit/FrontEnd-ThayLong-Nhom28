@@ -1,0 +1,43 @@
+.answer{
+    padding: 10px 0xp; 
+    border-bottom: 1px solid #d3d3d3;
+    
+    .name{
+        display: flex;
+        margin: 10px 0px;
+        text-align: center;
+        .regenvy{
+            width: 130px;
+            text-align: center;
+            color: #7ab541;
+            margin-left: 20px;
+            border: 2px solid #7ab541;
+            border-radius: 5px;
+        }
+    }
+
+    .content{
+        margin: 10px 0px;
+    }
+
+    .controls{
+        font-size: 15px;
+        margin: 10px 0px;
+        color: darken($color: blue, $amount: 10%);
+        display: flex;
+        text-align: center;
+
+        .tag{
+            margin: 0px 10px;
+
+            &:hover{
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            &:active{
+                color: darken($color: blue, $amount: 10%);
+            }
+        }
+    }
+}
