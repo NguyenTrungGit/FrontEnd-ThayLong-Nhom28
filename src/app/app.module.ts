@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ProductDetailsComponent } from './NTrung/product-details/product-details.component';
 import { HeaderComponent } from './Tuyen/header/header.component';
 import { FooterComponent } from './Tuyen/footer/footer.component';
+
 import { ProductComponent } from './BTruong/product/product.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -32,8 +33,11 @@ import { SaleTitleComponent } from './BTruong/sale/sale-title/sale-title.compone
 import { SaleProductItemComponent } from './BTruong/sale/sale-product-list/sale-product-item/sale-product-item.component';
 import { SaleProductPopupComponent } from './BTruong/sale/sale-product-popup/sale-product-popup.component';
 
-
-
+import { ProductNewsComponent } from './NTrung/product-details/product-news/product-news.component';
+import { ProductRelatedComponent } from './NTrung/product-details/product-related/product-related.component';
+import { CartComponent } from './NTrung/cart/cart.component';
+import { CartInfoComponent } from './NTrung/cart/cart-info/cart-info.component';
+import { CartBillComponent } from './NTrung/cart/cart-bill/cart-bill.component';
 
 
 @NgModule({
@@ -64,9 +68,11 @@ import { SaleProductPopupComponent } from './BTruong/sale/sale-product-popup/sal
    SaleTitleComponent,
    SaleProductItemComponent,
    SaleProductPopupComponent,
-
-
-
+    ProductNewsComponent,
+    ProductRelatedComponent,
+    CartComponent,
+    CartInfoComponent,
+    CartBillComponent
 
   ],
   imports: [
