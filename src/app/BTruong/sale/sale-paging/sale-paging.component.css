@@ -1,0 +1,41 @@
+.circle1 {
+    padding-top: 8px;
+    background: #86ba09;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    color: #f8f8f8;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.circle2 {
+    padding-top: 8px;
+    background: #f8f8f8;
+    border-radius: 50%;
+    border: 1px solid rgb(87, 87, 87);
+    height: 45px;
+    width: 45px;
+    color: rgb(87, 87, 87);
+    text-align: center;
+    margin-right: 30px;
+}
+
+.circle3 {
+    padding-top: 8px;
+    background: #f8f8f8;
+    border-radius: 50%;
+    border: 1px solid rgb(87, 87, 87);
+    height: 45px;
+    width: 45px;
+    color: rgb(87, 87, 87);
+    text-align: center;
+}
+
+.woocome {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 310px;
+    margin-bottom: 100px;
+}
