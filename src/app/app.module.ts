@@ -15,7 +15,10 @@ import { ProductItemComponent } from './BTruong/product/product-list/product-ite
 
 import { ProductNewsComponent } from './NTrung/product-details/product-news/product-news.component';
 import { ProductRelatedComponent } from './NTrung/product-details/product-related/product-related.component';
-
+import { HomeComponent } from './Tuyen/home/home.component';
+import { CdTimerModule } from 'angular-cd-timer';
+import { CountdownModule } from 'ngx-countdown';
+import { ProductItemHomeComponent } from './Tuyen/home/product-item-home/product-item-home.component';
 
 @NgModule({
   declarations: [
@@ -32,12 +35,16 @@ import { ProductRelatedComponent } from './NTrung/product-details/product-relate
     ProductItemComponent,
 
     ProductNewsComponent,
-    ProductRelatedComponent
+    ProductRelatedComponent,
+    HomeComponent,
+    ProductItemHomeComponent
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CdTimerModule,
+    CountdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]
