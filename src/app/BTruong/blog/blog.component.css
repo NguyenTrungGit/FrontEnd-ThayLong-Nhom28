@@ -1,0 +1,13 @@
+.filter1 {
+    min-height: 900px;
+    width: 500px;
+}
+
+.posts {
+    min-height: 900px;
+    width: 1000px;
+}
+
+.main {
+    display: flex;
+}

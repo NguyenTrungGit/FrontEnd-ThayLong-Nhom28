@@ -1,6 +1,6 @@
 .header {
     height: 200px;
-    width: 1441px;
+    width: 100%;
 }
 
 .title-page {
@@ -10,14 +10,15 @@
 
 .title-pr {
     position: absolute;
-    top: 70px;
+    top: 74px;
     left: 655px;
+    letter-spacing: 1px;
 }
 
 .bread-crumb {
     position: absolute;
-    top: 120px;
-    left: 645px;
+    top: 112px;
+    left: 609px;
 }
 
 a {
@@ -40,7 +41,7 @@ span {
     color: black;
 }
 
-/flex-col {
+.flex-col {
     display: flex;
 }
 
