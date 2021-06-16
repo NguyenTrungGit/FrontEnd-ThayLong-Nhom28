@@ -32,12 +32,14 @@ import { SaleProductListComponent } from './BTruong/sale/sale-product-list/sale-
 import { SaleTitleComponent } from './BTruong/sale/sale-title/sale-title.component';
 import { SaleProductItemComponent } from './BTruong/sale/sale-product-list/sale-product-item/sale-product-item.component';
 import { SaleProductPopupComponent } from './BTruong/sale/sale-product-popup/sale-product-popup.component';
-
 import { ProductNewsComponent } from './NTrung/product-details/product-news/product-news.component';
 import { ProductRelatedComponent } from './NTrung/product-details/product-related/product-related.component';
+import { HomeComponent } from './Tuyen/home/home.component';
+import { ProductItemHomeComponent } from './Tuyen/home/product-item-home/product-item-home.component';
 import { CartComponent } from './NTrung/cart/cart.component';
 import { CartInfoComponent } from './NTrung/cart/cart-info/cart-info.component';
 import { CartBillComponent } from './NTrung/cart/cart-bill/cart-bill.component';
+
 
 
 @NgModule({
@@ -70,6 +72,8 @@ import { CartBillComponent } from './NTrung/cart/cart-bill/cart-bill.component';
    SaleProductPopupComponent,
     ProductNewsComponent,
     ProductRelatedComponent,
+    HomeComponent,
+    ProductItemHomeComponent
     CartComponent,
     CartInfoComponent,
     CartBillComponent

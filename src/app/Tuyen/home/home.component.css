@@ -1,0 +1,201 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.banner {
+    background-image: url('/assets/tuyen/img/banner.png');
+    text-align: center;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 25px;
+    font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.dropdown-item:hover {
+    background-color: #fed136;
+    color: #fff;
+}
+
+.banner-text {
+    padding: 200px 0 150px 0;
+}
+
+.banner-heading {
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 100px;
+    margin-bottom: 12px;
+    text-shadow: 1px 0.5px #363636;
+    color: #fff;
+}
+
+.banner-sub-heading {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 50px;
+    text-shadow: 1px 0.5px #363636;
+    color: #fff;
+}
+
+.btn-banner {
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.btn-success {
+    background-color: #28bd4b;
+    border-color: #26ca4c;
+}
+
+
+/* .row {
+    display: flex;
+}
+
+.icon-category {
+    flex: 1;
+    border: 6px solid #BFC88D;
+    border-radius: 50%;
+    background-color: #26ca4c;
+    height: 190px;
+    width: 190px;
+    background-size: cover;
+} */
+
+.icon-category {
+    overflow: hidden;
+    border-radius: 50%;
+    border: 8px solid rgba(136, 192, 0, .2);
+}
+
+.icon-category:hover {
+    border: 8px solid rgba(136, 192, 0, .75);
+}
+
+.icon-category:hover img {
+    transform: scale(1.1);
+    transition: all .4s linear
+}
+
+.promotional {
+    height: 300px;
+    background-color: #e0e0e0;
+}
+
+.input-promotional {
+    margin-left: 380px;
+    margin-right: 380px;
+}
+
+.btn-round {
+    border-radius: 3rem;
+}
+
+.btn-custom {
+    color: #fff;
+    background-color: #ED6663;
+    border-color: #ED6663;
+    outline: 0;
+}
+
+.btn-custom:not(:disabled):not(.disabled).active,
+.btn-custom:not(:disabled):not(.disabled):active {
+    background-color: #ED6663;
+    opacity: 80%;
+    box-shadow: 0 0 0 0.2rem rgba(182, 0, 24, 0.6);
+}
+
+.input-promotional>.btn.focus,
+.btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem transparent;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(182, 182, 182, 0.6);
+}
+
+.discount {
+    background-image: url('/assets/tuyen/img/bg_3.png');
+    background-size: cover;
+    height: 541px
+}
+
+.content-discount {
+    float: right;
+    margin-right: 180px;
+}
+
+.title-discount mark {
+    color: #82AE46;
+    background-color: transparent;
+    font-size: 28px;
+}
+
+
+/*  */
+
+.btn-discount {
+    color: #fff;
+    background-color: #82AE46;
+    border-color: #82AE46;
+}
+
+.btn-discount:focus {
+    outline: 0;
+}
+
+.btn-discount:not(:disabled):not(.disabled).active,
+.btn-discount:not(:disabled):not(.disabled):active {
+    background-color: #82AE46;
+    box-shadow: none;
+}
+
+.btn-discount:hover {
+    color: #fff;
+    background-color: #82AE46;
+    border-color: #8cc43f;
+    box-shadow: 0 0 0 0.1rem rgba(17, 83, 0, 0.6);
+}
+
+.countdown-value {
+    display: flex;
+}
+
+.countdown-value .countdown-item {
+    flex: 1;
+}
+
+.cl-green {
+    color: #82AE46;
+}
+
+.number-discount {
+    font-size: 28px;
+}
+
+
+/*  */
