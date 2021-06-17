@@ -73,7 +73,7 @@ import { CartBillComponent } from './NTrung/cart/cart-bill/cart-bill.component';
     ProductNewsComponent,
     ProductRelatedComponent,
     HomeComponent,
-    ProductItemHomeComponent
+    ProductItemHomeComponent,
     CartComponent,
     CartInfoComponent,
     CartBillComponent
