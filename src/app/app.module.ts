@@ -39,7 +39,11 @@ import { ProductItemHomeComponent } from './Tuyen/home/product-item-home/product
 import { CartComponent } from './NTrung/cart/cart.component';
 import { CartInfoComponent } from './NTrung/cart/cart-info/cart-info.component';
 import { CartBillComponent } from './NTrung/cart/cart-bill/cart-bill.component';
-
+import { MaterialModule } from './material/material.module';
+import { ProductEvaluateComponent } from './NTrung/product-details/product-evaluate/product-evaluate.component';
+import { EvaluateDialogComponent } from './NTrung/product-details/product-evaluate/evaluate-dialog/evaluate-dialog.component';
+import { EvaluateQuestionComponent } from './NTrung/product-details/product-evaluate/evaluate-question/evaluate-question.component';
+import { EvaluateAnswerComponent } from './NTrung/product-details/product-evaluate/evaluate-answer/evaluate-answer.component';
 
 
 @NgModule({
@@ -76,17 +80,22 @@ import { CartBillComponent } from './NTrung/cart/cart-bill/cart-bill.component';
     ProductItemHomeComponent,
     CartComponent,
     CartInfoComponent,
-    CartBillComponent
-
+    CartBillComponent,
+    ProductEvaluateComponent,
+    EvaluateDialogComponent,
+    EvaluateQuestionComponent,
+    EvaluateAnswerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatDialogModule
 
+    MatDialogModule,
+    MaterialModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [EvaluateDialogComponent],
 })
-export class AppModule { }
+export class AppModule {}

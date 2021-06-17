@@ -10,10 +10,6 @@ $border:0.5px solid #707070;
 $border-light:0.5px solid #d3d3d3;
 $box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
 
-// *{
-//     color: $grey-color;
-// }
-
 .layout-box{
     display: flex;
     justify-content: center;
@@ -24,7 +20,6 @@ $box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
     .product-details-image{
         width: $boxSize;
         height: $info-size;
-        
     
         .image-main{
             width: $boxSize;
@@ -117,23 +112,26 @@ $box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
         width: $info-size;
         height:$info-size;
         padding-left: 2*$margin;
-        
+
         .name-discount{
+            height: 100px;
             padding: 0px 20px;
             display: flex;
             width: $info-size;
             border-bottom: $border-light;
 
             .name{
+                margin: auto;   
                 font-size: 0.1 * $boxSize;
                 width: 87%;
                 font:italic;
             }
             .discount{
-                margin-top: 30px;
+                margin: auto;
                 text-align: center;
+                justify-content: center;
                 width: 13%;
-                height: 50%;
+                height: 20px;
                 color: #fff;
                 background-color: #ffb24c;
                 border-radius: 2px;
@@ -318,5 +316,11 @@ $box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
         }
     }
     
+
+
 }
 
+.evaluate{
+    width: 600px;
+    border-bottom: $border-light;
+}
