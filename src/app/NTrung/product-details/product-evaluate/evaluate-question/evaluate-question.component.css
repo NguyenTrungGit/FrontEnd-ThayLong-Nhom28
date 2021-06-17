@@ -1,0 +1,37 @@
+.question {
+  width: 600px;
+  font-size: 16px;
+  padding: 10px 0px;
+}
+.question .name {
+  margin: 10px 0px;
+}
+.question .content {
+  margin: 10px 0px;
+}
+.question .controls {
+  font-size: 15px;
+  margin: 10px 0px;
+  color: #0000cc;
+  display: flex;
+  text-align: center;
+}
+.question .controls .tag {
+  margin: 0px 10px;
+}
+.question .controls .tag:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.question .controls .tag:active {
+  color: #0000cc;
+}
+
+.answer {
+  border-radius: 2px;
+  background-color: #ebebeb;
+  width: 600px;
+  padding: 10px 0px 10px 20px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
+}/*# sourceMappingURL=evaluate-question.component.css.map */

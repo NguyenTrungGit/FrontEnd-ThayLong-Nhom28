@@ -1,4 +1,4 @@
-import { CdTimerModule } from 'angular-cd-timer';
+// import { CdTimerModule } from 'angular-cd-timer';
 import { Component, Input, OnInit } from '@angular/core';
 
 
