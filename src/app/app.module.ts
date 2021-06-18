@@ -44,6 +44,7 @@ import { ProductEvaluateComponent } from './NTrung/product-details/product-evalu
 import { EvaluateDialogComponent } from './NTrung/product-details/product-evaluate/evaluate-dialog/evaluate-dialog.component';
 import { EvaluateQuestionComponent } from './NTrung/product-details/product-evaluate/evaluate-question/evaluate-question.component';
 import { EvaluateAnswerComponent } from './NTrung/product-details/product-evaluate/evaluate-answer/evaluate-answer.component';
+import { IntroduceComponent } from './Tuyen/introduce/introduce.component';
 
 
 @NgModule({
@@ -85,6 +86,7 @@ import { EvaluateAnswerComponent } from './NTrung/product-details/product-evalua
     EvaluateDialogComponent,
     EvaluateQuestionComponent,
     EvaluateAnswerComponent,
+    IntroduceComponent,
   ],
   imports: [
     BrowserModule,
