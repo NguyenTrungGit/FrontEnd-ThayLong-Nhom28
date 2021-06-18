@@ -134,7 +134,9 @@
 .layout-box .product-details-info .name-discount .discount {
   margin: auto;
   text-align: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 13%;
   height: 20px;
   color: #fff;
@@ -325,8 +327,8 @@
   text-decoration: underline;
 }
 
-
 .evaluate {
   width: 600px;
   border-bottom: 0.5px solid #d3d3d3;
-}/*# sourceMappingURL=product-details.component.css.map */
+}
+/*# sourceMappingURL=product-details.component.css.map */

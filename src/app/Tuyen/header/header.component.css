@@ -40,11 +40,12 @@
 .nav-link {
   color: #000;
 }
+
 .nav-link i {
   font-size: 28px;
 }
 
-.navbar-nav span {
+.navbar-nav .quantity {
   margin-top: 100px;
   margin-left: 36px;
   padding-left: 8px;
@@ -64,7 +65,10 @@
 }
 
 .search-box {
+  -webkit-transition: width 0.6s, border-radius 0.6s, background 0.6s, -webkit-box-shadow 0.6s;
+  transition: width 0.6s, border-radius 0.6s, background 0.6s, -webkit-box-shadow 0.6s;
   transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+  transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s, -webkit-box-shadow 0.6s;
   font-size: 16px;
   width: 40px;
   height: 36px;
@@ -72,10 +76,12 @@
   border: none;
   cursor: pointer;
   background: #ebebeb;
+  -webkit-transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
   transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
   border: none;
   outline: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   padding-left: 15px;
   cursor: text;
   width: 200px;
@@ -83,9 +89,11 @@
   background: #ebebeb;
   color: black;
 }
+
 .search-box + label .search-icon {
   color: black;
 }
+
 .search-box + label .search-icon {
   color: black;
 }
@@ -130,7 +138,8 @@
   background-color: #fff;
   border-color: #99c470;
   outline: 0;
-  box-shadow: 0 0 0 0.1rem #99c470;
+  -webkit-box-shadow: 0 0 0 0.1rem #99c470;
+          box-shadow: 0 0 0 0.1rem #99c470;
 }
 
 .modal form {
@@ -141,11 +150,11 @@
   .modal-dialog {
     max-width: 400px;
   }
-
   .modal-dialog .modal-content {
     padding: 1rem;
   }
 }
+
 .modal-header .close {
   margin-top: -1.5rem;
 }
@@ -164,4 +173,116 @@
 
 .signup-section {
   padding: 0.3rem 0rem;
-}/*# sourceMappingURL=header.component.css.map */
+}
+
+.cart-home {
+  position: relative;
+}
+
+.block-minicart {
+  display: none;
+}
+
+.cart-home:hover .block-minicart {
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  display: block;
+}
+
+.cart-home .block-minicart {
+  background-color: white;
+  position: absolute;
+  -webkit-transform: translate(-60%);
+          transform: translate(-60%);
+  border-radius: 10px;
+  width: 300px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.22);
+}
+
+.thumb a {
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+  padding: 3px;
+  display: block;
+}
+
+.block-products .list-products .item-product .content-product {
+  padding-left: 16px;
+  text-align: left;
+  -ms-flex-preferred-size: 77%;
+      flex-basis: 77%;
+}
+
+.block-products {
+  padding-top: 1px;
+}
+
+.block-products .list-products {
+  max-height: 320px;
+  overflow-y: scroll;
+}
+
+.block-products .list-products .item-product .price-remove .btn-remove {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background: url(/assets/NTrungData/cancel.svg);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  opacity: 0.3;
+  margin-top: -24px;
+}
+
+.block-products .list-products .item-product {
+  width: 100%;
+}
+
+.lh-25 {
+  line-height: 25px;
+}
+
+.border-bottom-cart {
+  border-bottom: 2px solid #acacac;
+  text-align: center;
+}
+
+.btn-incart {
+  border-radius: 20px;
+  width: 100%;
+  color: #ebebeb;
+}
+
+.btn-red {
+  background-color: #f04542;
+}
+
+.btn-red:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem #5b7940;
+          box-shadow: 0 0 0 0.2rem #5b7940;
+}
+
+.btn-green {
+  background-color: #7AB541;
+}
+
+.btn:focus {
+  -webkit-box-shadow: 0 0 0 0 #ffffff;
+          box-shadow: 0 0 0 0 #ffffff;
+}
+
+.btn-red:not(:disabled):not(.disabled).active,
+.btn-red:not(:disabled):not(.disabled):active {
+  -webkit-box-shadow: 0 0 0 0.2rem #ff9392;
+          box-shadow: 0 0 0 0.2rem #ff9392;
+  opacity: 90%;
+}
+
+.btn-green:not(:disabled):not(.disabled).active,
+.btn-green:not(:disabled):not(.disabled):active {
+  -webkit-box-shadow: 0 0 0 0.2rem #bdff84;
+          box-shadow: 0 0 0 0.2rem #bdff84;
+  opacity: 90%;
+}
+/*# sourceMappingURL=header.component.css.map */
