@@ -44,6 +44,9 @@ import { ProductEvaluateComponent } from './NTrung/product-details/product-evalu
 import { EvaluateDialogComponent } from './NTrung/product-details/product-evaluate/evaluate-dialog/evaluate-dialog.component';
 import { EvaluateQuestionComponent } from './NTrung/product-details/product-evaluate/evaluate-question/evaluate-question.component';
 import { EvaluateAnswerComponent } from './NTrung/product-details/product-evaluate/evaluate-answer/evaluate-answer.component';
+import { PayComponent } from './NTrung/pay/pay.component';
+import { PayFormComponent } from './NTrung/pay/pay-form/pay-form.component';
+import { PayBillComponent } from './NTrung/pay/pay-bill/pay-bill.component';
 
 
 @NgModule({
@@ -85,6 +88,9 @@ import { EvaluateAnswerComponent } from './NTrung/product-details/product-evalua
     EvaluateDialogComponent,
     EvaluateQuestionComponent,
     EvaluateAnswerComponent,
+    PayComponent,
+    PayFormComponent,
+    PayBillComponent,
   ],
   imports: [
     BrowserModule,
