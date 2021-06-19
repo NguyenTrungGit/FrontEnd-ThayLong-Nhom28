@@ -9,8 +9,12 @@
 }
 
 form{
+    .col{
+        height: 67px;
+    }
+
     .row{
-        padding-bottom: 20px;
+        padding-bottom: 15px;
     }
 
     .form-check{

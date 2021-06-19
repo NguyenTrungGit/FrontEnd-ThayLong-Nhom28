@@ -45,6 +45,7 @@ import { EvaluateDialogComponent } from './NTrung/product-details/product-evalua
 import { EvaluateQuestionComponent } from './NTrung/product-details/product-evaluate/evaluate-question/evaluate-question.component';
 import { EvaluateAnswerComponent } from './NTrung/product-details/product-evaluate/evaluate-answer/evaluate-answer.component';
 import { PayComponent } from './NTrung/pay/pay.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { PayFormComponent } from './NTrung/pay/pay-form/pay-form.component';
 import { PayBillComponent } from './NTrung/pay/pay-bill/pay-bill.component';
 
@@ -96,9 +97,10 @@ import { PayBillComponent } from './NTrung/pay/pay-bill/pay-bill.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
     MatDialogModule,
     MaterialModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
