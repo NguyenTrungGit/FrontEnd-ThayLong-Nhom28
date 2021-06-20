@@ -1,6 +1,6 @@
 <div class="title">Thông tin thanh toán</div>
 <br />
-<form [formGroup]="billForm" #billFormModel = "ngForm">
+<form [formGroup]="billForm">
   <!-- Name and phone -->
   <div class="row">
     <div class="col">
@@ -120,8 +120,11 @@
             billForm.controls.country.touched
         }"
         required
+        (change)="onSelectCountry($event.target)"
+        [ngModel]="selectedCountry.id"
       >
-      <option >a</option>
+      <option value="0">-- Tỉnh/Thành Phố --</option>
+      <option *ngFor = "let country of countries?.countries " value="{{country.id}}">{{country.name}}</option>
       </select>
       <div
         *ngIf="
@@ -133,6 +136,7 @@
         Mời chọn Tỉnh/Thành phố
       </div>
     </div>
+
     <div class="col">
       <select
         class="custom-select"
@@ -144,8 +148,11 @@
             !billForm.controls.state.valid && billForm.controls.state.touched
         }"
         required
+        [ngModel]="selectedState.id"
+        (change)="onSelectDistrict($event.target)"
       >
-      <option> </option>
+      <option value="0">-- Quận/Huyện -- </option>
+      <option *ngFor="let state of states" value="{{state.id}}"> {{state.name}}</option>
       </select>
       <div
         *ngIf="
@@ -173,11 +180,10 @@
             billForm.controls.district.touched
         }"
         required
+        [ngModel]="selectedDistrict.id"
       >
-        <option selected>Open this select menu</option>
-        <option>One</option>
-        <option>Two</option>
-        <option>Three</option>
+        <option value ="0">-- Phường/Xã --</option>
+        <option *ngFor="let district of districts" value="{{district.id}}"> {{district.name}}</option>
       </select>
       <div
         *ngIf="

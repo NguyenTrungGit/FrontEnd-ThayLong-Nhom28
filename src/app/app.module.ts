@@ -48,6 +48,7 @@ import { PayComponent } from './NTrung/pay/pay.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { PayFormComponent } from './NTrung/pay/pay-form/pay-form.component';
 import { PayBillComponent } from './NTrung/pay/pay-bill/pay-bill.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -100,7 +101,8 @@ import { PayBillComponent } from './NTrung/pay/pay-bill/pay-bill.component';
     MatDialogModule,
     MaterialModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

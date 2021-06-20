@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AddressGroupService } from '../../../service/NTrung/address-group.service';
+import { filter } from 'rxjs/operators';
+import { Subscriber } from 'rxjs';
 
 @Component({
   selector: 'app-pay-form',
@@ -7,6 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./pay-form.component.scss'],
 })
 export class PayFormComponent implements OnInit {
+  // validate form
   billForm: FormGroup = this._fb.group({
     fristName: [null, [Validators.required, Validators.minLength(2)]],
     phoneNum: [
@@ -30,12 +34,57 @@ export class PayFormComponent implements OnInit {
     dilivery: [],
   });
 
-  constructor(private _fb: FormBuilder) {}
+  // address auto complete select
+  countries: any;
+  states: any;
+  districts: any;
+  selectedCountry: any = {
+    id: 0,
+    name: '',
+  };
+  selectedState: any = {
+    id: 0,
+    name: '',
+  };
+  selectedDistrict: any = {
+    id: 0,
+    name: '',
+  };
+  constructor(
+    private _fb: FormBuilder,
+    private addressgroup: AddressGroupService
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.showAll();
+    this.onSelectCountry(this.selectedCountry.id);
+  }
 
   submit() {
     console.log(this.billForm.value);
   }
-  
+
+  showAll() {
+    this.addressgroup.getAll().subscribe((data: any) => {
+      (this.countries = data), console.log(this.countries);
+    });
+  }
+
+  onSelectCountry(country_id: any) {
+    this.addressgroup.getAll().subscribe((res: any) => {
+      (this.states = res['states'].filter(
+        (res: any) => res.country_id == country_id!.value
+      )),
+        console.log(this.states);
+    });
+  }
+
+  onSelectDistrict(state_id: any) {
+    this.addressgroup.getAll().subscribe((res: any) => {
+      (this.districts = res['districts'].filter(
+        (res: any) => res.state_id == state_id!.value
+      )),
+        console.log(this.districts);
+    });
+  }
 }

@@ -1,0 +1,29 @@
+{
+  "countries": [
+    { "id": 1, "name": "HCM" },
+    { "id": 2, "name": "Hà Nội" },
+    { "id": 3, "name": "Đồng Nai" }
+  ],
+  "states": [
+    { "id": 1, "name": "Quận 1", "country_id": 1 },
+    { "id": 2, "name": "Thủ Đức", "country_id": 1 },
+    { "id": 3, "name": "Bình Chánh", "country_id": 1 },
+    { "id": 4, "name": "Thanh Xuân", "country_id": 2 },
+    { "id": 5, "name": "Hội an", "country_id": 2 },
+    { "id": 6, "name": "Phố Cổ", "country_id": 2 },
+    { "id": 7, "name": "Long Khánh", "country_id": 3 },
+    { "id": 8, "name": "Bảo Vinh", "country_id": 3 },
+    { "id": 9, "name": "An Lộc", "country_id": 3 }
+  ],
+  "districts": [
+    { "id": 1, "name": "Q1 1", "state_id": 1 },
+    { "id": 2, "name": "Q1 2", "state_id": 1 },
+    { "id": 3, "name": "Q1 3", "state_id": 1 },
+    { "id": 4, "name": "Thanh Xuân", "state_id": 2 },
+    { "id": 5, "name": "Hội an", "state_id": 2 },
+    { "id": 6, "name": "Phố Cổ", "state_id": 2 },
+    { "id": 7, "name": "Long Khánh", "state_id": 3 },
+    { "id": 8, "name": "Bảo Vinh", "state_id": 3 },
+    { "id": 9, "name": "An Lộc", "state_id": 3 }
+  ]
+}
