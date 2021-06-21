@@ -45,6 +45,12 @@ import { EvaluateDialogComponent } from './NTrung/product-details/product-evalua
 import { EvaluateQuestionComponent } from './NTrung/product-details/product-evaluate/evaluate-question/evaluate-question.component';
 import { EvaluateAnswerComponent } from './NTrung/product-details/product-evaluate/evaluate-answer/evaluate-answer.component';
 import { IntroduceComponent } from './Tuyen/introduce/introduce.component';
+import { PayComponent } from './NTrung/pay/pay.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { PayFormComponent } from './NTrung/pay/pay-form/pay-form.component';
+import { PayBillComponent } from './NTrung/pay/pay-bill/pay-bill.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -87,14 +93,19 @@ import { IntroduceComponent } from './Tuyen/introduce/introduce.component';
     EvaluateQuestionComponent,
     EvaluateAnswerComponent,
     IntroduceComponent,
+    PayComponent,
+    PayFormComponent,
+    PayBillComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
     MatDialogModule,
     MaterialModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
