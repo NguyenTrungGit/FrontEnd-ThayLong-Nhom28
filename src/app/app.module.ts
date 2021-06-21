@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatDialogModule} from '@angular/material/dialog';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductDetailsComponent } from './NTrung/product-details/product-details.component';
@@ -50,6 +51,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { PayFormComponent } from './NTrung/pay/pay-form/pay-form.component';
 import { PayBillComponent } from './NTrung/pay/pay-bill/pay-bill.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ContainerComponent } from './Tuyen/container/container.component';
+import { TestdataComponent } from './Tuyen/testdata/testdata.component';
 
 
 
@@ -96,6 +99,8 @@ import { HttpClientModule } from '@angular/common/http';
     PayComponent,
     PayFormComponent,
     PayBillComponent,
+    ContainerComponent,
+    TestdataComponent,
   ],
   imports: [
     BrowserModule,
