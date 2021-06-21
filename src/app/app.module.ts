@@ -50,6 +50,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { PayFormComponent } from './NTrung/pay/pay-form/pay-form.component';
 import { PayBillComponent } from './NTrung/pay/pay-bill/pay-bill.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ThanksPageComponent } from './Ntrung/thanks-page/thanks-page.component';
 
 
 
@@ -96,6 +97,7 @@ import { HttpClientModule } from '@angular/common/http';
     PayComponent,
     PayFormComponent,
     PayBillComponent,
+    ThanksPageComponent,
   ],
   imports: [
     BrowserModule,
