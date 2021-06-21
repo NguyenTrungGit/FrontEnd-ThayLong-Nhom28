@@ -1,6 +1,6 @@
  .image-introduce {
      background-image: url('/assets/tuyen/img/banner-introduce.png');
-     height: 400px;
+     height: 318px;
      position: relative;
  }
  
@@ -10,7 +10,7 @@
      font-weight: 1000;
      letter-spacing: 4px;
      position: absolute;
-     top: 65%;
+     top: 50%;
      left: 50%;
      transform: translate(-50%, -50%);
  }
@@ -19,7 +19,7 @@
      border-bottom: 2px solid #fff;
      width: 100px;
      position: absolute;
-     top: 75%;
+     top: 59%;
      left: 50%;
      transform: translate(-50%, -50%);
  }
