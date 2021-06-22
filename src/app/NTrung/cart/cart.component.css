@@ -1,4 +1,6 @@
 .layout-box {
+  margin-top: 130px;
+  margin-bottom: 30px;
   display: flex;
   padding: 20px 0;
 }
