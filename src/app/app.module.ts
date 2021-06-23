@@ -53,6 +53,7 @@ import { PayBillComponent } from './NTrung/pay/pay-bill/pay-bill.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContainerComponent } from './Tuyen/container/container.component';
 import { TestdataComponent } from './Tuyen/testdata/testdata.component';
+import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component';
 
 
 
@@ -101,6 +102,7 @@ import { TestdataComponent } from './Tuyen/testdata/testdata.component';
     PayBillComponent,
     ContainerComponent,
     TestdataComponent,
+    ThanksPageComponent,
   ],
   imports: [
     BrowserModule,
