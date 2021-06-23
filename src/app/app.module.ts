@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatDialogModule} from '@angular/material/dialog';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductDetailsComponent } from './NTrung/product-details/product-details.component';
@@ -32,12 +33,27 @@ import { SaleProductListComponent } from './BTruong/sale/sale-product-list/sale-
 import { SaleTitleComponent } from './BTruong/sale/sale-title/sale-title.component';
 import { SaleProductItemComponent } from './BTruong/sale/sale-product-list/sale-product-item/sale-product-item.component';
 import { SaleProductPopupComponent } from './BTruong/sale/sale-product-popup/sale-product-popup.component';
-
 import { ProductNewsComponent } from './NTrung/product-details/product-news/product-news.component';
 import { ProductRelatedComponent } from './NTrung/product-details/product-related/product-related.component';
+import { HomeComponent } from './Tuyen/home/home.component';
+import { ProductItemHomeComponent } from './Tuyen/home/product-item-home/product-item-home.component';
 import { CartComponent } from './NTrung/cart/cart.component';
 import { CartInfoComponent } from './NTrung/cart/cart-info/cart-info.component';
 import { CartBillComponent } from './NTrung/cart/cart-bill/cart-bill.component';
+import { MaterialModule } from './material/material.module';
+import { ProductEvaluateComponent } from './NTrung/product-details/product-evaluate/product-evaluate.component';
+import { EvaluateDialogComponent } from './NTrung/product-details/product-evaluate/evaluate-dialog/evaluate-dialog.component';
+import { EvaluateQuestionComponent } from './NTrung/product-details/product-evaluate/evaluate-question/evaluate-question.component';
+import { EvaluateAnswerComponent } from './NTrung/product-details/product-evaluate/evaluate-answer/evaluate-answer.component';
+import { IntroduceComponent } from './Tuyen/introduce/introduce.component';
+import { PayComponent } from './NTrung/pay/pay.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { PayFormComponent } from './NTrung/pay/pay-form/pay-form.component';
+import { PayBillComponent } from './NTrung/pay/pay-bill/pay-bill.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ContainerComponent } from './Tuyen/container/container.component';
+import { TestdataComponent } from './Tuyen/testdata/testdata.component';
+
 
 
 @NgModule({
@@ -70,19 +86,34 @@ import { CartBillComponent } from './NTrung/cart/cart-bill/cart-bill.component';
    SaleProductPopupComponent,
     ProductNewsComponent,
     ProductRelatedComponent,
+    HomeComponent,
+    ProductItemHomeComponent,
     CartComponent,
     CartInfoComponent,
-    CartBillComponent
-
+    CartBillComponent,
+    ProductEvaluateComponent,
+    EvaluateDialogComponent,
+    EvaluateQuestionComponent,
+    EvaluateAnswerComponent,
+    IntroduceComponent,
+    PayComponent,
+    PayFormComponent,
+    PayBillComponent,
+    ContainerComponent,
+    TestdataComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatDialogModule
-
+    MatDialogModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [EvaluateDialogComponent],
 })
-export class AppModule { }
+export class AppModule {}

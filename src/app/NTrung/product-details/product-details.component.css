@@ -88,21 +88,26 @@
   padding-left: 20px;
 }
 .layout-box .product-details-info .name-discount {
+  height: 100px;
   padding: 0px 20px;
   display: flex;
   width: 620px;
   border-bottom: 0.5px solid #d3d3d3;
 }
 .layout-box .product-details-info .name-discount .name {
+  margin: auto;
   font-size: 45px;
   width: 87%;
   font: italic;
 }
 .layout-box .product-details-info .name-discount .discount {
-  margin-top: 30px;
+  margin: auto;
   text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 13%;
-  height: 50%;
+  height: 20px;
   color: #fff;
   background-color: #ffb24c;
   border-radius: 2px;
@@ -250,4 +255,9 @@
 .layout-box .product-details-info .note .note-sub .note-content:hover {
   cursor: pointer;
   text-decoration: underline;
-}/*# sourceMappingURL=product-details.component.css.map */
+}
+
+.evaluate {
+  width: 600px;
+  border-bottom: 0.5px solid #d3d3d3;
+}
