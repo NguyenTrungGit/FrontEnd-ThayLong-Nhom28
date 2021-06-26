@@ -1,0 +1,10 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<div class="container-product">
+    <div class="row ">
+        <div class="col-md-3" *ngFor="let product of datas  ">
+
+            <app-product-item-nam [productItem]="product"></app-product-item-nam>
+
+        </div>
+    </div>
+</div>

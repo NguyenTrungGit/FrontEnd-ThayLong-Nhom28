@@ -12,8 +12,11 @@ private  httpOptions ={
   headers:new HttpHeaders({'Content-Type':'application/json'})
 }
   constructor(private httpClient:HttpClient) { }
+
   public getProducts():Observable<Product[]>{
     const url =`${this.REST_API_SERVER}/product`;
     return this.httpClient.get<Product[]>(url,this.httpOptions);
   }
 }
+
+
