@@ -52,6 +52,7 @@ import { PayBillComponent } from './NTrung/pay/pay-bill/pay-bill.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContainerComponent } from './Tuyen/container/container.component';
 import { TestdataComponent } from './Tuyen/testdata/testdata.component';
+
 import { ProductRauComponent } from './BTruong/product-rau/product-rau.component';
 import { TitleRauComponent } from './BTruong/product-rau/title-rau/title-rau.component';
 import { ProductListRauComponent } from './BTruong/product-rau/product-list-rau/product-list-rau.component';
@@ -72,7 +73,7 @@ import { ProductNamComponent } from './BTruong/product-nam/product-nam.component
 import { TitleNamComponent } from './BTruong/product-nam/title-nam/title-nam.component';
 import { ProductListNamComponent } from './BTruong/product-nam/product-list-nam/product-list-nam.component';
 import { ProductItemNamComponent } from './BTruong/product-nam/product-list-nam/product-item-nam/product-item-nam.component';
-
+import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component';
 
 
 @NgModule({
@@ -139,7 +140,7 @@ import { ProductItemNamComponent } from './BTruong/product-nam/product-list-nam/
     TitleNamComponent,
     ProductListNamComponent,
     ProductItemNamComponent
-
+    ThanksPageComponent,
 
   ],
   imports: [
