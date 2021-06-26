@@ -1,0 +1,17 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<div class="container-product">
+    <div class="row ">
+        <div class="col-md-3" *ngFor="let product of datas 
+        |
+            paginate: { itemsPerPage: 12,
+               currentPage: page,
+              totalItems:totalLenght
+             }">
+
+            <app-product-item-qua [productItem]=product></app-product-item-qua>
+
+        </div>
+    </div>
+</div>
+
+<pagination-controls class="text-center my-pagination circle1" (pageChange)="page = $event" previousLabel="" nextLabel=""></pagination-controls>

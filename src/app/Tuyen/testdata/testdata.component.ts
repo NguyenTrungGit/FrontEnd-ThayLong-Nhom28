@@ -17,6 +17,7 @@ this.getProducts();
 getProducts(){
   this.productService.getProducts().subscribe((res: any)=>{
     this.datas=res;
+
   })
 }
 }

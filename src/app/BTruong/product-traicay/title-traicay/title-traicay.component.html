@@ -1,0 +1,60 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+
+<div class="header">
+
+    <div class="text-center bg-breadcrumb" style="background-image : url(//cdn.shopify.com/s/files/1/0554/6006/9585/files/bg_dark.jpg?v=1616145178 ); background-position : center; background-size: cover">
+        <div class="title-page">
+            <h2 class="title-pr" style="color: #fff;">TRÁI CÂY</h2>
+
+            <div class="bread-crumb">
+                <a routerLink="/cuahang" style="color: #fff;">Sản Phẩm</a>
+                <span>-</span>
+
+                <a routerLink="/rau" style="color: #fff;">Trái Cây</a>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="shop-page-title category-page-title page-title " style="max-width: 1245px;">
+
+    <div class="page-title-inner flex-row  medium-flex-wrap container">
+        <div class="flex-col flex-grow medium-text-center" style="margin-right: 10px; position: relative;">
+            <div class="is-large">
+                <nav class="woocommerce-breadcrumb breadcrumbs">
+
+                    <a [routerLink]="['/trangchu']" style="cursor: pointer; color: #929292;margin-right: 0px;">TRANG CHỦ /</a>
+
+                    <a [routerLink]="['/cuahang']" style="color: black;"> CỬA HÀNG</a>
+
+                </nav>
+            </div>
+
+        </div>
+        <!-- .flex-left -->
+
+        <div class="flex-col medium-text-center" style="display: flex;position: absolute; right: 100px;">
+
+
+            <p class="woocommerce-result-count hide-for-medium" style="margin-right: 20px;">
+                Hiển thị 1&ndash;12 trong 16 kết quả</p>
+            <form class="woocommerce-ordering" method="get">
+                <select name="orderby" class="orderby">
+					<option value="menu_order"  selected='selected'>Thứ tự mặc định</option>
+					<option value="popularity" >Thứ tự theo mức độ phổ biến</option>
+					<option value="rating" >Thứ tự theo điểm đánh giá</option>
+					<option value="date" >Mới nhất</option>
+					<option value="price" >Thứ tự theo giá: thấp đến cao</option>
+					<option value="price-desc" >Thứ tự theo giá: cao xuống thấp</option>
+			</select>
+                <input type="hidden" name="paged" value="1" />
+                <input type="hidden" name="min_price" value="35000" /><input type="hidden" name="max_price" value="450000" /></form>
+        </div>
+        <!-- .flex-right -->
+
+    </div>
+    <!-- flex-row -->

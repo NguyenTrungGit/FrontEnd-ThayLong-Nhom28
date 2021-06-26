@@ -8,13 +8,12 @@ import { AppComponent } from './app.component';
 import { ProductDetailsComponent } from './NTrung/product-details/product-details.component';
 import { HeaderComponent } from './Tuyen/header/header.component';
 import { FooterComponent } from './Tuyen/footer/footer.component';
-
+import {NgxPaginationModule} from 'ngx-pagination';
 import { ProductComponent } from './BTruong/product/product.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductPopupComponent } from './BTruong/product-popup/product-popup.component';
 import { ProductListComponent } from './BTruong/product/product-list/product-list.component';
-import { PagingComponent } from './BTruong/product/paging/paging.component';
 import { FiltersComponent } from './BTruong/product/filters/filters.component';
 import { TitleComponent } from './BTruong/product/title/title.component';
 import { ProductItemComponent } from './BTruong/product/product-list/product-item/product-item.component';
@@ -53,8 +52,28 @@ import { PayBillComponent } from './NTrung/pay/pay-bill/pay-bill.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContainerComponent } from './Tuyen/container/container.component';
 import { TestdataComponent } from './Tuyen/testdata/testdata.component';
-import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component';
 
+import { ProductRauComponent } from './BTruong/product-rau/product-rau.component';
+import { TitleRauComponent } from './BTruong/product-rau/title-rau/title-rau.component';
+import { ProductListRauComponent } from './BTruong/product-rau/product-list-rau/product-list-rau.component';
+import { ProductItemRauComponent } from './BTruong/product-rau/product-list-rau/product-item-rau/product-item-rau.component';
+import { ProductTraicayComponent } from './BTruong/product-traicay/product-traicay.component';
+import { TitleTraicayComponent } from './BTruong/product-traicay/title-traicay/title-traicay.component';
+import { ProductListTraicayComponent } from './BTruong/product-traicay/product-list-traicay/product-list-traicay.component';
+import { ProductItemTraicayComponent } from './BTruong/product-traicay/product-list-traicay/product-item-traicay/product-item-traicay.component';
+import { ProductCuComponent } from './BTruong/product-cu/product-cu.component';
+import { TitleCuComponent } from './BTruong/product-cu/title-cu/title-cu.component';
+import { ProductListCuComponent } from './BTruong/product-cu/product-list-cu/product-list-cu.component';
+import { ProductItemCuComponent } from './BTruong/product-cu/product-list-cu/product-item-cu/product-item-cu.component';
+import { ProductQuaComponent } from './BTruong/product-qua/product-qua.component';
+import { TitleQuaComponent } from './BTruong/product-qua/title-qua/title-qua.component';
+import { ProductListQuaComponent } from './BTruong/product-qua/product-list-qua/product-list-qua.component';
+import { ProductItemQuaComponent } from './BTruong/product-qua/product-list-qua/product-item-qua/product-item-qua.component';
+import { ProductNamComponent } from './BTruong/product-nam/product-nam.component';
+import { TitleNamComponent } from './BTruong/product-nam/title-nam/title-nam.component';
+import { ProductListNamComponent } from './BTruong/product-nam/product-list-nam/product-list-nam.component';
+import { ProductItemNamComponent } from './BTruong/product-nam/product-list-nam/product-item-nam/product-item-nam.component';
+import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component';
 
 
 @NgModule({
@@ -65,7 +84,6 @@ import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component'
     FooterComponent,
     ProductComponent,
     ProductListComponent,
-    PagingComponent,
     FiltersComponent,
     TitleComponent,
     ProductItemComponent,
@@ -102,7 +120,28 @@ import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component'
     PayBillComponent,
     ContainerComponent,
     TestdataComponent,
+    ProductRauComponent,
+    TitleRauComponent,
+    ProductListRauComponent,
+    ProductItemRauComponent,
+    ProductTraicayComponent,
+    TitleTraicayComponent,
+    ProductListTraicayComponent,
+    ProductItemTraicayComponent,
+    ProductCuComponent,
+    TitleCuComponent,
+    ProductListCuComponent,
+    ProductItemCuComponent,
+    ProductQuaComponent,
+    TitleQuaComponent,
+    ProductListQuaComponent,
+    ProductItemQuaComponent,
+    ProductNamComponent,
+    TitleNamComponent,
+    ProductListNamComponent,
+    ProductItemNamComponent
     ThanksPageComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -112,7 +151,8 @@ import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component'
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent],
