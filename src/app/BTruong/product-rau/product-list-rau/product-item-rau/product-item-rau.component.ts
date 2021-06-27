@@ -12,7 +12,20 @@ export class ProductItemRauComponent implements OnInit {
 
   constructor(public dialog: MatDialog){}
   openDialog(){
-    this.dialog.open(ProductPopupComponent);
+    this.dialog.open(ProductPopupComponent,{
+      data:{
+        id: this.productItem?.id,
+            name: this.productItem?.name,
+            price: this.productItem?.price,
+            quantity:this.productItem?.quantity,
+            category: this.productItem?.category,
+            origin: this.productItem?.origin,
+            img1: this.productItem?.img1,
+            img2: this.productItem?.img2,
+            img3: this.productItem?.img3,
+            description: this.productItem?.description
+      }
+    });
   }
   ngOnInit(): void {
   }
