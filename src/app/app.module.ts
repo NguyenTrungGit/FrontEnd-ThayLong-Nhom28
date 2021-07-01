@@ -37,8 +37,6 @@ import { ProductRelatedComponent } from './NTrung/product-details/product-relate
 import { HomeComponent } from './Tuyen/home/home.component';
 import { ProductItemHomeComponent } from './Tuyen/home/product-item-home/product-item-home.component';
 import { CartComponent } from './NTrung/cart/cart.component';
-import { CartInfoComponent } from './NTrung/cart/cart-info/cart-info.component';
-import { CartBillComponent } from './NTrung/cart/cart-bill/cart-bill.component';
 import { MaterialModule } from './material/material.module';
 import { ProductEvaluateComponent } from './NTrung/product-details/product-evaluate/product-evaluate.component';
 import { EvaluateDialogComponent } from './NTrung/product-details/product-evaluate/evaluate-dialog/evaluate-dialog.component';
@@ -74,6 +72,7 @@ import { TitleNamComponent } from './BTruong/product-nam/title-nam/title-nam.com
 import { ProductListNamComponent } from './BTruong/product-nam/product-list-nam/product-list-nam.component';
 import { ProductItemNamComponent } from './BTruong/product-nam/product-list-nam/product-item-nam/product-item-nam.component';
 import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component';
+import { CartInfoComponent } from './NTrung/cart/cart-info/cart-info.component';
 
 
 @NgModule({
@@ -108,8 +107,6 @@ import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component'
     HomeComponent,
     ProductItemHomeComponent,
     CartComponent,
-    CartInfoComponent,
-    CartBillComponent,
     ProductEvaluateComponent,
     EvaluateDialogComponent,
     EvaluateQuestionComponent,
@@ -141,6 +138,7 @@ import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component'
     ProductListNamComponent,
     ProductItemNamComponent,
     ThanksPageComponent,
+    CartInfoComponent,
 
 
   ],

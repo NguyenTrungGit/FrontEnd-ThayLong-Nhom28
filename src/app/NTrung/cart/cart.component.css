@@ -1,16 +1,52 @@
-.layout-box {
+.container {
+  width: 830px;
+  color: #4d4b4b;
   margin-top: 130px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+}
+.container .title {
+  border-bottom: #4d4d4d solid 1px;
   display: flex;
-  padding: 20px 0;
+  justify-content: center;
 }
-.layout-box .cart-info {
-  width: 700px;
-  padding: 0px 20px 20px 0px;
+.container .title .product {
+  padding-left: 55px;
+  width: 300px;
 }
-.layout-box .cart-bill {
-  height: 500px;
-  width: 410px;
-  padding: 0px 0px 20px 20px;
-  border-left: 0.5px solid #707070;
+.container .title .price {
+  text-align: center;
+  width: 100px;
+}
+.container .title .amount {
+  text-align: center;
+  width: 300px;
+}
+.container .title .total {
+  text-align: center;
+  width: 100px;
+}
+.container .summary {
+  display: flex;
+}
+.container .summary input {
+  text-align: center;
+  width: 300px;
+  height: 30px;
+  border: #d7d7d7 solid 1px;
+}
+.container .control {
+  text-align: center;
+  margin-top: 20px;
+}
+.container .control .btn {
+  margin: 0 20px;
+  width: 250px;
+  border-radius: 20px;
+  color: white;
+}
+.container .control .btn-see-more {
+  background-color: #66a55f;
+}
+.container .control .btn-pay {
+  background-color: #de6663;
 }/*# sourceMappingURL=cart.component.css.map */

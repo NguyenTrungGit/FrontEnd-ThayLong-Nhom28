@@ -1,25 +1,63 @@
-$box-size:700px;
-$background-color: #d3d3d3;
-$border:0.5px solid #707070;
-$border-light:0.5px solid #d3d3d3;
-$box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
+.container {
+  width: 830px;
+  color: #4d4b4b;
+  margin-top: 130px;
+  margin-bottom: 50px;
 
-.layout-box{
-    margin-top: 130px;
-    margin-bottom: 30px;
+  .title {
+    border-bottom: #4d4d4d solid 1px;
     display: flex;
-    padding: 20px 0;
+    justify-content: center;
 
-    .cart-info{
-        width: $box-size;
-        padding: 0px 20px 20px 0px;
+    .product {
+      padding-left: 55px;
+      width: 300px;
     }
 
-    .cart-bill{
-        height: 500px;
-        width: 1110px - $box-size;
-        padding: 0px 0px 20px 20px;
-        border-left: $border;
-        // margin-top: 20px;
+    .price {
+      text-align: center;
+      width: 100px;
     }
+
+    .amount {
+      text-align: center;
+      width: 300px;
+    }
+
+    .total {
+      text-align: center;
+      width: 100px;
+    }
+  }
+
+  .summary {
+    display: flex;
+
+    input {
+      text-align: center;
+      width: 300px;
+      height: 30px;
+      border: #d7d7d7 solid 1px;
+    }
+  }
+
+  .control {
+    text-align: center;
+    margin-top: 20px;
+
+    .btn {
+      margin: 0 20px;
+      width: 250px;
+      border-radius: 20px;
+      color: white;
+    }
+
+    .btn-see-more {
+      background-color: #66a55f;
+    }
+
+    .btn-pay {
+      background-color: #de6663;
+    }
+  }
 }
