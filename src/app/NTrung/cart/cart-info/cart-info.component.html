@@ -12,11 +12,11 @@
       <p><b>Xoài</b></p>
     </div>
   </div>
-  <div class="price tag" ><b>200.000&#8363;</b></div>
+  <div class="price tag"><b>200.000&#8363;</b></div>
   <div class="amount tag">
     <div class="change-amount">
       <div class="btn-minus small-square"></div>
-      <input class="amount" type="text" />
+      <input class="amount" type="text" #box (keyup)="getValue(box.value)" maxlength="3" value="{{changeNum}}"/>
       <div class="btn-plus small-square"></div>
     </div>
   </div>
