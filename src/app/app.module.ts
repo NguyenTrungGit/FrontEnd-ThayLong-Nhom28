@@ -72,7 +72,6 @@ import { TitleNamComponent } from './BTruong/product-nam/title-nam/title-nam.com
 import { ProductListNamComponent } from './BTruong/product-nam/product-list-nam/product-list-nam.component';
 import { ProductItemNamComponent } from './BTruong/product-nam/product-list-nam/product-item-nam/product-item-nam.component';
 import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component';
-import { CartInfoComponent } from './NTrung/cart/cart-info/cart-info.component';
 
 
 @NgModule({
@@ -138,9 +137,6 @@ import { CartInfoComponent } from './NTrung/cart/cart-info/cart-info.component';
     ProductListNamComponent,
     ProductItemNamComponent,
     ThanksPageComponent,
-    CartInfoComponent,
-
-
   ],
   imports: [
     BrowserModule,
