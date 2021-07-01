@@ -1,4 +1,7 @@
+import { Inject } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Product } from 'src/app/model/product.model';
 
 @Component({
   selector: 'app-product-popup',
@@ -6,8 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-popup.component.css']
 })
 export class ProductPopupComponent implements OnInit {
-
-  constructor() { }
+product?:Product;
+  constructor(@Inject(MAT_DIALOG_DATA) public data:any) {
+    console.log('xxx',data)
+    this.product=data;
+  }
 
   ngOnInit(): void {
   }
