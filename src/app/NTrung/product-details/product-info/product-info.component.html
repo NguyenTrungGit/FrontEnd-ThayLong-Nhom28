@@ -84,9 +84,9 @@
     <div class="control">
       <div class="amount">
         <div class="amount-sub" style="display: flex">
-          <div class="btn minus"></div>
-          <input type="text" />
-          <div class="btn plus"></div>
+          <div class="btn minus" (click)="down()"></div>
+          <input type="text" maxlength="3" value="{{ amount }}" />
+          <div class="btn plus" (click)="up()"></div>
         </div>
         <div class="btn btn-add font-weight-bold">Thêm vào giỏ</div>
       </div>

@@ -20,9 +20,9 @@
     </div>
     <div class="price font-weight-bold">500.000 &#8363;</div>
     <div class="amount">
-      <div class="btn minus"></div>
-      <input type="text" />
-      <div class="btn plus"></div>
+      <div class="btn minus" (click)="down()"></div>
+      <input type="text" value="{{ amount }}" />
+      <div class="btn plus" (click)="up()"></div>
     </div>
     <div class="total price font-weight-bold" style="color: #66a55f">
       5.000.000 &#8363;
@@ -37,14 +37,19 @@
     <input type="text" placeholder="Nhập mã giảm giá" />
     <div
       class="total font-weight-bold"
-      style="color: #66a55f; width: 100px; margin-left: 100px; text-align: right;"
+      style="
+        color: #66a55f;
+        width: 100px;
+        margin-left: 100px;
+        text-align: right;
+      "
     >
       5.000.000 &#8363;
     </div>
   </div>
 
   <div class="control">
-    <button class="btn btn-see-more font-weight-bold"> Xem thêm sản phẩm</button>
+    <button class="btn btn-see-more font-weight-bold">Xem thêm sản phẩm</button>
     <button class="btn btn-pay font-weight-bold">Thanh toán</button>
   </div>
 </div>
