@@ -1,14 +1,13 @@
-import { NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatDialogModule} from '@angular/material/dialog';
-
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductDetailsComponent } from './NTrung/product-details/product-details.component';
 import { HeaderComponent } from './Tuyen/header/header.component';
 import { FooterComponent } from './Tuyen/footer/footer.component';
-import { NgxPaginationModule} from 'ngx-pagination';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { ProductComponent } from './BTruong/product/product.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -32,19 +31,14 @@ import { SaleProductListComponent } from './BTruong/sale/sale-product-list/sale-
 import { SaleTitleComponent } from './BTruong/sale/sale-title/sale-title.component';
 import { SaleProductItemComponent } from './BTruong/sale/sale-product-list/sale-product-item/sale-product-item.component';
 import { SaleProductPopupComponent } from './BTruong/sale/sale-product-popup/sale-product-popup.component';
-import { ProductNewsComponent } from './NTrung/product-details/product-news/product-news.component';
 import { ProductRelatedComponent } from './NTrung/product-details/product-related/product-related.component';
 import { HomeComponent } from './Tuyen/home/home.component';
 import { ProductItemHomeComponent } from './Tuyen/home/product-item-home/product-item-home.component';
 import { CartComponent } from './NTrung/cart/cart.component';
 import { MaterialModule } from './material/material.module';
-import { ProductEvaluateComponent } from './NTrung/product-details/product-evaluate/product-evaluate.component';
-import { EvaluateDialogComponent } from './NTrung/product-details/product-evaluate/evaluate-dialog/evaluate-dialog.component';
-import { EvaluateQuestionComponent } from './NTrung/product-details/product-evaluate/evaluate-question/evaluate-question.component';
-import { EvaluateAnswerComponent } from './NTrung/product-details/product-evaluate/evaluate-answer/evaluate-answer.component';
 import { IntroduceComponent } from './Tuyen/introduce/introduce.component';
 import { PayComponent } from './NTrung/pay/pay.component';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PayFormComponent } from './NTrung/pay/pay-form/pay-form.component';
 import { PayBillComponent } from './NTrung/pay/pay-bill/pay-bill.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -72,7 +66,11 @@ import { TitleNamComponent } from './BTruong/product-nam/title-nam/title-nam.com
 import { ProductListNamComponent } from './BTruong/product-nam/product-list-nam/product-list-nam.component';
 import { ProductItemNamComponent } from './BTruong/product-nam/product-list-nam/product-item-nam/product-item-nam.component';
 import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component';
-
+import { ProductInfoComponent } from './NTrung/product-details/product-info/product-info.component';
+import { ProductMoreComponent } from './NTrung/product-details/product-more/product-more.component';
+import { CommentDialogComponent } from './NTrung/product-details/product-more/comment-dialog/comment-dialog.component';
+import { MoreInfoComponent } from './NTrung/product-details/product-more/more-info/more-info.component';
+import { CommentShowComponent } from './NTrung/product-details/product-more/comment-show/comment-show.component';
 
 @NgModule({
   declarations: [
@@ -93,23 +91,18 @@ import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component'
     BlogComponent,
     ContactComponent,
     MainComponent,
-   Title4Component,
-   SaleComponent,
-   SaleFiltersComponent,
-   SalePagingComponent,
-   SaleProductListComponent,
-   SaleTitleComponent,
-   SaleProductItemComponent,
-   SaleProductPopupComponent,
-    ProductNewsComponent,
+    Title4Component,
+    SaleComponent,
+    SaleFiltersComponent,
+    SalePagingComponent,
+    SaleProductListComponent,
+    SaleTitleComponent,
+    SaleProductItemComponent,
+    SaleProductPopupComponent,
     ProductRelatedComponent,
     HomeComponent,
     ProductItemHomeComponent,
     CartComponent,
-    ProductEvaluateComponent,
-    EvaluateDialogComponent,
-    EvaluateQuestionComponent,
-    EvaluateAnswerComponent,
     IntroduceComponent,
     PayComponent,
     PayFormComponent,
@@ -137,6 +130,11 @@ import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component'
     ProductListNamComponent,
     ProductItemNamComponent,
     ThanksPageComponent,
+    ProductInfoComponent,
+    ProductMoreComponent,
+    CommentDialogComponent,
+    MoreInfoComponent,
+    CommentShowComponent,
   ],
   imports: [
     BrowserModule,
@@ -151,6 +149,6 @@ import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component'
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [EvaluateDialogComponent],
+  entryComponents: [CommentDialogComponent],
 })
 export class AppModule {}
