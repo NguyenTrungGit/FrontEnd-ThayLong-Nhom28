@@ -74,6 +74,9 @@ import { TitleNamComponent } from './BTruong/product-nam/title-nam/title-nam.com
 import { ProductListNamComponent } from './BTruong/product-nam/product-list-nam/product-list-nam.component';
 import { ProductItemNamComponent } from './BTruong/product-nam/product-list-nam/product-item-nam/product-item-nam.component';
 import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component';
+import { PopupLoginComponent } from './Tuyen/header/popup-login/popup-login.component';
+
+import { HeaderDirectDirective } from './Tuyen/header/header-direct.directive';
 
 
 @NgModule({
@@ -141,6 +144,9 @@ import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component'
     ProductListNamComponent,
     ProductItemNamComponent,
     ThanksPageComponent,
+    PopupLoginComponent,
+
+    HeaderDirectDirective,
 
 
   ],
