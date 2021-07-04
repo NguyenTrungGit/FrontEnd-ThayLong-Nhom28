@@ -1,4 +1,5 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
 <div class="col large-3  ">
     <div class="sidebar-inner col-inner">
         <aside id="nav_menu-2" class="widget widget_nav_menu">
@@ -7,28 +8,28 @@
             </div>
             <div class="menu-danh-muc-san-pham-vertical-menu-container ">
                 <div class="menu">
-                    <div class="menu1">
-                        <p class="span-font"><a style="color: rgb(37, 37, 37);" routerLink="/rau">Rau</a> </p>
+                    <div class="menu1" routerLink="/rau">
+                        <p class="span-font"><a class="menu1a">Rau</a> </p>
 
 
                     </div>
-                    <div class="menu2">
-                        <p class="span-font"><a style="color: rgb(37, 37, 37);" routerLink="/traicay">Trái Cây</a> </p>
+                    <div class="menu2" routerLink="/traicay">
+                        <p class="span-font"><a class="menu2a">Trái Cây</a> </p>
 
 
                     </div>
-                    <div class="menu3">
-                        <p class="span-font"><a style="color: rgb(37, 37, 37);" routerLink="/cu">Củ</a> </p>
+                    <div class="menu3" routerLink="/cu">
+                        <p class="span-font"><a class="menu3a">Củ</a> </p>
 
                     </div>
-                    <div class="menu4">
+                    <div class="menu4" routerLink="/qua">
                         <p class="span-font">
-                            <a style="color: rgb(37, 37, 37);" routerLink="/qua">Quả</a>
+                            <a class="menu4a">Quả</a>
                         </p>
 
                     </div>
-                    <div class="menu5">
-                        <p class="span-font"><a style="color: rgb(37, 37, 37);" routerLink="/nam">Nấm</a> </p>
+                    <div class="menu5" routerLink="/nam">
+                        <p class="span-font"><a class="menu5a">Nấm</a> </p>
 
                     </div>
 
@@ -39,110 +40,110 @@
 
     </div>
 </div>
-
-
 <div class="col3 large-3  ">
     <div class="nav2">
 
         <div class="is-divider small" style="margin :0 auto; margin-top: 12px; color: #fff; font-size: 18px;">
             <span style="margin-left: 74px;">LỌC THEO GIÁ</span>
         </div>
-
         <div class="bottom">
-            <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-            </div>
             <div class="small">
-                <div class="btn">
-                    <button type="submit" style="  border: none;width: 50px; border-radius: 99px; font-size: 16px;background-color: #666;color: #fff;"><span style="font-size: 12px;padding-bottom: 3px;">Lọc</span></button>
+                <ngx-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ngx-slider>
+
+                <div class="btn" style=" position: absolute;
+                left: 27px;
+                top: 44px;
+                border: none;width: 50px; border-radius: 99px; font-size: 16px;background-color: #666;color: #fff;
+                height: 25px;
+    position: absolute;
+
+    left: 12px;">
+                    <span style="font-size: 12px;padding-bottom: 3px; position: absolute;
+                    top:4px;
+                    ;left: 14px;">Lọc</span>
+                    <!-- <a type="submit"
+            style=" border: none;width: 50px; border-radius: 99px; font-size: 16px;background-color: #666;color: #fff;"></a> -->
                 </div>
                 <div class="price ">
-                    Giá 35,000 ₫ — 450,000 ₫
+                    Giá :
                 </div>
-
+                <div class="cro">-</div>
             </div>
+
+
+
         </div>
+
     </div>
 </div>
 <div class="col4 large-3">
     <aside id="woocommerce_products-3" class="widget woocommerce widget_products">
         <div class="is-divider small">
-            <span class="widget-title shop-sidebar" style="font-size: 18px;color: #fff;margin: 0 auto;">SẢN PHẨM</span>
+            <span class="widget-title shop-sidebar" style="font-size: 18px;color: #fff;margin: 0 auto;">SẢN PHẨM PHỔ
+        BIẾN</span>
         </div>
         <ul class="product_list_widget">
-            <li style="height: 83px; background-color:#f8f8f8 ;border: 1px solid #e4e4e4 ;">
+            <li class="flex-con1">
                 <div class="flex">
-                    <a href="https://mauweb.monamedia.net/cleverfood/san-pham/nho-xanh/ ">
-                        <img width="60 " height="60 " src="https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-9-470x470-100x100.jpg " class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail " alt="
-                    " srcset="https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-9-470x470-100x100.jpg 100w, https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-9-470x470-150x150.jpg 150w, https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-9-470x470-300x300.jpg
-                    300w, https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-9-470x470.jpg 470w " sizes="(max-width: 100px) 100vw, 100px " />
-
+                    <a href="#">
+                        <img style="border-radius: 50%;" width="40 " height="40 " src="./assets/BTruong/image-mix/FR001.jpg" alt="">
                     </a>
-                    <div class="flex-sub " style="margin-left: 20px; ">
-                        <p class="product-title ">Nho xanh</p>
-                        <span class="woocommerce-Price-amount amount " style="margin-top: 0px; font-size: 14px;color:#86ba09 ; ">320,000&nbsp;<span
+                    <div class="flex-sub " style="margin-left: 28px; ">
+                        <p class="product-title ">Bòn Bon</p>
+                        <span class="woocommerce-Price-amount1 amount ">118,000&nbsp;<span
                 class="woocommerce-Price-currencySymbol ">&#8363;</span></span>
                     </div>
                 </div>
 
             </li>
-            <li style="height: 81px;border: 1px solid #e4e4e4  ">
+            <li class="flex-con2">
                 <div class="flex">
 
-                    <a href="https://mauweb.monamedia.net/cleverfood/san-pham/dao/ ">
-                        <img width="60 " height="60 " src="https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-24-470x470-100x100.jpg " class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail " alt="
-                    " srcset="https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-24-470x470-100x100.jpg 100w, https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-24-470x470-150x150.jpg 150w, https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-24-470x470-300x300.jpg
-                    300w, https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-24-470x470.jpg 470w " sizes="(max-width: 100px) 100vw, 100px " />
-                    </a>
-                    <div class="flex-sub " style="margin-left: 20px; ">
-                        <p class="product-title ">Đào</p>
+                    <a href="#">
+                        <img style="border-radius: 50%;" width="40 " height="40 " src="./assets/BTruong/image-mix/FR004.jpg" alt="">
 
-                        <span class="woocommerce-Price-amount amount " style="margin-top: 0px; font-size: 14px;color:#86ba09 ; ">330,000&nbsp;<span
+                    </a>
+                    <div class="flex-sub " style="margin-left: 28px; ">
+                        <p class="product-title ">Cam ruột đỏ</p>
+
+                        <span class="woocommerce-Price-amount2 amount ">130,000&nbsp;<span
                 class="woocommerce-Price-currencySymbol ">&#8363;</span></span>
                     </div>
                 </div>
             </li>
-            <li style="height: 81px; background-color: #f8f8f8;border: 1px solid #e4e4e4 ">
+            <li class="flex-con3">
                 <div class="flex">
-                    <a href="https://mauweb.monamedia.net/cleverfood/san-pham/chanh-day/ ">
-                        <img width="60 " height="60 " src="https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-15-470x470-100x100.jpg " class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail " alt="
-                    " srcset="https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-15-470x470-100x100.jpg 100w, https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-15-470x470-150x150.jpg 150w, https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-15-470x470-300x300.jpg
-                    300w, https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-15-470x470.jpg 470w " sizes="(max-width: 100px) 100vw, 100px " />
+                    <a href="# "> <img style="border-radius: 50%;" width="40 " height="40 " src="./assets/BTruong/image-mix/RAU013.jpg" alt="">
                     </a>
-                    <div class="flex-sub " style="margin-left: 20px; ">
-                        <p class="product-title ">Chanh dây</p>
-                        <span class="woocommerce-Price-amount amount " style="margin-top: 0px; font-size: 14px;color:#86ba09 ; ">190,000&nbsp;<span
-                class="woocommerce-Price-currencySymbol ">&#8363;</span></span>
-                    </div>
-
-
-
-                </div>
-            </li>
-            <li style="height: 81px;border: 1px solid #e4e4e4 ">
-                <div class="flex">
-                    <a href="https://mauweb.monamedia.net/cleverfood/san-pham/chuoi/ ">
-                        <img width="60 " height="60 " src="https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-12-470x470-100x100.jpg " class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail " alt="
-                    " srcset="https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-12-470x470-100x100.jpg 100w, https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-12-470x470-150x150.jpg 150w, https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-12-470x470-300x300.jpg
-                    300w, https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-12-470x470.jpg 470w " sizes="(max-width: 100px) 100vw, 100px " />
-                    </a>
-                    <div class="flex-sub " style="margin-left: 20px; ">
-                        <p class="product-title ">Chuối</p>
-                        <span class="woocommerce-Price-amount amount " style="margin-top: 0px; font-size: 14px;color:#86ba09 ; ">150,000&nbsp;<span
+                    <div class="flex-sub " style="margin-left: 28px; ">
+                        <p class="product-title ">Xà lách</p>
+                        <span class="woocommerce-Price-amount3 amount ">25,000&nbsp;<span
                 class="woocommerce-Price-currencySymbol ">&#8363;</span></span>
                     </div>
                 </div>
             </li>
-            <li style="height: 81px; background-color: #f8f8f8;border: 1px solid #e4e4e4">
+            <li class="flex-con4" style="height: 60px;border: 1px solid #e4e4e4 ">
                 <div class="flex">
-                    <a href="https://mauweb.monamedia.net/cleverfood/san-pham/dua-leo/ ">
-                        <img width="60 " height="60 " src="https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-16-470x470-100x100.jpg " class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail " alt="
-                    " srcset="https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-16-470x470-100x100.jpg 100w, https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-16-470x470-150x150.jpg 150w, https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-16-470x470-300x300.jpg
-                    300w, https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-16-470x470.jpg 470w " sizes="(max-width: 100px) 100vw, 100px " />
+
+                    <a href="# "> <img style="border-radius: 50%;" width="40 " height="40 " src="./assets/BTruong/image-mix/RAU016.jpg" alt="">
+
                     </a>
-                    <div class="flex-sub " style="margin-left: 20px; ">
-                        <p class="product-title ">Dưa leo</p>
-                        <span class="woocommerce-Price-amount amount " style="margin-top: 0px; font-size: 14px;color:#86ba09 ; ">50,000&nbsp;<span
+                    <div class="flex-sub " style="margin-left: 28px; ">
+                        <p class="product-title ">Tần ô</p>
+                        <span class="woocommerce-Price-amount4 amount ">16,000&nbsp;<span
+                class="woocommerce-Price-currencySymbol ">&#8363;</span></span>
+                    </div>
+                </div>
+            </li>
+            <li class="flex-con5">
+                <div class="flex">
+                    <a href="# ">
+                        <img style="border-radius: 50%;" width="40 " height="40 " src="./assets/BTruong/image-mix/RAU019.jpg" alt="">
+
+                    </a>
+                    <div class="flex-sub " style="margin-left: 28px; ">
+                        <p class="product-title ">Rau đay</p>
+                        <span class="woocommerce-Price-amount5 amount ">15,000&nbsp;<span
                 class="woocommerce-Price-currencySymbol ">&#8363;</span></span>
                     </div>
 

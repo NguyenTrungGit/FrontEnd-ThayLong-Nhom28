@@ -1,10 +1,11 @@
 .container-product {
     margin-right: 106px;
+    margin-left: 30px;
 }
 
 .circle1 {
     padding-top: 8px;
-    background: #86ba09;
+    background: #66A55F;
     border-radius: 50%;
     height: 45px;
     width: 45px;
@@ -45,9 +46,9 @@
 }
 
 .my-pagination /deep/ .ngx-pagination .current {
-    background: #86ba09;
+    background: #66A55F;
     border-radius: 50%;
-    border: 1px solid#86ba09;
+    border: 1px solid#66A55F;
     height: 45px;
     width: 45px;
     color: rgb(255, 255, 255);
@@ -58,4 +59,36 @@
 .my-pagination /deep/ .ngx-pagination {
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+.sort {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    margin-right: 64px;
+    font-family: 'Quicksand';
+}
+
+.display {
+    position: absolute;
+    margin-right: 21px;
+    left: 622px;
+    top: -12õ;
+    top: -23px;
+    font-size: 15px;
+    font-family: 'Quicksand';
+}
+
+.sort-sub {
+    position: absolute;
+    top: -24px;
+    left: 772px;
+    font-size: 14px;
+    font-family: 'Quicksand';
+}
+
+.sort-sub option {
+    font-size: 14px;
+    color: #212529;
+    font-family: 'Quicksand';
 }
