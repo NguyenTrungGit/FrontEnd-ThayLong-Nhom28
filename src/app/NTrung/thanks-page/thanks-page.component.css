@@ -5,7 +5,7 @@
   margin-bottom: 100px;
   width: 1400px;
   height: 542px;
-  background: url(../../../assets/tuyen/img/banner-introduce.png);
+  background: url(/../../../assets/tuyen/img/banner-introduce.png);
   background-size: 1400px;
   background-repeat: no-repeat;
   background-position: center;
@@ -23,7 +23,7 @@
   margin: 10px auto;
   width: 100px;
   height: 100px;
-  background: url(../../../assets/tuyen/img/logo2.png);
+  background: url(/../../../assets/tuyen/img/logo2.png);
   background-size: 170px;
   background-repeat: no-repeat;
   background-position: center;
@@ -40,7 +40,7 @@
   margin-bottom: 30px;
 }
 .image .box .content .success .icon {
-  background: url(../../../assets/NTrungData/check.svg);
+  background: url(/../../../assets/NTrungData/check.svg);
   background-size: 25px;
   width: 25px;
   height: 25px;
@@ -62,7 +62,7 @@
   margin: 0 10px;
   border-radius: 25px;
   font-weight: bold;
-  border: 3px solid #7ab541;
+  border: 3px solid #66a55f;
   background-color: #d9d9d9;
 }
 .image .box .controls .btn:hover {
@@ -71,7 +71,7 @@
 }
 .image .box .controls .btn:active {
   color: white;
-  background-color: #7ab541;
+  background-color: #66a55f;
   transition: 0.5;
 }
 .image .box .controls .icon {
@@ -82,11 +82,11 @@
   background-position: center;
 }
 .image .box .controls .icon1 {
-  background: url(../../../assets/NTrungData/back.svg);
+  background: url(/../../../assets/NTrungData/back.svg);
   margin: 0px 7px 0px 7px;
 }
 .image .box .controls .icon2 {
   width: 31.5px;
-  background: url(../../../assets/NTrungData/cart.svg);
+  background: url(/../../../assets/NTrungData/cart.svg);
   margin: 0px 10px 0px 15px;
 }/*# sourceMappingURL=thanks-page.component.css.map */

@@ -1,0 +1,82 @@
+<form>
+  <div class="row">
+    <div class="col">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Họ"
+        aria-label="First name"
+      />
+    </div>
+    <div class="col">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Tên"
+        aria-label="Last name"
+      />
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col">
+      <input
+        type="email"
+        class="form-control"
+        placeholder="Email"
+        aria-label="First name"
+      />
+    </div>
+    <div class="col">
+      <input
+        type="tel"
+        pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+        class="form-control"
+        placeholder="Số điện thoại"
+        aria-label="Last name"
+      />
+    </div>
+  </div>
+  <br />
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelect01">Giới tính</label>
+    </div>
+    <select class="custom-select" id="inputGroupSelect01">
+      <option selected>Nam</option>
+      <option value="1">Nữ</option>
+      <option value="2">Khác</option>
+    </select>
+  </div>
+
+  <div class="rating">
+    <div class="stars">
+      <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
+      <form action="">
+        <input class="star star-5" id="star-5" type="radio" name="star" />
+        <label class="star star-5" for="star-5"></label>
+        <input class="star star-4" id="star-4" type="radio" name="star" />
+        <label class="star star-4" for="star-4"></label>
+        <input class="star star-3" id="star-3" type="radio" name="star" />
+        <label class="star star-3" for="star-3"></label>
+        <input class="star star-2" id="star-2" type="radio" name="star" />
+        <label class="star star-2" for="star-2"></label>
+        <input class="star star-1" id="star-1" type="radio" name="star" />
+        <label class="star star-1" for="star-1"></label>
+      </form>
+    </div>
+  </div>
+  <div class="mb-3">
+    <textarea
+      class="form-control"
+      id="exampleFormControlTextarea1"
+      rows="3"
+      placeholder="Viết nhận xét hoặc bình luận"
+    ></textarea>
+  </div>
+  <div class="">
+    <button style="float: right" type="submit" class="btn btn-success">
+      Gửi
+    </button>
+  </div>
+</form>

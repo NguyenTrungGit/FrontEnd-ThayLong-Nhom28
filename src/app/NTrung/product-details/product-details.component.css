@@ -132,7 +132,7 @@
 }
 .layout-box .product-details-info .info .tag .price {
   width: 175px;
-  color: #7AB541;
+  color: #66a55f;
   font: bold;
 }
 .layout-box .product-details-info .info .tag .discount {
@@ -214,7 +214,7 @@
   width: 350px;
   height: 40px;
   border-radius: 20px;
-  background-color: #7AB541;
+  background-color: #66a55f;
   margin-left: 135px;
   box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
 }
