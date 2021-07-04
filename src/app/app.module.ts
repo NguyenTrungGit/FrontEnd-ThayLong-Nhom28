@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatDialogModule} from '@angular/material/dialog';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -76,6 +78,7 @@ import { ProductItemNamComponent } from './BTruong/product-nam/product-list-nam/
 import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -95,14 +98,14 @@ import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component'
     BlogComponent,
     ContactComponent,
     MainComponent,
-   Title4Component,
-   SaleComponent,
-   SaleFiltersComponent,
-   SalePagingComponent,
-   SaleProductListComponent,
-   SaleTitleComponent,
-   SaleProductItemComponent,
-   SaleProductPopupComponent,
+    Title4Component,
+    SaleComponent,
+    SaleFiltersComponent,
+    SalePagingComponent,
+    SaleProductListComponent,
+    SaleTitleComponent,
+    SaleProductItemComponent,
+    SaleProductPopupComponent,
     ProductNewsComponent,
     ProductRelatedComponent,
     HomeComponent,
@@ -152,7 +155,8 @@ import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component'
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    NgxSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent],

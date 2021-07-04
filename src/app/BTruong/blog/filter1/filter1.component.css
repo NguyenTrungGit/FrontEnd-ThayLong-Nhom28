@@ -20,7 +20,7 @@
 
 .is-divider {
     height: 80px;
-    background: #86ba09;
+    background: #66A55F;
     border-radius: 10px 10px 0px 0px;
 }
 
@@ -129,7 +129,7 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #86ba09;
+    background: #66A55F;
     cursor: pointer;
 }
 

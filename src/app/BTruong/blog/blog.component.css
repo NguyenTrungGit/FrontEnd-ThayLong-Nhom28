@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 .filter1 {
     min-height: 900px;
     width: 500px;
@@ -10,4 +11,5 @@
 
 .main {
     display: flex;
+    font-family: 'Quicksand', sans-serif;
 }

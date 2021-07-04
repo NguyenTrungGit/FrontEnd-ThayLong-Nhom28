@@ -24,7 +24,8 @@ const routes: Routes = [
   {path:'traicay',component:ProductTraicayComponent},
   {path:'cu',component:ProductCuComponent},
   {path:'qua',component:ProductQuaComponent},
-  {path:'nam',component:ProductNamComponent}
+  {path:'nam',component:ProductNamComponent},
+  {path:'',component:HomeComponent}
 
 ];
 
