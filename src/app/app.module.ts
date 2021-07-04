@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatDialogModule} from '@angular/material/dialog';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+
 
 
 
@@ -10,7 +11,7 @@ import { AppComponent } from './app.component';
 import { ProductDetailsComponent } from './NTrung/product-details/product-details.component';
 import { HeaderComponent } from './Tuyen/header/header.component';
 import { FooterComponent } from './Tuyen/footer/footer.component';
-import {NgxPaginationModule} from 'ngx-pagination';
+import { NgxPaginationModule} from 'ngx-pagination';
 import { ProductComponent } from './BTruong/product/product.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -142,8 +143,9 @@ import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component'
     ProductNamComponent,
     TitleNamComponent,
     ProductListNamComponent,
-    ProductItemNamComponent
+    ProductItemNamComponent,
     ThanksPageComponent,
+
 
   ],
   imports: [
