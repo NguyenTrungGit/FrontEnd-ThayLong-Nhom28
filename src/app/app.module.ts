@@ -159,7 +159,8 @@ import { HeaderDirectDirective } from './Tuyen/header/header-direct.directive';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],

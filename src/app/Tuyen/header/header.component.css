@@ -301,6 +301,8 @@
       -ms-flex: 1;
           flex: 1;
   height: 40px;
+  text-decoration: none;
+  color: #383838;
 }
 
 .cart-home .block-minicart .minicart-content .block-products .list-products .item-cartmini .title-item .quantity-item {
@@ -345,6 +347,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 22px;
 }
 
 .cart-home .block-minicart .minicart-content .block-products .total-cartmini .title {

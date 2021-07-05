@@ -32,7 +32,6 @@ i:any=-1;
     var navbar = (document.querySelector('.navbar') as HTMLElement);
     var topintro =(document.querySelector('.top-intro') as HTMLElement);
     var logo =(document.querySelector('.logo') as HTMLElement);
-
     if(document.documentElement.scrollTop<1){
       topintro.style.display='block'
      logo.style.width='170px'
@@ -44,6 +43,8 @@ i:any=-1;
       topintro.style.display='none'
      navbar.classList.add('shadow')
      logo.style.width='160px'
+     logo.style.paddingTop='8px';
+     logo.style.paddingBottom='8px';
 navbar.classList.add('p-0')
     }
 

@@ -13,17 +13,51 @@
                         <div class="p-3"><b>ĐĂNG NHẬP TÀI KHOẢN</b></div>
                     </div>
                     <div class="d-flex flex-column text-center">
-                        <form class="ml-2 mr-2">
+                        <form name="loginForm" [formGroup]="loginForm" class="ml-2 mr-2">
 
                             <div class="form-group">
-                                <input type="email" class="form-control btn-round" placeholder="Địa chỉ email...">
+                                <input type="email" formControlName="email" [ngClass]="{
+                                  'form-control': true,
+                                  'is-valid': loginForm.controls.email.valid,
+                                  'is-invalid':
+                                    !loginForm.controls.email.valid && loginForm.controls.email.touched
+                                }" class="form-control btn-round" placeholder="Địa chỉ email...">
+                                <span *ngIf="
+                                  loginForm.controls.email.errors?.required &&
+                                  loginForm.controls.email.touched
+                                " class="invalid-feedback">
+                                    Không để trống
+                                    </span>
+                                <span *ngIf="
+          loginForm.controls.email.errors?.pattern &&
+          loginForm.controls.email.touched
+        " class="invalid-feedback">
+                                    Ví dụ: khachhang@gmail.com
+                                </span>
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control btn-round" placeholder="Mật khẩu của bạn...">
+                                <input type="password" formControlName="password" [ngClass]="{
+                                  'form-control': true,
+                                  'is-valid': loginForm.controls.password.valid,
+                                  'is-invalid':
+                                    !loginForm.controls.password.valid && loginForm.controls.password.touched
+                                }" class="form-control btn-round" required placeholder="Mật khẩu của bạn...">
+                                <span *ngIf="
+                                loginForm.controls.password.errors?.required &&
+                                loginForm.controls.password.touched
+                              " class="invalid-feedback">
+                                  Không để trống
+                                  </span>
+                                <span *ngIf="
+        loginForm.controls.password.errors?.pattern &&
+        loginForm.controls.password.touched
+      " class="invalid-feedback">
+                                 Tối thiểu tám ký tự, ít nhất một chữ hoa, một chữ thường và một số:
+                              </span>
                             </div>
 
                             <div class="pt-3 pb-2">
-                                <button type="button" class="btn btn-primary btn-block font-weight-bold">ĐĂNG NHẬP</button>
+                                <button type="submit" class="btn btn-primary btn-block font-weight-bold">ĐĂNG NHẬP</button>
                             </div>
                         </form>
                     </div>
@@ -79,7 +113,7 @@
                             </div>
                             <div class="content-forgot">Mật khẩu sẽ được gửi về email của quý khách trong 1 phút trở lại.</div>
                             <div class="pt-3 pb-2">
-                                <button type="button" class="btn btn-primary btn-block font-weight-bold">KHÔI PHỤC</button>
+                                <button type="button" class="btn btn-primary btn-popup btn-block font-weight-bold">KHÔI PHỤC</button>
                             </div>
                         </form>
                     </div>

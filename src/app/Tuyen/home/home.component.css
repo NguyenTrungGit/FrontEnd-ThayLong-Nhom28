@@ -53,8 +53,8 @@
 }
 
 .btn-banner {
-    padding: 5px 20px;
-    border-radius: 10px;
+    padding: 9px 27px;
+    border-radius: 22px;
     font-weight: 700;
     line-height: 1.5;
     text-align: center;
@@ -63,8 +63,8 @@
 }
 
 .btn-success {
-    background-color: #28bd4b;
-    border-color: #26ca4c;
+    background-color: #66a55f;
+    border-color: #66a55f;
 }
 
 
@@ -107,6 +107,10 @@
     margin-right: 380px;
 }
 
+.promotional .form-control {
+    height: 48px;
+}
+
 .btn-round {
     border-radius: 3rem;
 }
@@ -125,7 +129,7 @@
     box-shadow: 0 0 0 0.2rem rgba(182, 0, 24, 0.6);
 }
 
-.input-promotional>.btn.focus,
+.btn.focus,
 .btn:focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem transparent;
@@ -183,18 +187,44 @@
 
 .countdown-value {
     display: flex;
-}
-
-.countdown-value .countdown-item {
-    flex: 1;
-}
-
-.cl-green {
     color: #82AE46;
 }
 
-.number-discount {
-    font-size: 28px;
+.countdown-value .stroke-right {
+    width: 50px;
+    border-right: 2px solid #82AE46;
+}
+
+.countdown-title {
+    font-size: 22px;
+    color: #82AE46;
+}
+
+.countdown-value .number-discount {
+    font-size: 48px;
+    width: 80px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.fsize-28 {
+    font-size: 24px;
+}
+
+.pl-14 {
+    padding-left: 14px;
+}
+
+.pr-14 {
+    padding-right: 14px;
+}
+
+.pt-15 {
+    padding-top: 15px;
+}
+
+.pb-15 {
+    padding-bottom: 15px;
 }
 
 

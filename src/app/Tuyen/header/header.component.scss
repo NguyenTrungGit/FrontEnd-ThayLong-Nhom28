@@ -286,6 +286,8 @@ $tl: 0.6s;
                             font-weight: 600;
                             flex: 1;
                             height: 40px;
+                            text-decoration: none;
+                            color: #383838;
                         }
                         .quantity-item {
                             flex: 1;
@@ -315,6 +317,7 @@ $tl: 0.6s;
             .total-cartmini {
                 font-size: 16px;
                 display: flex;
+                margin-right: 22px;
                 .title {
                     flex: 1;
                 }
