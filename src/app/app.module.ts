@@ -1,6 +1,9 @@
 import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatDialogModule} from '@angular/material/dialog';
+import {MatDialogModule} from '@angular/material/dialog';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
+
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -79,6 +82,7 @@ import { PopupLoginComponent } from './Tuyen/header/popup-login/popup-login.comp
 import { HeaderDirectDirective } from './Tuyen/header/header-direct.directive';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -98,14 +102,14 @@ import { HeaderDirectDirective } from './Tuyen/header/header-direct.directive';
     BlogComponent,
     ContactComponent,
     MainComponent,
-   Title4Component,
-   SaleComponent,
-   SaleFiltersComponent,
-   SalePagingComponent,
-   SaleProductListComponent,
-   SaleTitleComponent,
-   SaleProductItemComponent,
-   SaleProductPopupComponent,
+    Title4Component,
+    SaleComponent,
+    SaleFiltersComponent,
+    SalePagingComponent,
+    SaleProductListComponent,
+    SaleTitleComponent,
+    SaleProductItemComponent,
+    SaleProductPopupComponent,
     ProductNewsComponent,
     ProductRelatedComponent,
     HomeComponent,
@@ -160,6 +164,7 @@ import { HeaderDirectDirective } from './Tuyen/header/header-direct.directive';
     FormsModule,
     HttpClientModule,
     NgxPaginationModule,
+    NgxSliderModule
 
   ],
   providers: [],

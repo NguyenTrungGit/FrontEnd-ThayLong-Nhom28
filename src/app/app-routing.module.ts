@@ -29,6 +29,8 @@ const routes: Routes = [
   {path:'nam',component:ProductNamComponent},
   {path:'chitiet',component:ProductDetailsComponent},
   {path:'pay',component:PayComponent}
+  {path:'',component:HomeComponent}
+
 
 ];
 
