@@ -1,0 +1,262 @@
+$box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  color: #707070;
+  display: flex;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  position: relative;
+
+  .slide-show {
+    width: 500px;
+    #img1,
+    #img2,
+    #img3,
+    #img4 {
+      display: none;
+    }
+
+    .slide-img {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+
+      img {
+        cursor: pointer;
+        margin: 0 50px;
+        width: 400px;
+        height: 400px;
+        border: #d3d3d3 1px solid;
+        box-shadow: $box-shadow;
+      }
+    }
+
+    #img1:checked ~ #one,
+    #img2:checked ~ #two,
+    #img3:checked ~ #three,
+    #img4:checked ~ #four {
+      z-index: 9;
+    }
+
+    #img1:checked ~ .nav #dot1,
+    #img2:checked ~ .nav #dot2,
+    #img3:checked ~ .nav #dot3,
+    #img4:checked ~ .nav #dot4 {
+      opacity: 1;
+    }
+
+    .nav {
+      margin-top: 430px;
+      width: 500px;
+      height: 105px;
+      position: absolute;
+      text-align: center;
+
+      .image-sub {
+        margin: 0 10px;
+        width: 105px;
+        height: 105px;
+        opacity: 0.5;
+        box-shadow: $box-shadow;
+        transition: transform 0.3s, opacity 0.5s;
+
+        img {
+          width: 105px;
+          height: 105px;
+        }
+
+        &:hover {
+          cursor: pointer;
+          opacity: 0.7;
+          transform: scale(120%);
+        }
+      }
+    }
+  }
+
+  .info-box {
+    width: 610px;
+    padding: 0px 105px;
+
+    .title {
+      padding: 10px 0px;
+      margin: 10px 0px;
+      display: flex;
+
+      .tag-1 {
+        width: 300px;
+        font-size: 30px;
+      }
+
+      .tag-2 {
+        padding-top: 5px;
+        height: 30px;
+        text-align: center;
+        width: 100px;
+        border-radius: 3px;
+      }
+    }
+
+    .rating {
+      color: #ffb24c;
+      font-size: 25px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+
+      i {
+        margin-right: 5px;
+      }
+    }
+
+    .content {
+      padding: 10px 0px;
+      margin: 10px 0px;
+      display: flex;
+
+      input {
+        height: 20px;
+        margin-bottom: 12px;
+      }
+    }
+
+    .control {
+      padding: 10px 0px;
+      margin: 10px 0px;
+
+      .amount {
+        display: flex;
+
+        .amount-sub {
+          input {
+            text-align: center;
+            width: 50px;
+            height: 40px;
+            border: #d7d7d7 solid 1px;
+          }
+
+          .btn {
+            width: 40px;
+            height: 40px;
+            opacity: 0.5;
+
+            &:hover {
+              cursor: pointer;
+              opacity: 0.7;
+            }
+
+            &:active {
+              opacity: 1;
+            }
+          }
+
+          .minus {
+            background: url(/../../../assets/NTrungData/minus.svg);
+            background-color: #d7d7d7;
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+
+          .plus {
+            background: url(/../../../assets/NTrungData/plus.svg);
+            background-color: #d7d7d7;
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+        }
+
+        .btn-add {
+          color: white;
+          height: 40px;
+          width: 250px;
+          background: #ed6663;
+          text-align: center;
+          border-radius: 20px;
+          margin-left: 30px;
+          padding-top: 5px;
+
+          &:hover {
+            cursor: pointer;
+            background: darken($color: #ed6663, $amount: 5%);
+          }
+
+          &:active {
+            background: darken($color: #ed6663, $amount: 10%);
+          }
+        }
+      }
+
+      .btn-cart {
+        margin-top: 20px;
+        padding-top: 5px;
+        height: 40px;
+        background-color: #66a55f;
+        color: white;
+        text-align: center;
+        border-radius: 20px;
+        width: 400px;
+
+        &:hover {
+          cursor: pointer;
+          background: darken($color: #66a55f, $amount: 5%);
+        }
+
+        &:active {
+          background: darken($color: #66a55f, $amount: 10%);
+        }
+      }
+    }
+
+    .hashtag {
+      padding: 10px 0px 10px 35px;
+      margin: 10px 0px;
+      .tag {
+        margin: 10px 0px;
+        display: flex;
+
+        p {
+          margin: 0;
+          padding: 0;
+          margin: 5px 0px 0px 10px;
+        }
+
+        .icon {
+          width: 25px;
+          height: 25px;
+          background-size: 25px;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+
+        .icon-1 {
+          background: url(../../../../assets/NTrungData/delivery-truck.svg);
+        }
+
+        .icon-2 {
+          background: url(../../../../assets/NTrungData/payment-method.svg);
+        }
+
+        .icon-3 {
+          background: url(../../../../assets/NTrungData/history.svg);
+        }
+
+        &:hover {
+          p {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+
+          .icon {
+            cursor: pointer;
+            transform: scale(120%);
+          }
+        }
+      }
+    }
+  }
+}

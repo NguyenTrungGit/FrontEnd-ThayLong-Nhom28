@@ -123,8 +123,13 @@
         (change)="onSelectCountry($event.target)"
         [ngModel]="selectedCountry.id"
       >
-      <option value="0">-- Tỉnh/Thành Phố --</option>
-      <option *ngFor = "let country of countries?.countries " value="{{country.id}}">{{country.name}}</option>
+        <option value="0">-- Tỉnh/Thành Phố --</option>
+        <option
+          *ngFor="let country of countries?.countries"
+          value="{{ country.id }}"
+        >
+          {{ country.name }}
+        </option>
       </select>
       <div
         *ngIf="
@@ -151,8 +156,10 @@
         [ngModel]="selectedState.id"
         (change)="onSelectDistrict($event.target)"
       >
-      <option value="0">-- Quận/Huyện -- </option>
-      <option *ngFor="let state of states" value="{{state.id}}"> {{state.name}}</option>
+        <option value="0">-- Quận/Huyện --</option>
+        <option *ngFor="let state of states" value="{{ state.id }}">
+          {{ state.name }}
+        </option>
       </select>
       <div
         *ngIf="
@@ -182,8 +189,10 @@
         required
         [ngModel]="selectedDistrict.id"
       >
-        <option value ="0">-- Phường/Xã --</option>
-        <option *ngFor="let district of districts" value="{{district.id}}"> {{district.name}}</option>
+        <option value="0">-- Phường/Xã --</option>
+        <option *ngFor="let district of districts" value="{{ district.id }}">
+          {{ district.name }}
+        </option>
       </select>
       <div
         *ngIf="
@@ -270,8 +279,8 @@
   </div>
   <button
     type="button"
-    class="btn btn-primary"
-    style="float: right; color: white"
+    class="btn"
+    style="float: right; color: white; background: #66a55f; border-radius: 20px"
     (click)="submit()"
   >
     Đặt hàng

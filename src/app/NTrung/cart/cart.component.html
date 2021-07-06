@@ -1,8 +1,55 @@
-<div class="layout-box container">
-    <div class="cart-info">
-        <app-cart-info></app-cart-info>
+<div class="container">
+  <!-- tieu de -->
+  <div class="title font-weight-bold">
+    <p class="product">Sản phẩm</p>
+    <p class="price">Đơn giá</p>
+    <p class="amount">Số lượng</p>
+    <p class="total">Tổng</p>
+  </div>
+
+  <!--  Thong tin san pham trong gio hang-->
+  <div class="info">
+    <div class="product">
+      <div class="product-button"></div>
+      <img
+        class="product-image"
+        src="/../../../assets/BTruong/image-mix/FR040.jpg"
+        alt=""
+      />
+      <span class="product-name font-weight-bold">Xoài</span>
     </div>
-    <div class="cart-bill">
-        <app-cart-bill></app-cart-bill>
+    <div class="price font-weight-bold">500.000 &#8363;</div>
+    <div class="amount">
+      <div class="btn minus" (click)="down()"></div>
+      <input type="text" value="{{ amount }}" />
+      <div class="btn plus" (click)="up()"></div>
     </div>
+    <div class="total price font-weight-bold" style="color: #66a55f">
+      5.000.000 &#8363;
+    </div>
+  </div>
+
+  <!-- khuyen mai -->
+  <div class="summary">
+    <div class="font-weight-bold" style="width: 300px; padding-left: 55px">
+      Tạm tính
+    </div>
+    <input type="text" placeholder="Nhập mã giảm giá" />
+    <div
+      class="total font-weight-bold"
+      style="
+        color: #66a55f;
+        width: 100px;
+        margin-left: 100px;
+        text-align: right;
+      "
+    >
+      5.000.000 &#8363;
+    </div>
+  </div>
+
+  <div class="control">
+    <button class="btn btn-see-more font-weight-bold">Xem thêm sản phẩm</button>
+    <button class="btn btn-pay font-weight-bold">Thanh toán</button>
+  </div>
 </div>
