@@ -1,0 +1,128 @@
+.section-login {}
+
+.section-signin {
+    display: none;
+}
+
+.section-forgot {
+    display: none;
+}
+
+.content-forgot {
+    font-size: 16px;
+    opacity: 90%;
+    text-align: left;
+}
+
+.section-popup .text-footer {
+    color: #66A55F;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.section-popup {
+    height: 345px;
+}
+
+.content-forgot {
+    font-size: 14px;
+}
+
+
+/* btn */
+
+.section-popup .btn {
+    border-radius: 2px;
+}
+
+.section-popup .btn-primary {
+    color: #fff;
+    background-color: #66A55F;
+    border-color: #66A55F;
+    z-index: 2;
+    position: relative;
+}
+
+.section-popup .btn-primary:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: auto;
+    /*change here*/
+    right: 0;
+    /*change here*/
+    width: 0;
+    height: 100%;
+    background-color: #ffffff;
+    -webkit-transition: .25s;
+    transition: .25s;
+}
+
+.section-popup .btn-primary:hover {
+    color: black;
+}
+
+.section-popup .btn-primary:hover::before {
+    z-index: -1;
+    width: 100%;
+    left: 0;
+    /*change here*/
+    right: auto;
+    /*change here*/
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    /* background-color: #0062cc; */
+    border-color: #66A55F;
+}
+
+.btn.focus,
+.btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: none;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #66A55F;
+    outline: 0;
+    box-shadow: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #66A55F;
+    border-color: #66A55F;
+}
+
+
+/* .btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 .2em rgb(102, 165, 95, 0.3);
+} */
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 420px;
+        margin: 1.75rem auto;
+    }
+}
+
+.footer-modal {
+    font-size: 14px;
+}

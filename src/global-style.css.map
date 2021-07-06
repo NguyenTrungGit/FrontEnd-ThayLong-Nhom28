@@ -1,1 +1,9 @@
-{"version":3,"sources":["global-style.scss"],"names":[],"mappings":"AAAA,4DAAA","file":"global-style.css"}
+{
+    "version": 3,
+    "mappings": "AAAA,6DAA6D",
+    "sources": [
+        "global-style.scss"
+    ],
+    "names": [],
+    "file": "global-style.css"
+}

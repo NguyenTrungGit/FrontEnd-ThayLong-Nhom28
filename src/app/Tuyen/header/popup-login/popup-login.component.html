@@ -1,0 +1,132 @@
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header border-bottom-0 pb-0">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span>
+      </button>
+        </div>
+        <div class="text-center mt-0.5"> <img src="/assets/tuyen/img/logo2.png" alt="" style="height:120px;"></div>
+        <div class="type-modal">
+            <div class="section-login section-popup">
+                <div class="modal-body pt-0 pb-0">
+                    <div class="form-title text-center mt-0.5">
+                        <div class="p-3"><b>ĐĂNG NHẬP TÀI KHOẢN</b></div>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                        <form name="loginForm" [formGroup]="loginForm" class="ml-2 mr-2">
+
+                            <div class="form-group">
+                                <input type="email" formControlName="email" [ngClass]="{
+                                  'form-control': true,
+                                  'is-valid': loginForm.controls.email.valid,
+                                  'is-invalid':
+                                    !loginForm.controls.email.valid && loginForm.controls.email.touched
+                                }" class="form-control btn-round" placeholder="Địa chỉ email...">
+                                <span *ngIf="
+                                  loginForm.controls.email.errors?.required &&
+                                  loginForm.controls.email.touched
+                                " class="invalid-feedback">
+                                    Không để trống
+                                    </span>
+                                <span *ngIf="
+          loginForm.controls.email.errors?.pattern &&
+          loginForm.controls.email.touched
+        " class="invalid-feedback">
+                                    Ví dụ: khachhang@gmail.com
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" formControlName="password" [ngClass]="{
+                                  'form-control': true,
+                                  'is-valid': loginForm.controls.password.valid,
+                                  'is-invalid':
+                                    !loginForm.controls.password.valid && loginForm.controls.password.touched
+                                }" class="form-control btn-round" required placeholder="Mật khẩu của bạn...">
+                                <span *ngIf="
+                                loginForm.controls.password.errors?.required &&
+                                loginForm.controls.password.touched
+                              " class="invalid-feedback">
+                                  Không để trống
+                                  </span>
+                                <span *ngIf="
+        loginForm.controls.password.errors?.pattern &&
+        loginForm.controls.password.touched
+      " class="invalid-feedback">
+                                 Tối thiểu tám ký tự, ít nhất một chữ hoa, một chữ thường và một số:
+                              </span>
+                            </div>
+
+                            <div class="pt-3 pb-2">
+                                <button type="submit" class="btn btn-primary btn-block font-weight-bold">ĐĂNG NHẬP</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="m-2 pb-4 footer-modal">
+                    <div class="d-flex justify-content-center p-1">
+                        <div class="signup-section">Quên mật khẩu? <a href="#a" (click)="displayForgot()" type="button" data-toggle="modal" data-target="#signinModal" class="text-footer"> Khôi phục mât khẩu</a>.</div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class="signup-section">Bạn chưa có tài khoản? <a href="#a" (click)="displaySignin()" type="button" data-toggle="modal" data-target="#signinModal" class="text-footer"> Đăng ký ngay</a>.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-signin section-popup">
+                <div class="modal-body pt-0 pb-0">
+                    <div class="form-title text-center mt-0.5">
+                        <div class="p-3"><b>ĐĂNG KÝ TÀI KHOẢN</b></div>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                        <form class="ml-2 mr-2">
+
+                            <div class="form-group">
+                                <input type="email" class="form-control btn-round" placeholder="Địa chỉ email...">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control btn-round" placeholder="Mật khẩu...">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control btn-round" placeholder="Xác nhận khẩu...">
+                            </div>
+                            <div class="pt-3 pb-2">
+                                <button type="button" class="btn btn-primary btn-block font-weight-bold">ĐĂNG KÝ</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="m-2 pb-4 footer-modal">
+                    <div class="d-flex justify-content-center">
+                        <div class="signup-section">Bạn đã có tài khoản? <a (click)="displayLogin()" type="button" class="text-footer"> Đăng nhập</a>.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-forgot section-popup">
+                <div class="modal-body pt-0 pb-0">
+                    <div class="form-title text-center mt-0.5">
+                        <div class="p-3"><b>KHÔI PHỤC MẬT KHẨU</b></div>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                        <form class="ml-2 mr-2">
+
+                            <div class="form-group">
+                                <input type="email" class="form-control btn-round" placeholder="Địa chỉ email...">
+                            </div>
+                            <div class="content-forgot">Mật khẩu sẽ được gửi về email của quý khách trong 1 phút trở lại.</div>
+                            <div class="pt-3 pb-2">
+                                <button type="button" class="btn btn-primary btn-popup btn-block font-weight-bold">KHÔI PHỤC</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="m-2 pb-4 footer-modal">
+                    <div class="d-flex justify-content-center">
+                        <div class="signup-section">Bạn đã nhớ mật khẩu? <a (click)="displayLogin()" type="button" class="text-footer"> Đăng ký ngay</a>.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>

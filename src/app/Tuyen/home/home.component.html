@@ -16,7 +16,7 @@
         <p class="font-weight-bold h4">SẢN PHẨM TƯƠI SẠCH ĐƯỢC LỰA CHỌN TẠI VƯỜN</p>
     </div>
     <div class="list-icon-category ml-5 mr-5">
-        <div class="row align justify-content-center ml-5 mr-5">
+        <div class="row align justify-content-center ml-4 mr-4">
             <!-- <div class="icon-category align-items-center m-3" style="background-image: url('/assets/tuyen/img/collection1.1.jpg');">
             </div>
             <div class="icon-category align-items-center m-3" style="background-image: url('/assets/tuyen/img/collection1.2.jpg');">
@@ -29,27 +29,27 @@
             </div> -->
             <div class="icon-category align-items-center m-2" tabindex="-1">
                 <a href="#" title="a">
-                    <img src="/assets/tuyen/img/collection1.1.jpg" alt="" style="width:170px;">
+                    <img src="/assets/tuyen/img/collection1.1.jpg" alt="" style="width:200px;">
                 </a>
             </div>
             <div class="icon-category align-items-center m-2">
                 <a href="#" title="a">
-                    <img src="/assets/tuyen/img/collection1.2.jpg" alt="" style="width:170px;">
+                    <img src="/assets/tuyen/img/collection1.2.jpg" alt="" style="width:200px;">
                 </a>
             </div>
             <div class="icon-category align-items-center m-2">
                 <a href="#" title="a">
-                    <img src="/assets/tuyen/img/collection1.3.jpg" alt="" style="width:170px;">
+                    <img src="/assets/tuyen/img/collection1.3.jpg" alt="" style="width:200px;">
                 </a>
             </div>
             <div class="icon-category align-items-center m-2">
                 <a href="#" title="a">
-                    <img src="/assets/tuyen/img/collection1.5.jpg" alt="" style="width:170px;">
+                    <img src="/assets/tuyen/img/collection1.5.jpg" alt="" style="width:200px;">
                 </a>
             </div>
             <div class="icon-category align-items-center m-2">
                 <a href="#" title="a">
-                    <img src="/assets/tuyen/img/collection1.6.jpg" alt="" style="width:170px;">
+                    <img src="/assets/tuyen/img/collection1.6.jpg" alt="" style="width:200px;">
                 </a>
             </div>
         </div>
@@ -64,7 +64,7 @@
     <div class="list-product-featured ml-5 mr-5">
         <div class="ml-5 mr-5">
             <div class="row ml-5 mr-5">
-                <div class="col-sm-3 p-3" *ngFor="let i of [1,2,3,4,5,6]">
+                <div class="col-md-3 pb-15 pt-15" *ngFor="let i of [1,2,3,4,5,6,7,8]">
                     <app-product-item-home></app-product-item-home>
                 </div>
             </div>
@@ -74,35 +74,35 @@
 <div class="discount">
     <div class="content-discount pt-5">
         <div class="title-discount text-center">
-            <p class="font-weight-bold mb-2 h2" style="color: #646464;">Giảm giá cuối tuần</p>
-            <p class="font-weight-light font-italic mb-4" style="color: #82AE46;font-size: 22px;">chỉ duy nhất thứ 7 và chủ nhật</p>
+            <p class="font-weight-bold mb-4 h2" style="color: #646464;">Giảm giá cuối tuần</p>
+            <p class="font-weight-light font-italic mb-2" style="color: #82AE46;font-size: 22px;">chỉ duy nhất thứ 7 và chủ nhật</p>
             <p class="font-italic pb-3" style="font-size: 24px;">giảm sốc từ <mark><b>30-50%</b></mark></p>
         </div>
 
         <div class="countdown-discount text-center pt-5">
-            <div class="countdown-title cl-green font-italic mb-3">
+            <div class="countdown-title mb-3">
                 thời gian còn lại
             </div>
-            <div class="countdown-value cl-green font-weight-bold">
+            <div class="countdown-value font-weight-bold">
                 <div class="countdown-item">
-                    <div class="number-discount mb-2">0</div>
-                    <div class="font-italic font-weight-light">ngày</div>
+                    <div class="number-discount stroke-right mb-2 stroke-time">0</div>
+                    <div class="font-italic font-weight-light fsize-28">ngày</div>
 
                 </div>
-                <div class="countdown-item">|</div>
+
                 <div class="countdown-item">
-                    <div class="number-discount mb-2">20</div>
-                    <div class="font-italic font-weight-light">giờ</div>
+                    <div class="number-discount stroke-right mb-2 stroke-time">20</div>
+                    <div class="font-italic font-weight-light fsize-28">giờ</div>
                 </div>
-                <div class="countdown-item">|</div>
+
+                <div class="countdown-item">
+                    <div class="number-discount stroke-right mb-2 stroke-time">0</div>
+                    <div class="font-italic font-weight-light fsize-28">phút</div>
+                </div>
+
                 <div class="countdown-item">
                     <div class="number-discount mb-2">0</div>
-                    <div class="font-italic font-weight-light ">phút</div>
-                </div>
-                <div class="countdown-item">|</div>
-                <div class="countdown-item">
-                    <div class="number-discount mb-2">0</div>
-                    <div class="font-italic font-weight-light">giây</div>
+                    <div class="font-italic font-weight-light fsize-28">giây</div>
                 </div>
             </div>
             <button href="#" type="button" class="btn btn-discount btn-round mt-3 pl-4 pr-4">Mua ngay</button>
@@ -114,7 +114,7 @@
         <p class="font-weight-bold h4">ĐĂNG KÍ NGAY</p>
         <p class="font-weight-bold h2" style="color: #82AE46;">NHẬN KHUYẾN MÃI 30%</p>
     </div>
-    <div class="input-promotional mt-5">
+    <div class="input-promotional mt-3">
         <form action="">
             <div class="input-group">
                 <input type="email" class="form-control border-secondary rounded-pill" required placeholder="Email của bạn">
