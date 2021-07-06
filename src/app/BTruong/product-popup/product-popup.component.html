@@ -1,64 +1,110 @@
 <div class="quick">
-    <div class="image">
-        <div class="image-container">
-            <div class="image-lg">
-                <img style="width: 320px; height: 300px;" src="./assets/BTruong/image-mix/{{product?.img1}} " alt="">
-            </div>
-            <div class="image-sm">
-                <div class="image-sm-1">
-                    <img style="width: 100px; height: 100px;" src="./assets/BTruong/image-mix/{{product?.img2}}" alt="">
-                </div>
-                <div class="image-sm-1">
-                    <img style="width: 100px; height: 100px;" src="./assets/BTruong/image-mix/{{product?.img3}}" alt="">
-                </div>
-                <div class="image-sm-1">
-                    <img style="width: 100px; height: 100px;" src="./assets/BTruong/image-mix/{{product?.img3}}" alt="">
-                </div>
-            </div>
+  <div class="image">
+    <div class="image-container">
+      <div class="image-lg">
+        <img
+          style="width: 320px; height: 300px"
+          src="./assets/BTruong/image-mix/{{ product?.img1 }} "
+          alt=""
+        />
+      </div>
+      <div class="image-sm">
+        <div class="image-sm-1">
+          <img
+            style="width: 100px; height: 100px"
+            src="./assets/BTruong/image-mix/{{ product?.img2 }}"
+            alt=""
+          />
         </div>
+        <div class="image-sm-1">
+          <img
+            style="width: 100px; height: 100px"
+            src="./assets/BTruong/image-mix/{{ product?.img3 }}"
+            alt=""
+          />
+        </div>
+        <div class="image-sm-1">
+          <img
+            style="width: 100px; height: 100px"
+            src="./assets/BTruong/image-mix/{{ product?.img3 }}"
+            alt=""
+          />
+        </div>
+      </div>
     </div>
-    <div class="content">
-        <div class="title1">
-            <p style="margin-bottom: 0px; font-weight: 400px;">{{product?.name}}</p>
-            <div class="price-wrapper">
-                <span class="price"><span style="color: #66A55F; font-size: 18px;font-weight: 500;"
-            class="woocommerce-Price-amount amount">320,000&nbsp;<span
+  </div>
+  <div class="content">
+    <div class="title1">
+      <p style="margin-bottom: 0px; font-weight: 400px">{{ product?.name }}</p>
+      <div class="price-wrapper">
+        <span class="price"
+          ><span
+            style="color: #86ba09; font-size: 18px; font-weight: 500"
+            class="woocommerce-Price-amount amount"
+            >{{ product?.price }}&nbsp;<span
+              class="woocommerce-Price-currencySymbol"
+              >&#8363;</span
+            ></span
+          >
+        </span>
+      </div>
+    </div>
+    <div class="line">
+      <hr style="font-size: 16px" />
+    </div>
+    <div class="title2">
+      <p class="over">{{ product?.description }}</p>
+    </div>
 
-                <span class="price"><span style="color: #86ba09; font-size: 18px;font-weight: 500;"
-            class="woocommerce-Price-amount amount">{{product?.price}}&nbsp;<span
-
-              class="woocommerce-Price-currencySymbol">&#8363;</span></span>
-                </span>
+    <div class="btn-cont">
+      <div class="btn">
+        <div class="cart">
+          <div class="col-4 col-sm-4 col-md-4">
+            <div class="quantity" style="border-radius: 10px">
+              <input type="button" value="+" class="plus" />
+              <input
+                type="number"
+                step="1"
+                max="99"
+                min="1"
+                value="1"
+                title="Qty"
+                class="qty"
+                size="4"
+              />
+              <input type="button" value="-" class="minus" />
             </div>
+          </div>
         </div>
-        <div class="line">
-            <hr style="font-size: 16px;">
-        </div>
-        <div class="title2">
-            <p class="over">{{product?.description}}
-        </div>
-        <div class="btn-cont">
-            <div class="btn">
-                <div class="cart">
-                    <div class="col-4 col-sm-4 col-md-4">
-                        <div class="quantity" style="border-radius: 10px;">
-                            <input type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty" size="4">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="btn-cart-1">
-                </div>
-                <button type="button" class="btn btn-success" style="background-color: #66A55F;  height: 40px;font-size: 16px;
+        <div class="btn-cart-1"></div>
+        <button
+          type="button"
+          class="btn btn-success"
+          style="
+            background-color: #86ba09;
+            height: 40px;
+            font-size: 16px;
             width: 147px;
-            border-radius: 10px;"> <i class="fas fa-cart-plus"></i> Add to cart</button>
-            </div>
-        </div>
-        <div class="title3">
-            <p class="tag">Mã : <span class="list">{{product?.id}}</span></p>
-            <p class="tag">Danh Mục : <span class="list">{{product?.category}}</span></p>
-            <p class="tag">Tag : <span class="list" style=" font-style: italic;">cà chua, cà chua tự nhiên</span></p>
-        </div>
+            border-radius: 10px;
+          "
+        >
+          <i class="fas fa-cart-plus"></i> Add to cart
+        </button>
+      </div>
     </div>
-
+    <div class="title3">
+      <p class="tag">
+        Mã : <span class="list">{{ product?.id }}</span>
+      </p>
+      <p class="tag">
+        Danh Mục : <span class="list">{{ product?.category }}</span>
+      </p>
+      <p class="tag">
+        Tag :
+        <span class="list" style="font-style: italic"
+          >cà chua, cà chua tự nhiên</span
+        >
+      </p>
+    </div>
+  </div>
 </div>

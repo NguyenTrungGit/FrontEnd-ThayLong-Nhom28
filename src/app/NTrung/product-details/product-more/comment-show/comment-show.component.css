@@ -4,7 +4,7 @@
 }
 
 .layout-box {
-  width: 1140px;
+  width: 100%;
   border: #707070 solid 1px;
   margin-bottom: 50px;
 }
@@ -56,7 +56,7 @@
   margin: 20px;
 }
 .layout-box .control div {
-  margin: 0px 168px;
+  margin: 0px 135px;
   width: 610px;
   text-align: center;
 }

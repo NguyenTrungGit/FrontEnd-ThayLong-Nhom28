@@ -1,11 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
-
-
-
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -71,15 +67,21 @@ import { TitleNamComponent } from './BTruong/product-nam/title-nam/title-nam.com
 import { ProductListNamComponent } from './BTruong/product-nam/product-list-nam/product-list-nam.component';
 import { ProductItemNamComponent } from './BTruong/product-nam/product-list-nam/product-item-nam/product-item-nam.component';
 import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component';
+import { PopupLoginComponent } from './Tuyen/header/popup-login/popup-login.component';
+
+import { HeaderDirectDirective } from './Tuyen/header/header-direct.directive';
+import { CommentDialogComponent } from './NTrung/product-details/product-more/comment-dialog/comment-dialog.component';
 import { ProductInfoComponent } from './NTrung/product-details/product-info/product-info.component';
 import { ProductMoreComponent } from './NTrung/product-details/product-more/product-more.component';
-import { CommentDialogComponent } from './NTrung/product-details/product-more/comment-dialog/comment-dialog.component';
-import { MoreInfoComponent } from './NTrung/product-details/product-more/more-info/more-info.component';
 import { CommentShowComponent } from './NTrung/product-details/product-more/comment-show/comment-show.component';
-
+import { MoreInfoComponent } from './NTrung/product-details/product-more/more-info/more-info.component';
 
 @NgModule({
   declarations: [
+    MoreInfoComponent,
+    CommentShowComponent,
+    ProductInfoComponent,
+    ProductMoreComponent,
     AppComponent,
     ProductDetailsComponent,
     HeaderComponent,
@@ -105,10 +107,6 @@ import { CommentShowComponent } from './NTrung/product-details/product-more/comm
     SaleTitleComponent,
     SaleProductItemComponent,
     SaleProductPopupComponent,
-
-    ProductNewsComponent,
-
-
     ProductRelatedComponent,
     HomeComponent,
     ProductItemHomeComponent,
@@ -140,11 +138,8 @@ import { CommentShowComponent } from './NTrung/product-details/product-more/comm
     ProductListNamComponent,
     ProductItemNamComponent,
     ThanksPageComponent,
-    ProductInfoComponent,
-    ProductMoreComponent,
-    CommentDialogComponent,
-    MoreInfoComponent,
-    CommentShowComponent,
+    PopupLoginComponent,
+    HeaderDirectDirective,
   ],
   imports: [
     BrowserModule,
@@ -156,10 +151,7 @@ import { CommentShowComponent } from './NTrung/product-details/product-more/comm
     FormsModule,
     HttpClientModule,
     NgxPaginationModule,
-
-    NgxSliderModule
-
-
+    NgxSliderModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
