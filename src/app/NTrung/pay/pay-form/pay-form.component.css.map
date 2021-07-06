@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,CAAC,CAAA;EACG,KAAK,EAAE,OAAO;CACjB;;AACD,AAAA,MAAM,CAAA;EACF,WAAW,EAAE,IAAI;EACjB,SAAS,EAAE,IAAI;EACf,aAAa,EAAE,iBAAiB;EAChC,OAAO,EAAE,gBAAgB;CAC5B;;AAED,AACI,IADA,CACA,IAAI,CAAA;EACA,MAAM,EAAE,IAAI;CACf;;AAHL,AAKI,IALA,CAKA,IAAI,CAAA;EACA,cAAc,EAAE,IAAI;CACvB;;AAPL,AASI,IATA,CASA,WAAW,CAAA;EACP,cAAc,EAAE,IAAI;CACvB",
-    "sources": [
-        "pay-form.component.scss"
-    ],
-    "names": [],
-    "file": "pay-form.component.css"
-}
+{"version":3,"sources":["pay-form.component.scss"],"names":[],"mappings":"AAAA;EACE,cAAA;AACF;;AACA;EACE,iBAAA;EACA,eAAA;EACA,gCAAA;EACA,yBAAA;AAEF;;AAEE;EACE,YAAA;AACJ;AAEE;EACE,oBAAA;AAAJ;AAGE;EACE,oBAAA;AADJ","file":"pay-form.component.css"}
