@@ -23,7 +23,7 @@ export class ProductListCuComponent implements OnInit {
   getProducts() {
     this.productService.getProducts().subscribe((res: any) => {
       this.datas = res;
-      console.log(this.datas);
+
       this.datas= this.datas.filter(p=>p.category=='Củ')
 
     });

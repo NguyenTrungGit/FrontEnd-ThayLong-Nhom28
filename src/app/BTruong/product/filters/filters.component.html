@@ -7,34 +7,11 @@
                 <span class="widget-title shop-sidebar " style="margin :0 auto; margin-top: 12px; color: #fff; font-size: 18px;">DANH SÁCH SẢN PHẨM</span>
             </div>
             <div class="menu-danh-muc-san-pham-vertical-menu-container ">
-                <div class="menu">
-                    <div class="menu1" routerLink="/rau">
-                        <p class="span-font"><a class="menu1a">Rau</a> </p>
-
-
-                    </div>
-                    <div class="menu2" routerLink="/traicay">
-                        <p class="span-font"><a class="menu2a">Trái Cây</a> </p>
-
-
-                    </div>
-                    <div class="menu3" routerLink="/cu">
-                        <p class="span-font"><a class="menu3a">Củ</a> </p>
-
-                    </div>
-                    <div class="menu4" routerLink="/qua">
-                        <p class="span-font">
-                            <a class="menu4a">Quả</a>
-                        </p>
-
-                    </div>
-                    <div class="menu5" routerLink="/nam">
-                        <p class="span-font"><a class="menu5a">Nấm</a> </p>
-
-                    </div>
-
-
-                </div>
+                <ul class="menu" *ngFor="let item of categorys">
+                    <li class="">
+                        <a class="span-font" routerLink="/cuahang/{{item.id}}"><a class="menu1a">{{item.name}}</a> </a>
+                    </li>
+                </ul>
             </div>
         </aside>
 
@@ -60,7 +37,7 @@
     left: 12px;">
                     <span style="font-size: 12px;padding-bottom: 3px; position: absolute;
                     top:4px;
-                    ;left: 14px;">Lọc</span>
+                    ;left: 14px;" (click)="sendParent()">Lọc</span>
                     <!-- <a type="submit"
             style=" border: none;width: 50px; border-radius: 99px; font-size: 16px;background-color: #666;color: #fff;"></a> -->
                 </div>

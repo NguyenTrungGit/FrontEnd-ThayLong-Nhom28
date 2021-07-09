@@ -16,16 +16,13 @@ import { IntroduceComponent } from './Tuyen/introduce/introduce.component';
 
 const routes: Routes = [
   { path: 'trangchu', component: HomeComponent },
-  { path: 'cuahang', component: ProductComponent },
+  { path: 'cuahang/:cate', component: ProductComponent},
+  { path: 'cuahang', component: ProductComponent},
   { path: 'gioithieu', component: IntroduceComponent },
   { path: 'lienhe', component: ContactComponent },
   { path: 'chiase', component: BlogComponent },
   { path: 'giohang', component: CartComponent },
-  { path: 'rau', component: ProductRauComponent },
-  { path: 'traicay', component: ProductTraicayComponent },
-  { path: 'cu', component: ProductCuComponent },
-  { path: 'qua', component: ProductQuaComponent },
-  { path: 'nam', component: ProductNamComponent },
+
   { path: 'chitiet', component: ProductDetailsComponent },
   { path: 'pay', component: PayComponent },
   { path: '', component: HomeComponent },
