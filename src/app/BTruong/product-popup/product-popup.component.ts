@@ -11,7 +11,7 @@ import { Product } from 'src/app/model/product.model';
 export class ProductPopupComponent implements OnInit {
 product?:Product;
   constructor(@Inject(MAT_DIALOG_DATA) public data:any) {
-    console.log('xxx',data)
+    
     this.product=data;
   }
 

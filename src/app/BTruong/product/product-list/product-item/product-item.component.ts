@@ -10,6 +10,7 @@ import { Product } from 'src/app/model/product.model';
 })
 export class ProductItemComponent implements OnInit {
 
+
   constructor(public dialog: MatDialog){}
   openDialog(){
     this.dialog.open(ProductPopupComponent,{
@@ -28,6 +29,11 @@ export class ProductItemComponent implements OnInit {
     });
   }
   ngOnInit(): void {
+
+
+
   }
   @Input() productItem?: Product
+
+
 }
