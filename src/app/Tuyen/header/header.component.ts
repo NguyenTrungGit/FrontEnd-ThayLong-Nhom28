@@ -36,6 +36,8 @@ i:any=-1;
       topintro.style.display='block'
      logo.style.width='170px'
      navbar.classList.remove('p-0')
+     logo.style.paddingTop='0px';
+     logo.style.paddingBottom='0px';
     }if(document.documentElement.scrollTop>200){
       navbar.classList.add('transition-navbar')
 

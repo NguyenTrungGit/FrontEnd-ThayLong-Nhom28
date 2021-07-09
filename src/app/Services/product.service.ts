@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Category } from '../model/category.model';
 import { Product } from '../model/product.model';
 
 @Injectable({
@@ -15,6 +16,18 @@ private  httpOptions ={
 
   public getProducts():Observable<Product[]>{
     const url =`${this.REST_API_SERVER}/product`;
+    return this.httpClient.get<Product[]>(url,this.httpOptions);
+  }
+  public getCategorys():Observable<Category[]>{
+    const url =`${this.REST_API_SERVER}/category`;
+    return this.httpClient.get<Category[]>(url,this.httpOptions);
+  }
+  public getProductsByCategory(category:string):Observable<Product[]>{
+    const url =`${this.REST_API_SERVER}/product?category=${category}`;
+    return this.httpClient.get<Product[]>(url,this.httpOptions);
+  }
+  public getProductsByPrice(category:string):Observable<Product[]>{
+    const url =`${this.REST_API_SERVER}/product?category=${category}`;
     return this.httpClient.get<Product[]>(url,this.httpOptions);
   }
 }
