@@ -43,145 +43,169 @@
                     </span>
                     <div class="box-search">
                         <div class="title-search">TÌM KIẾM</div>
-                        <div class="site-search">
-                            <div class="form-search">
-                                <form action="">
-                                    <input class="input-search" type="text" placeholder="Tìm kiếm sản phẩm...">
-                                    <button class="btn-search" type="submit"><i class="far fa-search transform-search"></i></button>
+                        <div class="ng-autocomplete">
+                            <ng-autocomplete [data]="datas" [searchKeyword]="keyword" placeholder="Tim kiếm sản phẩm..." (selected)='selectEvent($event)' (inputChanged)='onChangeSearch($event)' (inputFocused)='onFocused($event)' historyIdentifier="countries" [itemTemplate]="itemTemplate"
+                                [notFoundTemplate]="notFoundTemplate">
+                            </ng-autocomplete>
+                            <ng-template #itemTemplate let-item>
+                                <div class="row">
+
+                                    <div class="row-left">
+                                        <div routerLink="/chitiet{{item.id}}" class=" name " [innerHTML]=" item.name | titlecase "></div>
+                                        <div class="price1 " [innerHTML]=" item.price | number "></div>
+                                    </div>
+                                    <div class="row-right ">
+                                        <img src=" ./assets/BTruong/image-mix/{{item.img1}} " alt=" ">
+                                    </div>
+
+                                </div>
+                            </ng-template>
+
+                            <ng-template #notFoundTemplate let-notFound>
+                                <div [innerHTML]="found "></div>
+                            </ng-template>
+                        </div>
+                        <div class="site-search ">
+
+                            <!-- <div class="form-search ">
+                                <form action=" ">
+                                    <input class="input-search " type="text " placeholder="Tìm kiếm sản phẩm... ">
+                                    <button class="btn-search " type="submit "><i class="far fa-search transform-search "></i></button>
                                 </form>
                             </div>
-                            <div class="resultsSearch">
-                                <div class="item-search">
-                                    <div class="title">
-                                        <a title="Rau muống túi 500g" href="">Rau muống túi 500g</a>
-                                        <div class="price-item">25.000</div>
+                            <div class="resultsSearch ">
+                                <div class="item-search ">
+                                    <div class="title ">
+                                        <a title="Rau muống túi 500g " href=" ">Rau muống túi 500g</a>
+                                        <div class="price-item ">25.000</div>
                                     </div>
-                                    <div class="thumb-search">
-                                        <a href=""><img src="/assets/BTruong/image-mix/FR001.jpg" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="item-search">
-                                    <div class="title">
-                                        <a title="Rau muống túi 500g" href="">Rau muống túi 500g</a>
-                                        <div class="price-item">25.000</div>
-                                    </div>
-                                    <div class="thumb-search">
-                                        <a href=""><img src="/assets/BTruong/image-mix/FR001.jpg" alt=""></a>
+                                    <div class="thumb-search ">
+                                        <a href=" "><img src="/assets/BTruong/image-mix/FR001.jpg " alt=" "></a>
                                     </div>
                                 </div>
-                                <div class="item-search">
-                                    <div class="title">
-                                        <a title="Rau muống túi 500g" href="">Rau muống túi 500g</a>
-                                        <div class="price-item">25.000</div>
+                                <div class="item-search ">
+                                    <div class="title ">
+                                        <a title="Rau muống túi 500g " href=" ">Rau muống túi 500g</a>
+                                        <div class="price-item ">25.000</div>
                                     </div>
-                                    <div class="thumb-search">
-                                        <a href=""><img src="/assets/BTruong/image-mix/FR001.jpg" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="item-search">
-                                    <div class="title">
-                                        <a title="Rau muống túi 500g" href="">Rau muống túi 500g</a>
-                                        <div class="price-item">25.000</div>
-                                    </div>
-                                    <div class="thumb-search">
-                                        <a href=""><img src="/assets/BTruong/image-mix/FR001.jpg" alt=""></a>
+                                    <div class="thumb-search ">
+                                        <a href=" "><img src="/assets/BTruong/image-mix/FR001.jpg " alt=" "></a>
                                     </div>
                                 </div>
-                                <div class="item-search">
-                                    <div class="title">
-                                        <a title="Rau muống túi 500g" href="">Rau muống túi 500g</a>
-                                        <div class="price-item">25.000</div>
+                                <div class="item-search ">
+                                    <div class="title ">
+                                        <a title="Rau muống túi 500g " href=" ">Rau muống túi 500g</a>
+                                        <div class="price-item ">25.000</div>
                                     </div>
-                                    <div class="thumb-search">
-                                        <a href=""><img src="/assets/BTruong/image-mix/FR001.jpg" alt=""></a>
+                                    <div class="thumb-search ">
+                                        <a href=" "><img src="/assets/BTruong/image-mix/FR001.jpg " alt=" "></a>
                                     </div>
                                 </div>
-                                <div class="item-more p-2"><a href="">Xem thêm 26 sản phẩm</a></div>
-                            </div>
+                                <div class="item-search ">
+                                    <div class="title ">
+                                        <a title="Rau muống túi 500g " href=" ">Rau muống túi 500g</a>
+                                        <div class="price-item ">25.000</div>
+                                    </div>
+                                    <div class="thumb-search ">
+                                        <a href=" "><img src="/assets/BTruong/image-mix/FR001.jpg " alt=" "></a>
+                                    </div>
+                                </div>
+                                <div class="item-search ">
+                                    <div class="title ">
+                                        <a title="Rau muống túi 500g " href=" ">Rau muống túi 500g</a>
+                                        <div class="price-item ">25.000</div>
+                                    </div>
+                                    <div class="thumb-search ">
+                                        <a href=" "><img src="/assets/BTruong/image-mix/FR001.jpg " alt=" "></a>
+                                    </div>
+                                </div>
+                                <div class="item-more p-2 "><a href=" ">Xem thêm 26 sản phẩm</a></div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="" type="button" data-toggle="modal" data-target="#popupModal"><i class="far fa-user "></i></a>
+            <li class="nav-item ">
+                <a class="nav-link " href=" " type="button " data-toggle="modal " data-target="#popupModal "><i class="far fa-user "></i></a>
             </li>
-            <li class="nav-item cart-home" (mouseover)="hideSearch()">
+            <li class="nav-item cart-home " (mouseover)="hideSearch() ">
                 <a class="nav-link " routerLink="/giohang "><i class="far fa-shopping-cart "></i></a>
                 <span class="quantity ">2</span>
-                <div class="block-minicart">
-                    <span class="box-triangle">
-                    <svg viewBox="0 0 20 9" role="presentation">
-                      <path d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z" fill="#ffffff"></path>
+                <div class="block-minicart ">
+                    <span class="box-triangle ">
+                    <svg viewBox="0 0 20 9 " role="presentation ">
+                      <path d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z
+                                            " fill="#ffffff "></path>
                     </svg>
                   </span>
-                    <div class="minicart-content">
+                    <div class="minicart-content ">
                         <!-- <div class="minicart-close ">
                       <button type="button " class="close pr-3 pl-3 pt-1 pb-1 "><span>×</span></button>
                   </div> -->
-                        <div class="block-products">
-                            <div class="title-block-minicart">
+                        <div class="block-products ">
+                            <div class="title-block-minicart ">
                                 Giỏ hàng
                             </div>
-                            <div class="list-products scrollbar scrollbar-primary pl-3 pr-3">
-                                <div class="item-cartmini">
-                                    <div class="thumb-item">
-                                        <a href=""><img src="/assets/BTruong/image-mix/FR001.jpg" alt="" width="60px" height="60px"></a>
+                            <div class="list-products scrollbar scrollbar-primary pl-3 pr-3 ">
+                                <div class="item-cartmini ">
+                                    <div class="thumb-item ">
+                                        <a href=" "><img src="/assets/BTruong/image-mix/FR001.jpg " alt=" " width="60px " height="60px "></a>
                                     </div>
-                                    <div class="title-item pl-2">
-                                        <a href="" class="title">Rau muống túi xanh tươi 500g </a>
-                                        <div><span class="quantity-item">1</span></div>
+                                    <div class="title-item pl-2 ">
+                                        <a href=" " class="title ">Rau muống túi xanh tươi 500g </a>
+                                        <div><span class="quantity-item ">1</span></div>
                                     </div>
-                                    <div class="remove-price">
-                                        <div class="mb-2 pb-2"><a href="" class="remove"><i class="fas fa-times"></i></a></div>
-                                        <div class="price"><span></span>20000đ</div>
-                                    </div>
-                                </div>
-                                <div class="item-cartmini">
-                                    <div class="thumb-item">
-                                        <a href=""><img src="/assets/BTruong/image-mix/FR001.jpg" alt="" width="60px" height="60px"></a>
-                                    </div>
-                                    <div class="title-item pl-2">
-                                        <a href="" class="title">Rau muống túi xanh tươi 500g </a>
-                                        <div><span class="quantity-item">1</span></div>
-                                    </div>
-                                    <div class="remove-price">
-                                        <div class="mb-2 pb-2"><a href="" class="remove"><i class="fas fa-times"></i></a></div>
-                                        <div class="price"><span></span>20000đ</div>
+                                    <div class="remove-price ">
+                                        <div class="mb-2 pb-2 "><a href=" " class="remove "><i class="fas fa-times "></i></a></div>
+                                        <div class="price "><span></span>20000đ</div>
                                     </div>
                                 </div>
-                                <div class="item-cartmini">
-                                    <div class="thumb-item">
-                                        <a href=""><img src="/assets/BTruong/image-mix/FR001.jpg" alt="" width="60px" height="60px"></a>
+                                <div class="item-cartmini ">
+                                    <div class="thumb-item ">
+                                        <a href=" "><img src="/assets/BTruong/image-mix/FR001.jpg " alt=" " width="60px " height="60px "></a>
                                     </div>
-                                    <div class="title-item pl-2">
-                                        <a href="" class="title">Rau muống túi xanh tươi 500g </a>
-                                        <div><span class="quantity-item">1</span></div>
+                                    <div class="title-item pl-2 ">
+                                        <a href=" " class="title ">Rau muống túi xanh tươi 500g </a>
+                                        <div><span class="quantity-item ">1</span></div>
                                     </div>
-                                    <div class="remove-price">
-                                        <div class="mb-2 pb-2"><a href="" class="remove"><i class="fas fa-times"></i></a></div>
-                                        <div class="price"><span></span>20000đ</div>
+                                    <div class="remove-price ">
+                                        <div class="mb-2 pb-2 "><a href=" " class="remove "><i class="fas fa-times "></i></a></div>
+                                        <div class="price "><span></span>20000đ</div>
                                     </div>
                                 </div>
-                                <div class="item-cartmini">
-                                    <div class="thumb-item">
-                                        <a href=""><img src="/assets/BTruong/image-mix/FR001.jpg" alt="" width="60px" height="60px"></a>
+                                <div class="item-cartmini ">
+                                    <div class="thumb-item ">
+                                        <a href=" "><img src="/assets/BTruong/image-mix/FR001.jpg " alt=" " width="60px " height="60px "></a>
                                     </div>
-                                    <div class="title-item pl-2">
-                                        <a href="" class="title">Rau muống túi xanh tươi 500g </a>
-                                        <div><span class="quantity-item">1</span></div>
+                                    <div class="title-item pl-2 ">
+                                        <a href=" " class="title ">Rau muống túi xanh tươi 500g </a>
+                                        <div><span class="quantity-item ">1</span></div>
                                     </div>
-                                    <div class="remove-price">
-                                        <div class="mb-2 pb-2"><a href="" class="remove"><i class="fas fa-times"></i></a></div>
-                                        <div class="price"><span></span>20000đ</div>
+                                    <div class="remove-price ">
+                                        <div class="mb-2 pb-2 "><a href=" " class="remove "><i class="fas fa-times "></i></a></div>
+                                        <div class="price "><span></span>20000đ</div>
+                                    </div>
+                                </div>
+                                <div class="item-cartmini ">
+                                    <div class="thumb-item ">
+                                        <a href=" "><img src="/assets/BTruong/image-mix/FR001.jpg " alt=" " width="60px " height="60px "></a>
+                                    </div>
+                                    <div class="title-item pl-2 ">
+                                        <a href=" " class="title ">Rau muống túi xanh tươi 500g </a>
+                                        <div><span class="quantity-item ">1</span></div>
+                                    </div>
+                                    <div class="remove-price ">
+                                        <div class="mb-2 pb-2 "><a href=" " class="remove "><i class="fas fa-times "></i></a></div>
+                                        <div class="price "><span></span>20000đ</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="total-cartmini mb-3 ml-3 pt-2">
-                                <div href="" class="title">Tổng tiền:</div>
-                                <div class="total-number"><span>150.000</span></div>
+                            <div class="total-cartmini mb-3 ml-3 pt-2 ">
+                                <div href=" " class="title ">Tổng tiền:</div>
+                                <div class="total-number "><span>150.000</span></div>
                             </div>
-                            <div class="text-center m-3">
-                                <button type="button" class="btn-checkout vvv">THANH TOÁN</button>
+                            <div class="text-center m-3 ">
+                                <button type="button " class="btn-checkout vvv ">THANH TOÁN</button>
 
                             </div>
                         </div>
@@ -194,6 +218,6 @@
     </nav>
 </div>
 
-<div class="modal fade" id="popupModal" tabindex="-1 " role="dialog" aria-hidden="true">
+<div class="modal fade " id="popupModal " tabindex="-1 " role="dialog " aria-hidden="true ">
     <app-popup-login></app-popup-login>
 </div>

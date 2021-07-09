@@ -9,14 +9,20 @@
     cursor: pointer;
 }
 
+.fil {
+    margin-top: 80px;
+    margin-left: 80px;
+}
+
 .search-container button:hover {
     background: #ccc;
 }
 
-.search {
-    margin-top: 100px;
-    margin-left: 92px;
+.form {
+    display: flex;
 }
+
+.search {}
 
 .is-divider {
     height: 80px;
@@ -157,7 +163,6 @@
 .col4 {
     margin-top: 50px;
     width: 305px;
-    margin-left: 91px;
 }
 
 .product_list_widget {

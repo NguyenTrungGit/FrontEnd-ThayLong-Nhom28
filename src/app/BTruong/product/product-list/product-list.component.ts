@@ -12,6 +12,9 @@ export class ProductListComponent implements OnInit {
   page:number =1;
   showport:any =[];
 
+  start:number= (this.page-1)*12;
+  end:number= this.start +12 ;
+
   datas: Product[] = [];
   constructor(private productService: ProductService) {}
   ngOnInit(): void {
@@ -19,6 +22,7 @@ export class ProductListComponent implements OnInit {
     this.datas= this.datas.sort((low, high) => low.price - high.price);
   }
   getProducts() {
+
     this.productService.getProducts().subscribe((res: any) => {
       this.datas = res;
     });

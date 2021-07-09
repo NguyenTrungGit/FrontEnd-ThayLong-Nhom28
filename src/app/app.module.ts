@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -152,6 +153,7 @@ import { MoreInfoComponent } from './NTrung/product-details/product-more/more-in
     HttpClientModule,
     NgxPaginationModule,
     NgxSliderModule,
+    AutocompleteLibModule
   ],
   providers: [],
   bootstrap: [AppComponent],
