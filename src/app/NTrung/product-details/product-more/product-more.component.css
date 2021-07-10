@@ -2,6 +2,9 @@
   color: #707070;
 }
 
+.container {
+  margin-top: -50px;
+}
 .container .title {
   display: flex;
 }

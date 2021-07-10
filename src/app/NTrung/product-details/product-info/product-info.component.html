@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container border-bottom">
   <!-- image -->
 
   <div class="slide-show">
@@ -8,30 +8,30 @@
     <input type="radio" name="images" id="img4" />
 
     <div class="slide-img" id="four">
-      <img src="../../../../assets/NTrungData/image/product-24-470x470.jpg" />
+      <img src="./assets/BTruong/image-mix/{{ productInfo?.img2 }}" />
     </div>
 
     <div class="slide-img" id="three">
-      <img src="../../../../assets/NTrungData/image/product-12-470x470.jpg" />
+      <img src="./assets/BTruong/image-mix/{{ productInfo?.img3 }}" />
     </div>
 
     <div class="slide-img" id="two">
-      <img src="../../../../assets/NTrungData/image/product-11-470x470.jpg" />
+      <img src="./assets/BTruong/image-mix/{{ productInfo?.img2 }}" />
     </div>
 
     <div class="slide-img" id="one">
-      <img src="../../../../assets/NTrungData/image/Xoai.jpg" />
+      <img src="./assets/BTruong/image-mix/{{ productInfo?.img1 }} " />
     </div>
 
     <div class="nav">
       <label for="img1" class="image-sub" id="dot1"
-        ><img src="../../../../assets/NTrungData/image/Xoai.jpg"
+        ><img src="./assets/BTruong/image-mix/{{ productInfo?.img1 }}"
       /></label>
       <label for="img2" class="image-sub" id="dot2"
-        ><img src="../../../../assets/NTrungData/image/product-11-470x470.jpg"
+        ><img src="./assets/BTruong/image-mix/{{ productInfo?.img2 }}"
       /></label>
       <label for="img3" class="image-sub" id="dot3"
-        ><img src="../../../../assets/NTrungData/image/product-12-470x470.jpg"
+        ><img src="./assets/BTruong/image-mix/{{ productInfo?.img3 }}"
       /></label>
       <label for="img4" class="image-sub" id="dot4">
         <img
@@ -43,7 +43,7 @@
   <!-- info -->
   <div class="info-box">
     <div class="title border-bottom">
-      <div class="tag-1 font-weight-bold">Xoài</div>
+      <div class="tag-1 font-weight-bold">{{ productInfo?.name }}</div>
       <div class="tag-2" style="color: white; background-color: #ffb24c">
         -50% <i class="fas fa-tags"></i>
       </div>
@@ -52,9 +52,11 @@
     <!-- info title -->
     <div class="title">
       <div class="tag-1 font-weight-bold" style="color: #66a55f">
-        20.000 &#8363; / kg
+        {{ productInfo?.price }} &#8363; / kg
       </div>
-      <div class="tag-2">40.000 &#8363;</div>
+      <div class="tag-2">
+        <del>{{ productInfo?.price * 2 }} &#8363;</del>
+      </div>
     </div>
 
     <!-- info rating -->
@@ -76,7 +78,7 @@
       <div style="width: 250px">
         <input type="checkbox" checked /> Còn hàng
         <p>Đạt chứng nhận Global GAP</p>
-        <p>Việt Nam</p>
+        <p>{{ productInfo?.origin }}</p>
       </div>
     </div>
 

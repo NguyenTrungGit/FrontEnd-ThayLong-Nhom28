@@ -79,7 +79,13 @@
 }
 .container .info-box .title .tag-1 {
   width: 300px;
+  height: 40px;
+  padding: 5px;
   font-size: 30px;
+  max-width: 80%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .container .info-box .title .tag-2 {
   padding-top: 5px;
