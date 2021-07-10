@@ -1,10 +1,26 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, ElementRef, OnInit, ViewChild, AfterViewInit, AfterContentInit, Inject, HostListener } from '@angular/core';
+
+import {
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+  AfterViewInit,
+  AfterContentInit,
+  Inject,
+  HostListener,
+  Input,
+ChangeDetectionStrategy
+} from '@angular/core';
+import { Subject } from 'rxjs';
+import { Product } from 'src/app/model/product.model';
+import { ProductService } from 'src/app/Services/product.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent implements OnInit {
   i: any = -1;
@@ -12,10 +28,22 @@ export class HeaderComponent implements OnInit {
   title = 'filter';
   keyword ="name";
   found ="không tìm thấy sản phẩm."
+
+
+  public nameFilter='bao';
+  public nameFilterControl =  new Subject<string>();
+// scroll
+  items = Array.from({length: 210}).map((_, i) => `Item #${i}`);
   constructor(@Inject(DOCUMENT) private document: any, private productService: ProductService ) {}
 
   ngOnInit(): void {
     this.getProducts();
+    this.nameFilterControl.pipe().subscribe(value=>{ this.nameFilter = value.trim().toLowerCase();
+      console.log(value);
+    }
+    );
+
+
   }
   getProducts() {
     this.productService.getProducts().subscribe((res: any) => {
@@ -42,30 +70,28 @@ export class HeaderComponent implements OnInit {
   }
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    var header = (document.querySelector('.header') as HTMLElement);
-    var navbar = (document.querySelector('.navbar') as HTMLElement);
-    var topintro =(document.querySelector('.top-intro') as HTMLElement);
-    var logo =(document.querySelector('.logo') as HTMLElement);
-    if(document.documentElement.scrollTop<1){
-      topintro.style.display='block'
-     logo.style.width='170px'
-     navbar.classList.remove('p-0')
-     logo.style.paddingTop='0px';
-     logo.style.paddingBottom='0px';
-    }if(document.documentElement.scrollTop>200){
-      navbar.classList.add('transition-navbar')
-
-      header.classList.add("fixed-top")
-      topintro.style.display='none'
-     navbar.classList.add('shadow')
-     logo.style.width='160px'
-     logo.style.paddingTop='8px';
-     logo.style.paddingBottom='8px';
-navbar.classList.add('p-0')
+    var header = document.querySelector('.header') as HTMLElement;
+    var navbar = document.querySelector('.navbar') as HTMLElement;
+    var topintro = document.querySelector('.top-intro') as HTMLElement;
+    var logo = document.querySelector('.logo') as HTMLElement;
+    if (document.documentElement.scrollTop < 1) {
+      topintro.style.display = 'block';
+      logo.style.width = '170px';
+      navbar.classList.remove('p-0');
     }
+    if (document.documentElement.scrollTop > 200) {
+      navbar.classList.add('transition-navbar');
 
+      header.classList.add('fixed-top');
+      topintro.style.display = 'none';
+      navbar.classList.add('shadow');
+      logo.style.width = '160px';
+      logo.style.paddingTop = '8px';
+      logo.style.paddingBottom = '8px';
+      navbar.classList.add('p-0');
+    }
   }
-    selectEvent(item:any) {
+  selectEvent(item:any) {
     // do something with selected item
   }
 
@@ -77,4 +103,6 @@ navbar.classList.add('p-0')
   onFocused(e:any) {
     // do something
   }
+  //filter
+
 }

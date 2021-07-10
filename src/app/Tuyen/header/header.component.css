@@ -378,7 +378,7 @@
     display: none;
     position: absolute;
     right: 7%;
-    box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.09);
+    box-shadow: 0px -1px 5px 0px rgb(0 0 0 / 10%);
     border-radius: 4px;
 }
 
@@ -502,8 +502,8 @@
 }
 
 img {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
 }
 
@@ -511,13 +511,10 @@ img {
     display: flex;
 }
 
-::ng-deep .ng-pristine {
-    height: 40px !important;
-}
-
 ::ng-deep .input-container {
-    height: 65px;
+    height: 45px;
     background: #fff;
+    box-shadow: 0px 5px 5px 0px rgb(0 0 0 / 10%) !important;
 }
 
 ::ng-deep .item {
@@ -526,51 +523,6 @@ img {
 
 ::ng-deep .autocomplete-container {
     box-shadow: none !important;
-}
-
-::ng-deep .ng-pristine {
-    border: 1px solid #ececec !important;
-    width: 350px !important;
-    padding: 5px !important;
-    background-color: #ececec!important;
-}
-
-::ng-deep .ng-pristine:hover {
-    background-color: #fff !important;
-    border: #66a55f !important;
-    border: 1px solid #ececec !important;
-    width: 350px !important;
-    padding: 5px !important;
-}
-
-::ng-deep .ng-touched {
-    border: 1px solid #ececec !important;
-    width: 350px !important;
-    padding: 5px !important;
-    background-color: #ececec!important;
-}
-
-::ng-deep .ng-touched:hover {
-    background-color: #fff !important;
-    border: #66a55f !important;
-    border: 1px solid #ececec !important;
-    width: 350px !important;
-    padding: 5px !important;
-}
-
-::ng-deep .ng-valid {
-    border: 1px solid #ececec !important;
-    width: 350px !important;
-    padding: 5px !important;
-    background-color: #ececec!important;
-}
-
-::ng-deep .ng-valid:hover {
-    background-color: #fff !important;
-    border: #66a55f !important;
-    border: 1px solid #ececec !important;
-    width: 350px !important;
-    padding: 5px !important;
 }
 
 .row {
@@ -632,7 +584,7 @@ img {
     letter-spacing: 1px;
     margin-top: 3px;
     position: absolute;
-    left: 0px;
+    left: -2px;
 }
 
 .price1 {
@@ -640,7 +592,7 @@ img {
     margin-right: 83px;
     color: #66a55f;
     position: absolute;
-    left: 0px;
+    left: -2px;
     top: 26px;
 }
 
@@ -649,14 +601,16 @@ img {
 }
 
 ::ng-deep .is-visible {
-    max-height: 0px !important;
+    max-height: 46px !important;
     border-radius: 0px 0px 5px 5px;
+    box-shadow: 0px 5px 5px 0px rgb(0 0 0 / 10%) !important;
 }
 
 ::ng-deep .is-visible ul {
     max-height: 364px !important;
     background-color: #fff;
     border-radius: 0px 0px 5px 5px;
+    box-shadow: 0px 1px 5px 0px rgb(0 0 0 / 10%);
 }
 
 ::ng-deep .is-hidden ul {

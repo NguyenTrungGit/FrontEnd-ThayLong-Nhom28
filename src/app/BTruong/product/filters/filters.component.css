@@ -11,6 +11,11 @@
     margin-top: 0px;
 }
 
+.menu-sub {
+    height: 30px;
+    padding-top: 10px;
+}
+
 #rangePrmary {
     color: #66A55F;
 }
@@ -24,15 +29,26 @@
 .menu {
     position: relative;
     margin-top: 0px;
+    height: 41px;
+    background-color: #fff;
+    list-style: none;
+    margin-bottom: 0px;
+    border-left: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+    border-right: 1px solid #efefef;
+    cursor: pointer;
+}
+
+.menu:hover {
+    background-color: #66A55F;
 }
 
 .span-font {
     margin-top: 11px;
     font-weight: 500;
-    margin-left: 20px;
     font-size: 14px;
     color: rgb(37, 37, 37);
-    margin: 15px 15px 15px 36px;
+    margin: 15px 15px 15px 15px;
 }
 
 .menu1 {
@@ -56,7 +72,7 @@
     color: rgb(37, 37, 37);
 }
 
-.menu1:hover .menu1a {
+.menu:hover .menu1a {
     background-color: #66A55F;
     color: #ffff;
 }
@@ -172,7 +188,7 @@
 }
 
 .col3 {
-    margin-top: 255px;
+    margin-top: 40px;
     width: 270px;
     margin-left: 60px;
 }
