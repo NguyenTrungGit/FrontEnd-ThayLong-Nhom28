@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Product } from 'src/app/model/product.model';
 
 @Component({
   selector: 'app-product-info',
@@ -6,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-info.component.scss'],
 })
 export class ProductInfoComponent implements OnInit {
-  amount: any = 0;
+  amount: any = 1;
+
+  // TODO: receive data from product details
+  @Input() productInfo?: Product;
 
   constructor() {}
 
@@ -17,7 +21,7 @@ export class ProductInfoComponent implements OnInit {
   }
 
   down() {
-    if (this.amount > 0) {
+    if (this.amount > 1) {
       this.amount--;
     }
   }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Product } from 'src/app/model/product.model';
+import { ProductService } from 'src/app/Services/product.service';
 
 @Component({
   selector: 'app-product-details',
@@ -6,7 +9,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-details.component.css'],
 })
 export class ProductDetailsComponent implements OnInit {
-  constructor() {}
+  id: any;
+  listProduct?: Product[];
+  productInfo?: Product;
 
-  ngOnInit(): void {}
+  constructor(
+    private productService: ProductService,
+    private activatedRoute: ActivatedRoute
+  ) {}
+
+  ngOnInit(): void {
+    // FIXME: the method is not optimized
+    this.getIdFromUrl();
+    this.getProductById();
+  }
+
+  //TODO: get id from url
+  getIdFromUrl() {
+    this.activatedRoute.paramMap.subscribe((params: any) => {
+      this.id = params.get('id');
+    });
+  }
+
+  //TODO: function: get list product and find product by id in this list product
+  getProductById() {
+    this.productService.getProducts().subscribe((res) => {
+      this.listProduct = res;
+      this.productInfo = this.listProduct.find((n) => n.id === this.id);
+    });
+  }
 }

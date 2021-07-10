@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogConfig, MatDialogModule } from '@angular/material/dialog';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -154,7 +154,7 @@ import { MoreInfoComponent } from './NTrung/product-details/product-more/more-in
     NgxPaginationModule,
     NgxSliderModule,
   ],
-  providers: [],
+  providers: [MatDialogConfig],
   bootstrap: [AppComponent],
   entryComponents: [CommentDialogComponent],
 })
