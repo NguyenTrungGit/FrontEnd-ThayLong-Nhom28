@@ -18,17 +18,17 @@ label.star {
 
 input.star:checked ~ label.star:before {
   content: "";
-  color: #FD4;
+  color: #fd4;
   transition: all 0.25s;
 }
 
 input.star-5:checked ~ label.star:before {
-  color: #FE7;
+  color: #fe7;
   text-shadow: 0 0 20px #952;
 }
 
 input.star-1:checked ~ label.star:before {
-  color: #F62;
+  color: #f62;
 }
 
 label.star:hover {
@@ -38,4 +38,11 @@ label.star:hover {
 label.star:before {
   content: "";
   font-family: FontAwesome;
+}
+
+button {
+  margin-left: 20px;
+  font-weight: bold;
+  width: 100px;
+  border-radius: 20px;
 }/*# sourceMappingURL=comment-dialog.component.css.map */

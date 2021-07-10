@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogConfig, MatDialogModule } from '@angular/material/dialog';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 import {ScrollingModule} from '@angular/cdk/scrolling';
@@ -119,7 +119,7 @@ import { MoreInfoComponent } from './NTrung/product-details/product-more/more-in
     AutocompleteLibModule,
     ScrollingModule
   ],
-  providers: [],
+  providers: [MatDialogConfig],
   bootstrap: [AppComponent],
   entryComponents: [CommentDialogComponent],
 })
