@@ -1,15 +1,15 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 
-<div class="col large-3  ">
+<div class="col2 large-3  ">
     <div class="sidebar-inner col-inner">
         <aside id="nav_menu-2" class="widget widget_nav_menu">
             <div class="is-divider small" style="display: flex;">
-                <span class="widget-title shop-sidebar " style="margin :0 auto; margin-top: 12px; color: #fff; font-size: 18px;">DANH SÁCH SẢN PHẨM</span>
+                <span class="widget-title shop-sidebar " style="margin :0 auto; margin-top: 12px; color: #fff; font-size: 18px;">DANH MỤC</span>
             </div>
             <div class="menu-danh-muc-san-pham-vertical-menu-container ">
-                <ul class="menu" *ngFor="let item of categorys">
-                    <li class="">
-                        <a class="span-font" routerLink="/cuahang/{{item.id}}"><a class="menu1a">{{item.name}}</a> </a>
+                <ul class="menu " *ngFor="let item of categorys " routerLink="/cuahang/{{item.id}}">
+                    <li class="menu-sub ">
+                        <a class="span-font "><a class="menu1a ">{{item.name}}</a> </a>
                     </li>
                 </ul>
             </div>
@@ -17,34 +17,25 @@
 
     </div>
 </div>
-<div class="col3 large-3  ">
-    <div class="nav2">
+<div class="col3 large-3 ">
+    <div class="nav2 ">
 
-        <div class="is-divider small" style="margin :0 auto; margin-top: 12px; color: #fff; font-size: 18px;">
-            <span style="margin-left: 74px;">LỌC THEO GIÁ</span>
+        <div class="is-divider small " style="margin :0 auto; margin-top: 12px; color: #fff; font-size: 18px; ">
+            <span style="margin-left: 74px; ">LỌC THEO GIÁ</span>
         </div>
-        <div class="bottom">
-            <div class="small">
-                <ngx-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ngx-slider>
+        <div class="bottom ">
+            <div class="small ">
+                <ngx-slider [(value)]="minValue " [(highValue)]="maxValue " [options]="options "></ngx-slider>
 
-                <div class="btn" style=" position: absolute;
-                left: 27px;
-                top: 44px;
-                border: none;width: 50px; border-radius: 99px; font-size: 16px;background-color: #666;color: #fff;
-                height: 25px;
-    position: absolute;
-
-    left: 12px;">
-                    <span style="font-size: 12px;padding-bottom: 3px; position: absolute;
-                    top:4px;
-                    ;left: 14px;" (click)="sendParent()">Lọc</span>
-                    <!-- <a type="submit"
-            style=" border: none;width: 50px; border-radius: 99px; font-size: 16px;background-color: #666;color: #fff;"></a> -->
+                <div class="btn " style=" position: absolute; left: 27px; top: 44px; border: none;width: 50px; border-radius: 99px; font-size: 16px;background-color: #666;color: #fff; height: 25px; position: absolute; left: 12px; ">
+                    <span style="font-size: 12px;padding-bottom: 3px; position: absolute; top:4px; ;left: 14px; " (click)="sendParent() ">Lọc</span>
+                    <!-- <a type="submit "
+            style=" border: none;width: 50px; border-radius: 99px; font-size: 16px;background-color: #666;color: #fff; "></a> -->
                 </div>
                 <div class="price ">
                     Giá :
                 </div>
-                <div class="cro">-</div>
+                <div class="cro ">-</div>
             </div>
 
 
@@ -53,17 +44,17 @@
 
     </div>
 </div>
-<div class="col4 large-3">
-    <aside id="woocommerce_products-3" class="widget woocommerce widget_products">
-        <div class="is-divider small">
-            <span class="widget-title shop-sidebar" style="font-size: 18px;color: #fff;margin: 0 auto;">SẢN PHẨM PHỔ
+<div class="col4 large-3 ">
+    <aside id="woocommerce_products-3 " class="widget woocommerce widget_products ">
+        <div class="is-divider small ">
+            <span class="widget-title shop-sidebar " style="font-size: 18px;color: #fff;margin: 0 auto; ">SẢN PHẨM PHỔ
         BIẾN</span>
         </div>
-        <ul class="product_list_widget">
-            <li class="flex-con1">
-                <div class="flex">
-                    <a href="#">
-                        <img style="border-radius: 50%;" width="40 " height="40 " src="./assets/BTruong/image-mix/FR001.jpg" alt="">
+        <ul class="product_list_widget ">
+            <li class="flex-con1 ">
+                <div class="flex ">
+                    <a href="# ">
+                        <img style="border-radius: 50%; " width="40 " height="40 " src="./assets/BTruong/image-mix/FR001.jpg " alt=" ">
                     </a>
                     <div class="flex-sub " style="margin-left: 28px; ">
                         <p class="product-title ">Bòn Bon</p>
@@ -73,11 +64,11 @@
                 </div>
 
             </li>
-            <li class="flex-con2">
-                <div class="flex">
+            <li class="flex-con2 ">
+                <div class="flex ">
 
-                    <a href="#">
-                        <img style="border-radius: 50%;" width="40 " height="40 " src="./assets/BTruong/image-mix/FR004.jpg" alt="">
+                    <a href="# ">
+                        <img style="border-radius: 50%; " width="40 " height="40 " src="./assets/BTruong/image-mix/FR004.jpg " alt=" ">
 
                     </a>
                     <div class="flex-sub " style="margin-left: 28px; ">
@@ -88,9 +79,9 @@
                     </div>
                 </div>
             </li>
-            <li class="flex-con3">
-                <div class="flex">
-                    <a href="# "> <img style="border-radius: 50%;" width="40 " height="40 " src="./assets/BTruong/image-mix/RAU013.jpg" alt="">
+            <li class="flex-con3 ">
+                <div class="flex ">
+                    <a href="# "> <img style="border-radius: 50%; " width="40 " height="40 " src="./assets/BTruong/image-mix/RAU013.jpg " alt=" ">
                     </a>
                     <div class="flex-sub " style="margin-left: 28px; ">
                         <p class="product-title ">Xà lách</p>
@@ -99,10 +90,10 @@
                     </div>
                 </div>
             </li>
-            <li class="flex-con4" style="height: 60px;border: 1px solid #e4e4e4 ">
-                <div class="flex">
+            <li class="flex-con4 " style="height: 60px;border: 1px solid #e4e4e4 ">
+                <div class="flex ">
 
-                    <a href="# "> <img style="border-radius: 50%;" width="40 " height="40 " src="./assets/BTruong/image-mix/RAU016.jpg" alt="">
+                    <a href="# "> <img style="border-radius: 50%; " width="40 " height="40 " src="./assets/BTruong/image-mix/RAU016.jpg " alt=" ">
 
                     </a>
                     <div class="flex-sub " style="margin-left: 28px; ">
@@ -112,10 +103,10 @@
                     </div>
                 </div>
             </li>
-            <li class="flex-con5">
-                <div class="flex">
+            <li class="flex-con5 ">
+                <div class="flex ">
                     <a href="# ">
-                        <img style="border-radius: 50%;" width="40 " height="40 " src="./assets/BTruong/image-mix/RAU019.jpg" alt="">
+                        <img style="border-radius: 50%; " width="40 " height="40 " src="./assets/BTruong/image-mix/RAU019.jpg " alt=" ">
 
                     </a>
                     <div class="flex-sub " style="margin-left: 28px; ">

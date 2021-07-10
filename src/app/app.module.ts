@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatDialogConfig, MatDialogModule } from '@angular/material/dialog';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { AutocompleteLibModule } from 'angular-ng-autocomplete';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -46,26 +49,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContainerComponent } from './Tuyen/container/container.component';
 import { TestdataComponent } from './Tuyen/testdata/testdata.component';
 
-import { ProductRauComponent } from './BTruong/product-rau/product-rau.component';
-import { TitleRauComponent } from './BTruong/product-rau/title-rau/title-rau.component';
-import { ProductListRauComponent } from './BTruong/product-rau/product-list-rau/product-list-rau.component';
-import { ProductItemRauComponent } from './BTruong/product-rau/product-list-rau/product-item-rau/product-item-rau.component';
-import { ProductTraicayComponent } from './BTruong/product-traicay/product-traicay.component';
-import { TitleTraicayComponent } from './BTruong/product-traicay/title-traicay/title-traicay.component';
-import { ProductListTraicayComponent } from './BTruong/product-traicay/product-list-traicay/product-list-traicay.component';
-import { ProductItemTraicayComponent } from './BTruong/product-traicay/product-list-traicay/product-item-traicay/product-item-traicay.component';
-import { ProductCuComponent } from './BTruong/product-cu/product-cu.component';
-import { TitleCuComponent } from './BTruong/product-cu/title-cu/title-cu.component';
-import { ProductListCuComponent } from './BTruong/product-cu/product-list-cu/product-list-cu.component';
-import { ProductItemCuComponent } from './BTruong/product-cu/product-list-cu/product-item-cu/product-item-cu.component';
-import { ProductQuaComponent } from './BTruong/product-qua/product-qua.component';
-import { TitleQuaComponent } from './BTruong/product-qua/title-qua/title-qua.component';
-import { ProductListQuaComponent } from './BTruong/product-qua/product-list-qua/product-list-qua.component';
-import { ProductItemQuaComponent } from './BTruong/product-qua/product-list-qua/product-item-qua/product-item-qua.component';
-import { ProductNamComponent } from './BTruong/product-nam/product-nam.component';
-import { TitleNamComponent } from './BTruong/product-nam/title-nam/title-nam.component';
-import { ProductListNamComponent } from './BTruong/product-nam/product-list-nam/product-list-nam.component';
-import { ProductItemNamComponent } from './BTruong/product-nam/product-list-nam/product-item-nam/product-item-nam.component';
+
 import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component';
 import { PopupLoginComponent } from './Tuyen/header/popup-login/popup-login.component';
 
@@ -117,29 +101,8 @@ import { MoreInfoComponent } from './NTrung/product-details/product-more/more-in
     PayBillComponent,
     ContainerComponent,
     TestdataComponent,
-    ProductRauComponent,
-    TitleRauComponent,
-    ProductListRauComponent,
-    ProductItemRauComponent,
-    ProductTraicayComponent,
-    TitleTraicayComponent,
-    ProductListTraicayComponent,
-    ProductItemTraicayComponent,
-    ProductCuComponent,
-    TitleCuComponent,
-    ProductListCuComponent,
-    ProductItemCuComponent,
-    ProductQuaComponent,
-    TitleQuaComponent,
-    ProductListQuaComponent,
-    ProductItemQuaComponent,
-    ProductNamComponent,
-    TitleNamComponent,
-    ProductListNamComponent,
-    ProductItemNamComponent,
     ThanksPageComponent,
     PopupLoginComponent,
-
     HeaderDirectDirective,
   ],
   imports: [
@@ -153,6 +116,8 @@ import { MoreInfoComponent } from './NTrung/product-details/product-more/more-in
     HttpClientModule,
     NgxPaginationModule,
     NgxSliderModule,
+    AutocompleteLibModule,
+    ScrollingModule
   ],
   providers: [MatDialogConfig],
   bootstrap: [AppComponent],

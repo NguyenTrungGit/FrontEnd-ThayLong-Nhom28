@@ -1,48 +1,5 @@
 .container-product {
-    margin-right: 106px;
-    margin-left: 30px;
-}
-
-.circle1 {
-    padding-top: 8px;
-    background: #66A55F;
-    border-radius: 50%;
-    height: 45px;
-    width: 45px;
-    color: #f8f8f8;
-    text-align: center;
-    margin-right: 30px;
-    cursor: pointer;
-}
-
-.circle2 {
-    padding-top: 8px;
-    background: #f8f8f8;
-    border-radius: 50%;
-    border: 1px solid rgb(87, 87, 87);
-    height: 45px;
-    width: 45px;
-    color: rgb(87, 87, 87);
-    text-align: center;
-    margin-right: 30px;
-}
-
-.circle3 {
-    padding-top: 8px;
-    background: #f8f8f8;
-    border-radius: 50%;
-    border: 1px solid rgb(87, 87, 87);
-    height: 45px;
-    width: 45px;
-    color: rgb(87, 87, 87);
-    text-align: center;
-}
-
-.woocome {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 100px;
+    margin-right: 70px;
 }
 
 .my-pagination /deep/ .ngx-pagination .current {
@@ -59,30 +16,24 @@
 .my-pagination /deep/ .ngx-pagination {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    padding-left: 0px;
 }
 
 .sort {
     display: flex;
-    position: relative;
     justify-content: flex-end;
-    margin-right: 64px;
     font-family: 'Quicksand';
+    align-items: baseline;
+    margin-right: 5px;
 }
 
 .display {
-    position: absolute;
     margin-right: 21px;
-    left: 622px;
-    top: -12px;
-    top: -23px;
     font-size: 15px;
     font-family: 'Quicksand';
 }
 
 .sort-sub {
-    position: absolute;
-    top: -24px;
-    left: 772px;
     font-size: 14px;
     font-family: 'Quicksand';
 }
@@ -91,4 +42,9 @@
     font-size: 14px;
     color: #212529;
     font-family: 'Quicksand';
+}
+
+.col-md-3 {
+    margin-top: 30px;
+    padding: 0px 15px 0px 15px;
 }

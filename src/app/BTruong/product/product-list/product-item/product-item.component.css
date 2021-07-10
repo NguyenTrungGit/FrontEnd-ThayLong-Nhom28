@@ -19,6 +19,7 @@
 
 .icon-hover {
     height: 35px;
+    margin-bottom: 4px;
 }
 
 .icon {
@@ -32,7 +33,8 @@
 
 .product-small {
     border: 1px solid #e4e4e4;
-    width: 213px;
+    width: 100%;
+    height: 320px;
     border-radius: 10px;
     box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
 }
@@ -49,7 +51,7 @@
 .product-small:hover .box-image .image-zoom {
     border-radius: 20px 20px 0px 0px;
     transform: scale(1.1);
-    transition: all ease-in-out 0.3s;
+    transition: all linear 0.3s;
 }
 
 .title-wrapper {
