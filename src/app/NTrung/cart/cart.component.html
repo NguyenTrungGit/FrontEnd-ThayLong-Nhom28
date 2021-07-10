@@ -21,7 +21,7 @@
     <div class="price font-weight-bold">500.000 &#8363;</div>
     <div class="amount">
       <div class="btn minus" (click)="down()"></div>
-      <input type="text" value="{{ amount }}" />
+      <input type="text" value="{{ amount }}" maxlength="3" />
       <div class="btn plus" (click)="up()"></div>
     </div>
     <div class="total price font-weight-bold" style="color: #66a55f">
@@ -31,20 +31,21 @@
 
   <!-- khuyen mai -->
   <div class="summary">
-    <div class="font-weight-bold" style="width: 300px; padding-left: 55px">
-      Tạm tính
+    <div class="discount">
+      <div class="font-weight-bold" style="width: 300px">Nhập mã giảm giá</div>
+      <div>
+        <input
+          type="text"
+          placeholder="Voucher"
+          maxlength="8"
+          (keyup)="enterVoucher($event.target)"
+        />
+        <div *ngIf="discount" class="content font-weight-bold">- {{ discount.price }} &#8363;</div>
+      </div>
     </div>
-    <input type="text" placeholder="Nhập mã giảm giá" />
-    <div
-      class="total font-weight-bold"
-      style="
-        color: #66a55f;
-        width: 100px;
-        margin-left: 100px;
-        text-align: right;
-      "
-    >
-      5.000.000 &#8363;
+    <div class="total">
+      <div class="font-weight-bold" style="width: 300px">Tạm tính</div>
+      <div class="content font-weight-bold">500.000 &#8363;</div>
     </div>
   </div>
 
