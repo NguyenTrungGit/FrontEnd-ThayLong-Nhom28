@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Product } from 'src/app/model/product.model';
 
 @Component({
@@ -7,9 +7,20 @@ import { Product } from 'src/app/model/product.model';
   styleUrls: ['./product-more.component.css'],
 })
 export class ProductMoreComponent implements OnInit {
-  
+  checkActiveInfo: boolean = true;
+  checkActiveComment: boolean = false;
+
   @Input() productInfo?: Product;
   constructor() {}
 
   ngOnInit(): void {}
+
+  changeInfo() {
+    this.checkActiveInfo = true;
+    this.checkActiveComment = false;
+  }
+  changeComment() {
+    this.checkActiveComment = true;
+    this.checkActiveInfo = false;
+  }
 }

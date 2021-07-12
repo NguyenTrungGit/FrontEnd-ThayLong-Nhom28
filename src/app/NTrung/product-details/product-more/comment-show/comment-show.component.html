@@ -1,34 +1,9 @@
 <div class="layout-box">
   <!-- comment -->
-  <div class="comment">
-    <div class="title">
-      <p class="name font-weight-bold">Người dùng</p>
-      <p class="rating">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-      </p>
-    </div>
-    <div class="content">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quas
-      modi magni mollitia nulla commodi. Assumenda, ipsum! Vero at dignissimos
-      blanditiis assumenda. Molestias qui, aperiam quia eos ex tenetur cum vitae
-      a itaque voluptatum perspiciatis numquam temporibus repellat tempora
-    </div>
-    <div class="feed-back">
-      <input type="radio" id="like" name="feel" /><label for="like" class="like"
-        ><i class="far fa-thumbs-up"></i> Thích</label
-      >
-
-      <input type="radio" id="dislike" name="feel" /><label
-        for="dislike"
-        class="dislike"
-        ><i class="far fa-thumbs-down"> Không thích</i></label
-      >
-    </div>
-  </div>
+  <app-comment-item
+    *ngFor="let comment of listComment"
+    [comment]="comment"
+  ></app-comment-item>
 
   <!-- control -->
   <div class="control font-weight-bold">
@@ -36,7 +11,11 @@
       Mọi thắc mắc và khiếu nại về sản phẩm xin vui lòng liên hệ Hotline để được
       hỗ trợ, giải đáp trong thời gian sớm nhất: 0339551554 (Miễn phí)
     </div>
-    <button style="float: right; font-weight: bold;" class="btn" (click)="openCommentDialog()">
+    <button
+      style="float: right; font-weight: bold"
+      class="btn"
+      (click)="openCommentDialog()"
+    >
       Viết bình luận
     </button>
   </div>
