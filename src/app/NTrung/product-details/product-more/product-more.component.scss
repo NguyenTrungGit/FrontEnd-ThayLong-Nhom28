@@ -6,10 +6,6 @@
   .title {
     display: flex;
 
-    input {
-      display: none;
-    }
-
     label {
       margin: 0;
       padding: 0;
@@ -25,8 +21,7 @@
       border-bottom: none;
     }
 
-    #info:checked ~ .info,
-    #comment:checked ~ .comment {
+    .active {
       background: #707070;
       color: white;
     }

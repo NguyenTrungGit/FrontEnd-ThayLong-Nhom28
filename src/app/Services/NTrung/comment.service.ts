@@ -5,10 +5,15 @@ import { Comment } from 'src/app/model/comment.model';
   providedIn: 'root',
 })
 export class CommentService {
-  listComment: Comment[] = [];
+  listComment: Comment[] = [
+    new Comment("1","Nguyễn","Trung","Nguyentrunglk9@gmail.com","0339551554","nam","5","Sản phẩm tốt, đạt chất lượng của Global GAP"),
+    new Comment("2","Nguyễn","Hương","Nguyentrunglk9@gmail.com","0339551554","nam","5","Sản phẩm tốt, đạt chất lượng của Global GAP"),
+    new Comment("3","Trần","Phú","Nguyentrunglk9@gmail.com","0339551554","nam","5","Sản phẩm tốt, đạt chất lượng của Global GAP"),
+    new Comment("4","Nguyễn","Vỹ","Nguyentrunglk9@gmail.com","0339551554","nam","5","Sản phẩm tốt, đạt chất lượng của Global GAP"),
+  ];
   constructor() {}
 
-  getComment() {
+  getComments() {
     return this.listComment;
   }
 
