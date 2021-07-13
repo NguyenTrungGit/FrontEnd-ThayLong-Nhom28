@@ -3,7 +3,7 @@
 }
 
 .container {
-  margin-top: -50px;
+  padding: 0;
 }
 .container .title {
   display: flex;

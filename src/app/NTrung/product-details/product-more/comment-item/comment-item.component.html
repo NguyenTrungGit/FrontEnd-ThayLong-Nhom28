@@ -1,26 +1,21 @@
 <div class="comment">
-    <div class="title">
-      <p class="name font-weight-bold">{{comment?.surname+" "+comment?.name}}</p>
-      <p class="rating">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-      </p>
-    </div>
-    <div class="content">
-      {{comment?.content}}
-    </div>
-    <div class="feed-back">
-      <input type="radio" id="like" name="feel" /><label for="like" class="like"
-        ><i class="far fa-thumbs-up"></i> Thích</label
-      >
-
-      <input type="radio" id="dislike" name="feel" /><label
-        for="dislike"
-        class="dislike"
-        ><i class="far fa-thumbs-down"> Không thích</i></label
-      >
-    </div>
+  <div class="title">
+    <p class="name font-weight-bold">
+      {{ comment?.surname + " " + comment?.name }}
+    </p>
+    <p class="rating">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+    </p>
   </div>
+  <div class="content">
+    {{ comment?.content }}
+  </div>
+  <div class="feed-back" >
+    <button [class.is-like]="checkActiveLike" (click)="changeLike()"><i class="far fa-thumbs-up"> Thích</i></button>
+    <button [class.is-dislike]="checkActiveDislike" (click)="changeDislike()"><i class="far fa-thumbs-down"> Không thích</i></button>
+  </div>
+</div>
