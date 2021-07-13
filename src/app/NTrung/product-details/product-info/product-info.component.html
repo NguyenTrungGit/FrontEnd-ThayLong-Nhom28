@@ -75,7 +75,8 @@
         <p>Xuất xứ:</p>
       </div>
       <div style="width: 250px">
-        <input type="checkbox"/>
+        <p *ngIf="productInfo?.quantity"><i class="fas fa-check" style="color: hsl(240, 100%, 70%)"></i> Còn hàng</p>
+        <p *ngIf="!productInfo?.quantity"><i class="fas fa-ban" style="color: hsl(0, 100%, 70%)"></i> Hết hàng</p>
         <p>Đạt chứng nhận Global GAP</p>
         <p>{{ productInfo?.origin }}</p>
       </div>
