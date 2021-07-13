@@ -25,19 +25,26 @@
 .comment .feed-back input {
   display: none;
 }
-.comment .feed-back label {
+.comment .feed-back button {
+  color: #707070;
+  border: none;
   cursor: pointer;
   margin-right: 20px;
   transition: transform 0.2s;
+  background: none;
+  outline: none;
 }
-.comment .feed-back label:hover {
+.comment .feed-back button i {
+  font-weight: blod;
+}
+.comment .feed-back button:hover {
   transform: scale(110%);
 }
-.comment .feed-back #like:checked ~ .like {
+.comment .feed-back .is-like {
   color: #66a55f;
   transform: scale(105%);
 }
-.comment .feed-back #dislike:checked ~ .dislike {
+.comment .feed-back .is-dislike {
   color: #cf2c61;
   transform: scale(105%);
 }/*# sourceMappingURL=comment-item.component.css.map */

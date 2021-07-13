@@ -1,6 +1,5 @@
-<div class="container border-bottom">
+<div class="container">
   <!-- image -->
-
   <div class="slide-show">
     <input type="radio" name="images" id="img1" />
     <input type="radio" name="images" id="img2" />
@@ -52,7 +51,7 @@
     <!-- info title -->
     <div class="title">
       <div class="tag-1 font-weight-bold" style="color: #66a55f">
-        {{ productInfo?.price }} &#8363; / kg
+        {{ productInfo?.price }} &#8363;
       </div>
       <div class="tag-2">
         <del>{{ productInfo?.price * 2 }} &#8363;</del>
@@ -69,14 +68,15 @@
     </div>
 
     <!-- info content -->
-    <div class="content">
+    <div class="content border-bottom">
       <div style="width: 150px">
         <p>Tình trạng:</p>
         <p>Chứng nhận:</p>
         <p>Xuất xứ:</p>
       </div>
       <div style="width: 250px">
-        <input type="checkbox" checked /> Còn hàng
+        <p *ngIf="productInfo?.quantity"><i class="fas fa-check" style="color: hsl(240, 100%, 70%)"></i> Còn hàng</p>
+        <p *ngIf="!productInfo?.quantity"><i class="fas fa-ban" style="color: hsl(0, 100%, 70%)"></i> Hết hàng</p>
         <p>Đạt chứng nhận Global GAP</p>
         <p>{{ productInfo?.origin }}</p>
       </div>

@@ -7,6 +7,7 @@ export class Comment {
     public phone: string,
     public sex: string,
     public rate: string,
-    public content: string
+    public content: string,
+    public status:boolean
   ) {}
 }

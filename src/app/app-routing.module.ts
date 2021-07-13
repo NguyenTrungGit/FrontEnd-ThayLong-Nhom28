@@ -17,8 +17,7 @@ const routes: Routes = [
   { path: 'lienhe', component: ContactComponent },
   { path: 'chiase', component: BlogComponent },
   { path: 'giohang', component: CartComponent },
-
-  { path: 'cuahang/chitiet/:cate/:id', component: ProductDetailsComponent },
+  { path: 'cuahang/:cate/chitiet/:id', component: ProductDetailsComponent },
   { path: 'pay', component: PayComponent },
   { path: '', component: HomeComponent },
 ];
