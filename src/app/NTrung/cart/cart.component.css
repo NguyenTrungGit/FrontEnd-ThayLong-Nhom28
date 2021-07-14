@@ -4,106 +4,149 @@
   margin-top: 30px;
   margin-bottom: 50px;
 }
+
 .container .title {
   border-bottom: #4d4d4d solid 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .container .title .product {
   padding-left: 55px;
   width: 300px;
 }
+
 .container .title .price {
   text-align: center;
   width: 100px;
 }
+
 .container .title .amount {
   text-align: center;
   width: 300px;
 }
+
 .container .title .total {
   text-align: center;
   width: 100px;
 }
+
 .container .info {
   margin: 20px 0px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border-bottom: #4d4b4b dashed 1px;
   padding-bottom: 20px;
 }
+
 .container .info .product {
   width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .container .info .product .product-button {
   width: 25px;
   height: 25px;
   padding-top: 110px;
   opacity: 0.4;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
   background: url(/../../../../assets/NTrungData/cancel.svg);
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .container .info .product .product-button:hover {
   cursor: pointer;
   opacity: 0.6;
-  transform: scale(120%);
+  -webkit-transform: scale(120%);
+          transform: scale(120%);
 }
+
 .container .info .product .product-button:active {
   opacity: 1;
 }
+
 .container .info .product .product-image {
   width: 100px;
   height: 100px;
   margin: 0 20px;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
+
 .container .info .product .product-image:hover {
   cursor: pointer;
-  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
+
 .container .info .product .product-name {
   padding-top: 50px;
   width: 135px;
 }
+
 .container .info .price {
   text-align: right;
   padding-top: 50px;
   width: 100px;
 }
+
 .container .info .amount {
   width: 300px;
   padding-top: 45px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .container .info .amount input {
   text-align: center;
   width: 50px;
   height: 30px;
   border: #d7d7d7 solid 1px;
 }
+
 .container .info .amount .tag {
   margin: 0 auto;
   background-color: red;
   width: 30px;
   height: 30px;
 }
+
 .container .info .amount .btn {
   width: 30px;
   height: 30px;
   opacity: 0.5;
 }
+
 .container .info .amount .btn:hover {
   cursor: pointer;
   opacity: 0.7;
 }
+
 .container .info .amount .btn:active {
   opacity: 1;
 }
+
 .container .info .amount .minus {
   background: url(/../../../assets/NTrungData/minus.svg);
   background-color: #d7d7d7;
@@ -111,6 +154,7 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .container .info .amount .plus {
   background: url(/../../../assets/NTrungData/plus.svg);
   background-color: #d7d7d7;
@@ -118,28 +162,37 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .container .summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .container .summary input {
   text-align: center;
   width: 300px;
   height: 30px;
   border: #d7d7d7 solid 1px;
 }
+
 .container .control {
   text-align: center;
   margin-top: 20px;
 }
+
 .container .control .btn {
   margin: 0 20px;
   width: 250px;
   border-radius: 20px;
   color: white;
 }
+
 .container .control .btn-see-more {
   background-color: #66a55f;
 }
+
 .container .control .btn-pay {
   background-color: #de6663;
-}/*# sourceMappingURL=cart.component.css.map */
+}
+/*# sourceMappingURL=cart.component.css.map */

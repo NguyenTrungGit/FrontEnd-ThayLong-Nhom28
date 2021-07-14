@@ -12,9 +12,12 @@
 form .col {
   height: 67px;
 }
+
 form .row {
   padding-bottom: 15px;
 }
+
 form .form-check {
   padding-bottom: 20px;
-}/*# sourceMappingURL=pay-form.component.css.map */
+}
+/*# sourceMappingURL=pay-form.component.css.map */

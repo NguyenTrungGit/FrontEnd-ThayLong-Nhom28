@@ -1,1 +1,9 @@
-{"version":3,"sources":["product-related.component.scss"],"names":[],"mappings":"AAAA;EACI,0BAAA;AACJ;AACI;EACI,kBAAA;AACR","file":"product-related.component.css"}
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAA;EACP,OAAO,EAAE,iBAAiB;CAK7B;;AAND,AAGI,WAHO,CAGP,MAAM,CAAA;EACF,UAAU,EAAE,MAAM;CACrB",
+    "sources": [
+        "product-related.component.scss"
+    ],
+    "names": [],
+    "file": "product-related.component.css"
+}

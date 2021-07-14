@@ -1,117 +1,113 @@
 <div class="container border-bottom">
-  <!-- image -->
+    <!-- image -->
 
-  <div class="slide-show">
-    <input type="radio" name="images" id="img1" />
-    <input type="radio" name="images" id="img2" />
-    <input type="radio" name="images" id="img3" />
-    <input type="radio" name="images" id="img4" />
+    <div class="slide-show">
+        <input type="radio" name="images" id="img1" />
+        <input type="radio" name="images" id="img2" />
+        <input type="radio" name="images" id="img3" />
+        <input type="radio" name="images" id="img4" />
 
-    <div class="slide-img" id="four">
-      <img src="./assets/BTruong/image-mix/{{ productInfo?.img2 }}" />
-    </div>
+        <div class="slide-img" id="four">
+            <img src="./assets/BTruong/image-mix/{{ productInfo?.img2 }}" />
+        </div>
 
-    <div class="slide-img" id="three">
-      <img src="./assets/BTruong/image-mix/{{ productInfo?.img3 }}" />
-    </div>
+        <div class="slide-img" id="three">
+            <img src="./assets/BTruong/image-mix/{{ productInfo?.img3 }}" />
+        </div>
 
-    <div class="slide-img" id="two">
-      <img src="./assets/BTruong/image-mix/{{ productInfo?.img2 }}" />
-    </div>
+        <div class="slide-img" id="two">
+            <img src="./assets/BTruong/image-mix/{{ productInfo?.img2 }}" />
+        </div>
 
-    <div class="slide-img" id="one">
-      <img src="./assets/BTruong/image-mix/{{ productInfo?.img1 }} " />
-    </div>
+        <div class="slide-img" id="one">
+            <img src="./assets/BTruong/image-mix/{{ productInfo?.img1 }} " />
+        </div>
 
-    <div class="nav">
-      <label for="img1" class="image-sub" id="dot1"
-        ><img src="./assets/BTruong/image-mix/{{ productInfo?.img1 }}"
+        <div class="nav">
+            <label for="img1" class="image-sub" id="dot1"><img src="./assets/BTruong/image-mix/{{ productInfo?.img1 }}"
       /></label>
-      <label for="img2" class="image-sub" id="dot2"
-        ><img src="./assets/BTruong/image-mix/{{ productInfo?.img2 }}"
+            <label for="img2" class="image-sub" id="dot2"><img src="./assets/BTruong/image-mix/{{ productInfo?.img2 }}"
       /></label>
-      <label for="img3" class="image-sub" id="dot3"
-        ><img src="./assets/BTruong/image-mix/{{ productInfo?.img3 }}"
+            <label for="img3" class="image-sub" id="dot3"><img src="./assets/BTruong/image-mix/{{ productInfo?.img3 }}"
       /></label>
-      <label for="img4" class="image-sub" id="dot4">
+            <label for="img4" class="image-sub" id="dot4">
         <img
           src="https://giaiphapbds.admicro.vn/wp-content/themes/bds_new/images/a.jpg"
       /></label>
         </div>
     </div>
 
-    </div>
-  </div>
+</div>
 
-  <!-- info -->
-  <div class="info-box">
+
+<!-- info -->
+<div class="info-box">
     <div class="title border-bottom">
-      <div class="tag-1 font-weight-bold">{{ productInfo?.name }}</div>
-      <div class="tag-2" style="color: white; background-color: #ffb24c">
-        -50% <i class="fas fa-tags"></i>
-      </div>
+        <div class="tag-1 font-weight-bold">{{ productInfo?.name }}</div>
+        <div class="tag-2" style="color: white; background-color: #ffb24c">
+            -50% <i class="fas fa-tags"></i>
+        </div>
     </div>
 
     <!-- info title -->
     <div class="title">
-      <div class="tag-1 font-weight-bold" style="color: #66a55f">
-        {{ productInfo?.price }} &#8363; / kg
-      </div>
-      <div class="tag-2">
-        <del>{{ productInfo?.price * 2 }} &#8363;</del>
-      </div>
+        <div class="tag-1 font-weight-bold" style="color: #66a55f">
+            {{ productInfo?.price }} &#8363; / kg
+        </div>
+        <div class="tag-2">
+            <del>{{ productInfo?.price * 2 }} &#8363;</del>
+        </div>
     </div>
 
     <!-- info rating -->
     <div class="rating">
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
     </div>
 
     <!-- info content -->
     <div class="content">
-      <div style="width: 150px">
-        <p>Tình trạng:</p>
-        <p>Chứng nhận:</p>
-        <p>Xuất xứ:</p>
-      </div>
-      <div style="width: 250px">
-        <input type="checkbox" checked /> Còn hàng
-        <p>Đạt chứng nhận Global GAP</p>
-        <p>{{ productInfo?.origin }}</p>
-      </div>
+        <div style="width: 150px">
+            <p>Tình trạng:</p>
+            <p>Chứng nhận:</p>
+            <p>Xuất xứ:</p>
+        </div>
+        <div style="width: 250px">
+            <input type="checkbox" checked /> Còn hàng
+            <p>Đạt chứng nhận Global GAP</p>
+            <p>{{ productInfo?.origin }}</p>
+        </div>
     </div>
 
     <!-- info control -->
     <div class="control">
-      <div class="amount">
-        <div class="amount-sub" style="display: flex">
-          <div class="btn minus" (click)="down()"></div>
-          <input type="text" maxlength="3" value="{{ amount }}" />
-          <div class="btn plus" (click)="up()"></div>
+        <div class="amount">
+            <div class="amount-sub" style="display: flex">
+                <div class="btn minus" (click)="down()"></div>
+                <input type="text" maxlength="3" value="{{ amount }}" />
+                <div class="btn plus" (click)="up()"></div>
+            </div>
+            <div class="btn btn-add font-weight-bold">Thêm vào giỏ</div>
         </div>
-        <div class="btn btn-add font-weight-bold">Thêm vào giỏ</div>
-      </div>
-      <div class="btn btn-cart font-weight-bold">Xem giỏ hàng</div>
+        <div class="btn btn-cart font-weight-bold">Xem giỏ hàng</div>
     </div>
 
     <!-- info hastag -->
     <div class="hashtag">
-      <div class="tag">
-        <div class="icon icon-1"></div>
-        <p>Hỗ trợ vận chuyển miễn phí mùa dịch</p>
-      </div>
-      <div class="tag">
-        <div class="icon icon-2"></div>
-        <p>Nhiều phương thức thanh toán</p>
-      </div>
-      <div class="tag">
-        <div class="icon icon-3"></div>
-        <p>Đổi trả sản phẩm trong vòng 48h</p>
-      </div>
+        <div class="tag">
+            <div class="icon icon-1"></div>
+            <p>Hỗ trợ vận chuyển miễn phí mùa dịch</p>
+        </div>
+        <div class="tag">
+            <div class="icon icon-2"></div>
+            <p>Nhiều phương thức thanh toán</p>
+        </div>
+        <div class="tag">
+            <div class="icon icon-3"></div>
+            <p>Đổi trả sản phẩm trong vòng 48h</p>
+        </div>
     </div>
-  </div>
 </div>

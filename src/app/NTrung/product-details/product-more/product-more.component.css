@@ -5,16 +5,22 @@
 .container {
   margin-top: -50px;
 }
+
 .container .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .container .title input {
   display: none;
 }
+
 .container .title label {
   margin: 0;
   padding: 0;
 }
+
 .container .title .block {
   padding-top: 10px;
   cursor: pointer;
@@ -24,8 +30,10 @@
   border: #707070 solid 1px;
   border-bottom: none;
 }
+
 .container .title #info:checked ~ .info,
 .container .title #comment:checked ~ .comment {
   background: #707070;
   color: white;
-}/*# sourceMappingURL=product-more.component.css.map */
+}
+/*# sourceMappingURL=product-more.component.css.map */
