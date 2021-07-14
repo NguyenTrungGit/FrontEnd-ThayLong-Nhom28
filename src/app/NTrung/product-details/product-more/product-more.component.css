@@ -3,7 +3,7 @@
 }
 
 .container {
-  margin-top: -50px;
+  padding: 0;
 }
 
 .container .title {
@@ -11,11 +11,6 @@
   display: -ms-flexbox;
   display: flex;
 }
-
-.container .title input {
-  display: none;
-}
-
 .container .title label {
   margin: 0;
   padding: 0;
@@ -30,10 +25,7 @@
   border: #707070 solid 1px;
   border-bottom: none;
 }
-
-.container .title #info:checked ~ .info,
-.container .title #comment:checked ~ .comment {
+.container .title .active {
   background: #707070;
   color: white;
-}
-/*# sourceMappingURL=product-more.component.css.map */
+}/*# sourceMappingURL=product-more.component.css.map */

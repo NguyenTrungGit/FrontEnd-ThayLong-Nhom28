@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatDialogConfig, MatDialogModule } from '@angular/material/dialog';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { AutocompleteLibModule } from 'angular-ng-autocomplete';
-import {ScrollingModule} from '@angular/cdk/scrolling';
-
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -49,7 +47,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContainerComponent } from './Tuyen/container/container.component';
 import { TestdataComponent } from './Tuyen/testdata/testdata.component';
 
-
 import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component';
 import { PopupLoginComponent } from './Tuyen/header/popup-login/popup-login.component';
 
@@ -59,7 +56,7 @@ import { ProductInfoComponent } from './NTrung/product-details/product-info/prod
 import { ProductMoreComponent } from './NTrung/product-details/product-more/product-more.component';
 import { CommentShowComponent } from './NTrung/product-details/product-more/comment-show/comment-show.component';
 import { MoreInfoComponent } from './NTrung/product-details/product-more/more-info/more-info.component';
-
+import { CommentItemComponent } from './NTrung/product-details/product-more/comment-item/comment-item.component';
 @NgModule({
   declarations: [
     MoreInfoComponent,
@@ -104,12 +101,12 @@ import { MoreInfoComponent } from './NTrung/product-details/product-more/more-in
     ThanksPageComponent,
     PopupLoginComponent,
     HeaderDirectDirective,
+    CommentItemComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatDialogModule,
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,
@@ -117,9 +114,8 @@ import { MoreInfoComponent } from './NTrung/product-details/product-more/more-in
     NgxPaginationModule,
     NgxSliderModule,
     AutocompleteLibModule,
-    ScrollingModule
+    ScrollingModule,
   ],
-  providers: [MatDialogConfig],
   bootstrap: [AppComponent],
   entryComponents: [CommentDialogComponent],
 })

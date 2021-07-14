@@ -8,7 +8,7 @@ import { Product } from 'src/app/model/product.model';
 })
 export class ProductInfoComponent implements OnInit {
   amount: any = 1;
-
+  checking = false;
   // TODO: receive data from product details
   @Input() productInfo?: Product;
 

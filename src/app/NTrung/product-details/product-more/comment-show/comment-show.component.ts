@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { Comment } from 'src/app/model/comment.model';
+import { CommentService } from 'src/app/Services/NTrung/comment.service';
 import { CommentDialogComponent } from '../comment-dialog/comment-dialog.component';
 
 @Component({
@@ -8,13 +10,17 @@ import { CommentDialogComponent } from '../comment-dialog/comment-dialog.compone
   styleUrls: ['./comment-show.component.scss'],
 })
 export class CommentShowComponent implements OnInit {
-  constructor(public dialog: MatDialog, public dialogConfig: MatDialogConfig) {}
+  listComment: Comment[] = [];
+  constructor(
+    public dialog: MatDialog,
+    public commentService: CommentService
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.listComment = this.commentService.getComments();
+  }
 
   openCommentDialog() {
-    this.dialogConfig.disableClose =true;
-    this.dialogConfig.autoFocus = true;
     let dialogRef = this.dialog.open(CommentDialogComponent, {});
   }
 }

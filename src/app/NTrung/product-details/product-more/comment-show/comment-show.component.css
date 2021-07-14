@@ -8,83 +8,15 @@
   border: #707070 solid 1px;
   margin-bottom: 50px;
 }
-
-.layout-box .comment {
-  margin: 0px 20px;
-  border-bottom: #d3d3d3 1px solid;
-}
-
-.layout-box .comment .title {
-  margin: 20px 0px 20px 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.layout-box .comment .title p {
-  margin: 0;
-}
-
-.layout-box .comment .title .rating {
-  margin-left: 30px;
-}
-
-.layout-box .comment .title .rating i {
-  color: #ffb24c;
-  margin: 2px;
-}
-
-.layout-box .comment .content {
-  margin: 0px 20px 20px 80px;
-}
-
-.layout-box .comment .feed-back {
-  margin: 0px 20px 20px 80px;
-}
-
-.layout-box .comment .feed-back input {
-  display: none;
-}
-
-.layout-box .comment .feed-back label {
-  cursor: pointer;
-  margin-right: 20px;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
-}
-
-.layout-box .comment .feed-back label:hover {
-  -webkit-transform: scale(110%);
-          transform: scale(110%);
-}
-
-.layout-box .comment .feed-back #like:checked ~ .like {
-  color: #66a55f;
-  -webkit-transform: scale(105%);
-          transform: scale(105%);
-}
-
-.layout-box .comment .feed-back #dislike:checked ~ .dislike {
-  color: #cf2c61;
-  -webkit-transform: scale(105%);
-          transform: scale(105%);
-}
-
 .layout-box .control {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 20px;
 }
-
 .layout-box .control div {
-  margin: 0px 135px;
+  margin: 0px 130px;
   width: 610px;
   text-align: center;
 }
-
 .layout-box .control .btn {
   color: white;
   background: #66a55f;
@@ -92,12 +24,9 @@
   border-radius: 30px;
   float: right;
 }
-
 .layout-box .control .btn:hover {
   background: #85b780;
 }
-
 .layout-box .control .btn:active {
   background: #5b9654;
-}
-/*# sourceMappingURL=comment-show.component.css.map */
+}/*# sourceMappingURL=comment-show.component.css.map */
