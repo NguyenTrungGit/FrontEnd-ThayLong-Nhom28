@@ -2,7 +2,7 @@ export class Product {
   id:string;
   name:string;
   price: any;
-  quantity:string;
+  quantity:number;
   category:string;
   origin:string;
   img1:string;
@@ -11,7 +11,7 @@ export class Product {
   description: string;
 
 
-  constructor(id = '', name='' ,quantity='',category='',origin='',img1='',img2 ='',img3='', description = '',price=''){
+  constructor(id = '', name='' ,quantity=100,category='',origin='',img1='',img2 ='',img3='', description = '',price=''){
   this.id = id
   this.name = name
   this.description = description
