@@ -13,7 +13,6 @@ export class CommentItemComponent implements OnInit {
   constructor(private commentService: CommentService) {}
 
   ngOnInit(): void {
-    console.log(this.comment?.like);
   }
 
   changeLike() {

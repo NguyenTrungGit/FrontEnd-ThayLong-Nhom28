@@ -11,8 +11,8 @@ export class Comment {
     public email: string,
     public phone: string,
     public sex: string,
-    public rate: string,
-    public content: string
+    public content: string,
+    public rate: Number,
   ) {
     this.id = uuidv4();
   }

@@ -12,8 +12,8 @@ export class CommentService {
       'Nguyentrunglk9@gmail.com',
       '0339551554',
       'nam',
-      '5',
-      'Sản phẩm tốt, đạt chất lượng của Global GAP'
+      'Sản phẩm tốt, đạt chất lượng của Global GAP',
+      5
     ),
     new Comment(
       'Nguyễn',
@@ -21,8 +21,8 @@ export class CommentService {
       'Nguyentrunglk9@gmail.com',
       '0339551554',
       'nam',
-      '5',
-      'Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP'
+      'Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP',
+      5
     ),
   ];
   constructor() {}

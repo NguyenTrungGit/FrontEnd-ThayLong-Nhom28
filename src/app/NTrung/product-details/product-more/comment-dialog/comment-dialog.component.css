@@ -45,4 +45,12 @@ button {
   font-weight: bold;
   width: 100px;
   border-radius: 20px;
+}
+
+.set-input-short {
+  width: 300px;
+}
+
+.col {
+  height: 60px;
 }/*# sourceMappingURL=comment-dialog.component.css.map */
