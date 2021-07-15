@@ -7,26 +7,22 @@ import { Comment } from 'src/app/model/comment.model';
 export class CommentService {
   listComment: Comment[] = [
     new Comment(
-      '1',
       'Nguyễn',
       'Trung',
       'Nguyentrunglk9@gmail.com',
       '0339551554',
       'nam',
       '5',
-      'Sản phẩm tốt, đạt chất lượng của Global GAP',
-      false
+      'Sản phẩm tốt, đạt chất lượng của Global GAP'
     ),
     new Comment(
-      '2',
       'Nguyễn',
       'Hương',
       'Nguyentrunglk9@gmail.com',
       '0339551554',
       'nam',
       '5',
-      'Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP',
-      true
+      'Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP'
     ),
   ];
   constructor() {}

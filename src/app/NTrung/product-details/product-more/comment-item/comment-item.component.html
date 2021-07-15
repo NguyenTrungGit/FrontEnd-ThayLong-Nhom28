@@ -15,7 +15,7 @@
     {{ comment?.content }}
   </div>
   <div class="feed-back" >
-    <button [class.is-like]="checkActiveLike" (click)="changeLike()"><i class="far fa-thumbs-up"> Thích</i></button>
-    <button [class.is-dislike]="checkActiveDislike" (click)="changeDislike()"><i class="far fa-thumbs-down"> Không thích</i></button>
+    <button [class.is-like]="comment?.like" (click)="changeLike()"><i class="far fa-thumbs-up"> Thích</i></button>
+    <button [class.is-dislike]="comment?.unlike" (click)="changeDislike()"><i class="far fa-thumbs-down"> Không thích</i></button>
   </div>
 </div>
