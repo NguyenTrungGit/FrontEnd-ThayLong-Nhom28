@@ -11,6 +11,7 @@ import { CommentDialogComponent } from '../comment-dialog/comment-dialog.compone
 })
 export class CommentShowComponent implements OnInit {
   listComment: Comment[] = [];
+  data: any;
   constructor(
     public dialog: MatDialog,
     public commentService: CommentService
@@ -21,6 +22,24 @@ export class CommentShowComponent implements OnInit {
   }
 
   openCommentDialog() {
-    let dialogRef = this.dialog.open(CommentDialogComponent, {});
+    this.dialog
+      .open(CommentDialogComponent, {
+        disableClose: true })
+      .afterClosed()
+      .subscribe((res) => {
+        this.data = res;
+        console.log(this.data);
+        this.commentService.addComment(
+          new Comment(
+            this.data[0],
+            this.data[1],
+            this.data[2],
+            this.data[3],
+            this.data[4],
+            this.data[5],
+            this.data[6]
+          )
+        );
+      });
   }
 }

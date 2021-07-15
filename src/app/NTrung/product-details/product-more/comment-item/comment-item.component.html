@@ -3,19 +3,36 @@
     <p class="name font-weight-bold">
       {{ comment?.surname + " " + comment?.name }}
     </p>
-    <p class="rating">
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
+
+    <p class="rating" *ngIf="comment?.rate == 5">
+      <i class="fas fa-star" *ngFor="let item of [1, 2, 3, 4, 5]"></i>
+    </p>
+    <p class="rating" *ngIf="comment?.rate == 4">
+      <i class="fas fa-star" *ngFor="let item of [1, 2, 3, 4]"></i>
+      <i class="far fa-star" *ngFor="let item of [1]"></i>
+    </p>
+    <p class="rating" *ngIf="comment?.rate == 3">
+      <i class="fas fa-star" *ngFor="let item of [1, 2, 3]"></i>
+      <i class="far fa-star" *ngFor="let item of [1, 2]"></i>
+    </p>
+    <p class="rating" *ngIf="comment?.rate == 2">
+      <i class="fas fa-star" *ngFor="let item of [1, 2]"></i>
+      <i class="far fa-star" *ngFor="let item of [1, 2, 3]"></i>
+    </p>
+    <p class="rating" *ngIf="comment?.rate == 1">
+      <i class="fas fa-star" *ngFor="let item of [1]"></i>
+      <i class="far fa-star" *ngFor="let item of [1, 2, 3, 4]"></i>
     </p>
   </div>
   <div class="content">
     {{ comment?.content }}
   </div>
-  <div class="feed-back" >
-    <button [class.is-like]="checkActiveLike" (click)="changeLike()"><i class="far fa-thumbs-up"> Thích</i></button>
-    <button [class.is-dislike]="checkActiveDislike" (click)="changeDislike()"><i class="far fa-thumbs-down"> Không thích</i></button>
+  <div class="feed-back">
+    <button [class.is-like]="comment?.like" (click)="changeLike()">
+      <i class="far fa-thumbs-up"> Thích</i>
+    </button>
+    <button [class.is-dislike]="comment?.unlike" (click)="changeDislike()">
+      <i class="far fa-thumbs-down"> Không thích</i>
+    </button>
   </div>
 </div>

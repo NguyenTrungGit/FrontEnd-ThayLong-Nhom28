@@ -102,6 +102,7 @@ import { CommentItemComponent } from './NTrung/product-details/product-more/comm
     PopupLoginComponent,
     HeaderDirectDirective,
     CommentItemComponent,
+    CommentDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -117,6 +118,6 @@ import { CommentItemComponent } from './NTrung/product-details/product-more/comm
     ScrollingModule,
   ],
   bootstrap: [AppComponent],
-  entryComponents: [CommentDialogComponent],
+  entryComponents:[CommentDialogComponent]
 })
 export class AppModule {}
