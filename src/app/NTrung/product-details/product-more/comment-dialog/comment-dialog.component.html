@@ -1,4 +1,5 @@
-<form style="padding: 20px;"
+<form 
+style="padding: 20px"
   novalidate
   #form="ngForm"
   (ngSubmit)="onFormSubmit()"
@@ -284,7 +285,7 @@
       [disabled]="commentGroup.invalid"
       style="float: right"
       class="btn btn-success"
-      [matDialogClose]="[surname, name, email, phone, sex, content, sex]"
+      [matDialogClose]="[surname, name, email, phone, sex, content, rate]"
     >
       Gửi
     </button>
