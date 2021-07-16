@@ -71,11 +71,11 @@
                 </div>
             </li>
             <li class="nav-item ">
-                <a class="nav-link " href=" " type="button " data-toggle="modal " data-target="#popupModal "><i class="far fa-user "></i></a>
+                <a class="nav-link" href="" type="button" data-toggle="modal" data-target="#popupModal"><i class="far fa-user "></i></a>
             </li>
-            <li class="nav-item cart-home " (mouseover)="hideSearch() ">
-                <a class="nav-link " routerLink="/giohang "><i class="far fa-shopping-cart "></i></a>
-                <span class="quantity ">2</span>
+            <li class="nav-item cart-home" (mouseover)="hideSearch() ">
+                <a class="nav-link " routerLink="/giohang"><i class="far fa-shopping-cart "></i></a>
+                <span class="quantity ">{{numberItemInCart}}</span>
                 <div class="block-minicart ">
                     <span class="box-triangle ">
                     <svg viewBox="0 0 20 9 " role="presentation ">
@@ -163,6 +163,6 @@
     </nav>
 </div>
 
-<div class="modal fade " id="popupModal " tabindex="-1 " role="dialog " aria-hidden="true ">
+<div class="modal fade" id="popupModal" tabindex="-1" role="dialog" aria-hidden="true">
     <app-popup-login></app-popup-login>
 </div>

@@ -29,8 +29,9 @@ export class ProductItemComponent implements OnInit {
     });
   }
   addToCart(){
+    this.productItem.quantity=1;
     this.shoppingCartService.addToCart(this.productItem);
-    window.alert('has been added to cart!')
+    // window.alert('has been added to cart!')
 
       }
   ngOnInit(): void {

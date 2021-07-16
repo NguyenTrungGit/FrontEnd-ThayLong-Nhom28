@@ -11,42 +11,37 @@ placeholder:Product[]=[];
 constructor(){
     var cart=localStorage.getItem('cart');
     if(!(cart===null)){
-      console.log("khoi tao ko trống")
       const cartLocalStorage =JSON.parse(cart);
       this.cartItems.next(cartLocalStorage)
 }
 }
 addToCart(product: Product) {
-
 let exist:Product;
  var cart=localStorage.getItem('cart');
     if(!(cart===null)){
-      console.log("Add: cart da có")
-      const cartLocalStorage =JSON.parse(cart);
+      const cartLocalStorage =this.getCartLocalStorage();
     exist=cartLocalStorage.find((item:Product) =>{ return item.id===product.id})
     if(exist){
-      exist.quantity++;
+      exist.quantity+=product.quantity;
       this.setCartLocalStorage(cartLocalStorage);
     }else{
-      product.quantity=1;
       const newItem=[...cartLocalStorage,product];
       this.setCartLocalStorage(newItem);
-      this.cartItems.next(cartLocalStorage);
+      this.cartItems.next(this.getCartLocalStorage());
     }
 }else{
-  console.log("Add: cart chua có")
-  product.quantity=1;
   this.placeholder.push(product);
   this.setCartLocalStorage(this.placeholder);
-  this.cartItems.next(JSON.parse(cart+""))
+  this.cartItems.next(this.getCartLocalStorage())
+}
 }
 
-
-}
 setCartLocalStorage(data:any){
   localStorage.setItem('cart',JSON.stringify(data))
 }
-
+getCartLocalStorage(){
+ return JSON.parse(localStorage.getItem('cart')||'')
+}
 getAllItems(){
 
 }
