@@ -52,8 +52,7 @@
                 <div class="cart">
                     <div class="col-4 col-sm-4 col-md-4">
                         <div class="quantity" style="border-radius: 10px;">
-                            <input type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty" size="4">
-
+                            <input #box (keyup)="getValue(box.value)" type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty" size="4">
                         </div>
                     </div>
                 </div>
@@ -64,7 +63,7 @@
             font-size: 16px;
             width: 147px;
             border-radius: 10px;
-          ">
+          " (click)="addToCart()">
           <i class="fas fa-cart-plus"></i> Add to cart
         </button>
             </div>

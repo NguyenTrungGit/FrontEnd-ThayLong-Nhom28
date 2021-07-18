@@ -26,6 +26,7 @@ import { ShoppingCartService } from 'src/app/Services/shopping-cart.service';
 export class HeaderComponent implements OnInit {
   i: any = -1;
   datas: Product[] = [];
+   itemsCart: Product[] = [];
   title = 'filter';
   keyword ="name";
   found ="không tìm thấy sản phẩm."
@@ -38,12 +39,11 @@ numberItemInCart:number=0;
   constructor(@Inject(DOCUMENT) private document: any, private productService: ProductService ,private cartService:ShoppingCartService) {}
 
   ngOnInit(): void {
+     this.cartService.cartItems.subscribe(data=>{
+      this.itemsCart=data;
+    })
     this.cartService.cartItems.subscribe(data=>{
-
-
         this.numberItemInCart=data.length
-
-    
     })
     this.getProducts();
     this.nameFilterControl.pipe().subscribe(value=>{ this.nameFilter = value.trim().toLowerCase();
