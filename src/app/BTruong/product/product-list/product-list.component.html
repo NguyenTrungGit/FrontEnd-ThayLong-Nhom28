@@ -13,12 +13,12 @@
 </select>
     </div>
     <div class="row ">
-        <div  routerLink='/cuahang/{{product.category}}/chitiet/{{product.id}}' class="col-md-3" *ngFor="let product of datas |
+        <div class="col-md-3" *ngFor="let product of datas |
         paginate: { itemsPerPage: 12,
            currentPage: page,
           totalItems:totalLenght
          } ">
-            <app-product-item [productItem]="product "></app-product-item>
+            <app-product-item [productItem]="product"></app-product-item>
         </div>
     </div>
 </div>

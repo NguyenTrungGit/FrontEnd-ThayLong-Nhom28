@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/model/product.model';
 import { Voucher } from 'src/app/model/voucher.model';
+import { ShoppingCartService } from 'src/app/Services/shopping-cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -16,10 +18,14 @@ export class CartComponent implements OnInit {
     new Voucher('vc40000', '40000'),
     new Voucher('vc50000', '50000'),
   ];
+  constructor(private shoppingcartService: ShoppingCartService) {}
+  items:Product[] =[];
 
-  constructor() {}
-
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.shoppingcartService.cartItems.subscribe(data=>{
+      this.items=data;
+    })
+  }
 
   up() {
     this.amount += 1;

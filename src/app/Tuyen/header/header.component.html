@@ -71,11 +71,11 @@
                 </div>
             </li>
             <li class="nav-item ">
-                <a class="nav-link " href=" " type="button " data-toggle="modal " data-target="#popupModal "><i class="far fa-user "></i></a>
+                <a class="nav-link" href="" type="button" data-toggle="modal" data-target="#popupModal"><i class="far fa-user "></i></a>
             </li>
-            <li class="nav-item cart-home " (mouseover)="hideSearch() ">
-                <a class="nav-link " routerLink="/giohang "><i class="far fa-shopping-cart "></i></a>
-                <span class="quantity ">2</span>
+            <li class="nav-item cart-home" (mouseover)="hideSearch() ">
+                <a class="nav-link " routerLink="/giohang"><i class="far fa-shopping-cart "></i></a>
+                <span class="quantity ">{{numberItemInCart}}</span>
                 <div class="block-minicart ">
                     <span class="box-triangle ">
                     <svg viewBox="0 0 20 9 " role="presentation ">
@@ -91,59 +91,23 @@
                             <div class="title-block-minicart ">
                                 Giỏ hàng
                             </div>
-                            <div class="list-products scrollbar scrollbar-primary pl-3 pr-3 ">
-                                <div class="item-cartmini ">
+                            <div class="list-products scrollbar scrollbar-primary pl-3 pr-3" *ngFor="let item of itemsCart">
+                                <div class="item-cartmini">
                                     <div class="thumb-item ">
-                                        <a href=" "><img src="/assets/BTruong/image-mix/FR001.jpg " alt=" " width="60px " height="60px "></a>
+                                        <a href=" "><img src="/assets/BTruong/image-mix/{{item.img1}}" alt=" " width="60px " height="60px "></a>
                                     </div>
-                                    <div class="title-item pl-2 ">
-                                        <a href=" " class="title ">Rau muống túi xanh tươi 500g </a>
-                                        <div><span class="quantity-item ">1</span></div>
+                                    <div class="title-item pl-2">
+                                        <a href=" " class="title">{{item.name}} </a>
+                                        <div><span class="quantity-item ">{{item.quantity}} </span></div>
                                     </div>
-                                    <div class="remove-price ">
-                                        <div class="mb-2 pb-2 "><a href=" " class="remove "><i class="fas fa-times "></i></a></div>
-                                        <div class="price "><span></span>20000đ</div>
+                                    <div class="remove-price">
+                                        <div class="mb-2 pb-2"><a href=" " class="remove "><i class="fas fa-times "></i></a></div>
+                                        <div class="price"><span></span>{{item.price}} </div>
                                     </div>
                                 </div>
-                                <div class="item-cartmini ">
-                                    <div class="thumb-item ">
-                                        <a href=" "><img src="/assets/BTruong/image-mix/FR001.jpg " alt=" " width="60px " height="60px "></a>
-                                    </div>
-                                    <div class="title-item pl-2 ">
-                                        <a href=" " class="title ">Rau muống túi xanh tươi 500g </a>
-                                        <div><span class="quantity-item ">1</span></div>
-                                    </div>
-                                    <div class="remove-price ">
-                                        <div class="mb-2 pb-2 "><a href=" " class="remove "><i class="fas fa-times "></i></a></div>
-                                        <div class="price "><span></span>20000đ</div>
-                                    </div>
-                                </div>
-                                <div class="item-cartmini ">
-                                    <div class="thumb-item ">
-                                        <a href=" "><img src="/assets/BTruong/image-mix/FR001.jpg " alt=" " width="60px " height="60px "></a>
-                                    </div>
-                                    <div class="title-item pl-2 ">
-                                        <a href=" " class="title ">Rau muống túi xanh tươi 500g </a>
-                                        <div><span class="quantity-item ">1</span></div>
-                                    </div>
-                                    <div class="remove-price ">
-                                        <div class="mb-2 pb-2 "><a href=" " class="remove "><i class="fas fa-times "></i></a></div>
-                                        <div class="price "><span></span>20000đ</div>
-                                    </div>
-                                </div>
-                                <div class="item-cartmini ">
-                                    <div class="thumb-item ">
-                                        <a href=" "><img src="/assets/BTruong/image-mix/FR001.jpg " alt=" " width="60px " height="60px "></a>
-                                    </div>
-                                    <div class="title-item pl-2 ">
-                                        <a href=" " class="title ">Rau muống túi xanh tươi 500g </a>
-                                        <div><span class="quantity-item ">1</span></div>
-                                    </div>
-                                    <div class="remove-price ">
-                                        <div class="mb-2 pb-2 "><a href=" " class="remove "><i class="fas fa-times "></i></a></div>
-                                        <div class="price "><span></span>20000đ</div>
-                                    </div>
-                                </div>
+                               
+                                
+                               
                             </div>
                             <div class="total-cartmini mb-3 ml-3 pt-2 ">
                                 <div href=" " class="title ">Tổng tiền:</div>
@@ -163,6 +127,6 @@
     </nav>
 </div>
 
-<div class="modal fade " id="popupModal " tabindex="-1 " role="dialog " aria-hidden="true ">
+<div class="modal fade" id="popupModal" tabindex="-1" role="dialog" aria-hidden="true">
     <app-popup-login></app-popup-login>
 </div>
