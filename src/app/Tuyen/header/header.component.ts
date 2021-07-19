@@ -15,6 +15,7 @@ ChangeDetectionStrategy
 import { Subject } from 'rxjs';
 import { Product } from 'src/app/model/product.model';
 import { ProductService } from 'src/app/Services/product.service';
+import { ShoppingCartService } from 'src/app/Services/shopping-cart.service';
 
 @Component({
   selector: 'app-header',
@@ -25,18 +26,25 @@ import { ProductService } from 'src/app/Services/product.service';
 export class HeaderComponent implements OnInit {
   i: any = -1;
   datas: Product[] = [];
+   itemsCart: Product[] = [];
   title = 'filter';
   keyword ="name";
   found ="không tìm thấy sản phẩm."
-
+numberItemInCart:number=0;
 
   public nameFilter='bao';
   public nameFilterControl =  new Subject<string>();
 // scroll
   items = Array.from({length: 210}).map((_, i) => `Item #${i}`);
-  constructor(@Inject(DOCUMENT) private document: any, private productService: ProductService ) {}
+  constructor(@Inject(DOCUMENT) private document: any, private productService: ProductService ,private cartService:ShoppingCartService) {}
 
   ngOnInit(): void {
+     this.cartService.cartItems.subscribe(data=>{
+      this.itemsCart=data;
+    })
+    this.cartService.cartItems.subscribe(data=>{
+        this.numberItemInCart=data.length
+    })
     this.getProducts();
     this.nameFilterControl.pipe().subscribe(value=>{ this.nameFilter = value.trim().toLowerCase();
       console.log(value);

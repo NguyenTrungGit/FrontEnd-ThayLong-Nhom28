@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ProductPopupComponent } from 'src/app/BTruong/product-popup/product-popup.component';
 import { Product } from 'src/app/model/product.model';
+import { ShoppingCartService } from 'src/app/Services/shopping-cart.service';
 
 @Component({
   selector: 'app-product-item',
@@ -10,7 +11,7 @@ import { Product } from 'src/app/model/product.model';
 })
 export class ProductItemComponent implements OnInit {
 
-  constructor(public dialog: MatDialog){}
+  constructor(public dialog: MatDialog,private shoppingCartService:ShoppingCartService){}
   openDialog(){
     this.dialog.open(ProductPopupComponent,{
       data:{
@@ -27,7 +28,13 @@ export class ProductItemComponent implements OnInit {
       }
     });
   }
+  addToCart(){
+    this.productItem.quantity=1;
+    this.shoppingCartService.addToCart(this.productItem);
+    // window.alert('has been added to cart!')
+
+      }
   ngOnInit(): void {
   }
-  @Input() productItem?: Product
+  @Input() productItem!: Product
 }

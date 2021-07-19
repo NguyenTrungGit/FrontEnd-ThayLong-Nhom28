@@ -106,6 +106,7 @@ import { BlogContentDetailsComponent } from './BTruong/blog-content/blog-content
     CommentItemComponent,
     BlogContentComponent,
     BlogContentDetailsComponent,
+    CommentDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -121,6 +122,6 @@ import { BlogContentDetailsComponent } from './BTruong/blog-content/blog-content
     ScrollingModule,
   ],
   bootstrap: [AppComponent],
-  entryComponents: [CommentDialogComponent],
+  entryComponents:[CommentDialogComponent]
 })
 export class AppModule {}

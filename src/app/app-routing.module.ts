@@ -7,11 +7,13 @@ import { ProductComponent } from './BTruong/product/product.component';
 import { CartComponent } from './NTrung/cart/cart.component';
 import { PayComponent } from './NTrung/pay/pay.component';
 import { ProductDetailsComponent } from './NTrung/product-details/product-details.component';
+import { HeaderComponent } from './Tuyen/header/header.component';
 import { HomeComponent } from './Tuyen/home/home.component';
 import { IntroduceComponent } from './Tuyen/introduce/introduce.component';
 
 const routes: Routes = [
   { path: 'trangchu', component: HomeComponent },
+  { path: 'trangchu', component: HeaderComponent },
   { path: 'cuahang/:cate', component: ProductComponent },
   { path: 'cuahang', component: ProductComponent },
   { path: 'gioithieu', component: IntroduceComponent },
