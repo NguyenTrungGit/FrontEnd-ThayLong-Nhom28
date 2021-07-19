@@ -18,7 +18,7 @@
     "product": [{
             "id": "RAU001",
             "name": "CẢI DÚNG-TÚI 300",
-            "price": "8000",
+            "price": 8000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -30,7 +30,7 @@
         {
             "id": "RAU002",
             "name": "DỀN TÚI 300G",
-            "price": "8000",
+            "price": 8000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -42,7 +42,7 @@
         {
             "id": "RAU003",
             "name": "CẢI BẸ XANH TÚI 300G",
-            "price": "8000",
+            "price": 8000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -54,7 +54,7 @@
         {
             "id": "RAU004",
             "name": "CẢI XOĂN 500G",
-            "price": "20000",
+            "price": 20000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -65,7 +65,7 @@
         }, {
             "id": "RAU005",
             "name": "XÀ LÁCH ROMAINE THỦY CANH 300G",
-            "price": "25000",
+            "price": 25000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -77,7 +77,7 @@
         {
             "id": "RAU006",
             "name": "TẦN Ô 500G",
-            "price": "16000",
+            "price": 16000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -89,7 +89,7 @@
         {
             "id": "RAU007",
             "name": "RAU ĐAY 500G",
-            "price": "15000",
+            "price": 15000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -101,7 +101,7 @@
         {
             "id": "RAU008",
             "name": "Xà lách búp mỡ thuỷ canh 300G",
-            "price": "10000",
+            "price": 10000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -113,7 +113,7 @@
         {
             "id": "RAU009",
             "name": "GIÁ MẦM ĐẬU XANH 300G",
-            "price": "10000",
+            "price": 10000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -125,7 +125,7 @@
         {
             "id": "RAU010",
             "name": "Cải bó xôi túi 500g",
-            "price": "19000",
+            "price": 19000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -137,7 +137,7 @@
         {
             "id": "RAU011",
             "name": "Rau đắng túi 300g",
-            "price": "8000",
+            "price": 8000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -149,7 +149,7 @@
         {
             "id": "RAU012",
             "name": "Rau mồng tơi baby túi 300g",
-            "price": "15000",
+            "price": 15000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -161,7 +161,7 @@
         {
             "id": "RAU013",
             "name": "Rau muống hạt baby túi 300g",
-            "price": "7500",
+            "price": 7500,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -173,7 +173,7 @@
         {
             "id": "RAU014",
             "name": "Rau dền baby túi 300g",
-            "price": "15000",
+            "price": 15000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -185,7 +185,7 @@
         {
             "id": "RAU015",
             "name": "Cải bẹ xanh baby túi 300g",
-            "price": "7500",
+            "price": 7500,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -197,7 +197,7 @@
         {
             "id": "RAU016",
             "name": "Cải ngồng túi 300g",
-            "price": "7000",
+            "price": 7000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -209,7 +209,7 @@
         {
             "id": "RAU017",
             "name": "Xà lách lô lô xanh túi 500g",
-            "price": "7000",
+            "price": 7000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -221,7 +221,7 @@
         {
             "id": "RAU018",
             "name": "Xà lách xoong Đà Lạt túi 500g",
-            "price": "7000",
+            "price": 7000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -233,7 +233,7 @@
         {
             "id": "RAU019",
             "name": "Rau lang túi 500g",
-            "price": "6500",
+            "price": 6500,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -245,7 +245,7 @@
         {
             "id": "RAU020",
             "name": "Rau cần tàu (cần ta) túi 400g",
-            "price": "6500",
+            "price": 6500,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -257,7 +257,7 @@
         {
             "id": "RAU021",
             "name": "Hành paro gói 200g",
-            "price": "5500",
+            "price": 5500,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -269,7 +269,7 @@
         {
             "id": "RAU022",
             "name": "Cần tây túi 200g",
-            "price": "5000",
+            "price": 5000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -281,7 +281,7 @@
         {
             "id": "RAU023",
             "name": "Cải thìa túi 500g",
-            "price": "10000",
+            "price": 10000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -293,7 +293,7 @@
         {
             "id": "RAU024",
             "name": "Rau mồng tơi túi 500g",
-            "price": "5000",
+            "price": 5000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -305,7 +305,7 @@
         {
             "id": "RAU025",
             "name": "Rau ngót túi 200g",
-            "price": "10000",
+            "price": 10000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -317,7 +317,7 @@
         {
             "id": "RAU026",
             "name": "Tía tô túi 50g",
-            "price": "3000",
+            "price": 3000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -329,7 +329,7 @@
         {
             "id": "RAU027",
             "name": "Rau diếp cá túi 50g",
-            "price": "3000",
+            "price": 3000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -341,7 +341,7 @@
         {
             "id": "RAU028",
             "name": "Rau húng cây túi 50g",
-            "price": "3000",
+            "price": 3000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -353,7 +353,7 @@
         {
             "id": "RAU029",
             "name": "Nha đam túi 200g",
-            "price": "3000",
+            "price": 3000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -365,7 +365,7 @@
         {
             "id": "RAU030",
             "name": "Bạc hà túi 200g",
-            "price": "2800",
+            "price": 2800,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -377,7 +377,7 @@
         {
             "id": "RAU031",
             "name": "Ngò rí túi 50g",
-            "price": "5000",
+            "price": 5000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -389,7 +389,7 @@
         {
             "id": "RAU032",
             "name": "Rau húng quế túi 50g",
-            "price": "2500",
+            "price": 2500,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -401,7 +401,7 @@
         {
             "id": "RAU033",
             "name": "Hẹ lá túi 100g",
-            "price": "2000",
+            "price": 2000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -413,7 +413,7 @@
         {
             "id": "RAU034",
             "name": "Ngò gai, rau om túi 50g",
-            "price": "2000",
+            "price": 2000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -425,7 +425,7 @@
         {
             "id": "RAU035",
             "name": "Nấm mỡ nâu hộp 150g",
-            "price": "55000",
+            "price": 55000,
             "quantity": "50",
             "category": "nam",
             "origin": "Việt Nam",
@@ -437,7 +437,7 @@
         {
             "id": "RAU036",
             "name": "Nấm mỡ trắng hộp 150g",
-            "price": "45000",
+            "price": 45000,
             "quantity": "50",
             "category": "nam",
             "origin": "Việt Nam",
@@ -449,7 +449,7 @@
         {
             "id": "RAU037",
             "name": "Nấm linh chi nâu hộp 150g",
-            "price": "26000",
+            "price": 26000,
             "quantity": "50",
             "category": "nam",
             "origin": "Việt Nam",
@@ -461,7 +461,7 @@
         {
             "id": "RAU038",
             "name": "Nấm bào ngư xám túi 300g",
-            "price": "24000",
+            "price": 24000,
             "quantity": "50",
             "category": "nam",
             "origin": "Việt Nam",
@@ -473,7 +473,7 @@
         {
             "id": "RAU039",
             "name": "Nấm đùi gà túi 200g",
-            "price": "22000",
+            "price": 22000,
             "quantity": "50",
             "category": "nam",
             "origin": "Việt Nam",
@@ -485,7 +485,7 @@
         {
             "id": "RAU040",
             "name": "Nấm hải sản túi 150g",
-            "price": "20000",
+            "price": 20000,
             "quantity": "50",
             "category": "nam",
             "origin": "Việt Nam",
@@ -497,7 +497,7 @@
         {
             "id": "RAU041",
             "name": "Nấm bào ngư trắng túi 300g",
-            "price": "17000",
+            "price": 17000,
             "quantity": "50",
             "category": "nam",
             "origin": "Việt Nam",
@@ -509,7 +509,7 @@
         {
             "id": "RAU042",
             "name": "Xà lách Mỹ túi 300g",
-            "price": "15000",
+            "price": 15000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -521,7 +521,7 @@
         {
             "id": "RAU043",
             "name": "Bông so đũa túi 200g",
-            "price": "12000",
+            "price": 12000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -533,7 +533,7 @@
         {
             "id": "RAU044",
             "name": "Bắp cải tím túi 500g",
-            "price": "11000",
+            "price": 11000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -545,7 +545,7 @@
         {
             "id": "RAU045",
             "name": "Nấm kim châm Hàn Quốc túi 150g",
-            "price": "19000",
+            "price": 19000,
             "quantity": "50",
             "category": "nam",
             "origin": "Việt Nam",
@@ -557,7 +557,7 @@
         {
             "id": "RAU046",
             "name": "Bông súng túi 300g",
-            "price": "5000",
+            "price": 5000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -569,7 +569,7 @@
         {
             "id": "RAU047",
             "name": "Bắp cải trắng túi 500g",
-            "price": "5000",
+            "price": 5000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -581,7 +581,7 @@
         {
             "id": "RAU048",
             "name": "Hành ngò túi 50g",
-            "price": "4500",
+            "price": 4500,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -593,7 +593,7 @@
         {
             "id": "RAU049",
             "name": "Rau bò khai túi 500g",
-            "price": "15000",
+            "price": 15000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -605,7 +605,7 @@
         {
             "id": "RAU050",
             "name": "Xà lách xoăn 500g",
-            "price": "15000",
+            "price": 15000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -617,7 +617,7 @@
         {
             "id": "RAU051",
             "name": "RAU DỀN ĐỎ TÚI 500G",
-            "price": "20000",
+            "price": 20000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -629,7 +629,7 @@
         {
             "id": "RAU052",
             "name": "RAU NGẢI CỨU 300G",
-            "price": "30000",
+            "price": 30000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -641,7 +641,7 @@
         {
             "id": "RAU053",
             "name": "SÚP LƠ TRẮNG TÚI 1KG",
-            "price": "40000",
+            "price": 40000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -653,7 +653,7 @@
         {
             "id": "RAU054",
             "name": "SÚP LƠ XANH 500G",
-            "price": "20000",
+            "price": 20000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -665,7 +665,7 @@
         {
             "id": "RAU055",
             "name": "Măng Tây Xanh 500G",
-            "price": "30000",
+            "price": 30000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -677,7 +677,7 @@
         {
             "id": "RAU056",
             "name": "Rau rocket 200G",
-            "price": "30000",
+            "price": 30000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -689,7 +689,7 @@
         {
             "id": "RAU057",
             "name": "BÔNG BÍ 500G",
-            "price": "30000",
+            "price": 30000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -701,7 +701,7 @@
         {
             "id": "RAU058",
             "name": "Cải bó xôi Đà Lạt 500G",
-            "price": "30000",
+            "price": 30000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -713,7 +713,7 @@
         {
             "id": "RAU059",
             "name": "Hành lá 300G",
-            "price": "12000",
+            "price": 12000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -725,7 +725,7 @@
         {
             "id": "RAU060",
             "name": "Cải Kale Đà Lạt 500G",
-            "price": "38000",
+            "price": 38000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -737,7 +737,7 @@
         {
             "id": "RAU061",
             "name": "Rau rừng Gia Lai 500G",
-            "price": "35000",
+            "price": 35000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -749,7 +749,7 @@
         {
             "id": "RAU062",
             "name": "Bắp cải thảo Đà Lạt 1KG",
-            "price": "30000",
+            "price": 30000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -761,7 +761,7 @@
         {
             "id": "RAU063",
             "name": "Cải ngọt Đà Lạt 500G",
-            "price": "24000",
+            "price": 24000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -773,7 +773,7 @@
         {
             "id": "RAU064",
             "name": "Bông Atiso Đà Lạt 1KG",
-            "price": "400000",
+            "price": 400000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -785,7 +785,7 @@
         {
             "id": "RAU065",
             "name": "Bắp cải (sú tim) Đà Lạt 1KG",
-            "price": "30000",
+            "price": 30000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -797,7 +797,7 @@
         {
             "id": "RAU066",
             "name": "Rau lang Đà Lạt 500G",
-            "price": "20000",
+            "price": 20000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -809,7 +809,7 @@
         {
             "id": "RAU067",
             "name": "Cải cầu vòng hữu cơ  200g",
-            "price": "32000",
+            "price": 32000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -821,7 +821,7 @@
         {
             "id": "RAU068",
             "name": "Cải Đuôi Phụng Hữu Cơ 300g",
-            "price": "50000",
+            "price": 50000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -833,7 +833,7 @@
         {
             "id": "RAU069",
             "name": "Húng Lủi Hữu Cơ  50g",
-            "price": "13000",
+            "price": 13000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -845,7 +845,7 @@
         {
             "id": "RAU070",
             "name": "Lá Trà Xanh 300G",
-            "price": "35000",
+            "price": 35000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -857,7 +857,7 @@
         {
             "id": "RAU071",
             "name": "Lá Sorrel Hữu Cơ  100g",
-            "price": "25000",
+            "price": 25000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -869,7 +869,7 @@
         {
             "id": "RAU072",
             "name": "Lá Xạ Hương Hữu Cơ  50g",
-            "price": "45000",
+            "price": 45000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -881,7 +881,7 @@
         {
             "id": "RAU073",
             "name": "Nấm Đông Cô Hữu Cơ 500G",
-            "price": "40000",
+            "price": 40000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -893,7 +893,7 @@
         {
             "id": "RAU074",
             "name": "Nấm Ngọc Thạch Hộp 250g",
-            "price": "59000",
+            "price": 59000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -905,7 +905,7 @@
         {
             "id": "RAU075",
             "name": "Rau Cải Mầm Hữu Cơ  100g",
-            "price": "46000",
+            "price": 46000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -917,7 +917,7 @@
         {
             "id": "RAU076",
             "name": "Rau Càng Cua Hữu Cơ 250g",
-            "price": "35000",
+            "price": 35000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -929,7 +929,7 @@
         {
             "id": "RAU077",
             "name": "Rau Diếp Cá Hữu Cơ  50g",
-            "price": "13000",
+            "price": 13000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -941,7 +941,7 @@
         {
             "id": "RAU078",
             "name": "Rau Kinh Giới Hữu Cơ 50g",
-            "price": "13500",
+            "price": 13500,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -953,7 +953,7 @@
         {
             "id": "RAU079",
             "name": "Sâm Đất Hữu Cơ 250g",
-            "price": "35000",
+            "price": 35000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -965,7 +965,7 @@
         {
             "id": "RAU080",
             "name": "Rau Thì Là Hữu Cơ 100G",
-            "price": "27000",
+            "price": 27000,
             "quantity": "50",
             "category": "rau",
             "origin": "Việt Nam",
@@ -977,7 +977,7 @@
         {
             "id": "FR001",
             "name": "Bòn Bon",
-            "price": "118000",
+            "price": 118000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -989,7 +989,7 @@
         {
             "id": "FR002",
             "name": "Cam ruột đỏ ",
-            "price": "130000",
+            "price": 130000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1001,7 +1001,7 @@
         {
             "id": "FR003",
             "name": "Măng cụt ",
-            "price": "99000",
+            "price": 99000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1013,7 +1013,7 @@
         {
             "id": "FR004",
             "name": "Nhãn",
-            "price": "70000",
+            "price": 70000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1025,7 +1025,7 @@
         {
             "id": "FR005",
             "name": "Mãng cầu xiêm Đài Loan",
-            "price": "350000",
+            "price": 350000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Đài Loan",
@@ -1037,7 +1037,7 @@
         {
             "id": "FR006",
             "name": "Dưa lưới",
-            "price": "120000",
+            "price": 120000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1049,7 +1049,7 @@
         {
             "id": "FR007",
             "name": "Táo Nữ Hoàng",
-            "price": "100000",
+            "price": 100000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1061,7 +1061,7 @@
         {
             "id": "FR008",
             "name": "Táo Newzealand",
-            "price": "160000",
+            "price": 160000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Newzealand",
@@ -1073,7 +1073,7 @@
         {
             "id": "FR009",
             "name": "KiWi Vàng",
-            "price": "240000",
+            "price": 240000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1085,7 +1085,7 @@
         {
             "id": "FR010",
             "name": "Dứa",
-            "price": "170000",
+            "price": 170000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1097,7 +1097,7 @@
         {
             "id": "FR011",
             "name": "Sầu riêng",
-            "price": "450000",
+            "price": 450000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1109,7 +1109,7 @@
         {
             "id": "FR012",
             "name": "Nho Xanh",
-            "price": "250000",
+            "price": 250000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1121,7 +1121,7 @@
         {
             "id": "FR013",
             "name": "Cherry Mỹ",
-            "price": "600000",
+            "price": 600000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Mỹ",
@@ -1133,7 +1133,7 @@
         {
             "id": "FR014",
             "name": "Táo Vàng",
-            "price": "290000",
+            "price": 290000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1145,7 +1145,7 @@
         {
             "id": "FR015",
             "name": "Dâu Tây",
-            "price": "230000",
+            "price": 230000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1157,7 +1157,7 @@
         {
             "id": "FR016",
             "name": "Quýt Vàng",
-            "price": "120000",
+            "price": 120000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1169,7 +1169,7 @@
         {
             "id": "FR017",
             "name": "Lê Hàn Quốc",
-            "price": "120000",
+            "price": 120000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Hàn Quốc",
@@ -1181,7 +1181,7 @@
         {
             "id": "FR018",
             "name": "Cherry Vàng Mỹ",
-            "price": "715000",
+            "price": 715000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Mỹ",
@@ -1193,7 +1193,7 @@
         {
             "id": "FR019",
             "name": "KiWi xanh",
-            "price": "130000",
+            "price": 130000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1205,7 +1205,7 @@
         {
             "id": "FR020",
             "name": "Lê Nam Phi",
-            "price": "95000",
+            "price": 95000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Nam Phi",
@@ -1217,7 +1217,7 @@
         {
             "id": "FR021",
             "name": "Nho Đen không hạt Úc",
-            "price": "225000",
+            "price": 225000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Úc",
@@ -1229,7 +1229,7 @@
         {
             "id": "FR022",
             "name": "Quýt Úc",
-            "price": "139000",
+            "price": 139000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Úc",
@@ -1241,7 +1241,7 @@
         {
             "id": "FR023",
             "name": "Táo Đỏ SekaiiChi Nhật Bản",
-            "price": "499000",
+            "price": 499000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Nhật Bản",
@@ -1253,7 +1253,7 @@
         {
             "id": "FR024",
             "name": "Táo Xanh Newzealand",
-            "price": "110000",
+            "price": 110000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Newzealand",
@@ -1265,7 +1265,7 @@
         {
             "id": "FR025",
             "name": "Việt Quất Mỹ",
-            "price": "90000",
+            "price": 90000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Mỹ",
@@ -1277,7 +1277,7 @@
         {
             "id": "FR026",
             "name": "Hồng dẻo thái lát ",
-            "price": "250000",
+            "price": 250000,
             "quantity": "100",
             "category": "traicay",
 
@@ -1290,7 +1290,7 @@
         {
             "id": "FR027",
             "name": "Dưa Hấu",
-            "price": "58000",
+            "price": 58000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1302,7 +1302,7 @@
         {
             "id": "FR028",
             "name": "Bơ Booth Mỹ",
-            "price": "75000",
+            "price": 75000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Mỹ",
@@ -1314,7 +1314,7 @@
         {
             "id": "FR029",
             "name": "Xoài Cát Hoà Lộc",
-            "price": "72000",
+            "price": 72000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1326,7 +1326,7 @@
         {
             "id": "FR030",
             "name": "Quýt đường ",
-            "price": "29000",
+            "price": 29000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1338,7 +1338,7 @@
         {
             "id": "FR031",
             "name": "Vú Sữa",
-            "price": "40000",
+            "price": 40000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1350,7 +1350,7 @@
         {
             "id": "FR032",
             "name": "Dưà Sáp",
-            "price": "20000",
+            "price": 20000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1362,7 +1362,7 @@
         {
             "id": "FR033",
             "name": "Bưởi",
-            "price": "55000",
+            "price": 55000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1374,7 +1374,7 @@
         {
             "id": "FR034",
             "name": "Bơ Việt Nam",
-            "price": "60000",
+            "price": 60000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1386,7 +1386,7 @@
         {
             "id": "FR035",
             "name": "Phật Thủ",
-            "price": "20000",
+            "price": 20000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1398,7 +1398,7 @@
         {
             "id": "FR036",
             "name": "Mận Tam Hoa",
-            "price": "40000",
+            "price": 40000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1410,7 +1410,7 @@
         {
             "id": "FR037",
             "name": "Táo Mèo Tú Lệ",
-            "price": "25000",
+            "price": 25000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1422,7 +1422,7 @@
         {
             "id": "FR038",
             "name": "Xoài Tượng",
-            "price": "29000",
+            "price": 29000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1434,7 +1434,7 @@
         {
             "id": "FR039",
             "name": "Nho Việt Nam",
-            "price": "40000",
+            "price": 40000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1446,7 +1446,7 @@
         {
             "id": "FR040",
             "name": "Thanh Long Ruột Đỏ",
-            "price": "25000",
+            "price": 25000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1458,7 +1458,7 @@
         {
             "id": "FR041",
             "name": "Bưởi Thanh Trà",
-            "price": "80000",
+            "price": 80000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1470,7 +1470,7 @@
         {
             "id": "FR042",
             "name": "Bưởi Phúc Trạch",
-            "price": "75000",
+            "price": 75000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1482,7 +1482,7 @@
         {
             "id": "FR043",
             "name": "Chuối Cavendish",
-            "price": "100000",
+            "price": 100000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Úc",
@@ -1495,7 +1495,7 @@
         {
             "id": "FR044",
             "name": "Cam MeKo",
-            "price": "55000",
+            "price": 55000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Nhật Bản",
@@ -1507,7 +1507,7 @@
         {
             "id": "FR045",
             "name": "Bình Bát",
-            "price": "26000",
+            "price": 26000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1519,7 +1519,7 @@
         {
             "id": "FR046",
             "name": "Chanh Leo",
-            "price": "30000",
+            "price": 30000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1531,7 +1531,7 @@
         {
             "id": "FR047",
             "name": "Chà Là",
-            "price": "40000",
+            "price": 40000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1543,7 +1543,7 @@
         {
             "id": "FR048",
             "name": "Chôm Chôm",
-            "price": "40000",
+            "price": 40000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1555,7 +1555,7 @@
         {
             "id": "FR049",
             "name": "Cóc ",
-            "price": "12000",
+            "price": 12000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1567,7 +1567,7 @@
         {
             "id": "FR050",
             "name": "Chùm Ruột",
-            "price": "10000",
+            "price": 10000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1579,7 +1579,7 @@
         {
             "id": "FR051",
             "name": "Chòi Mòi",
-            "price": "23000",
+            "price": 23000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1591,7 +1591,7 @@
         {
             "id": "FR052",
             "name": "Hạt Dẻ",
-            "price": "78000",
+            "price": 78000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1603,7 +1603,7 @@
         {
             "id": "FR053",
             "name": "Dưa Gang",
-            "price": "20000",
+            "price": 20000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1615,7 +1615,7 @@
         {
             "id": "FR054",
             "name": "Dưa Lê",
-            "price": "25000",
+            "price": 25000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1627,7 +1627,7 @@
         {
             "id": "FR055",
             "name": "Đu Đủ",
-            "price": "46000",
+            "price": 46000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1639,7 +1639,7 @@
         {
             "id": "FR056",
             "name": "Hồng Xiêm",
-            "price": "72000",
+            "price": 72000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1651,7 +1651,7 @@
         {
             "id": "FR057",
             "name": "Khế",
-            "price": "18000",
+            "price": 18000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1663,7 +1663,7 @@
         {
             "id": "FR058",
             "name": "Lê Ki Ma",
-            "price": "40000",
+            "price": 40000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1675,7 +1675,7 @@
         {
             "id": "FR059",
             "name": "Lựu",
-            "price": "89000",
+            "price": 89000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1687,7 +1687,7 @@
         {
             "id": "FR060",
             "name": "Me",
-            "price": "20000",
+            "price": 20000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1699,7 +1699,7 @@
         {
             "id": "FR061",
             "name": "Mít",
-            "price": "40000",
+            "price": 40000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1711,7 +1711,7 @@
         {
             "id": "FR062",
             "name": "Mơ",
-            "price": "36000",
+            "price": 36000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1723,7 +1723,7 @@
         {
             "id": "FR063",
             "name": "Nhót",
-            "price": "10000",
+            "price": 10000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1735,7 +1735,7 @@
         {
             "id": "FR064",
             "name": "Ổi",
-            "price": "50000",
+            "price": 50000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1747,7 +1747,7 @@
         {
             "id": "FR065",
             "name": "Sơ Ri",
-            "price": "20000",
+            "price": 20000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1759,7 +1759,7 @@
         {
             "id": "FR066",
             "name": "Quả Sơn Trà",
-            "price": "40000",
+            "price": 40000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1771,7 +1771,7 @@
         {
             "id": "FR067",
             "name": "Quả Vải",
-            "price": "90000",
+            "price": 90000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1783,7 +1783,7 @@
         {
             "id": "FR068",
             "name": "Chuối Ngự",
-            "price": "38000",
+            "price": 38000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1795,7 +1795,7 @@
         {
             "id": "FR069",
             "name": "Trái Xoay",
-            "price": "45000",
+            "price": 45000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1807,7 +1807,7 @@
         {
             "id": "FR070",
             "name": "Quả Sim Rừng",
-            "price": "100000",
+            "price": 100000,
             "quantity": "100",
             "category": "traicay",
             "origin": "Việt Nam",
@@ -1819,7 +1819,7 @@
         {
             "id": "CUQUA01",
             "name": "Bắp mĩ",
-            "price": "10000",
+            "price": 10000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -1831,7 +1831,7 @@
         {
             "id": "CUQUA02",
             "name": "Bầu",
-            "price": "10000",
+            "price": 10000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -1843,7 +1843,7 @@
         {
             "id": "CUQUA03",
             "name": "Bí đao",
-            "price": "13000",
+            "price": 13000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -1855,7 +1855,7 @@
         {
             "id": "CUQUA04",
             "name": "Bí đỏ",
-            "price": "10000",
+            "price": 10000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -1867,7 +1867,7 @@
         {
             "id": "CUQUA05",
             "name": "Bí ngòi",
-            "price": "18000",
+            "price": 18000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -1880,7 +1880,7 @@
         {
             "id": "CUQUA06",
             "name": "Bông cải xanh Romanesco",
-            "price": "300000",
+            "price": 300000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -1892,7 +1892,7 @@
         {
             "id": "CUQUA07",
             "name": "Cà bát",
-            "price": "15000",
+            "price": 15000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -1904,7 +1904,7 @@
         {
             "id": "CUQUA08",
             "name": "Cà chua",
-            "price": "25000",
+            "price": 25000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -1916,7 +1916,7 @@
         {
             "id": "CUQUA09",
             "name": "Cà chua bi",
-            "price": "40000",
+            "price": 40000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -1928,7 +1928,7 @@
         {
             "id": "CUQUA010",
             "name": "Cà rốt",
-            "price": "18000",
+            "price": 18000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -1940,7 +1940,7 @@
         {
             "id": "CUQUA011",
             "name": "Cà tím",
-            "price": "10000",
+            "price": 10000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -1952,7 +1952,7 @@
         {
             "id": "CUQUA012",
             "name": "Chanh",
-            "price": "20000",
+            "price": 20000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -1964,7 +1964,7 @@
         {
             "id": "CUQUA013",
             "name": "Chuối cau",
-            "price": "20000",
+            "price": 20000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -1976,7 +1976,7 @@
         {
             "id": "CUQUA014",
             "name": "Chuối đỏ",
-            "price": "30000",
+            "price": 30000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -1988,7 +1988,7 @@
         {
             "id": "CUQUA015",
             "name": "Củ ấu",
-            "price": "40000",
+            "price": 40000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2000,7 +2000,7 @@
         {
             "id": "CUQUA016",
             "name": "Củ cải trắng",
-            "price": "10000",
+            "price": 10000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2012,7 +2012,7 @@
         {
             "id": "CUQUA017",
             "name": "Củ dền",
-            "price": "20000",
+            "price": 20000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2024,7 +2024,7 @@
         {
             "id": "CUQUA018",
             "name": "Củ gừng",
-            "price": "40000",
+            "price": 40000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2036,7 +2036,7 @@
         {
             "id": "CUQUA019",
             "name": "Củ năng",
-            "price": "40000",
+            "price": 40000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2048,7 +2048,7 @@
         {
             "id": "CUQUA020",
             "name": "Củ nén",
-            "price": "70000",
+            "price": 70000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2060,7 +2060,7 @@
         {
             "id": "CUQUA021",
             "name": "Củ nghệ đen",
-            "price": "40000",
+            "price": 40000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2072,7 +2072,7 @@
         {
             "id": "CUQUA022",
             "name": "Củ Riềng",
-            "price": "20000",
+            "price": 20000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2084,7 +2084,7 @@
         {
             "id": "CUQUA023",
             "name": "Củ sắn",
-            "price": "10000",
+            "price": 10000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2096,7 +2096,7 @@
         {
             "id": "CUQUA024",
             "name": "Củ sen",
-            "price": "50000",
+            "price": 50000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2108,7 +2108,7 @@
         {
             "id": "CUQUA025",
             "name": "Củ su hào",
-            "price": "15000",
+            "price": 15000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2120,7 +2120,7 @@
         {
             "id": "CUQUA026",
             "name": "Củ Tỏi",
-            "price": "40000",
+            "price": 40000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2132,7 +2132,7 @@
         {
             "id": "CUQUA027",
             "name": "Đậu bắp",
-            "price": "20000",
+            "price": 20000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2144,7 +2144,7 @@
         {
             "id": "CUQUA028",
             "name": "Đậu cove",
-            "price": "15000",
+            "price": 15000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2156,7 +2156,7 @@
         {
             "id": "CUQUA029",
             "name": "Đậu đũa",
-            "price": "17000",
+            "price": 17000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2168,7 +2168,7 @@
         {
             "id": "CUQUA030",
             "name": "Chuối hột",
-            "price": "10000",
+            "price": 10000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2180,7 +2180,7 @@
         {
             "id": "CUQUA031",
             "name": "Đậu hà lan",
-            "price": "40000",
+            "price": 40000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2192,7 +2192,7 @@
         {
             "id": "CUQUA032",
             "name": "Đậu rồng",
-            "price": "15000",
+            "price": 15000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2204,7 +2204,7 @@
         {
             "id": "CUQUA033",
             "name": "Dâu tằm",
-            "price": "35000",
+            "price": 35000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2216,7 +2216,7 @@
         {
             "id": "CUQUA034",
             "name": "Đậu tầm",
-            "price": "30000",
+            "price": 30000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2228,7 +2228,7 @@
         {
             "id": "CUQUA035",
             "name": "Dừa dứa",
-            "price": "40000",
+            "price": 40000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2240,7 +2240,7 @@
         {
             "id": "CUQUA036",
             "name": "Dưa hồng",
-            "price": "20000",
+            "price": 20000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2252,7 +2252,7 @@
         {
             "id": "CUQUA037",
             "name": "Dưa leo",
-            "price": "15000",
+            "price": 15000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2264,7 +2264,7 @@
         {
             "id": "CUQUA038",
             "name": "Dừa nước",
-            "price": "30000",
+            "price": 30000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2276,7 +2276,7 @@
         {
             "id": "CUQUA039",
             "name": "Hành tây",
-            "price": "20000",
+            "price": 20000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2288,7 +2288,7 @@
         {
             "id": "CUQUA040",
             "name": "Hành tím",
-            "price": "30000",
+            "price": 30000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2301,7 +2301,7 @@
         {
             "id": "CUQUA041",
             "name": "Khổ qua",
-            "price": "15000",
+            "price": 15000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2313,7 +2313,7 @@
         {
             "id": "CUQUA042",
             "name": "Khổ qua rừng",
-            "price": "35000",
+            "price": 35000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2325,7 +2325,7 @@
         {
             "id": "CUQUA043",
             "name": "Khoai lang mật",
-            "price": "25000",
+            "price": 25000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2337,7 +2337,7 @@
         {
             "id": "CUQUA044",
             "name": "Khoai lang tím",
-            "price": "15000",
+            "price": 15000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2349,7 +2349,7 @@
         {
             "id": "CUQUA045",
             "name": "Khoai mì",
-            "price": "12000",
+            "price": 12000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2361,7 +2361,7 @@
         {
             "id": "CUQUA046",
             "name": "Khoai mỡ",
-            "price": "25000",
+            "price": 25000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2373,7 +2373,7 @@
         {
             "id": "CUQUA047",
             "name": "Khoai môn",
-            "price": "35000",
+            "price": 35000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2385,7 +2385,7 @@
         {
             "id": "CUQUA048",
             "name": "Củ nghệ",
-            "price": "30000",
+            "price": 30000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2397,7 +2397,7 @@
         {
             "id": "CUQUA049",
             "name": "Khoai tây",
-            "price": "25000",
+            "price": 25000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2409,7 +2409,7 @@
         {
             "id": "CUQUA050",
             "name": "Khoai từ",
-            "price": "15000",
+            "price": 15000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2421,7 +2421,7 @@
         {
             "id": "CUQUA051",
             "name": "Mận",
-            "price": "15000",
+            "price": 15000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2433,7 +2433,7 @@
         {
             "id": "CUQUA052",
             "name": "Măng giang",
-            "price": "20000",
+            "price": 20000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2445,7 +2445,7 @@
         {
             "id": "CUQUA053",
             "name": "Măng nứa",
-            "price": "25000",
+            "price": 25000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2457,7 +2457,7 @@
         {
             "id": "CUQUA054",
             "name": "Măng sặt",
-            "price": "30000",
+            "price": 30000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2469,7 +2469,7 @@
         {
             "id": "CUQUA055",
             "name": "Măng tre",
-            "price": "40000",
+            "price": 40000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2481,7 +2481,7 @@
         {
             "id": "CUQUA056",
             "name": "Măng vầu",
-            "price": "350000",
+            "price": 350000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2493,7 +2493,7 @@
         {
             "id": "CUQUA057",
             "name": "Mướp",
-            "price": "15000",
+            "price": 15000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2505,7 +2505,7 @@
         {
             "id": "CUQUA058",
             "name": "Ớt Chuông",
-            "price": "30000",
+            "price": 30000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2517,7 +2517,7 @@
         {
             "id": "CUQUA059",
             "name": "Ớt sừng",
-            "price": "30000",
+            "price": 30000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2529,7 +2529,7 @@
         {
             "id": "CUQUA060",
             "name": "Quả gấc",
-            "price": "20000",
+            "price": 20000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2541,7 +2541,7 @@
         {
             "id": "CUQUA061",
             "name": "Quả mâm xôi",
-            "price": "40000",
+            "price": 40000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2553,7 +2553,7 @@
         {
             "id": "CUQUA062",
             "name": "Quả sake",
-            "price": "20000",
+            "price": 20000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2565,7 +2565,7 @@
         {
             "id": "CUQUA063",
             "name": "Quả salak",
-            "price": "50000",
+            "price": 50000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2577,7 +2577,7 @@
         {
             "id": "CUQUA064",
             "name": "Quả sấu",
-            "price": "10000",
+            "price": 10000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2589,7 +2589,7 @@
         {
             "id": "CUQUA065",
             "name": "Sầu riêng ruột đỏ",
-            "price": "80000",
+            "price": 80000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2601,7 +2601,7 @@
         {
             "id": "CUQUA066",
             "name": "Su su",
-            "price": "10000",
+            "price": 10000,
             "quantity": "10",
             "category": "cu",
             "origin": "Việt Nam",
@@ -2613,7 +2613,7 @@
         {
             "id": "CUQUA067",
             "name": "Tắc",
-            "price": "15000",
+            "price": 15000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2625,7 +2625,7 @@
         {
             "id": "CUQUA068",
             "name": "Tiêu",
-            "price": "75000",
+            "price": 75000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2637,7 +2637,7 @@
         {
             "id": "CUQUA069",
             "name": "Trái hồng xiêm",
-            "price": "40000",
+            "price": 40000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
@@ -2649,7 +2649,7 @@
         {
             "id": "CUQUA070",
             "name": "Trái thanh trà",
-            "price": "35000",
+            "price": 35000,
             "quantity": "10",
             "category": "qua",
             "origin": "Việt Nam",
