@@ -10,7 +10,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .container .title .product {
@@ -35,7 +37,11 @@
 
 .container .info {
   margin: 20px 0px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border-bottom: #4d4b4b dashed 1px;
   padding-bottom: 20px;
@@ -66,7 +72,8 @@
 .container .info .product .product-button:hover {
   cursor: pointer;
   opacity: 0.6;
-  transform: scale(120%);
+  -webkit-transform: scale(120%);
+          transform: scale(120%);
 }
 
 .container .info .product .product-button:active {
@@ -80,10 +87,13 @@
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
+
 .container .info .product .product-image:hover {
   cursor: pointer;
-  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 .container .info .product .product-name {
@@ -100,7 +110,11 @@
 .container .info .amount {
   width: 300px;
   padding-top: 45px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -148,7 +162,10 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .container .summary .discount, .container .summary .total {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 10px;
 }
@@ -161,6 +178,7 @@
   margin-left: 400px;
   margin-bottom: 5px;
 }
+
 .container .summary .content {
   width: 100px;
   text-align: right;
@@ -186,4 +204,5 @@
 
 .container .control .btn-pay {
   background-color: #de6663;
-}/*# sourceMappingURL=cart.component.css.map */
+}
+/*# sourceMappingURL=cart.component.css.map */

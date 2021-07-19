@@ -39,9 +39,21 @@
     cursor: pointer;
 }
 
+.active {
+    background-color: #66a55f;
+    color: #fff;
+}
+
 .menu:hover {
     background-color: #66A55F;
+    transition: 0.3s;
 }
+
+
+/*
+.menu:active {
+    background-color: #66A55F;
+} */
 
 .span-font {
     margin-top: 11px;
@@ -69,11 +81,12 @@
 }
 
 .menu1a {
+    width: 100%;
+    height: 100%;
     color: rgb(37, 37, 37);
 }
 
 .menu:hover .menu1a {
-    background-color: #66A55F;
     color: #ffff;
 }
 
@@ -605,4 +618,12 @@ body {
 
 .flex-con5:hover .woocommerce-Price-amount5 {
     color: #fff;
+}
+
+.is-active {
+    background: red;
+}
+
+.changestyle {
+    background-color: #66A55F;
 }

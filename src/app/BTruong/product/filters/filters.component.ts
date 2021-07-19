@@ -3,6 +3,7 @@ import { Options, LabelType } from '@angular-slider/ngx-slider';
 import { ProductService } from 'src/app/Services/product.service';
 import { Product } from 'src/app/model/product.model';
 import { ActivatedRoute } from '@angular/router';
+import { Category } from 'src/app/model/category.model';
 
 
 @Component({
@@ -14,6 +15,7 @@ export class FiltersComponent implements OnInit{
   @Output() messageEvent  = new EventEmitter<{min: string, max: string}>();
   minPrice!:number;
   maxPrice!:number;
+  check:boolean=false;
   // @Input() categoryName:any;
   categorys: Product[] = [];
   minValue: number = 2000;
@@ -35,11 +37,21 @@ export class FiltersComponent implements OnInit{
 
     }
   };
+  selectedItemId:any;
 
   constructor(private productService: ProductService,private actRoute: ActivatedRoute) {
   }
 
+  updateColor(){
+    if(this.check==false){
+      this.check=true;
+      console.log("xanh");
 
+    }else{
+    this.check = false;
+    console.log("trang");
+    }
+  }
   sendParent(){
     this.messageEvent.emit({min: this.minPrice+'',max:this.maxPrice+''});
     console.log("vao filter child")
@@ -51,6 +63,11 @@ export class FiltersComponent implements OnInit{
       this.categorys = res;
 
     });
+  }
+  update(){
+    if(this.selectedItemId== true){
+      this.selectedItemId== this.categorys;
+    }
   }
   ngOnInit(): void {
     this.getCategorys();

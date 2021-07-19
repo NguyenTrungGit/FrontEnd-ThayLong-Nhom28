@@ -1,5 +1,6 @@
 @charset "UTF-8";
 .transition-navbar {
+  -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
 
@@ -47,7 +48,8 @@
 }
 
 .navbar .navbar-nav .nav-link:hover .transform-search {
-  transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
 }
 
 .nav-item {
@@ -65,6 +67,7 @@
 
 .nav-left .nav-item a:hover {
   border-bottom: 2px solid #000000;
+  -webkit-transition: width 1s;
   transition: width 1s;
 }
 
@@ -96,7 +99,10 @@
 }
 
 .search-box {
+  -webkit-transition: width 0.6s, border-radius 0.6s, background 0.6s, -webkit-box-shadow 0.6s;
+  transition: width 0.6s, border-radius 0.6s, background 0.6s, -webkit-box-shadow 0.6s;
   transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+  transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s, -webkit-box-shadow 0.6s;
   font-size: 16px;
   width: 40px;
   height: 36px;
@@ -104,10 +110,12 @@
   border: none;
   cursor: pointer;
   background: #ebebeb;
+  -webkit-transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
   transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
   border: none;
   outline: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   padding-left: 15px;
   cursor: text;
   width: 200px;
@@ -164,7 +172,8 @@
   background-color: #fff;
   border-color: #99c470;
   outline: 0;
-  box-shadow: 0 0 0 0.1rem #99c470;
+  -webkit-box-shadow: 0 0 0 0.1rem #99c470;
+          box-shadow: 0 0 0 0.1rem #99c470;
 }
 
 .modal form {
@@ -175,11 +184,11 @@
   .modal-dialog {
     max-width: 400px;
   }
-
   .modal-dialog .modal-content {
     padding: 1rem;
   }
 }
+
 .modal-header .close {
   margin-top: -1.5rem;
 }
@@ -218,6 +227,7 @@
 }
 
 .cart-home:hover .block-minicart {
+  -webkit-transition: all 1s linear;
   transition: all 1s linear;
   display: block;
 }
@@ -225,10 +235,12 @@
 .cart-home .block-minicart {
   background-color: white;
   position: absolute;
-  transform: translate(-70%);
+  -webkit-transform: translate(-70%);
+          transform: translate(-70%);
   border-radius: 4px;
   width: 350px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.22);
 }
 
 .cart-home .block-minicart .minicart-content .block-products .title-block-minicart {
@@ -263,6 +275,8 @@
 
 .cart-home .block-minicart .minicart-content .block-products .list-products .item-cartmini {
   font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -270,39 +284,59 @@
 }
 
 .cart-home .block-minicart .minicart-content .block-products .list-products .item-cartmini .title-item {
-  flex: 2;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .cart-home .block-minicart .minicart-content .block-products .list-products .item-cartmini .title-item .title {
   font-weight: 600;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   height: 40px;
   text-decoration: none;
   color: #383838;
 }
 
 .cart-home .block-minicart .minicart-content .block-products .list-products .item-cartmini .title-item .quantity-item {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   background-color: #e9e9e9;
   padding: 1px 8px 1px 8px;
   display: inline;
 }
 
 .cart-home .block-minicart .minicart-content .block-products .list-products .item-cartmini .remove-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .cart-home .block-minicart .minicart-content .block-products .list-products .item-cartmini .remove-price .price {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   color: #66a55f;
   font-weight: 800;
 }
 
 .cart-home .block-minicart .minicart-content .block-products .list-products .item-cartmini .remove-price .remove {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   background-color: #e9e9e9;
   padding: 1px 7px 1px 7px;
   float: right;
@@ -311,16 +345,22 @@
 
 .cart-home .block-minicart .minicart-content .block-products .total-cartmini {
   font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-right: 22px;
 }
 
 .cart-home .block-minicart .minicart-content .block-products .total-cartmini .title {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .cart-home .block-minicart .minicart-content .block-products .total-cartmini .total-number {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .cart-home .block-minicart .minicart-content .block-products .total-cartmini .total-number span {
@@ -354,6 +394,7 @@
   width: 0;
   height: 100%;
   background-color: #ffffff;
+  -webkit-transition: 0.25s;
   transition: 0.25s;
 }
 
@@ -379,7 +420,8 @@
   display: none;
   position: absolute;
   right: 7%;
-  box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 -1px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 -1px 5px 0px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
 }
 
@@ -452,7 +494,9 @@
 .dropdown-search .box-search .site-search .resultsSearch .item-search .title {
   width: calc(100% - 40px);
   float: left;
-  align-items: left;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
 }
 
 .dropdown-search .box-search .site-search .resultsSearch .item-search .title a {
@@ -492,26 +536,24 @@
   right: 30%;
   bottom: 100%;
 }
+
 .ng-autocomplete {
   position: absolute;
   left: 0px;
   width: 400px;
 }
 
-img {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-}
-
 .col-8 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 ::ng-deep .input-container {
   height: 45px;
   background: #fff;
-  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1) !important;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1) !important;
+          box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1) !important;
 }
 
 ::ng-deep .item {
@@ -519,7 +561,8 @@ img {
 }
 
 ::ng-deep .autocomplete-container {
-  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 .row {
@@ -527,7 +570,9 @@ img {
   padding: 4px;
   width: 360px;
   border-bottom: 1px dotted #dfe0e1;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   cursor: pointer;
 }
 
@@ -553,7 +598,7 @@ img {
 }
 
 ::ng-deep .text::after {
-  content: "Được chọn gần đây" !important;
+  content: 'Được chọn gần đây' !important;
   width: 268px;
   color: #292d32;
   position: absolute;
@@ -566,7 +611,7 @@ img {
 }
 
 .row-left {
-  font-family: "Quicksand";
+  font-family: 'Quicksand';
   font-size: 14px;
   margin-left: 11px;
   width: 255px;
@@ -575,6 +620,12 @@ img {
 
 .row-right {
   margin-right: 30px;
+}
+
+.row-right img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
 }
 
 .name {
@@ -601,14 +652,16 @@ img {
 ::ng-deep .is-visible {
   max-height: 46px !important;
   border-radius: 0px 0px 5px 5px;
-  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1) !important;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1) !important;
+          box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1) !important;
 }
 
 ::ng-deep .is-visible ul {
   max-height: 364px !important;
   background-color: #fff;
   border-radius: 0px 0px 5px 5px;
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
 }
 
 ::ng-deep .is-hidden ul {
@@ -619,4 +672,4 @@ img {
   background-color: #fff !important;
   border: none !important;
 }
-/*# sourceMappingURL=header.component.css.map *//*# sourceMappingURL=header.component.css.map */
+/*# sourceMappingURL=header.component.css.map */

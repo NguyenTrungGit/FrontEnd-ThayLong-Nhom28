@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Blog } from 'src/app/model/blog.model';
 
 @Component({
   selector: 'app-list-posts-item',
@@ -11,5 +12,5 @@ export class ListPostsItemComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  @Input() blogItem?: Blog
 }

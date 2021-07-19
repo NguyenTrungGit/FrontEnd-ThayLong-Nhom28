@@ -13,3 +13,16 @@
     display: flex;
     font-family: 'Quicksand', sans-serif;
 }
+
+.container {
+    max-width: 1470px;
+}
+
+.col-lg-4 {
+    display: flex;
+    justify-content: center;
+}
+
+.col-lg-8 {
+    margin-bottom: 75px;
+}

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Blog } from 'src/app/model/blog.model';
+import { ProductService } from 'src/app/Services/product.service';
 
 @Component({
   selector: 'app-filter1',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Filter1Component implements OnInit {
 
-  constructor() { }
+  blog: Blog[] = [];
+  // blogID: BlogID[]=[];
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
+    this.getBlog();
+    // this.getBlogID();
   }
+  getBlog() {
+    this.productService.getBlog().subscribe((res: any) => {
+      this.blog = res;
 
+    });
+  }
+  // getBlogID() {
+  //   this.productService.getBlogID().subscribe((res: any) => {
+  //     this.blogID = res;
+
+  //   });
+  //}
 }

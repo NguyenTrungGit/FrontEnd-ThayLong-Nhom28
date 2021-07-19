@@ -1,5 +1,4 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-
 <div class="col2 large-3  ">
     <div class="sidebar-inner col-inner">
         <aside id="nav_menu-2" class="widget widget_nav_menu">
@@ -7,26 +6,25 @@
                 <span class="widget-title shop-sidebar " style="margin :0 auto; margin-top: 12px; color: #fff; font-size: 18px;">DANH MỤC</span>
             </div>
             <div class="menu-danh-muc-san-pham-vertical-menu-container ">
-                <ul class="menu " *ngFor="let item of categorys " routerLink="/cuahang/{{item.id}}">
+                <ul class="menu " routerLink="/cuahang/{{item.id}}" routerLinkActive="router-link-active" *ngFor="let item of categorys" [ngClass]="{'active': selectedItemId === item.id}" (click)="selectedItemId = item.id">
                     <li class="menu-sub ">
-                        <a class="span-font "><a class="menu1a ">{{item.name}}</a> </a>
+                        <a class="span-font menu1a " [class.changestyle]="check" (click)="updateColor()">{{item.name}}</a>
                     </li>
                 </ul>
             </div>
         </aside>
-
     </div>
+    <!--  -->
+
 </div>
 <div class="col3 large-3 ">
     <div class="nav2 ">
-
         <div class="is-divider small " style="margin :0 auto; margin-top: 12px; color: #fff; font-size: 18px; ">
             <span style="margin-left: 74px; ">LỌC THEO GIÁ</span>
         </div>
         <div class="bottom ">
             <div class="small ">
                 <ngx-slider [(value)]="minValue " [(highValue)]="maxValue " [options]="options "></ngx-slider>
-
                 <div class="btn " style=" position: absolute; left: 27px; top: 44px; border: none;width: 50px; border-radius: 99px; font-size: 16px;background-color: #666;color: #fff; height: 25px; position: absolute; left: 12px; ">
                     <span style="font-size: 12px;padding-bottom: 3px; position: absolute; top:4px; ;left: 14px; " (click)="sendParent() ">Lọc</span>
                     <!-- <a type="submit "
@@ -37,11 +35,7 @@
                 </div>
                 <div class="cro ">-</div>
             </div>
-
-
-
         </div>
-
     </div>
 </div>
 <div class="col4 large-3 ">
@@ -62,18 +56,15 @@
                 class="woocommerce-Price-currencySymbol ">&#8363;</span></span>
                     </div>
                 </div>
-
             </li>
             <li class="flex-con2 ">
                 <div class="flex ">
 
                     <a href="# ">
                         <img style="border-radius: 50%; " width="40 " height="40 " src="./assets/BTruong/image-mix/FR004.jpg " alt=" ">
-
                     </a>
                     <div class="flex-sub " style="margin-left: 28px; ">
                         <p class="product-title ">Cam ruột đỏ</p>
-
                         <span class="woocommerce-Price-amount2 amount ">130,000&nbsp;<span
                 class="woocommerce-Price-currencySymbol ">&#8363;</span></span>
                     </div>
@@ -92,9 +83,7 @@
             </li>
             <li class="flex-con4 " style="height: 60px;border: 1px solid #e4e4e4 ">
                 <div class="flex ">
-
                     <a href="# "> <img style="border-radius: 50%; " width="40 " height="40 " src="./assets/BTruong/image-mix/RAU016.jpg " alt=" ">
-
                     </a>
                     <div class="flex-sub " style="margin-left: 28px; ">
                         <p class="product-title ">Tần ô</p>
@@ -107,16 +96,12 @@
                 <div class="flex ">
                     <a href="# ">
                         <img style="border-radius: 50%; " width="40 " height="40 " src="./assets/BTruong/image-mix/RAU019.jpg " alt=" ">
-
                     </a>
                     <div class="flex-sub " style="margin-left: 28px; ">
                         <p class="product-title ">Rau đay</p>
                         <span class="woocommerce-Price-amount5 amount ">15,000&nbsp;<span
                 class="woocommerce-Price-currencySymbol ">&#8363;</span></span>
                     </div>
-
-
-
                 </div>
             </li>
         </ul>

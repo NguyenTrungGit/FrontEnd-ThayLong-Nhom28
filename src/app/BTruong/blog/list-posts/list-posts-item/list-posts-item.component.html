@@ -2,16 +2,16 @@
 
     <div class="title-blog">
         <div class="date">
-            <p class="date-p">26 otocber 2020</p>
+            <p class="date-p">{{blogItem?.time}}</p>
         </div>
         <div class="tile-sub">
-            <p class="title-sub-p"> Việt quất sữa chua</p>
+            <p class="title-sub-p">{{blogItem?.title}}</p>
         </div>
         <div class="des">
-            <p class="des-p">Cách đây 2000 năm, Việt quất được phát hiện ở phía nam Hoa Ky, nó có màu tím và có vị chua đặc trưng. Việt quất sẽ đặc biệt hơn nếu nó được kết hợp với sữa chua.</p>
+            <p class="des-p">{{blogItem?.content1}}</p>
         </div>
     </div>
     <div class="image-blog">
-        <img width="240" height="170" src="https://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/menu-products-300x221.jpg" alt="">
+        <img width="240" height="170" src="./assets/BTruong/image-mix/{{ blogItem?.imageBl }}" alt="">
     </div>
 </div>
