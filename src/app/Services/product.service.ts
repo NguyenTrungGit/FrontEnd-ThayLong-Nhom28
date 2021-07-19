@@ -34,6 +34,16 @@ private  httpOptions ={
     const url =`${this.REST_API_SERVER}/product?price_gte=${minPrice}&price_lte=${maxPrice}&category=${category}`;
     return this.httpClient.get<Product[]>(url,this.httpOptions);
   }
+
+  public getProductsById(id: string): Observable<Product[]> {
+    const url = `${this.REST_API_SERVER}/product?id=${id}`;
+    return this.httpClient.get<Product[]>(url, this.httpOptions);
+  }
+
+  public getProductsRelated(page: Number, category: string): Observable<Product[]> {
+    const url = `${this.REST_API_SERVER}/product?category=${category}&_limit=4&_page=${page}`;
+    return this.httpClient.get<Product[]>(url, this.httpOptions);
+  }
 }
 
 
