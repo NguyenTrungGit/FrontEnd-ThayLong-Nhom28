@@ -31,35 +31,15 @@ export class ProductListComponent implements OnInit {
       this.maxPrice=Number(Object.values(this.rangePrice)[1]);
       this.minPrice=Number(Object.values(this.rangePrice)[0]);
       if(this.categoryName==="tatca"){
-        this.productService.getProducts().subscribe((res: any) => {
+        this.productService.getProductsByPrice(this.minPrice,this.maxPrice).subscribe((res: any) => {
           this.datas=res;
-          this.datas=this.datas.filter(p=>(p.price>=this.minPrice&&p.price<=this.maxPrice))
         });
       }else{
-        this.productService.getProductsByCategory(this.categoryName).subscribe((res: any) => {
+        this.productService.getProductsByPriceAndCategory(this.minPrice,this.maxPrice,this.categoryName).subscribe((res: any) => {
           this.datas = res;
-          this.datas=res;
-          this.datas=this.datas.filter(p=>(p.price>=this.minPrice&&p.price<=this.maxPrice))
         });
       }
     }
-
-
-    getProductsbyPrice() {
-      this.maxPrice=Number(Object.values(this.rangePrice)[1]);
-      this.minPrice=Number(Object.values(this.rangePrice)[0]);
-      this.datas=this.datas.filter(p=>(p.price>=this.minPrice&&p.price<=this.maxPrice))
-
-        }
-
-
-
-    //     this.datas = res;
-    //     console.log(this.datas);
-
-
-    //   });
-    // }
     sort(event: any) {
       switch (event.target.value) {
         case "":{

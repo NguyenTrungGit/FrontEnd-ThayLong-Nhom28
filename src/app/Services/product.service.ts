@@ -26,8 +26,12 @@ private  httpOptions ={
     const url =`${this.REST_API_SERVER}/product?category=${category}`;
     return this.httpClient.get<Product[]>(url,this.httpOptions);
   }
-  public getProductsByPrice(category:string):Observable<Product[]>{
-    const url =`${this.REST_API_SERVER}/product?category=${category}`;
+  public getProductsByPrice(minPrice:number,maxPrice:number):Observable<Product[]>{
+    const url =`${this.REST_API_SERVER}/product?price_gte=${minPrice}&price_lte=${maxPrice}`;
+    return this.httpClient.get<Product[]>(url,this.httpOptions);
+  }
+  public getProductsByPriceAndCategory(minPrice:number,maxPrice:number,category:string):Observable<Product[]>{
+    const url =`${this.REST_API_SERVER}/product?price_gte=${minPrice}&price_lte=${maxPrice}&category=${category}`;
     return this.httpClient.get<Product[]>(url,this.httpOptions);
   }
 }
