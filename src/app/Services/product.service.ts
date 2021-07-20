@@ -34,6 +34,7 @@ private  httpOptions ={
     const url =`${this.REST_API_SERVER}/product?price_gte=${minPrice}&price_lte=${maxPrice}&category=${category}`;
     return this.httpClient.get<Product[]>(url,this.httpOptions);
   }
+
 }
 
 

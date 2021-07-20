@@ -87,28 +87,36 @@
                         <!-- <div class="minicart-close ">
                       <button type="button " class="close pr-3 pl-3 pt-1 pb-1 "><span>×</span></button>
                   </div> -->
-                        <div class="block-products ">
+                        <div class="block-products">
                             <div class="title-block-minicart ">
                                 Giỏ hàng
                             </div>
-                            <div class="list-products scrollbar scrollbar-primary pl-3 pr-3" *ngFor="let item of itemsCart">
-                                <div class="item-cartmini">
-                                    <div class="thumb-item ">
-                                        <a href=" "><img src="/assets/BTruong/image-mix/{{item.img1}}" alt=" " width="60px " height="60px "></a>
-                                    </div>
-                                    <div class="title-item pl-2">
-                                        <a href=" " class="title">{{item.name}} </a>
-                                        <div><span class="quantity-item ">{{item.quantity}} </span></div>
-                                    </div>
-                                    <div class="remove-price">
-                                        <div class="mb-2 pb-2"><a href=" " class="remove "><i class="fas fa-times "></i></a></div>
-                                        <div class="price"><span></span>{{item.price}} </div>
+                            <div *ngIf="numberItemInCart!==0; then have else empty"></div>
+                            <ng-template #empty>
+                                <div class="title-empty-cart text-center mt-3">Giỏ hàng trống</div>
+                                <img class="empty-cart text-center" src="/assets/tuyen/img/cart-empty.png" alt="empty cart">
+                            </ng-template>
+                            <ng-template #have>
+                                <div class="list-products scrollbar scrollbar-primary pl-3 pr-3" *ngFor="let item of itemsCart">
+                                    <div class="item-cartmini">
+                                        <div class="thumb-item ">
+                                            <a href=" "><img src="/assets/BTruong/image-mix/{{item.img1}}" alt=" " width="60px " height="60px "></a>
+                                        </div>
+                                        <div class="title-item pl-2">
+                                            <a href=" " class="title">{{item.name}} </a>
+                                            <div><span class="quantity-item ">{{item.quantity}} </span></div>
+                                        </div>
+                                        <div class="remove-price">
+                                            <div class="mb-2 pb-2"><a href=" " class="remove "><i class="fas fa-times "></i></a></div>
+                                            <div class="price"><span></span>{{item.price}} </div>
+                                        </div>
                                     </div>
                                 </div>
-                               
-                                
-                               
-                            </div>
+                            </ng-template>
+
+
+
+
                             <div class="total-cartmini mb-3 ml-3 pt-2 ">
                                 <div href=" " class="title ">Tổng tiền:</div>
                                 <div class="total-number "><span>150.000</span></div>

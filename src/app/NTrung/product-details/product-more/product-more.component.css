@@ -5,13 +5,18 @@
 .container {
   padding: 0;
 }
+
 .container .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .container .title label {
   margin: 0;
   padding: 0;
 }
+
 .container .title .block {
   padding-top: 10px;
   cursor: pointer;
@@ -21,7 +26,9 @@
   border: #707070 solid 1px;
   border-bottom: none;
 }
+
 .container .title .active {
   background: #707070;
   color: white;
-}/*# sourceMappingURL=product-more.component.css.map */
+}
+/*# sourceMappingURL=product-more.component.css.map */

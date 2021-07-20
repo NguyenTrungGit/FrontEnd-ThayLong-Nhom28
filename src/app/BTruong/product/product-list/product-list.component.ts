@@ -37,6 +37,8 @@ export class ProductListComponent implements OnInit {
       }else{
         this.productService.getProductsByPriceAndCategory(this.minPrice,this.maxPrice,this.categoryName).subscribe((res: any) => {
           this.datas = res;
+          console.log(res.length)
+        
         });
       }
     }

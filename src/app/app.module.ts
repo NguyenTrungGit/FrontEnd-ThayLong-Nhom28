@@ -11,6 +11,7 @@ import { HeaderComponent } from './Tuyen/header/header.component';
 import { FooterComponent } from './Tuyen/footer/footer.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ProductComponent } from './BTruong/product/product.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductPopupComponent } from './BTruong/product-popup/product-popup.component';
@@ -57,6 +58,7 @@ import { ProductMoreComponent } from './NTrung/product-details/product-more/prod
 import { CommentShowComponent } from './NTrung/product-details/product-more/comment-show/comment-show.component';
 import { MoreInfoComponent } from './NTrung/product-details/product-more/more-info/more-info.component';
 import { CommentItemComponent } from './NTrung/product-details/product-more/comment-item/comment-item.component';
+
 
 @NgModule({
   declarations: [
@@ -118,6 +120,7 @@ import { CommentItemComponent } from './NTrung/product-details/product-more/comm
     NgxSliderModule,
     AutocompleteLibModule,
     ScrollingModule,
+    CarouselModule
   ],
   bootstrap: [AppComponent],
   entryComponents:[CommentDialogComponent]
