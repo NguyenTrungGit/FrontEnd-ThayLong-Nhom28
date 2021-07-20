@@ -1,0 +1,72 @@
+<div class="blog-content">
+    <div class="blog-deatails">
+        <div class="image">
+            <img src="./assets/BTruong/image-mix/{{ blogInfor?.imageBl }}" alt="">
+        </div>
+        <div class="titl">
+            <p class="p1">{{blogInfor?.title}}</p>
+            <p class="p2">{{blogInfor?.time}}</p>
+        </div>
+        <div class="cont">
+            <p>{{blogInfor?.content1}}</p>
+            <p>{{blogInfor?.content2}}</p>
+        </div>
+    </div>
+    <div class="author">
+        <div class="title-author">
+            <p>Tác giả bài viết</p>
+        </div>
+        <div class="infor-author">
+            <div class="image-author">
+                <img src="./assets/BTruong/image-mix/{{ blogInfor?.imageAuthor }}" alt="">
+            </div>
+            <div class="infor-detail">
+                <div class="name-author">
+                    <p>{{blogInfor?.nameAuthor}}</p>
+                </div>
+                <div class="related-author">
+                    <p style="    word-spacing: 2px;">{{blogInfor?.story}}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="blog-comment">
+    <div class="title-comment">
+        <p>Để lại bình luận</p>
+    </div>
+    <div class="form">
+        <form>
+            <div class="form-group" style="margin-bottom: 2 rem;">
+                <label for="formGroupExampleInput" style="font-size: 15px;max-width: 1.5 rem; word-spacing: 1px;">Để lại nhận
+          xét và cùng chia sẻ với chúng tôi.</label>
+                <div class="form-container-5">
+                    <span class="form-control" class="wpcf7-form-control-wrap textarea-noidung"><textarea name="textarea-noidung"
+              cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form_lien_he"
+              id="textarea-noidung" aria-required="true" aria-invalid="false" placeholder="" style="height: 120px;border-radius: 5px; font-family: 'Quicksand', sans-serif;font: 14px;   width: 100%;
+                      /* color: red; */
+                      height: 100px;
+                      border: 1px solid #ced4da;"></textarea></span>
+                </div>
+
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Họ và tên">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Email">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Số điện thoại">
+                </div>
+            </div>
+        </form>
+        <div class="btn">
+
+            <input type="button" class="button" value="Gửi bình luận">
+
+        </div>
+    </div>
+</div>

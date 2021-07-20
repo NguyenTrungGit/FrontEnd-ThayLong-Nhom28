@@ -48,10 +48,11 @@
                                 [notFoundTemplate]="notFoundTemplate">
                             </ng-autocomplete>
                             <ng-template #itemTemplate let-item>
-                                <div class="row">
+                                <div class="row" routerLink='/cuahang/chitiet/{{item.category}}/{{item.id}}'>
 
                                     <div class="row-left">
-                                        <div routerLink="/chitiet/{{item.id}}" class=" name " [innerHTML]=" item.name | titlecase "></div>
+                                        <div class=" name " [innerHTML]=" item.name | titlecase ">
+                                        </div>
                                         <div class="price1 " [innerHTML]=" item.price | number "></div>
                                     </div>
                                     <div class="row-right ">

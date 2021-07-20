@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 .search-container button {
     float: right;
     padding: 9px 10px;
@@ -11,7 +12,6 @@
 
 .fil {
     margin-top: 80px;
-    margin-left: 80px;
 }
 
 .search-container button:hover {
@@ -22,12 +22,16 @@
     display: flex;
 }
 
-.search {}
+.search {
+    display: flex;
+    justify-content: center;
+}
 
 .is-divider {
     height: 80px;
     background: #66A55F;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
+    border: 1px solid #e4e4e4;
 }
 
 .menu-danh-muc-san-pham-vertical-menu-container {
@@ -163,6 +167,7 @@
 .col4 {
     margin-top: 50px;
     width: 305px;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .product_list_widget {
@@ -170,10 +175,20 @@
     padding-left: 0px;
 }
 
-.product-title {
-    margin-top: 18px;
+.product-hv .product-title {
+    margin-top: 6px;
     margin-bottom: 0px;
-    font-size: 16px;
+    font-size: 15px;
+    padding-right: 15px;
+    color: #212529;
+}
+
+.product-hv:hover .product-title {
+    color: #fff;
+}
+
+.product-title p {
+    padding-right: 4px;
 }
 
 .flex {
@@ -181,4 +196,14 @@
     display: flex;
     justify-content: flex-start;
     padding-top: 12px;
+}
+
+.product-hv .flex {
+    background-color: #fff;
+    height: 100%;
+}
+
+.product-hv:hover .flex {
+    background-color: #66A55F;
+    cursor: pointer;
 }

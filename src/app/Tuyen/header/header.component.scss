@@ -390,7 +390,9 @@
     display: none;
     position: absolute;
     right: 7%;
+
     // box-shadow: 0px -1px 5px 0px rgb(0 0 0 / 10%);
+
     border-radius: 4px;
 }
 
@@ -505,7 +507,7 @@
 }
 
 
-/*# sourceMappingURL=header.component.css.map */
+
 
 .ng-autocomplete {
     position: absolute;
@@ -513,11 +515,7 @@
     width: 400px;
 }
 
-img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-}
+
 
 .col-8 {
     display: flex;
@@ -526,7 +524,9 @@ img {
 ::ng-deep .input-container {
     height: 45px;
     background: #fff;
+
     // box-shadow: 0px 5px 5px 0px rgb(0 0 0 / 10%) !important;
+
 }
 
 ::ng-deep .item {
@@ -590,6 +590,11 @@ img {
 
 .row-right {
     margin-right: 30px;
+      img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
 }
 
 .name {
@@ -616,14 +621,18 @@ img {
 ::ng-deep .is-visible {
     max-height: 46px !important;
     border-radius: 0px 0px 5px 5px;
+
     // box-shadow: 0px 5px 5px 0px rgb(0 0 0 / 10%) !important;
+
 }
 
 ::ng-deep .is-visible ul {
     max-height: 364px !important;
     background-color: #fff;
     border-radius: 0px 0px 5px 5px;
+
     // box-shadow: 0px 1px 5px 0px rgb(0 0 0 / 10%);
+
 }
 
 ::ng-deep .is-hidden ul {

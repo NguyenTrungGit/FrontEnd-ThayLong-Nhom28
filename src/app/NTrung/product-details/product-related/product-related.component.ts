@@ -8,7 +8,7 @@ import { Product } from 'src/app/model/product.model';
 })
 export class ProductRelatedComponent implements OnInit {
 
-  @Input() productInfo?: Product;
+  @Input() lsProductsRelated?: Product[];
   constructor() { }
 
   ngOnInit(): void {
