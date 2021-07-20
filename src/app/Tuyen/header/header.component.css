@@ -254,6 +254,17 @@
   font-weight: 1000;
 }
 
+.cart-home .block-minicart .minicart-content .block-products .title-empty-cart {
+  font-size: 16px;
+  color: #66a55f;
+}
+
+.cart-home .block-minicart .minicart-content .block-products .empty-cart {
+  height: 50%;
+  width: 100%;
+  z-index: 2;
+}
+
 .cart-home .block-minicart .minicart-content .block-products .scrollbar {
   background: white;
   overflow-y: scroll;
@@ -420,8 +431,10 @@
   display: none;
   position: absolute;
   right: 7%;
+
   -webkit-box-shadow: 0 -1px 5px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0 -1px 5px 0px rgba(0, 0, 0, 0.1);
+
   border-radius: 4px;
 }
 
@@ -552,8 +565,10 @@
 ::ng-deep .input-container {
   height: 45px;
   background: #fff;
+
   -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1) !important;
           box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1) !important;
+
 }
 
 ::ng-deep .item {
@@ -652,16 +667,20 @@
 ::ng-deep .is-visible {
   max-height: 46px !important;
   border-radius: 0px 0px 5px 5px;
+
   -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1) !important;
           box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1) !important;
+
 }
 
 ::ng-deep .is-visible ul {
   max-height: 364px !important;
   background-color: #fff;
   border-radius: 0px 0px 5px 5px;
+
   -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
+
 }
 
 ::ng-deep .is-hidden ul {

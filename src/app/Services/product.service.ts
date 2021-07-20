@@ -36,6 +36,7 @@ private  httpOptions ={
     return this.httpClient.get<Product[]>(url,this.httpOptions);
   }
 
+
   public getBlog():Observable<Blog[]>{
     const url =`${this.REST_API_SERVER}/blog`;
     return this.httpClient.get<Blog[]>(url,this.httpOptions);
@@ -50,6 +51,7 @@ private  httpOptions ={
     const url = `${this.REST_API_SERVER}/product?category=${category}&_limit=4&_page=${page}`;
     return this.httpClient.get<Product[]>(url, this.httpOptions);
   }
+
 
 }
 
