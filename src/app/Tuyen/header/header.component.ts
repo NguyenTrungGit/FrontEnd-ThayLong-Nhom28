@@ -83,21 +83,24 @@ numberItemInCart:number=0;
     var navbar = document.querySelector('.navbar') as HTMLElement;
     var topintro = document.querySelector('.top-intro') as HTMLElement;
     var logo = document.querySelector('.logo') as HTMLElement;
+    navbar.style.padding="0"
     if (document.documentElement.scrollTop < 1) {
+      navbar.style.paddingTop="4px"
+      navbar.style.paddingBottom="4px"
       topintro.style.display = 'block';
       logo.style.width = '170px';
       navbar.classList.remove('p-0');
     }
     if (document.documentElement.scrollTop > 200) {
       navbar.classList.add('transition-navbar');
-      container.style.height='86px'
+      container.style.height='100px'
       header.classList.add('fixed-top');
       topintro.style.display = 'none';
       navbar.classList.add('shadow');
       logo.style.width = '160px';
-      logo.style.paddingTop = '8px';
-      logo.style.paddingBottom = '8px';
-      navbar.classList.add('p-0');
+      logo.style.paddingTop = '2px';
+      logo.style.paddingBottom = '2px';
+
     }
   }
   selectEvent(item:any) {
