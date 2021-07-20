@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Blog } from '../model/blog.model';
 import { Category } from '../model/category.model';
 import { Product } from '../model/product.model';
 
@@ -35,6 +36,11 @@ private  httpOptions ={
     return this.httpClient.get<Product[]>(url,this.httpOptions);
   }
 
+  public getBlog():Observable<Blog[]>{
+    const url =`${this.REST_API_SERVER}/blog`;
+    return this.httpClient.get<Blog[]>(url,this.httpOptions);
+  }
+
   public getProductsById(id: string): Observable<Product[]> {
     const url = `${this.REST_API_SERVER}/product?id=${id}`;
     return this.httpClient.get<Product[]>(url, this.httpOptions);
@@ -44,6 +50,7 @@ private  httpOptions ={
     const url = `${this.REST_API_SERVER}/product?category=${category}&_limit=4&_page=${page}`;
     return this.httpClient.get<Product[]>(url, this.httpOptions);
   }
+
 }
 
 

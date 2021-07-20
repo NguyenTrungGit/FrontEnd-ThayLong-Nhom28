@@ -1,4 +1,97 @@
 ﻿{
+    "blogID": [{
+        "id": "BLOG001",
+        "name": "BLOG001",
+        "imageBl": "BLOG001.jpg",
+        "title": "Trồng cà chua ngon rẻ đơn giản tại nhà"
+
+    }, {
+        "id": "BLOG002",
+        "name": "BLOG002",
+        "imageBl": "BLOG002.jpg",
+        "title": "Chả cốm ăn với gì ngon?"
+    }, {
+        "id": "BLOG003",
+        "name": "BLOG003",
+        "imageBl": "BLOG003.jpg",
+        "title": "Tác dụng của dâu tây trong làm đẹp"
+    }, {
+        "id": "BLOG004",
+        "name": "BLOG004",
+        "imageBl": "BLOG004.jpg",
+        "title": "Bất ngờ công dụng của Cherry"
+    }, {
+        "id": "BLOG005",
+        "name": "BLOG005",
+        "imageBl": "BLOG005.jpg",
+        "title": "Bạn có biết tiêu chuẩn global gap?"
+    }, {
+        "id": "BLOG006",
+        "name": "BLOG006",
+        "imageBl": "BLOG006.jpg",
+        "title": "Cam Vàng Navel Úc quý hiếm"
+    }],
+    "blog": [{
+        "id": "BLOG001",
+        "title": "Trồng cà chua ngon rẻ đơn giản tại nhà",
+        "time": "19-12-2020",
+        "imageBl": "BLOG001.jpg",
+        "imageAuthor": "BLOG002.jpg",
+        "nameAuthor": "Nguyễn Bảo Trường",
+        "content1": "Để có cơ hội thành công cao nhất, hãy chọn một loại cà chua phù hợp với khí hậu nơi bạn sinh sống. Đa phần các loại cà chua thích hợp với khí hậu mát mẻ, nhưng hiện nay đã có một số giống chịu nhiệt phù hợp với những vùng như Sài Gòn.",
+        "content2": "Yêu cầu quan trọng nhất đối với cà chua là nhiều ánh nắng mặt trời. Đặt cà chua ở nơi đầy đủ ánh nắng mặt trời cùng. Khoảng cách giữa mỗi cây nên là 60cm để giúp lưu thông không khí, giúp cây khỏe mạnh và có năng suất cao. Không trồng cà chua ở cùng một vị trí hàng năm. Xử lý hoặc hay đổi vị trí đất trồng sau mỗi vụ để ngăn ngừa sự tích tụ của bệnh trong đất.Cà chua phát triển tốt nhất với việc bón phân thường xuyên từ các nguồn phân bón hữu cơ cung cấp nitơ, phốt pho và kali cân bằng. Khi trồng, cùng với phân trùn, phân bò hoai thì bổ sung thêm vỏ chuối ủ, vỏ trứng xay, tro bếp giúp cung cấp đầy đủ chất dịnh dưỡng cho cây.Nếu không bón phân đúng cách, cây không sinh sản tốt và dễ bị cỏ dại, sâu bệnh.Ngoài ra, còn có các loại cây có thể trồng cùng với cà chua như: Cần tây, xà lách, củ cải đỏ, cúc trắng, bí đỏ, cà tím, cải kale. Chúng có tác dụng xua đuổi các loại ruồi trắng, ruồi phá hoại, nhện và ký sinh, thu hút thiên địch với sâu ăn lá, ruồi…trên cây cà.",
+        "story": "Dịch giả, quê Phong Châu, Phú Thọ. Tặng thưởng Hội Nhà văn Việt Nam. Ông đã dịch hơn 30 tác phẩm văn học Châu Mĩ Latinh như Sự tráo trở của phương pháp, Ngài đại tá chờ thư, Trăm năm cô đơn, Tình yêu thời thổ tả…"
+    }, {
+        "id": "BLOG002",
+        "title": "Chả cốm ăn với gì ngon?",
+        "time": "20-11-2020",
+        "imageBl": "BLOG003.jpg",
+        "imageAuthor": "BLOG004.jpg",
+        "nameAuthor": "Văn Linh",
+        "content1": "Tùy theo phong cách và khẩu vị mà chủ quán tự cho thêm các loại topping đi kèm. Và ở mỗi quán lại có một vị ngon riêng níu kéo bước chân thực khách. Các bạn ở Hà Nội có thể ăn bánh giò kèm chả cốm tại quán Bánh giò Thụy Khuê; Chợ hôm hay bánh giò Nguyễn Công Trứ. ",
+        "content2": "Bánh giò là một loại bánh được làm từ bột gạo tẻ, nhân bánh làm từ thịt nạc heo cùng mộc nhĩ. Loại bánh này rất phổ biến tại các tỉnh miền Bắc. Bánh thường ăn kèm với chả quế, thịt xiên, nem chua, xúc xích hay chả cốm. Vỏ bánh mềm, dẻo, có lớp nhân beo béo, nêm nếm vừa vị, ăn kèm dưa leo, chả quế và chả cốm thì không gì ngon bằng.Không những ăn kèm với bánh giò, bún đậu, chả cốm còn được người Hà Nội dùng làm nguyên liệu ăn cùng các loại xôi như xôi trắng, xôi xéo, xôi gấc. Tại Sài Gòn, kiểu dùng xôi với chả cốm thường không phổ biến và được ít người biết đến. Với các bạn tại Hà Nội, có thể ghé đến hàng xôi bà Thảo- Đường Thành hay xôi Cô Kim tại 25 Lò Đúc để thưởng thức.Chả cốm ăn riêng đã ngon, làm topping cho xôi, bún đậu, bánh cuốn hay bánh giò còn ngon hơn nữa. Qua bài viết về chả cốm ăn với gì ngon, mong rằng bạn đã chọn cho mình được món ăn kèm với chả cốm cho gia đình. Chúc cả nhà có một bữa ăn ngon miệng!",
+        "story": "Tên thật là Trần Viết Linh, nhà văn, nhà biên kịch, quê ở Thạch Hà, Hà Tĩnh. Ngoài 16 tiểu thuyết, ông còn có 23 tập truyện ngắn, 3 tập sách thiếu nhi, 20 kịch bản phim truyện, phim truyền hình, phim hoạt hình. Một số tiểu thuyết tiêu biểu: Mùa hoa dẻ, Đêm sương muối, Gương mặt một người thân, Kỉ niệm nơi đáy hồ, Sông Gianh (bộ ba), Đất nước ông bà…"
+    }, {
+        "id": "BLOG003",
+        "title": "Tác dụng của dâu tây trong làm đẹp",
+        "time": "19-02-2021",
+        "imageBl": "BLOG005.jpg",
+        "imageAuthor": "BLOG006.jpg",
+        "nameAuthor": "Phan Minh Nhật",
+        "content1": "Dâu tây là một trong những loại quả thơm ngon và cực kỳ bổ dưỡng. Nó đã mê hoặc rất nhiều chị em bởi hương thơm quyến rũ và vị ngọt đặc trưng, gây ấn tượng khó quên với những ai từng sử dụng. Bên cạnh đó, tác dụng của dâu tây trong làm đẹp cũng rất thần kỳ.",
+        "content2": "Với loại trái cây này, bạn có thể có tất cả những công thức chăm sóc sắc đẹp toàn diện từ dưỡng da đến giảm cân hiệu quả. Đặc biệt, khi phối hợp khéo léo với các nguyên liệu khác, công dụng của dâu tây làm đẹp sẽ khiến bạn phải bất ngờ không kém gì những phương pháp trị liệu đắt đỏ ở các trung tâm thẩm mỹ cao cấp.Da nhiều dầu là nguyên nhân gây ra mụn trứng cá, mụn đầu đen…Nếu bạn thuộc nhóm người có loại da này thì cần có một chế độ chăm sóc da khoa học, loại bỏ dầu trên da, phòng tránh mụn.  Trong đó các mặt nạ từ thiên nhiên là một phương pháp rẻ tiền mà hiệu quả. Tác dụng của dâu tây trong làm đẹp sẽ giúp bạn thanh lọc độc tố, loại bỏ bã nhờn, giúp làn da láng mịn.Mặt nạ dâu, bột mì, mật ong: nghiễn nhuyễn 2 trái dâu cùng với 1 thìa mật ong nguyên chất và 1 thìa bột mỳ. Bôi hỗn hợp lên mặt trong 20 phút và rửa sạch lại bằng nước ấm. Trong khi nguồn vitamin C khiến tác dụng của dâu tây giúp làn da căng bóng mịn màng thì mật ong có công dụng sát khuẩn chống lên mụn, bột mỳ hút dầu cho làn da khô ráo.",
+        "story": " Nhà văn quê ở Phúc Thọ, Hà Tây (nay thuộc Hà Nội), Tặng thưởng Hội Nhà văn Việt Nam, Giải thưởng Nhà nước về Văn học nghệ thuật. Một số tác phẩm: Không phải trò đùa, Những bức tường lửa, Trong cơn gió lốc, Trước ngưỡng cửa bình minh, Giữa ba ngôi chúa, Người đẹp xứ Đoài, Thềm nắng, Con nhà võ, Người ở bến Phù Vân"
+    }, {
+        "id": "BLOG004",
+        "title": "Bất ngờ công dụng của Cherry",
+        "time": "08-11-2020",
+        "imageBl": "BLOG007.jpg",
+        "imageAuthor": "BLOG008.jpg",
+        "nameAuthor": "Nguyễn An Thy",
+        "content1": "Quả cherry hay còn gọi là quả anh đào, không những rất ngon miệng mà quan trọng hơn, nó còn mang lại cho bạn rất nhiều lợi ích về sức khỏe mà bạn không ngờ tới. Cherry còn là loại quả được mang đi biếu hoặc tặng vì giá thành của nó khá cao. Nhưng không ai biết được tác dụng thật của quả Cherry.",
+        "content2": "Hàm lượng vitamin A cao là một trong những lợi ích lớn nhất của quả Cherry. Chúng chứa lượng vitamin A gấp 20 lần trong quả việt quất hoặc dâu tây. Ngoài ra, quả cherry còn chứa beta carotene – vitamin đặc biệt này rất có lợi cho hệ miễn dịch, thị lực và làn da của bạn.Nếu bạn thường xuyên ngủ không ngon giấc, quả Cherry sẽ giúp bạn cải thiện các vấn đề về giấc ngủ bởi chúng chứa melatonin giúp điều hòa giấc ngủ. Vì vậy, ăn quả anh đào thường xuyên sẽ giúp bạn có giấc ngủ sâu.Quả Cherry được biết đến là thực phẩm tốt cho não bộ bởi chúng chứa các chất chống ôxy hóa anthocyanin. Đây là một lí do nữa khiến bạn không nên bỏ qua loại quả tuyệt vời này.Quả Cherry với đặc tính chống viêm sẽ rất có lợi cho những vận động viên điền kinh và người tập chạy bị đau, hoặc người bị viêm khớp . Nếu bạn cũng có hoàn cảnh tương tự, hãy dùng nước ép quả anh đào loãng 3 lần/ngày.Quả Cherry có thể giúp bạn phòng ngừa ung thư bởi chúng chứa chất chống ôxy hóa có tác dụng ngăn chặn các gốc tự do gây tổn thương tế bào và mô.",
+        "story": "Cô là 1 blog trẻ nổi tiếng trên mạng xã hội. Cô là người tạo ra nhiều trend trên tiktok và vô số bài viết từ nhiều mảng khác nhau. Đặc biệt, cô còn rất yêu thiên nhiên, và viết nhiều bài viết trên chủ đề này."
+    }, {
+        "id": "BLOG005",
+        "title": "Bạn có biết tiêu chuẩn global gap?",
+        "time": "24-04-2020",
+        "imageBl": "BLOG009.jpg",
+        "imageAuthor": "BLOG010.jpg",
+        "nameAuthor": "Phạm Minh Châu",
+        "content1": "Tiêu chuẩn GLOBALG.A.P – là viết tắt của từ Global Good Agricultural Practice – Thực hành nông nghiệp tốt toàn cầu) đã bắt đầu vào năm 1997 từ tiêu chuẩn EUREPGAP, một sáng kiến của Euro-Retailer Produce Working Group. Các nhà bán lẻ Anh làm việc cùng với các siêu thị ở Châu Âu nhận thức được mối quan tâm ngày càng tăng của người tiêu dùng về an toàn sản phẩm, tác động môi trường và sức khỏe, an toàn và phúc lợi cho người lao động.",
+        "content2": "Đây là một bộ tiêu chuẩn được xây dựng để áp dụng tự nguyện cho sản xuất nông nghiệp (trồng trọt, chăn nuôi và thủy sản) trên toàn cầu. Các tiêu chuẩn GLOBALG.A.P giúp sản xuất tuân thủ các chuẩn mực được chấp nhận trên toàn châu Âu, toàn cầu về an toàn thực phẩm, phương pháp sản xuất bền vững và sử dụng có trách nhiệm đối với nước, thức ăn hỗn hợp và vật liệu nhân giống thực vật. Cấp giấy chứng nhận cũng có nghĩa là tiết kiệm cho các nhà sản xuất, vì họ sẽ không còn cần phải trải qua nhiều cuộc đánh giá theo các tiêu chí khác nhau mỗi năm.Người sản xuất phải ghi chép lại toàn bộ quá trình sản xuất, bắt đầu từ khâu xuống giống đến khi thu hoạch và bảo quản để phòng ngừa khi xảy ra sự cố như là ngộ độc thực phẩm hay dư lượng hóa chất vượt ngưỡng cho phép và có thể truy nguyên được nguồn gốc.",
+        "story": "Chắc hẳn cái tên Phạm Minh Châu không còn xa lạ đối với độc giả báo Tuổi Trẻ, anh là tác giả của nhiều bài báo phản ánh đời xã lao động, ngoài ra anh còn là 1 blog có tiếng trên mạng xã hội, với nhiều content đa dạng anh trở thành người có đông đảo fan trên mọi miền đất nước. "
+    }, {
+        "id": "BLOG006",
+        "title": "Cam Vàng Navel Úc quý hiếm",
+        "time": "10-12-2020",
+        "imageBl": "BLOG011.jpg",
+        "imageAuthor": "BLOG012.jpg",
+        "nameAuthor": "Nguyễn Chí Trung",
+        "content1": "Cam vàng Navel Úc có chứa nhiều Vitamin C, tốt cho da, chống lão hóa, giảm Cholesterol, có tác dụng hồi phục sức khỏe nhanh, tăng cường chức năng tạo hồng huyết cầu, giảm căng thẳng thần kinh. Việc tiêu thụ vitamin C ở liều cao ( khoảng 500mg mỗi ngày ) rất tốt cho người ốm.",
+        "content2": "Quả cam Navel mọng nước chứa một hàm lượng Vitamin C cao đến mức chỉ cần ăn một quả cũng đáp ứng được 130% nhu cầu vitaminC hàng ngày của chúng ta. Ngoài ra, cam Navel còn được biết tới như một loại đồ ăn kiêng giàu chất xơ, Vitamin A, B, Canxi, Magnesium, Sắt, Đồng, Iốt…Ăn cam thường xuyên sẽ giúp phòng tránh các bệnh truyền nhiễm do virus; giảm đáng kể nguy cơ mắc bệnh sỏi thận. Để tránh lượng calo dư thừa, hãy bổ sung Cam Navel Úc vào chế độ dinh dưỡng hàng ngày của mình.Để có được những trái cam tuyệt hảo này, phải kể tới quy trình chăm sóc, tạo giống cũng như thu hái, vận chuyển vô cùng phức tạp, cầu kì. Những vườn cam Navel bạt ngàn có diện tích trên 1000ha được bao phủ toàn bộ bằng hệ thống lưới phía trên. Để đầu tư hệ thống lưới này rất đắt tiền, tuy nhiên, nó đã mang lại rất nhiều lợi ích:",
+        "story": "Tên thật Thái Nguyên Chung, nhà văn, quê Hoà Vang, Quảng Nam. Giải thưởng Hội Nhà văn Việt Nam. Tác phẩm: bút kí: Đà Nẵng, tập truyện ngắn: Bức thư làng Mực; Hương cau; Khi dòng sông ra đến cửa; tiểu thuyết Tiếng khóc của nàng Út."
+    }],
     "category": [{
         "id": "rau",
         "name": "Rau"
@@ -1489,7 +1582,7 @@
             "img1": "FR127.jpg",
             "img2": "FR128.jpg",
             "img3": "FR129.jpg",
-            "description": "Chuối già Cavendish thuộc loại cây thảo, cao từ 5m đến 6m, sống lâu năm, thân cây tròn, mềm,thẳng, có bẹ lá. Chuối già Cavendish với cuống hình tròn có khuyết rãnh, lá to, dài. Trái nằm trên buồng, có từ 6-8 nải, mỗi nải khoảng 12 trái. Trái nhỏ, dài, mùi thơm. Khi chín, vỏ vẫn màu xanh nhưng khi chín mùi thì màu vàng. Quả chuối già có vị ngọt, chuối già có tính hàn, không độc."
+            "description": "Chuối già Cavendish thuộc loại cây thảo, cao từ 5m đến 6m, sống lâu năm, thân cây tròn, mềm,thẳng, có bẹ lá. Chuối già Cavendish với cuống hình tròn có khuyết rãnh, lá to, dài. Trái nằm trên buồng, có từ 6-8 nải, mỗi nải khoảng 12 trái. Trái nhỏ, dài, mùi thơm. Khi chín, vỏ vẫn màu xanh nhưng khi chín mùi thì màu vàng. Quả chuối già có vị ngọt, chuối già có tính hàn, không độc."
         },
 
         {
@@ -1754,7 +1847,7 @@
             "img1": "FR193.jpg",
             "img2": "FR194.jpg",
             "img3": "FR195.jpg",
-            "description": "Sơ ri là loại quả nổi tiếng của vùng đất Nam Bộ. Đây là một lo   giàu dưỡng chất, đem lại nhiều tác dụng hữu ích đối với sức khỏe người sử dụng. Ăn sơ ri thường xuyên sẽ giúp tăng cường khả năng miễn dịch, bảo vệ cơ thể bạn tránh khỏi một số căn bệnh như cảm, sốt, sâu răng."
+            "description": "Sơ ri là loại quả nổi tiếng của vùng đất Nam Bộ. Đây là một lo   giàu dưỡng chất, đem lại nhiều tác dụng hữu ích đối với sức khỏe người sử dụng. Ăn sơ ri thường xuyên sẽ giúp tăng cường khả năng miễn dịch, bảo vệ cơ thể bạn tránh khỏi một số căn bệnh như cảm, sốt, sâu răng."
         },
         {
             "id": "FR066",
@@ -1766,7 +1859,7 @@
             "img1": "FR196.jpg",
             "img2": "FR197.jpg",
             "img3": "FR198.jpg",
-            "description": "Quả Sơn Trà là loại quả nhỏ mọc trên cây bụi thuộc chi Crataegus có mặt ở Châu Âu, Bắc Mỹ và Châu Á. Quả mọng chứa nhiều chất dinh dưỡng và có vị chua, hơi ngậy và vị ngọt nhẹ, có màu từ vàng đến đỏ đậm đến đen."
+            "description": "Quả Sơn Trà là loại quả nhỏ mọc trên cây bụi thuộc chi Crataegus có mặt ở Châu Âu, Bắc Mỹ và Châu Á. Quả mọng chứa nhiều chất dinh dưỡng và có vị chua, hơi ngậy và vị ngọt nhẹ, có màu từ vàng đến đỏ đậm đến đen."
         },
         {
             "id": "FR067",
@@ -1911,7 +2004,7 @@
             "img1": "tr016.jpg",
             "img2": "tr017.jpg",
             "img3": "tr018.jpg",
-            "description": "Cà chua rất giàu vitamin A, C, K, vitamin B6, kali, folate, thiamin, magiê, niacin, đồng và phốt pho, là những vi chấtcần thiết để duy trì một sức khỏe tốt. Điều tuyệt vời hơn ở cà chua là chúng chứa rất ít cholesterol, chất béo bão hòa, natri và calo. Bạn có thể ăn cà chua sống kẹp với bánh mì, làm salad, nước sốt, sinh tố, thậm chí nấu súp. Sau đây là 9 lợi ích của cà chua."
+            "description": "Cà chua rất giàu vitamin A, C, K, vitamin B6, kali, folate, thiamin, magiê, niacin, đồng và phốt pho, là những vi chấtcần thiết để duy trì một sức khỏe tốt. Điều tuyệt vời hơn ở cà chua là chúng chứa rất ít cholesterol, chất béo bão hòa, natri và calo. Bạn có thể ăn cà chua sống kẹp với bánh mì, làm salad, nước sốt, sinh tố, thậm chí nấu súp. Sau đây là 9 lợi ích của cà chua."
         },
         {
             "id": "CUQUA09",
@@ -2055,7 +2148,7 @@
             "img1": "tr043.jpg",
             "img2": "tr044.jpg",
             "img3": "tr045.jpg",
-            "description": "Củ nén thuộc chi Allium có vai trò quan trọng trong việc phòng chống ung thư. Một số nghiên cứu đã cho thấy rằng các loại thực vật thuộc chi allium có ảnh hưởng tích cực đến các bệnh ung thư."
+            "description": "Củ nén thuộc chi Allium có vai trò quan trọng trong việc phòng chống ung thư. Một số nghiên cứu đã cho thấy rằng các loại thực vật thuộc chi allium có ảnh hưởng tích cực đến các bệnh ung thư."
         },
         {
             "id": "CUQUA021",

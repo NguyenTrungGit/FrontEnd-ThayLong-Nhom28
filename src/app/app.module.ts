@@ -57,7 +57,8 @@ import { ProductMoreComponent } from './NTrung/product-details/product-more/prod
 import { CommentShowComponent } from './NTrung/product-details/product-more/comment-show/comment-show.component';
 import { MoreInfoComponent } from './NTrung/product-details/product-more/more-info/more-info.component';
 import { CommentItemComponent } from './NTrung/product-details/product-more/comment-item/comment-item.component';
-
+import { BlogContentComponent } from './BTruong/blog-content/blog-content.component';
+import { BlogContentDetailsComponent } from './BTruong/blog-content/blog-content-details/blog-content-details.component';
 @NgModule({
   declarations: [
     MoreInfoComponent,
@@ -103,8 +104,9 @@ import { CommentItemComponent } from './NTrung/product-details/product-more/comm
     PopupLoginComponent,
     HeaderDirectDirective,
     CommentItemComponent,
+    BlogContentComponent,
+    BlogContentDetailsComponent,
     CommentDialogComponent
-
   ],
   imports: [
     BrowserModule,
