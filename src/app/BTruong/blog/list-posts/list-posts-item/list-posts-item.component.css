@@ -1,7 +1,7 @@
     .blog-item {
         width: 240px;
         height: 330px;
-        border-radius: 10px;
+        border-radius: 5px;
         box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
         cursor: pointer;
         -webkit-box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
@@ -23,7 +23,7 @@
     }
 
     img {
-        border-radius: 0px 0px 10px 10px;
+        border-radius: 0px 0px 5px 5px;
     }
 
     .date {
