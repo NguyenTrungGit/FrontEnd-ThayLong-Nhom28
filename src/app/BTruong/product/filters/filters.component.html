@@ -18,15 +18,15 @@
 
 </div>
 <div class="col3 large-3 ">
-    <div class="nav2 ">
+    <div class="nav2">
         <div class="is-divider small " style="margin :0 auto; margin-top: 12px; color: #fff; font-size: 18px; ">
             <span style="margin-left: 74px; ">LỌC THEO GIÁ</span>
         </div>
         <div class="bottom ">
             <div class="small ">
                 <ngx-slider [(value)]="minValue " [(highValue)]="maxValue " [options]="options "></ngx-slider>
-                <div class="btn " style=" position: absolute; left: 27px; top: 44px; border: none;width: 50px; border-radius: 99px; font-size: 16px;background-color: #666;color: #fff; height: 25px; position: absolute; left: 12px; ">
-                    <span style="font-size: 12px;padding-bottom: 3px; position: absolute; top:4px; ;left: 14px; " (click)="sendParent() ">Lọc</span>
+                <div class="btn" (click)="sendParent()" style=" position: absolute; left: 27px; top: 44px; border: none;width: 50px; border-radius: 99px; font-size: 16px;background-color: #666;color: #fff; height: 25px; position: absolute; left: 12px; ">
+                    <span style="font-size: 12px;padding-bottom: 3px; position: absolute; top:4px; ;left: 14px; ">Lọc</span>
                     <!-- <a type="submit "
             style=" border: none;width: 50px; border-radius: 99px; font-size: 16px;background-color: #666;color: #fff; "></a> -->
                 </div>
