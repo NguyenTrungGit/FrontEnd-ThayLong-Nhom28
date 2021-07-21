@@ -8,7 +8,7 @@ import { ProductService } from 'src/app/Services/product.service';
   styleUrls: ['./filter1.component.css']
 })
 export class Filter1Component implements OnInit {
-
+  selectedItemId1:any;
   blog: Blog[] = [];
   // blogID: BlogID[]=[];
   constructor(private productService: ProductService) { }

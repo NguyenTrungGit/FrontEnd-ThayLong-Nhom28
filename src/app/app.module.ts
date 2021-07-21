@@ -129,3 +129,7 @@ import { BlogContentDetailsComponent } from './BTruong/blog-content/blog-content
   entryComponents:[CommentDialogComponent]
 })
 export class AppModule {}
+
+
+
+
