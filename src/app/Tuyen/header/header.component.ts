@@ -78,6 +78,7 @@ numberItemInCart:number=0;
   }
   @HostListener('window:scroll', [])
   onWindowScroll() {
+   var container  = document.querySelector('.container') as HTMLElement;
     var header = document.querySelector('.header') as HTMLElement;
     var navbar = document.querySelector('.navbar') as HTMLElement;
     var topintro = document.querySelector('.top-intro') as HTMLElement;
@@ -89,7 +90,7 @@ numberItemInCart:number=0;
     }
     if (document.documentElement.scrollTop > 200) {
       navbar.classList.add('transition-navbar');
-
+      container.style.height='86px'
       header.classList.add('fixed-top');
       topintro.style.display = 'none';
       navbar.classList.add('shadow');
