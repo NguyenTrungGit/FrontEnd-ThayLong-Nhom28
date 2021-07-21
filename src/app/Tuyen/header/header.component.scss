@@ -5,6 +5,7 @@
 .top-intro {
     background-color: #66a55f;
     height: 25px;
+    transition: all 1s linear;
 }
 
 .title-top-intro {
@@ -390,9 +391,7 @@
     display: none;
     position: absolute;
     right: 7%;
-
     // box-shadow: 0px -1px 5px 0px rgb(0 0 0 / 10%);
-
     border-radius: 4px;
 }
 
@@ -506,37 +505,27 @@
     bottom: 100%;
 }
 
-
-
-
 .ng-autocomplete {
     position: absolute;
     left: 0px;
     width: 400px;
 }
 
-
-
 .col-8 {
     display: flex;
 }
 
-::ng-deep .input-container {
-    height: 45px;
-    background: #fff;
-
-    // box-shadow: 0px 5px 5px 0px rgb(0 0 0 / 10%) !important;
-
-}
-
-::ng-deep .item {
-    height: 61px !important;
-}
-
-::ng-deep .autocomplete-container {
-    box-shadow: none !important;
-}
-
+// ::ng-deep .input-container {
+//     height: 45px;
+//     background: #fff;
+//     // box-shadow: 0px 5px 5px 0px rgb(0 0 0 / 10%) !important;
+// }
+// ::ng-deep .item {
+//     height: 61px !important;
+// }
+// ::ng-deep .autocomplete-container {
+//     box-shadow: none !important;
+// }
 .row {
     margin-left: 16px;
     padding: 4px;
@@ -546,40 +535,35 @@
     cursor: pointer;
 }
 
-::ng-deep .material-icons {
-    margin-left: 13px;
-    padding-left: 35px;
-    position: absolute;
-    top: -10px;
-    left: -91px;
-}
-
-::ng-deep .material-icons:hover {
-    margin-left: 13px;
-    padding-left: 35px;
-    position: absolute;
-    top: -10px;
-    left: -91px;
-    color: #66a55f !important;
-}
-
-::ng-deep .text {
-    color: #fff !important;
-}
-
-::ng-deep .text::after {
-    content: 'Được chọn gần đây' !important;
-    width: 268px;
-    color: #292d32;
-    position: absolute;
-    left: 65px;
-}
-
-::ng-deep .not-found {
-    border-radius: 0px 0px 5px 5px !important;
-    border: none !important;
-}
-
+// ::ng-deep .material-icons {
+//     margin-left: 13px;
+//     padding-left: 35px;
+//     position: absolute;
+//     top: -10px;
+//     left: -91px;
+// }
+// ::ng-deep .material-icons:hover {
+//     margin-left: 13px;
+//     padding-left: 35px;
+//     position: absolute;
+//     top: -10px;
+//     left: -91px;
+//     color: #66a55f !important;
+// }
+// ::ng-deep .text {
+//     color: #fff !important;
+// }
+// ::ng-deep .text::after {
+//     content: 'Được chọn gần đây' !important;
+//     width: 268px;
+//     color: #292d32;
+//     position: absolute;
+//     left: 65px;
+// }
+// ::ng-deep .not-found {
+//     border-radius: 0px 0px 5px 5px !important;
+//     border: none !important;
+// }
 .row-left {
     font-family: 'Quicksand';
     font-size: 14px;
@@ -590,11 +574,11 @@
 
 .row-right {
     margin-right: 30px;
-      img {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-}
+    img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+    }
 }
 
 .name {
@@ -614,32 +598,24 @@
     top: 26px;
 }
 
-::ng-deep .suggestions-container {
-    height: 350px !important;
-}
-
-::ng-deep .is-visible {
-    max-height: 46px !important;
-    border-radius: 0px 0px 5px 5px;
-
-    // box-shadow: 0px 5px 5px 0px rgb(0 0 0 / 10%) !important;
-
-}
-
-::ng-deep .is-visible ul {
-    max-height: 364px !important;
-    background-color: #fff;
-    border-radius: 0px 0px 5px 5px;
-
-    // box-shadow: 0px 1px 5px 0px rgb(0 0 0 / 10%);
-
-}
-
-::ng-deep .is-hidden ul {
-    max-height: 350px !important;
-}
-
-::ng-deep .heading {
-    background-color: #fff !important;
-    border: none !important;
-}
+// ::ng-deep .suggestions-container {
+//     height: 350px !important;
+// }
+// ::ng-deep .is-visible {
+//     max-height: 46px !important;
+//     border-radius: 0px 0px 5px 5px;
+//     // box-shadow: 0px 5px 5px 0px rgb(0 0 0 / 10%) !important;
+// }
+// ::ng-deep .is-visible ul {
+//     max-height: 364px !important;
+//     background-color: #fff;
+//     border-radius: 0px 0px 5px 5px;
+//     // box-shadow: 0px 1px 5px 0px rgb(0 0 0 / 10%);
+// }
+// ::ng-deep .is-hidden ul {
+//     max-height: 350px !important;
+// }
+// ::ng-deep .heading {
+//     background-color: #fff !important;
+//     border: none !important;
+// }

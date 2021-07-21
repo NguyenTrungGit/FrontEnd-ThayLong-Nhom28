@@ -124,6 +124,7 @@ import { BlogContentDetailsComponent } from './BTruong/blog-content/blog-content
     AutocompleteLibModule,
     ScrollingModule,
     CarouselModule
+
   ],
   bootstrap: [AppComponent],
   entryComponents:[CommentDialogComponent]

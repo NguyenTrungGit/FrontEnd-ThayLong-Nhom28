@@ -5,28 +5,32 @@
     justify-content: center;
 }
 
-.map {
-    width: 735px;
-    height: 635px;
+.form-container-item {
+    padding-bottom: 20px;
+}
+
+p .map {
+    flex: 1;
 }
 
 .form {
-    width: 735px;
-    height: 635px;
+    flex: 1;
 }
 
-.image {
+
+/* .image {
     width: 600px;
     height: 700px;
-}
+} */
 
-img {
+
+/* img {
     width: 100%;
     height: 80%;
     object-fit: contain;
     margin-left: 80px;
     margin-top: 70px;
-}
+} */
 
 .button {
     background-color: #66A55F;
