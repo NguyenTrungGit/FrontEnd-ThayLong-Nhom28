@@ -24,6 +24,8 @@ export class ProductListComponent implements OnInit {
   constructor(private productService: ProductService) {}
   ngOnChanges(changes: SimpleChanges): void {
     this.categoryTemp = this.categoryName;
+    this.activePage = 1;
+    this.pager ={}
     this.getProducts();
   }
 
