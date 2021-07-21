@@ -26,7 +26,7 @@
     <ul *ngIf="pager.pages && pager.pages.length">
       <li
         (click)="setPage(pager.currentPage - 1)"
-        [ngClass]="{ disabled: pager.currentPage == 1 }"
+        [ngClass]="{ 'disabled': pager.currentPage == 1 }"
       >
         <a href="javascript: void(0)"><<</a>
       </li>

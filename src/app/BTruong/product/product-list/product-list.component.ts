@@ -23,6 +23,7 @@ export class ProductListComponent implements OnInit {
   pager: any = {};
   constructor(private productService: ProductService) {}
   ngOnChanges(changes: SimpleChanges): void {
+    this.categoryTemp = this.categoryName;
     this.getProducts();
   }
 

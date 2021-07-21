@@ -98,3 +98,12 @@
   font-size: 20px;
   background: hsl(114, 28%, 51%);
 }
+
+.paging-wrapper ul li.disabled a:hover{
+  color: hsla(0, 0%, 0%, 0.7);
+}
+
+.paging-wrapper ul li.disabled a:active{
+  color: hsla(0, 0%, 0%, 0.7);
+  background: hsla(0, 0%, 83%, 0.3);
+}
