@@ -1,50 +1,100 @@
 .container-product {
-    margin-right: 70px;
+  margin-right: 70px;
 }
 
 .my-pagination /deep/ .ngx-pagination .current {
-    background: #66A55F;
-    border-radius: 50%;
-    border: 1px solid#66A55F;
-    height: 45px;
-    width: 45px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding-top: 10px;
+  background: #66a55f;
+  border-radius: 50%;
+  border: 1px solid#66A55F;
+  height: 45px;
+  width: 45px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 10px;
 }
 
 .my-pagination /deep/ .ngx-pagination {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    padding-left: 0px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 0px;
 }
 
 .sort {
-    display: flex;
-    justify-content: flex-end;
-    font-family: 'Quicksand';
-    align-items: baseline;
-    margin-right: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Quicksand";
+  align-items: baseline;
+  margin-right: 5px;
 }
 
 .display {
-    margin-right: 21px;
-    font-size: 15px;
-    font-family: 'Quicksand';
+  margin-right: 21px;
+  font-size: 15px;
+  font-family: "Quicksand";
 }
 
 .sort-sub {
-    font-size: 14px;
-    font-family: 'Quicksand';
+  font-size: 14px;
+  font-family: "Quicksand";
 }
 
 .sort-sub option {
-    font-size: 14px;
-    color: #212529;
-    font-family: 'Quicksand';
+  font-size: 14px;
+  color: #212529;
+  font-family: "Quicksand";
 }
 
 .col-md-3 {
-    margin-top: 30px;
-    padding: 0px 15px 0px 15px;
+  margin-top: 30px;
+  padding: 0px 15px 0px 15px;
+}
+
+.paging-wrapper {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 30px 0;
+}
+
+.paging-wrapper ul {
+  padding: 0;
+  margin: 0;
+  gap: 10px;
+  display: flex;
+}
+
+.paging-wrapper ul li {
+  display: flex;
+}
+
+.paging-wrapper ul li a {
+  color: hsla(0, 0%, 0%, 0.5);
+  background: hsla(0, 0%, 83%, 0.3);
+  font-weight: 700;
+  border-radius: 50%;
+  padding: 13px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  list-style: none;
+  transition: 0.2s;
+  user-select: none;
+  font-size: 15px;
+  border: 1px solid hsla(0, 0%, 83%, 0.4);
+}
+
+.paging-wrapper ul li a:hover {
+  color: hsla(0, 0%, 0%, 0.7);
+}
+
+.paging-wrapper ul li a:active {
+  color: hsla(0, 0%, 100%, 0.8);
+  background: hsl(114, 28%, 51%);
+}
+
+.paging-wrapper ul li a.active {
+  color: hsla(0, 0%, 100%, 0.8);
+  font-size: 20px;
+  background: hsl(114, 28%, 51%);
 }

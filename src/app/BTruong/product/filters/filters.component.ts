@@ -42,16 +42,7 @@ export class FiltersComponent implements OnInit{
   constructor(private productService: ProductService,private actRoute: ActivatedRoute) {
   }
 
-  updateColor(){
-    if(this.check==false){
-      this.check=true;
-      console.log("xanh");
-
-    }else{
-    this.check = false;
-    console.log("trang");
-    }
-  }
+ 
   sendParent(){
     this.messageEvent.emit({min: this.minPrice+'',max:this.maxPrice+''});
     console.log("vao filter child")
