@@ -17,11 +17,11 @@
             </div>
             <div class="price font-weight-bold">{{item.price}} &#8363;</div>
             <div class="amount">
-                <div class="btn minus" (click)="down()"></div>
-                <input type="text" value="{{item.quantity}}" maxlength="3" />
-                <div class="btn plus" (click)="up()"></div>
+                <div class="btn minus" (click)="down(inputQuantityElement,item)"></div>
+                <input #inputQuantityElement type="text" value="{{item.quantity}}" maxlength="2" (input)="updateQuantity(inputQuantityElement,item)" />
+                <div class="btn plus " (click)="up(inputQuantityElement,item) "></div>
             </div>
-            <div class="total price font-weight-bold" style="color: #66a55f">
+            <div class="total price font-weight-bold " style="color: #66a55f ">
                 {{item.quantity*item.price}} &#8363;
             </div>
         </div>
@@ -29,22 +29,22 @@
 
 
     <!-- khuyen mai -->
-    <div class="summary">
-        <div class="discount">
-            <div class="font-weight-bold" style="width: 300px">Nhập mã giảm giá</div>
+    <div class="summary ">
+        <div class="discount ">
+            <div class="font-weight-bold " style="width: 300px ">Nhập mã giảm giá</div>
             <div>
-                <input type="text" placeholder="Voucher" maxlength="8" (keyup)="enterVoucher($event.target)" />
-                <!-- <div *ngIf="discount" class="content font-weight-bold">- {{ discount.price }} &#8363;</div> -->
+                <input type="text " placeholder="Voucher " maxlength="8 " (keyup)="enterVoucher($event.target) " />
+                <!-- <div *ngIf="discount " class="content font-weight-bold ">- {{ discount.price }} &#8363;</div> -->
             </div>
         </div>
-        <div class="total">
-            <div class="font-weight-bold" style="width: 300px">Tạm tính</div>
-            <div class="content font-weight-bold">500.000 &#8363;</div>
+        <div class="total ">
+            <div class="font-weight-bold " style="width: 300px ">Tạm tính</div>
+            <div class="content font-weight-bold ">{{total}} &#8363;</div>
         </div>
     </div>
 
-    <div class="control">
-        <button class="btn btn-see-more font-weight-bold">Xem thêm sản phẩm</button>
-        <button class="btn btn-pay font-weight-bold">Thanh toán</button>
+    <div class="control ">
+        <button class="btn btn-see-more font-weight-bold ">Xem thêm sản phẩm</button>
+        <button class="btn btn-pay font-weight-bold ">Thanh toán</button>
     </div>
 </div>
