@@ -58,4 +58,7 @@ this.total=this.getTotal();
     }
     return total;
   }
+  removeProduct(product:Product){
+    this.shoppingcartService.removeProduct(product)
+  }
 }

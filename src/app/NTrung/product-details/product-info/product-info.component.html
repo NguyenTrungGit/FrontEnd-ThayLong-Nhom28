@@ -83,11 +83,11 @@
         <div class="control">
             <div class="amount">
                 <div class="amount-sub" style="display: flex">
-                    <div class="btn minus" (click)="down()"></div>
-                    <input type="text" maxlength="3" value="{{ amount }}" />
-                    <div class="btn plus" (click)="up()"></div>
+                    <div class="btn minus" (click)="down(inputQuantityElementDetail,productInfo)"></div>
+                    <input #inputQuantityElementDetail type="text" maxlength="2" value="{{ amount }}" (input)="updateQuantity(inputQuantityElementDetail)" />
+                    <div class="btn plus" (click)="up(inputQuantityElementDetail,productInfo)"></div>
                 </div>
-                <div class="btn btn-add font-weight-bold" (click)="addToCart()">Thêm vào giỏ</div>
+                <div class="btn btn-add font-weight-bold" (click)="addToCart(inputQuantityElementDetail)">Thêm vào giỏ</div>
             </div>
             <div class="btn btn-cart font-weight-bold">Xem giỏ hàng</div>
         </div>

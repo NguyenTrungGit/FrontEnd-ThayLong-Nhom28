@@ -11,7 +11,7 @@
     <div class="" *ngFor="let item of items">
         <div class="info">
             <div class="product">
-                <div class="product-button"></div>
+                <a class="product-button" (click)="removeProduct(item)"></a>
                 <img class="product-image" src="./assets/BTruong/image-mix/{{item.img1}}" alt="" />
                 <span class="product-name font-weight-bold">{{item.name}}</span>
             </div>
