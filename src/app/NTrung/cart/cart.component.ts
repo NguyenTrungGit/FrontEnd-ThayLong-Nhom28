@@ -56,7 +56,7 @@ this.total=this.getTotal();
     for (let index = 0; index < this.items.length; index++) {
       total+=this.items[index].price*this.items[index].quantity
     }
-    return total;
+    return total;``
   }
   removeProduct(product:Product){
     this.shoppingcartService.removeProduct(product)
