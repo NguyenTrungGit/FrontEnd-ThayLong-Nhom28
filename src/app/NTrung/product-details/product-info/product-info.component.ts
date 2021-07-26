@@ -18,7 +18,7 @@ export class ProductInfoComponent implements OnInit {
   id:any;
 
 
-  ngOnInit(): void {}
+  
     addToCart(element:any){
     if(this.productInfo!==undefined){
     this.productInfo.quantity=Number(element.value);
@@ -29,7 +29,7 @@ export class ProductInfoComponent implements OnInit {
   up(element:any,product?:Product) {
     element.value++;
     this.updateQuantity(element)
-
+  }
   constructor(private shoppingCartService: ShoppingCartService, private productService: ProductService,) {}
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -40,15 +40,8 @@ export class ProductInfoComponent implements OnInit {
     this.id = this.idInput
     this.getProductById();
   }
-  addToCart() {
-    if (this.productInfo !== undefined) {
-      this.productInfo.quantity = this.amount;
-      this.shoppingCartService.addToCart(this.productInfo);
-    }
-  }
-  up() {
-    this.amount += 1;
-  }
+
+
 
   down(element:any,product?:Product) {
     if(Number(element.value)>=2)
