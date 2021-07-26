@@ -173,6 +173,7 @@
 .product_list_widget {
     list-style: none;
     padding-left: 0px;
+    margin-bottom: 0px;
 }
 
 .product-hv .product-title {
@@ -206,4 +207,12 @@
 .product-hv:hover .flex {
     background-color: #66A55F;
     cursor: pointer;
+}
+
+.active1 {
+    background-color: red !important;
+}
+
+.permanent-border {
+    background-color: red;
 }

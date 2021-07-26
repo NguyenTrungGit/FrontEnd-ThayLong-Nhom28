@@ -15,9 +15,7 @@ export class ProductDetailsComponent implements OnInit {
 
   lsProductsRelated: Product[] = [];
   category: any;
-  randomPage: any;
   constructor(
-    private productService: ProductService,
     private activatedRoute: ActivatedRoute,
     private router: Router
   ) {}
@@ -25,8 +23,6 @@ export class ProductDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.scrollOnTop();
     this.getParamsFromUrl();
-    this.getProductById();
-    this.getProductsRelated();
   }
 
   //TODO: get id from url
@@ -35,34 +31,6 @@ export class ProductDetailsComponent implements OnInit {
       this.id = response.get('id');
       this.category = response.get('cate');
     });
-  }
-
-  getProductById() {
-    // TODO: return a array, in array have 1 product has this.id and find product by id (Optimized)
-    this.productService.getProductsById(this.id).subscribe((res: any) => {
-      this.productInfo = res.find((n: any) => n.id === this.id);
-      console.log(res);
-    });
-  }
-
-  getProductsRelated() {
-    if (this.category === 'rau') {
-      this.randomPage = Math.floor(Math.random() * 18 + 1);
-    } else if (this.category === 'traicay') {
-      this.randomPage = Math.floor(Math.random() * 17 + 1);
-    } else if (this.category === 'qua') {
-      this.randomPage = Math.floor(Math.random() * 10 + 1);
-    } else if (this.category === 'nam') {
-      this.randomPage = Math.floor(Math.random() * 1 + 1);
-    } else if (this.category === 'cu') {
-      this.randomPage = Math.floor(Math.random() * 6 + 1);
-    }
-
-    this.productService
-      .getProductsRelated(this.randomPage, this.category)
-      .subscribe((response: Product[]) => {
-        this.lsProductsRelated = response;
-      });
   }
 
   scrollOnTop() {

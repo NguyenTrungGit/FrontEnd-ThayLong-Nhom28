@@ -10,7 +10,8 @@
 
 .col-md-4 {
     margin-top: 52px;
-    padding-left: 50px;
+    display: flex;
+    justify-content: center;
 }
 
 .row {
