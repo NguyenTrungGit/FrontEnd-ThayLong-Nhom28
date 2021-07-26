@@ -9,9 +9,9 @@ import { ShoppingCartService } from 'src/app/Services/shopping-cart.service';
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent implements OnInit {
-  amount: any = 1;
-  discount?: Voucher;
 
+  discount?: Voucher;
+total:number=0;
   listVoucher: Voucher[] = [
     new Voucher('vc20000', '20000'),
     new Voucher('vc30000', '30000'),
@@ -25,19 +25,40 @@ export class CartComponent implements OnInit {
     this.shoppingcartService.cartItems.subscribe(data=>{
       this.items=data;
     })
+    this.total=this.getTotal();
+  }
+updateQuantity(element:any,product:Product){
+var quantity=element.value;
+if(!Number(quantity) ||Number(quantity)<0){
+  quantity="1";
+}
+product.quantity=quantity
+this.shoppingcartService.updateCart(Number(quantity),product);
+this.total=this.getTotal();
+}
+
+  up(element:any,product:Product) {
+    element.value++;
+    this.updateQuantity(element, product)
   }
 
-  up() {
-    this.amount += 1;
-  }
-
-  down() {
-    if (this.amount > 1) {
-      this.amount--;
-    }
+  down(element:any,product:Product) {
+  if(Number(element.value)>=2)
+  element.value--;
+  this.updateQuantity(element, product)
   }
 
   enterVoucher(event: any) {
     this.discount = this.listVoucher.find((n) => n.id === event.value);
+  }
+  getTotal():number{
+    var total=0;
+    for (let index = 0; index < this.items.length; index++) {
+      total+=this.items[index].price*this.items[index].quantity
+    }
+    return total;``
+  }
+  removeProduct(product:Product){
+    this.shoppingcartService.removeProduct(product)
   }
 }

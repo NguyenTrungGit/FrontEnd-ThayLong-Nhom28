@@ -25,6 +25,7 @@ import { ShoppingCartService } from 'src/app/Services/shopping-cart.service';
 })
 export class HeaderComponent implements OnInit {
   i: any = -1;
+  totalCart:number=0;
   datas: Product[] = [];
    itemsCart: Product[] = [];
   title = 'filter';
@@ -44,6 +45,8 @@ numberItemInCart:number=0;
     })
     this.cartService.cartItems.subscribe(data=>{
         this.numberItemInCart=data.length
+        this.totalCart=this.getTotal();
+
     })
     this.getProducts();
     this.nameFilterControl.pipe().subscribe(value=>{ this.nameFilter = value.trim().toLowerCase();
@@ -51,12 +54,16 @@ numberItemInCart:number=0;
     }
     );
 
+  }
 
+  removeProduct(product:Product){
+this.cartService.removeProduct(product);
   }
   getProducts() {
     this.productService.getProducts().subscribe((res: any) => {
       this.datas = res;
     });
+
   }
   displaySearch() {
     var dropdownSearch = document.querySelector(
@@ -116,5 +123,11 @@ numberItemInCart:number=0;
     // do something
   }
   //filter
-
+  getTotal():number{
+    var total=0;
+    for (let index = 0; index < this.itemsCart.length; index++) {
+      total+=this.itemsCart[index].price*this.itemsCart[index].quantity
+    }
+    return total;
+  }
 }
