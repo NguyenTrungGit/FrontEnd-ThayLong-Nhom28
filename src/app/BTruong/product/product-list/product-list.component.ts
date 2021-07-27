@@ -1,5 +1,6 @@
 import { Input, SimpleChanges, OnChanges } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/model/product.model';
 import { ProductService } from 'src/app/Services/product.service';
 
@@ -13,16 +14,17 @@ export class ProductListComponent implements OnInit {
   @Input() categoryName: any;
   categoryTemp: any;
   maxPrice: number = 0;
-  minPrice: number = 999999999999;
+  minPrice: number = 0;
   showport: any = [];
   datas: Product[] = [];
-
+tuyen:string='';
   // paging
   total_count: any;
   activePage: any = 1;
   pager: any = {};
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService,private activatedRoute: ActivatedRoute,private router:Router) {}
   ngOnChanges(changes: SimpleChanges): void {
+
     this.categoryTemp = this.categoryName;
     this.activePage = 1;
     this.pager ={}
@@ -32,10 +34,23 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
     this.categoryTemp = this.categoryName;
     this.getProducts();
+
   }
   getProducts() {
-    this.maxPrice = Number(Object.values(this.rangePrice)[1]);
-    this.minPrice = Number(Object.values(this.rangePrice)[0]);
+    this.activatedRoute.queryParams.subscribe(params => {
+      let min=params['min']
+      let max=params['max']
+      if(min!==undefined&&max!==undefined){
+        this.maxPrice=max
+        this.minPrice=min
+      }else{
+        this.maxPrice = Number(Object.values(this.rangePrice)[1]);
+        this.minPrice = Number(Object.values(this.rangePrice)[0]);
+      }
+
+   });
+console.log(this.maxPrice,"c",this.minPrice)
+
     if (this.categoryName === 'tatca') {
       this.productService
         .getLengthByPrice(this.minPrice, this.maxPrice)
@@ -51,6 +66,8 @@ export class ProductListComponent implements OnInit {
             this.activePage
           );
         });
+        if(this.maxPrice!=99999999)
+        this.router.navigate([], {  queryParams: {  min:this.minPrice,max:this.maxPrice} });
     } else {
       this.productService
         .getLengthByPriceAndCategory(
@@ -75,6 +92,9 @@ export class ProductListComponent implements OnInit {
             this.activePage
           );
         });
+
+        if(this.maxPrice!=99999999)
+        this.router.navigate([], {  queryParams: {  min:this.minPrice,max:this.maxPrice} });
     }
   }
   sort(event: any) {
@@ -129,6 +149,11 @@ export class ProductListComponent implements OnInit {
   }
 
   setPage(page: number) {
+if(this.maxPrice!==99999999&&this.minPrice!==0){
+    this.router.navigate([], {  queryParams: {  min:this.minPrice,max:this.maxPrice,trang:page } });}
+    else{
+      this.router.navigate([], {  queryParams: { trang:page } });}
+
     if (page < 1 || page > this.pager.totalPages) {
       return;
     }
