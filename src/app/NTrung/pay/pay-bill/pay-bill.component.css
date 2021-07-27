@@ -3,41 +3,30 @@
   font-weight: bold;
   color: #707070;
   border: 1px solid #d3d3d3;
-  -webkit-box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
-          box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
+  box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
 }
-
 .layout-box .title {
   font-size: 25px;
   text-align: center;
   margin-bottom: 20px;
   color: #66a55f;
 }
-
 .layout-box .content {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .layout-box .content .title-content {
   border-bottom: 1px solid #d3d3d3;
 }
-
 .layout-box .content .tag {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 10px 0px;
 }
-
 .layout-box .logo {
   font-size: 15px;
   text-align: center;
   margin: 10px auto;
   width: 260px;
 }
-
 .layout-box .image {
   margin: 0 auto;
   width: 80px;
@@ -46,53 +35,39 @@
   background-repeat: no-repeat;
   background-size: 80px;
 }
-
 .layout-box .name {
   width: 130px;
 }
-
 .layout-box .amount {
   margin-right: 40px;
   font-size: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .layout-box .amount .unit-price {
   width: 45px;
   color: #66a55f;
   text-align: right;
 }
-
 .layout-box .amount div {
   margin: 0 2px;
 }
-
 .layout-box .total {
   margin-left: 20px;
   color: #66a55f;
   text-align: right;
   width: 100px;
 }
-
 .layout-box .list-product .product {
   border-bottom: 1px dashed #d3d3d3;
 }
-
 .layout-box .bill .bill-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .layout-box .bill .bill-title .bill-title {
   width: 50%;
 }
-
 .layout-box .bill .bill-title .bill-price {
   color: #66a55f;
   width: 50%;
   text-align: right;
-}
-/*# sourceMappingURL=pay-bill.component.css.map */
+}/*# sourceMappingURL=pay-bill.component.css.map */

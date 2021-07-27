@@ -1,3 +1,3 @@
 export class Voucher {
-  constructor(public id: string, public price: string) {}
+  constructor(public id: string, public discount: number) {}
 }
