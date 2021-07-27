@@ -8,20 +8,15 @@
   border: #707070 solid 1px;
   margin-bottom: 50px;
 }
-
 .layout-box .control {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 20px;
 }
-
 .layout-box .control div {
   margin: 0px 130px;
   width: 610px;
   text-align: center;
 }
-
 .layout-box .control .btn {
   color: white;
   background: #66a55f;
@@ -29,12 +24,9 @@
   border-radius: 30px;
   float: right;
 }
-
 .layout-box .control .btn:hover {
   background: #85b780;
 }
-
 .layout-box .control .btn:active {
   background: #5b9654;
-}
-/*# sourceMappingURL=comment-show.component.css.map */
+}/*# sourceMappingURL=comment-show.component.css.map */

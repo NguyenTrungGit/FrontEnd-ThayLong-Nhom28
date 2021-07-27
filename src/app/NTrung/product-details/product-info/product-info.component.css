@@ -5,55 +5,46 @@
 
 .container {
   color: #707070;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  margin-top: 115px;
+  margin-top: 55px;
   padding-bottom: 50px;
   margin-bottom: 50px;
   position: relative;
   border-bottom: 1px #d3d3d3 solid;
 }
-
 .container .slide-show {
   width: 500px;
   margin: 0 50px;
 }
-
 .container .slide-show #img1,
 .container .slide-show #img2,
 .container .slide-show #img3,
 .container .slide-show #img4 {
   display: none;
 }
-
 .container .slide-show .slide-img {
   position: absolute;
   width: 500px;
   height: 500px;
 }
-
 .container .slide-show .slide-img img {
   cursor: pointer;
   width: 100%;
   height: 100%;
   border: #d3d3d3 1px solid;
 }
-
 .container .slide-show #img1:checked ~ #one,
 .container .slide-show #img2:checked ~ #two,
 .container .slide-show #img3:checked ~ #three,
 .container .slide-show #img4:checked ~ #four {
   z-index: 9;
 }
-
 .container .slide-show #img1:checked ~ .nav #dot1,
 .container .slide-show #img2:checked ~ .nav #dot2,
 .container .slide-show #img3:checked ~ .nav #dot3,
 .container .slide-show #img4:checked ~ .nav #dot4 {
   opacity: 1;
 }
-
 .container .slide-show .nav {
   margin-top: 520px;
   width: 500px;
@@ -61,50 +52,36 @@
   text-align: center;
   gap: 20px;
 }
-
 .container .slide-show .nav .image-sub {
   width: 110px;
   height: 110px;
   opacity: 0.5;
-  -webkit-box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
-          box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
-  -webkit-transition: opacity 0.5s, -webkit-transform 0.3s;
-  transition: opacity 0.5s, -webkit-transform 0.3s;
+  box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
   transition: transform 0.3s, opacity 0.5s;
-  transition: transform 0.3s, opacity 0.5s, -webkit-transform 0.3s;
 }
-
 .container .slide-show .nav .image-sub img {
   width: 110px;
   height: 110px;
 }
-
 .container .slide-show .nav .image-sub:hover {
   cursor: pointer;
   opacity: 0.7;
-  -webkit-transform: scale(120%);
-          transform: scale(120%);
+  transform: scale(120%);
 }
-
 .container .info-box {
   width: 400px;
 }
-
 .container .info-box .title {
   padding-bottom: 10px;
   margin-bottom: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .container .info-box .title .tag-1 {
   width: 300px;
   padding: 5px;
   font-size: 30px;
   line-height: 30px;
 }
-
 .container .info-box .title .tag-2 {
   padding-top: 5px;
   height: 30px;
@@ -112,64 +89,49 @@
   width: 100px;
   border-radius: 3px;
 }
-
 .container .info-box .rating {
   color: #ffb24c;
   font-size: 25px;
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-
 .container .info-box .rating i {
   margin-right: 5px;
 }
-
 .container .info-box .content {
   padding: 10px 0px;
   margin: 10px 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .container .info-box .content input {
   height: 20px;
   margin-bottom: 12px;
 }
-
 .container .info-box .control {
   padding: 10px 0px;
   margin: 10px 0px;
 }
-
 .container .info-box .control .amount {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .container .info-box .control .amount .amount-sub input {
   text-align: center;
   width: 50px;
   height: 40px;
   border: #d7d7d7 solid 1px;
 }
-
 .container .info-box .control .amount .amount-sub .btn {
   width: 40px;
   height: 40px;
   opacity: 0.5;
 }
-
 .container .info-box .control .amount .amount-sub .btn:hover {
   cursor: pointer;
   opacity: 0.7;
 }
-
 .container .info-box .control .amount .amount-sub .btn:active {
   opacity: 1;
 }
-
 .container .info-box .control .amount .amount-sub .minus {
   background: url(/../../../assets/NTrungData/minus.svg);
   background-color: #d7d7d7;
@@ -177,7 +139,6 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-
 .container .info-box .control .amount .amount-sub .plus {
   background: url(/../../../assets/NTrungData/plus.svg);
   background-color: #d7d7d7;
@@ -185,7 +146,6 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-
 .container .info-box .control .amount .btn-add {
   color: white;
   height: 40px;
@@ -196,16 +156,13 @@
   margin-left: 30px;
   padding-top: 5px;
 }
-
 .container .info-box .control .amount .btn-add:hover {
   cursor: pointer;
   background: #ea504c;
 }
-
 .container .info-box .control .amount .btn-add:active {
   background: #e83935;
 }
-
 .container .info-box .control .btn-cart {
   margin-top: 20px;
   padding-top: 5px;
@@ -216,34 +173,26 @@
   border-radius: 20px;
   width: 400px;
 }
-
 .container .info-box .control .btn-cart:hover {
   cursor: pointer;
   background: #5b9654;
 }
-
 .container .info-box .control .btn-cart:active {
   background: #51864b;
 }
-
 .container .info-box .hashtag {
   padding: 10px 0px 10px 35px;
   margin: 10px 0px;
 }
-
 .container .info-box .hashtag .tag {
   margin: 10px 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .container .info-box .hashtag .tag p {
   margin: 0;
   padding: 0;
   margin: 5px 0px 0px 10px;
 }
-
 .container .info-box .hashtag .tag .icon {
   width: 25px;
   height: 25px;
@@ -251,27 +200,20 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-
 .container .info-box .hashtag .tag .icon-1 {
   background: url(../../../../assets/NTrungData/delivery-truck.svg);
 }
-
 .container .info-box .hashtag .tag .icon-2 {
   background: url(../../../../assets/NTrungData/payment-method.svg);
 }
-
 .container .info-box .hashtag .tag .icon-3 {
   background: url(../../../../assets/NTrungData/history.svg);
 }
-
 .container .info-box .hashtag .tag:hover p {
   cursor: pointer;
   text-decoration: underline;
 }
-
 .container .info-box .hashtag .tag:hover .icon {
   cursor: pointer;
-  -webkit-transform: scale(120%);
-          transform: scale(120%);
-}
-/*# sourceMappingURL=product-info.component.css.map */
+  transform: scale(120%);
+}/*# sourceMappingURL=product-info.component.css.map */
