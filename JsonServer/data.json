@@ -1,4 +1,27 @@
 ﻿{
+    "voucher": [
+        {
+          "id": "vc20",
+          "discount": 20000
+        },
+        {
+          "id": "vc30",
+          "discount": 30000
+        },
+        {
+          "id": "vc40",
+          "discount": 40000
+        },
+        {
+          "id": "vc50",
+          "discount": 50000
+        },
+        {
+          "id": "vc60",
+          "discount": 60000
+        }
+      ],
+
     "blogID": [{
         "id": "BLOG001",
         "name": "BLOG001",

@@ -1,9 +1,4 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,WAAW,CAAA;EACP,OAAO,EAAE,iBAAiB;CAM7B;;AAPD,AAGI,WAHO,CAGP,MAAM,CAAA;EACF,UAAU,EAAE,MAAM;EAClB,aAAa,EAAE,IAAI;CACtB",
-    "sources": [
-        "product-related.component.scss"
-    ],
-    "names": [],
-    "file": "product-related.component.css"
-}
+
+
+{"version":3,"sources":["product-related.component.scss"],"names":[],"mappings":"AAAA;EACI,0BAAA;AACJ;AACI;EACI,kBAAA;EACA,mBAAA;AACR","file":"product-related.component.css"}
+
