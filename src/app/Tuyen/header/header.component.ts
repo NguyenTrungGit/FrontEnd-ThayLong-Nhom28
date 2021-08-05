@@ -80,7 +80,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-     this.cartService.cartItems.subscribe(data=>{
+    this.cartService.cartItems.subscribe(data=>{
       this.itemsCart=data;
     })
     this.cartService.cartItems.subscribe(data=>{
@@ -88,18 +88,16 @@ export class HeaderComponent implements OnInit {
         this.totalCart=this.getTotal();
 
     })
+
     this.getProducts();
-    this.nameFilterControl.pipe().subscribe(value=>{ this.nameFilter = value.trim().toLowerCase();
-      console.log(value);
-    }
-    );
+    this.getSearch();
 
   }
 
 
-  }clearListSearch(){
+  clearListSearch(){
     this.search=[];
-
+  }
   removeProduct(product:Product){
 this.cartService.removeProduct(product);
 
@@ -165,18 +163,7 @@ this.getSearch();
       logo.style.paddingBottom = '2px';
     }
   }
-  selectEvent(item:any) {
-    // do something with selected item
-  }
 
-  onChangeSearch(search: string) {
-    // fetch remote data from here
-    // And reassign the 'data' which is binded to 'data' property.
-  }
-
-  onFocused(e:any) {
-    // do something
-  }
   //filter
   getTotal():number{
     var total=0;
