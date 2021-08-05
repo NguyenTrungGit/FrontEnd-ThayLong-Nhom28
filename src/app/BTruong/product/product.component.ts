@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  public rangePrice = { maxprice: 0, minprice: 999999999 }
+  public rangePrice = { maxprice: 0, minprice: 99999999 }
 cate!:string|null;
   constructor(private actRoute: ActivatedRoute) { }
 

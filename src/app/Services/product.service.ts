@@ -90,19 +90,19 @@ export class ProductService {
   ) {
     let totalPages = Math.ceil(totalItems / pageSize);
     let startPage: number, endPage: number;
-    if (totalPages <= 10) {
+    if (totalPages <= 6) {
       startPage = 1;
       endPage = totalPages;
     } else {
-      if (currentPage <= 6) {
+      if (currentPage <= 3) {
         startPage = 1;
-        endPage = 10;
-      } else if (currentPage + 4 >= totalPages) {
-        startPage = totalPages - 9;
+        endPage = 6;
+      } else if (currentPage + 3 >= totalPages) {
+        startPage = totalPages - 5;
         endPage = totalPages;
       } else {
-        startPage = currentPage - 5;
-        endPage = currentPage + 4;
+        startPage = currentPage - 3;
+        endPage = currentPage + 2;
       }
     }
 

@@ -27,6 +27,7 @@ import { ShoppingCartService } from 'src/app/Services/shopping-cart.service';
 })
 export class HeaderComponent implements OnInit {
   i: any = -1;
+  totalCart:number=0;
   datas: Product[] = [];
   search: Product[] = [];
   itemsCart: Product[] = [];
@@ -79,23 +80,35 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.cartService.cartItems.subscribe((data) => {
-      this.itemsCart = data;
-    });
-    this.cartService.cartItems.subscribe((data) => {
-      this.numberItemInCart = data.length;
-    });
+     this.cartService.cartItems.subscribe(data=>{
+      this.itemsCart=data;
+    })
+    this.cartService.cartItems.subscribe(data=>{
+        this.numberItemInCart=data.length
+        this.totalCart=this.getTotal();
+
+    })
     this.getProducts();
-    this.getSearch();
+    this.nameFilterControl.pipe().subscribe(value=>{ this.nameFilter = value.trim().toLowerCase();
+      console.log(value);
+    }
+    );
+
+  }
 
 
   }clearListSearch(){
     this.search=[];
+
+  removeProduct(product:Product){
+this.cartService.removeProduct(product);
+
   }
   getProducts() {
     this.productService.getProducts().subscribe((res: any) => {
       this.datas = res;
     });
+
   }
   getSearch() {
     this.productService.getProducts().subscribe((res: any) => {
@@ -152,5 +165,24 @@ this.getSearch();
       logo.style.paddingBottom = '2px';
     }
   }
+  selectEvent(item:any) {
+    // do something with selected item
+  }
 
+  onChangeSearch(search: string) {
+    // fetch remote data from here
+    // And reassign the 'data' which is binded to 'data' property.
+  }
+
+  onFocused(e:any) {
+    // do something
+  }
+  //filter
+  getTotal():number{
+    var total=0;
+    for (let index = 0; index < this.itemsCart.length; index++) {
+      total+=this.itemsCart[index].price*this.itemsCart[index].quantity
+    }
+    return total;
+  }
 }

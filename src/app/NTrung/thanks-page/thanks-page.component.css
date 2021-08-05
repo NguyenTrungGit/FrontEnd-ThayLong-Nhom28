@@ -9,10 +9,8 @@
   background-size: 1400px;
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
-          box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
+  box-shadow: 0 2px 4px 0 #d3d3d3, 0 3px 10px 0 #d3d3d3;
 }
-
 .image .box {
   padding-top: 40px;
   text-align: center;
@@ -21,7 +19,6 @@
   float: right;
   margin-right: 170px;
 }
-
 .image .box .logo {
   margin: 10px auto;
   width: 100px;
@@ -31,24 +28,17 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-
 .image .box .content {
   margin: 0 auto;
   font-weight: bold;
   font-size: 18px;
 }
-
 .image .box .content .success {
   font-size: 25px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  justify-content: center;
   display: flex;
   margin-bottom: 30px;
 }
-
 .image .box .content .success .icon {
   background: url(/../../../assets/NTrungData/check.svg);
   background-size: 25px;
@@ -56,26 +46,17 @@
   height: 25px;
   margin-left: 5px;
 }
-
 .image .box .content .success2 {
   margin-bottom: 30px;
 }
-
 .image .box .controls {
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .image .box .controls .btn {
   font-size: 16px;
   color: #707070;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 220px;
   height: 45px;
@@ -84,20 +65,16 @@
   font-weight: bold;
   background-color: #d9d9d9;
 }
-
 .image .box .controls .btn:hover {
   cursor: pointer;
   background-color: white;
 }
-
 .image .box .controls .btn:active {
   color: white;
   background-color: #66a55f;
   border-color: #66a55f;
-  -webkit-transition: 0.5;
   transition: 0.5;
 }
-
 .image .box .controls .icon {
   width: 25.5px;
   height: 25.5px;
@@ -105,15 +82,12 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-
 .image .box .controls .icon1 {
   background: url(/../../../assets/NTrungData/back.svg);
   margin: 0px 7px 0px 7px;
 }
-
 .image .box .controls .icon2 {
   width: 31.5px;
   background: url(/../../../assets/NTrungData/cart.svg);
   margin: 0px 10px 0px 15px;
-}
-/*# sourceMappingURL=thanks-page.component.css.map */
+}/*# sourceMappingURL=thanks-page.component.css.map */

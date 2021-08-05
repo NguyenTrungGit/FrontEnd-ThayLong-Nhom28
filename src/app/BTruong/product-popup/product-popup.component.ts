@@ -15,13 +15,18 @@ product?:Product;
 
     this.product=data;
   }
-  quantity:string='x';
+  quantity:number=1;
   ngOnInit(): void {
   }
-  getValue(val:string){
+  getValue(element:any){
+    this.quantity=element.value;
+    if(this.quantity>99){
+      this.quantity=99;
+    }
+
   }
   addToCart(){
-      this.product!.quantity=1;
+      this.product!.quantity=Number(this.quantity);
       this.shoppingCartService.addToCart(this.product!)
 
     }

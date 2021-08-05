@@ -112,7 +112,7 @@
                                             <div><span class="quantity-item ">{{item.quantity}} </span></div>
                                         </div>
                                         <div class="remove-price">
-                                            <div class="mb-2 pb-2"><a href=" " class="remove "><i class="fas fa-times "></i></a></div>
+                                            <div class="mb-2 pb-2"><a (click)="removeProduct(item)" class="remove "><i class="fas fa-times "></i></a></div>
                                             <div class="price"><span></span>{{item.price}} </div>
                                         </div>
                                     </div>
@@ -120,7 +120,7 @@
                             </ng-template>
                             <div class="total-cartmini mb-3 ml-3 pt-2 ">
                                 <div href=" " class="title ">Tổng tiền:</div>
-                                <div class="total-number "><span>150.000</span></div>
+                                <div class="total-number "><span>{{totalCart}}</span></div>
                             </div>
                             <div class="text-center m-3 ">
                                 <button type="button " class="btn-checkout vvv ">THANH TOÁN</button>

@@ -1,4 +1,27 @@
 ﻿{
+    "voucher": [
+        {
+          "id": "vc20",
+          "discount": 20000
+        },
+        {
+          "id": "vc30",
+          "discount": 30000
+        },
+        {
+          "id": "vc40",
+          "discount": 40000
+        },
+        {
+          "id": "vc50",
+          "discount": 50000
+        },
+        {
+          "id": "vc60",
+          "discount": 60000
+        }
+      ],
+
     "blogID": [{
         "id": "BLOG001",
         "name": "BLOG001",
@@ -117,7 +140,7 @@
             "origin": "Việt Nam",
             "img1": "RAU001.jpg",
             "img2": "RAU002.jpg",
-            "img3": "RAU003.j",
+            "img3": "RAU003.jpg",
             "description": "Cải bẹ dún có chứa nhiều thành phần dinh dưỡng có lợi cho sức khỏe như vitamin C và nhiều nguyên tố vi lượng, có tác dụng làm mát gan, thanh lọc, giải nhiệt cơ thể khi nấu canh, cũng có thể dùng làm rau luộc, xào dầu….đều rất ngon."
         },
         {

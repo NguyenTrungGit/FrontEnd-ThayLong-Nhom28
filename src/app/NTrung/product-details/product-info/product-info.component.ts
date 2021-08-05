@@ -17,6 +17,19 @@ export class ProductInfoComponent implements OnInit {
   productInfo!:Product
   id:any;
 
+
+  
+    addToCart(element:any){
+    if(this.productInfo!==undefined){
+    this.productInfo.quantity=Number(element.value);
+    this.shoppingCartService.addToCart(this.productInfo)
+}
+
+}
+  up(element:any,product?:Product) {
+    element.value++;
+    this.updateQuantity(element)
+  }
   constructor(private shoppingCartService: ShoppingCartService, private productService: ProductService,) {}
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -27,21 +40,21 @@ export class ProductInfoComponent implements OnInit {
     this.id = this.idInput
     this.getProductById();
   }
-  addToCart() {
-    if (this.productInfo !== undefined) {
-      this.productInfo.quantity = this.amount;
-      this.shoppingCartService.addToCart(this.productInfo);
-    }
-  }
-  up() {
-    this.amount += 1;
+
+
+
+  down(element:any,product?:Product) {
+    if(Number(element.value)>=2)
+  element.value--;
+  this.updateQuantity(element)
   }
 
-  down() {
-    if (this.amount > 1) {
-      this.amount--;
+  updateQuantity(element:any){
+    var quantity=element.value;
+    if(!Number(quantity) ||Number(quantity)<0){
+      quantity="1";
     }
-  }
+    }
 
   getProductById() {
     // TODO: return a array, in array have 1 product has this.id and find product by id (Optimized)

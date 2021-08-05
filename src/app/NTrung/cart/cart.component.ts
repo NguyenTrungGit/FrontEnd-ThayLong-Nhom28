@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Product } from 'src/app/model/product.model';
-import { Voucher } from 'src/app/model/voucher.model';
+import { VoucherService } from 'src/app/Services/NTrung/voucher.service';
 import { ShoppingCartService } from 'src/app/Services/shopping-cart.service';
 
 @Component({
@@ -9,35 +10,69 @@ import { ShoppingCartService } from 'src/app/Services/shopping-cart.service';
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent implements OnInit {
-  amount: any = 1;
-  discount?: Voucher;
+  voucherGroup: FormGroup = this._fb.group({
+    voucherId: [null, [Validators.required, Validators.minLength(4)]],
+  });
+  discount: number = 0;
+  notifi: string = '';
 
-  listVoucher: Voucher[] = [
-    new Voucher('vc20000', '20000'),
-    new Voucher('vc30000', '30000'),
-    new Voucher('vc40000', '40000'),
-    new Voucher('vc50000', '50000'),
-  ];
-  constructor(private shoppingcartService: ShoppingCartService) {}
-  items:Product[] =[];
+  total: number = 0;
+  items: Product[] = [];
+
+  constructor(
+    private shoppingcartService: ShoppingCartService,
+    private voucherService: VoucherService,
+    private _fb: FormBuilder
+  ) {}
 
   ngOnInit(): void {
-    this.shoppingcartService.cartItems.subscribe(data=>{
-      this.items=data;
-    })
+    this.shoppingcartService.cartItems.subscribe((data) => {
+      this.items = data;
+    });
+    this.total = this.getTotal();
   }
-
-  up() {
-    this.amount += 1;
-  }
-
-  down() {
-    if (this.amount > 1) {
-      this.amount--;
+  updateQuantity(element: any, product: Product) {
+    var quantity = element.value;
+    if (!Number(quantity) || Number(quantity) < 0) {
+      quantity = '1';
     }
+    product.quantity = quantity;
+    this.shoppingcartService.updateCart(Number(quantity), product);
+    this.total = this.getTotal();
   }
 
-  enterVoucher(event: any) {
-    this.discount = this.listVoucher.find((n) => n.id === event.value);
+  up(element: any, product: Product) {
+    element.value++;
+    this.updateQuantity(element, product);
+  }
+
+  down(element: any, product: Product) {
+    if (Number(element.value) >= 2) element.value--;
+    this.updateQuantity(element, product);
+  }
+
+  getTotal(): number {
+    var total = 0;
+    for (let index = 0; index < this.items.length; index++) {
+      total += this.items[index].price * this.items[index].quantity;
+    }
+    return total;
+    ``;
+  }
+  removeProduct(product: Product) {
+    this.shoppingcartService.removeProduct(product);
+  }
+
+  applyVoucher() {
+    let id = this.voucherGroup.controls.voucherId.value;
+    this.voucherService.getVoucherById(id).subscribe((res: any) => {
+      if (res.find((n: any) => n.id === id)) {
+        this.discount = res.find((n: any) => n.id === id).discount;
+        this.notifi = '';
+      } else {
+        this.notifi = 'Nhập sai';
+        this.discount = 0;
+      }
+    });
   }
 }
