@@ -6,3 +6,21 @@
 .row-contai {
     font-family: 'Quicksand', sans-serif;
 }
+
+
+/* mobilel */
+
+@media screen and ( max-width: 46.1875em) {
+    .col-lg-3 {
+        display: none;
+    }
+}
+
+
+/* tablet */
+
+@media only screen and ( min-width: 46.25em) and ( max-width: 63.9375em) {
+    .tablet {
+        display: block;
+    }
+}

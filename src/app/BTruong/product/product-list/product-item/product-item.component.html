@@ -32,6 +32,7 @@
                         </a>
                     </div>
                 </div>
+
                 <div class="title-wrapper ">
                     <p style="margin-bottom: 5px; " class="name product-title "><a style="color: rgb(12, 12, 12) ; font-size: 16px; text-decoration: none;" href="#">{{productItem?.name |titlecase  }}</a></p>
                 </div>
@@ -39,6 +40,15 @@
                     <span class="price "><span style="color: #66A55F; font-size: 18px;font-weight: 500; "
                       class="woocommerce-Price-amount amount ">{{productItem?.price | number }}&nbsp;<span class="woocommerce-Price-currencySymbol ">&#8363;</span></span>
                     </span>
+                </div>
+                <div class="add-cart">
+                    <div class="title-cart">
+                        <p>Thêm vào giỏ</p>
+                    </div>
+                    <div class="icon-cart" style="color: #fff;">
+                        <a class="cart" (click)="addToCart()"><i class="far fa-shopping-cart "></i></a>
+
+                    </div>
                 </div>
             </div>
             <!-- box-text -->

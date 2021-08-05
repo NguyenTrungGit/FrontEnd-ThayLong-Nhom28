@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { Search } from '@syncfusion/ej2-angular-dropdowns';
 import { BlogContentComponent } from './BTruong/blog-content/blog-content.component';
 import { BlogComponent } from './BTruong/blog/blog.component';
 import { ContactComponent } from './BTruong/contact/contact.component';
@@ -8,6 +9,7 @@ import { CartComponent } from './NTrung/cart/cart.component';
 import { PayComponent } from './NTrung/pay/pay.component';
 import { ProductDetailsComponent } from './NTrung/product-details/product-details.component';
 import { HeaderComponent } from './Tuyen/header/header.component';
+import { SearchComponent } from './Tuyen/header/search/search.component';
 import { HomeComponent } from './Tuyen/home/home.component';
 import { IntroduceComponent } from './Tuyen/introduce/introduce.component';
 
@@ -16,6 +18,7 @@ const routes: Routes = [
   { path: 'trangchu', component: HeaderComponent },
   { path: 'cuahang/:cate', component: ProductComponent },
   { path: 'cuahang', component: ProductComponent },
+
   { path: 'gioithieu', component: IntroduceComponent },
   { path: 'lienhe', component: ContactComponent },
   { path: 'chiase', component: BlogComponent },
@@ -23,7 +26,8 @@ const routes: Routes = [
   { path: 'cuahang/:cate/chitiet/:id', component: ProductDetailsComponent },
   { path: 'pay', component: PayComponent },
   { path: '', component: HomeComponent },
-  {path:'chiase/chiasechitiet/:id',component: BlogContentComponent},
+  { path: 'chiase/chiasechitiet/:id', component: BlogContentComponent },
+  { path: 'search', component: SearchComponent }
 ];
 
 @NgModule({

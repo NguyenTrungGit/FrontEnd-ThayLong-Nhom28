@@ -37,53 +37,57 @@
                 <a class="nav-link" (click)="displaySearch()"><i class="far fa-search transform-search"></i></a>
                 <div class="dropdown-search">
                     <span class="box-triangle">
-                      <svg viewBox="0 0 20 9" role="presentation">
-                        <path d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z" fill="#ffffff"></path>
-                      </svg>
-                    </span>
+            <svg viewBox="0 0 20 9" role="presentation">
+              <path
+                d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z"
+                fill="#ffffff"></path>
+            </svg>
+          </span>
                     <div class="box-search">
                         <div class="title-search">TÌM KIẾM</div>
-                        <div class="ng-autocomplete">
-                            <ng-autocomplete [data]="datas" [searchKeyword]="keyword" placeholder="Tim kiếm sản phẩm..." (selected)='selectEvent($event)' (inputChanged)='onChangeSearch($event)' (inputFocused)='onFocused($event)' historyIdentifier="countries" [itemTemplate]="itemTemplate"
-                                [notFoundTemplate]="notFoundTemplate">
-                            </ng-autocomplete>
-                            <ng-template #itemTemplate let-item>
-                                <div class="row" routerLink='/cuahang/chitiet/{{item.category}}/{{item.id}}'>
 
-                                    <div class="row-left">
-                                        <div class=" name " [innerHTML]=" item.name | titlecase ">
-                                        </div>
-                                        <div class="price1 " [innerHTML]=" item.price | number "></div>
-                                    </div>
-                                    <div class="row-right ">
-                                        <img src=" ./assets/BTruong/image-mix/{{item.img1}} " alt=" ">
-                                    </div>
-
-                                </div>
-                            </ng-template>
-
-                            <ng-template #notFoundTemplate let-notFound>
-                                <div [innerHTML]="found "></div>
-                            </ng-template>
-                        </div>
                         <div class="site-search ">
+                            <div class="form-search ">
+
+                                <!-- <input (keyup)="toggleShow()" #box (keyup.enter)="goToSearch(box.value)" (keyup.enter)="onEnter(box.value)" [(ngModel)]="filtre" class="form-control" type="text" name="search" autocomplete="off" placeholder="Tim kiem"> -->
+                                <input (keyup)="toggleShow()" #box (keyup.enter)="goToSearch(box.value)" (keyup.enter)="onEnter(box.value)" [(ngModel)]="filtre" class="form-control" type="text" name="search" autocomplete="off" placeholder="Tim kiem">
+                            </div>
+                            <div *ngIf="isShown" class="resultsSearch ">
+                                <div id="your-data" [hidden]="visibleState" class="item-search " *ngFor="let item of search | filterList :filtre :filterMetadata :ishow : ishiden| slice:0:4">
+                                    <div>
+                                        <div class="title ">
+                                            <a title="Rau muống túi 500g " routerLink='/cuahang/{{item.category}}/chitiet/{{item.id}}' [innerText]="item.name|titlecase"></a>
+                                            <div class="price-item ">{{item.price| number}}</div>
+                                        </div>
+                                        <div class="thumb-search ">
+                                            <a href=" "><img src="/assets/BTruong/image-mix/{{item.img1}} " alt=" "></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div *ngIf="ishow" class="item-more p-2 " [routerLink]="['/search']" [queryParams]="{key: filtre}"><a>Xem thêm
+                                              {{filterMetadata.count}} sản phẩm</a></div>
+                                <div *ngIf="ishiden" class="item-more p-2 "><a>Không tìm thấy sản phẩm nào</a></div>
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="" type="button" data-toggle="modal" data-target="#popupModal"><i class="far fa-user "></i></a>
+                <a class="nav-link" href="" type="button" data-toggle="modal" data-target="#popupModal"><i
+            class="far fa-user "></i></a>
             </li>
             <li class="nav-item cart-home" (mouseover)="hideSearch() ">
                 <a class="nav-link " routerLink="/giohang"><i class="far fa-shopping-cart "></i></a>
                 <span class="quantity ">{{numberItemInCart}}</span>
                 <div class="block-minicart ">
                     <span class="box-triangle ">
-                    <svg viewBox="0 0 20 9 " role="presentation ">
-                      <path d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z
+            <svg viewBox="0 0 20 9 " role="presentation ">
+              <path d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z
                                             " fill="#ffffff "></path>
-                    </svg>
-                  </span>
+            </svg>
+          </span>
                     <div class="minicart-content ">
                         <!-- <div class="minicart-close ">
                       <button type="button " class="close pr-3 pl-3 pt-1 pb-1 "><span>×</span></button>
@@ -114,10 +118,6 @@
                                     </div>
                                 </div>
                             </ng-template>
-
-
-
-
                             <div class="total-cartmini mb-3 ml-3 pt-2 ">
                                 <div href=" " class="title ">Tổng tiền:</div>
                                 <div class="total-number "><span>150.000</span></div>

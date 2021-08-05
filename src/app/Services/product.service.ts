@@ -10,6 +10,7 @@ import * as _ from 'underscore';
   providedIn: 'root',
 })
 export class ProductService {
+  private keySearch='';
   private REST_API_SERVER = 'http://localhost:3000';
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
@@ -120,5 +121,20 @@ export class ProductService {
       endIndex: endIndex,
       pages: pages,
     };
+  }
+
+
+  public getProductsBySearch(
+   name:string
+  ): Observable<Product[]> {
+    const url = `${this.REST_API_SERVER}/product/?name_like=${name}` ;
+    console.log(name,"day ne");
+    return this.httpClient.get<Product[]>(url, this.httpOptions);
+  }
+  setKeySearch(keySearch:string){
+    this.keySearch=keySearch;
+  }
+  getKetSearch():string{
+    return this.keySearch;
   }
 }

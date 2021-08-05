@@ -1,13 +1,10 @@
-<link
-  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-  rel="stylesheet"
-/>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
 <div class="container-product">
-  <div class="sort">
-    <p class="display" style="margin-right: 20px">
-      Hiển thị 1&ndash;12 kết quả
-    </p>
-    <select class="sort-sub" id="sort-by" (change)="sort($event)">
+    <div class="sort">
+        <p class="display" style="margin-right: 20px">
+            Hiển thị 1&ndash;12 kết quả
+        </p>
+        <select class="sort-sub" id="sort-by" (change)="sort($event)">
       <option value="" selected disabled hidden>Thứ tự mặc định</option>
       <option value="">Thứ tự mặc định</option>
       <option value="Name-a">Thứ tự theo tên: A-Z</option>
@@ -15,27 +12,21 @@
       <option value="Low">Thứ tự theo giá: thấp đến cao</option>
       <option value="High">Thứ tự theo giá: cao đến thấp</option>
     </select>
-  </div>
-  <div class="row">
-    <div class="col-md-3" *ngFor="let product of datas">
-      <app-product-item [productItem]="product"></app-product-item>
     </div>
-  </div>
+    <div class="row">
+        <div class="col-md-3" *ngFor="let product of datas">
+            <app-product-item [productItem]="product"></app-product-item>
+        </div>
+    </div>
 
-  <div class="paging-wrapper">
-    <ul *ngIf="pager.pages && pager.pages.length">
-      <li
-        (click)="setPage(pager.currentPage - 1)"
-        [ngClass]="{ 'disabled': pager.currentPage == 1 }"
-      >
-        <a href="javascript: void(0)"><<</a>
-      </li>
-      <li *ngFor="let page of pager.pages">
-        <a
-          href="javascript: void(0)"
-          (click)="setPage(page)"
-          [ngClass]="{ 'active': pager.currentPage === page }"
-          >{{ page }}</a
+    <div class="paging-wrapper">
+        <ul *ngIf="pager.pages && pager.pages.length">
+            <li (click)="setPage(pager.currentPage - 1)" [ngClass]="{ 'disabled': pager.currentPage == 1 }">
+                <a href="javascript: void(0)">
+                    <<</a>
+            </li>
+            <li *ngFor="let page of pager.pages">
+                <a href="javascript: void(0)" (click)="setPage(page)" [ngClass]="{ 'active': pager.currentPage === page }">{{ page }}</a
         >
       </li>
       <li [ngClass]="{ disabled: pager.currentPage === pager.totalPages }">
@@ -46,5 +37,3 @@
     </ul>
   </div>
 </div>
-
-
