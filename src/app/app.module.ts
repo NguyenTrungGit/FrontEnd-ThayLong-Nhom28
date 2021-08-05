@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { NgSelectModule } from '@ng-select/ng-select';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -61,6 +64,9 @@ import { CommentItemComponent } from './NTrung/product-details/product-more/comm
 
 import { BlogContentComponent } from './BTruong/blog-content/blog-content.component';
 import { BlogContentDetailsComponent } from './BTruong/blog-content/blog-content-details/blog-content-details.component';
+import { SearcgfilterPipe } from './searcgfilter.pipe';
+import { SearchComponent } from './Tuyen/header/search/search.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -109,7 +115,10 @@ import { BlogContentDetailsComponent } from './BTruong/blog-content/blog-content
     CommentItemComponent,
     BlogContentComponent,
     BlogContentDetailsComponent,
-    CommentDialogComponent
+    CommentDialogComponent,
+    SearcgfilterPipe,
+    SearchComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -123,7 +132,9 @@ import { BlogContentDetailsComponent } from './BTruong/blog-content/blog-content
     NgxSliderModule,
     AutocompleteLibModule,
     ScrollingModule,
-    CarouselModule
+    CarouselModule,
+    Ng2SearchPipeModule,
+    NgSelectModule
 
   ],
   bootstrap: [AppComponent],

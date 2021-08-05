@@ -5,12 +5,12 @@
         width: 100%;
         font-family: 'Quicksand', sans-serif;
     }
-
+    
     .title-page {
         height: 380px;
         position: relative;
     }
-
+    
     .title-pr {
         position: absolute;
         left: 50%;
@@ -19,49 +19,49 @@
         letter-spacing: 1px;
         align-items: center;
     }
-
+    
     .bread-crumb {
         position: absolute;
         top: 112px;
         left: 609px;
     }
-
+    
     a {
         margin-right: 20px;
         color: #fff;
     }
-
+    
     span {
         margin-right: 20px;
         color: #fff;
     }
-
+    
     .page-title-inner {
         display: flex;
         justify-content: space-between;
         margin-left: 85px;
         font-family: 'Quicksand', sans-serif;
     }
-
+    
     .woocommerce-breadcrumb {
         color: black;
     }
-
+    
     .flex-col {
         display: flex;
     }
-
+    
     .shop-page-title {
         margin-top: 50px;
     }
-
+    
     .content {
         display: flex;
         justify-items: center;
         justify-content: center;
         font-family: 'Quicksand', sans-serif;
     }
-
+    
     .content h2 {
         width: 800px;
         position: absolute;
@@ -72,19 +72,19 @@
         font-size: 3rem;
         letter-spacing: 7px;
     }
-
+    
     .content h2:nth-child(1) {
         height: 120px;
         margin-top: 60px;
     }
-
+    
     .content h2:nth-child(2) {
         height: 120px;
         margin-top: 60px;
         color: #FFF;
         animation: animate 4s linear infinite;
     }
-
+    
     .content p {
         color: #fff;
         text-transform: uppercase;
@@ -102,11 +102,11 @@
             clip-path: polygon(0 100%, 0 12%, 7% 17%, 12% 19%, 17% 19%, 27% 19%, 31% 19%, 37% 18%, 46% 15%, 50% 12%, 57% 10%, 63% 6%, 70% 5%, 77% 3%, 84% 4%, 90% 5%, 95% 7%, 99% 10%, 100% 100%);
         }
     } */
-
+    
     .text-center {
         height: 340px;
     }
-
+    
     .text-title {
         position: relative;
         height: 40px;
@@ -114,33 +114,78 @@
         font-size: 14px;
         font-family: 'Quicksand', sans-serif;
     }
-
+    
     .text-title-sub {
         position: absolute;
         top: 9px;
         left: 233px;
         display: flex;
     }
-
+    
     .text-title span {
         margin-left: 20px;
         color: #d3d3d3;
     }
-
+    
     .p1 {
         color: #212529;
         cursor: pointer;
     }
-
+    
     .p1:hover {
         color: #66a55f;
     }
-
+    
     .p2 {
         color: #212529;
         cursor: pointer;
     }
-
+    
     .p2:hover {
         color: #66a55f;
+    }
+    
+    .loc {
+        display: none;
+    }
+    /* mobilel */
+    
+    @media screen and ( max-width: 46.1875em) {
+        .header9 {
+            height: 9.0625em;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .text-title {
+            font-size: 1em;
+        }
+        .text-title .text-title-sub {
+            position: absolute;
+            top: 0.5625em;
+            left: 0.75em;
+            display: flex;
+        }
+        .text-center {
+            height: 6.5625em;
+            background-size: contain;
+        }
+        .loc {
+            display: block;
+        }
+        .loc .contair-loc {
+            margin: 1em;
+            display: flex;
+            font-size: 1.5em;
+            justify-content: center;
+            align-items: center;
+        }
+        .loc .contair-loc .title-loc {
+            margin-left: 0.5em;
+        }
+    }
+    /* tablet */
+    
+    @media only screen and ( min-width: 46.25em) and ( max-width: 63.9375em) {
+        .tablet {
+            display: block;
+        }
     }
