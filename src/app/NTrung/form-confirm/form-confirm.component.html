@@ -1,0 +1,132 @@
+<section class="section section__container">
+    <div class="section__title">Thông tin thanh toán</div>
+
+    <div class="confirm__wrapper">
+        <form  [formGroup]="billForm">
+            <div class="input__group">
+                <!-- name -->
+                <div>
+                    <input type="text" placeholder="Họ và tên" required  formControlName="fristName"  [ngClass]="{'form-control': true,'is-valid': billForm.controls.fristName.valid,'is-invalid':!billForm.controls.fristName.valid && billForm.controls.fristName.touched }">
+                    <ng-container >
+                        <div *ngIf=" billForm.controls.fristName.errors?.required && billForm.controls.fristName.touched " class="invalid-feedback">
+                        Không để trống
+                        </div>
+                        <div *ngIf=" billForm.controls.fristName.errors?.minlength && billForm.controls.fristName.touched"class="invalid-feedback">
+                        Ít nhất 2 kí tự
+                        </div>
+                    </ng-container>
+                </div>
+                
+                <!-- phone num -->
+                <div>
+                    <input type="text" placeholder="Số điện thoại" required  formControlName="phoneNum" [ngClass]="{'form-control': true,'is-valid': billForm.controls.phoneNum.valid,'is-invalid':!billForm.controls.phoneNum.valid && billForm.controls.phoneNum.touched}">
+                    <ng-container>
+                        <div *ngIf=" billForm.controls.phoneNum.errors?.required && billForm.controls.phoneNum.touched " class="invalid-feedback">
+                        Không để trống
+                        </div>
+                        <div *ngIf=" billForm.controls.phoneNum.errors?.pattern && billForm.controls.phoneNum.touched" class="invalid-feedback" >
+                        Ví dụ: 0123456789 / 8412345678
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+
+            <!-- email -->
+            <div class="input__single">
+                <input type="email" placeholder="Email" required formControlName="email" [ngClass]="{'w100':true,'form-control': true,'is-valid': billForm.controls.email.valid, 'is-invalid':!billForm.controls.email.valid && billForm.controls.email.touched}">
+                <ng-container>
+                    <div *ngIf="billForm.controls.email.errors?.required && billForm.controls.email.touched " class="invalid-feedback" >
+                        Không để trống
+                    </div>
+                    <div *ngIf="billForm.controls.email.errors?.pattern && billForm.controls.email.touched" class="invalid-feedback" >
+                        Ví dụ: khachhang@gmail.com
+                    </div>
+                </ng-container>
+            </div>
+
+            <div class="input__group">
+                <!-- country -->
+                <div>
+                    <select formControlName="country" required  [ngClass]="{'custom-select': true, 'is-valid': billForm.controls.country.valid,'is-invalid':!billForm.controls.country.valid && billForm.controls.country.touched}" (change)="onSelectCountry($event.target)" [ngModel]="selectedCountry.id">
+                        <option value="0">-- Tỉnh / Thành phố --</option>
+                        <option *ngFor="let country of countries?.countries" value="{{ country.id }}" >
+                            {{ country.name }}
+                        </option>
+                    </select>
+                    <ng-container >
+                        <div *ngIf=" billForm.controls.country.errors?.required && billForm.controls.country.touched " class="invalid-feedback" >
+                            Mời chọn Tỉnh / Thành phố
+                        </div>
+                    </ng-container>
+                </div>
+                
+                <!-- state -->
+                <div>
+                    <select  formControlName="state" required [ngClass]="{'custom-select': true,'is-valid': billForm.controls.state.valid, 'is-invalid': !billForm.controls.state.valid && billForm.controls.state.touched  }" [ngModel]="selectedState.id" (change)="onSelectDistrict($event.target)">
+                        <option value="0">-- Quận / Huyện --</option>
+                        <option *ngFor="let state of states" value="{{ state.id }}">
+                            {{ state.name }}
+                        </option>
+                    </select>
+                    <ng-container >
+                        <div *ngIf=" billForm.controls.state.errors?.required && billForm.controls.state.touched" class="invalid-feedback" >
+                            Mời chọn Quận/Huyện
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+            
+            <div class="input__group">
+                <div>
+                    <select  formControlName="district" required  [ngClass]="{'custom-select': true,'is-valid': billForm.controls.district.valid,'is-invalid': !billForm.controls.district.valid && billForm.controls.district.touched }"[ngModel]="selectedDistrict.id">
+                        <option value="0">-- Phường/Xã --</option>
+                        <option *ngFor="let district of districts" value="{{ district.id }}">
+                          {{ district.name }}
+                        </option>
+                    </select>
+                    <ng-container >
+                        <div *ngIf=" billForm.controls.district.errors?.required && billForm.controls.district.touched " class="invalid-feedback" >
+                             Mời chọn Phường/Xã
+                        </div>
+                    </ng-container>
+                </div>
+                
+                <div>
+                    <input type="text" class="form-control" placeholder="Địa chỉ" required   formControlName="address" [ngClass]="{'form-control': true,'is-valid': billForm.controls.address.valid,'is-invalid':!billForm.controls.address.valid && billForm.controls.address.touched }">
+                    <ng-container >
+                        <div *ngIf=" billForm.controls.address.errors?.required && billForm.controls.address.touched" class="invalid-feedback" >
+                            Không để trống
+                        </div>
+                        <div *ngIf=" billForm.controls.address.errors?.minlength && billForm.controls.address.touched " class="invalid-feedback" >
+                            Quá ngắn
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+
+           <div class="input__single">
+            <textarea class="form-control" placeholder="Yêu cầu khác (Không bắt buộc)"></textarea>
+           </div>
+
+            <div class="check__dilivery">
+                <div>
+                    <input class="input__check" type="radio" id="radio1" name="radio" value="option1" checked>
+                    <label for="radio1">Giao hàng tận nơi (miễn phí)</label>
+                </div>
+
+                <div>
+                    <input class="input__check" type="radio" id="radio2" name="radio" value="option2">
+                    <label for="radio2">Nhận hàng tại siêu thị</label>
+                </div>
+            </div>
+
+            <div class="controls__wrapper">
+                <div class="button button__medium button__green">
+                    Quay Lại
+                </div>
+
+                <input type="submit" class="button__submit button button__medium button__red" value="Xác nhận" [disabled]="billForm.invalid">
+            </div>
+        </form>
+    </div>
+</section>
