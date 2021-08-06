@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'gioithieu', component: IntroduceComponent },
   { path: 'lienhe', component: ContactComponent },
   { path: 'chiase', component: BlogComponent },
-  { path: 'giohang', component: CartComponent },
+  { path: 'giohang', component:CartComponent },
   { path: 'cuahang/:cate/chitiet/:id', component: ProductDetailsComponent },
   { path: 'pay', component: PayComponent },
   { path: '', component: HomeComponent },

@@ -18,6 +18,7 @@ export class CartComponent implements OnInit {
 
   total: number = 0;
   items: Product[] = [];
+  diliveryPrice:number = 20000;
 
   constructor(
     private shoppingcartService: ShoppingCartService,
