@@ -4,7 +4,7 @@
     margin-top: 77px;
     margin-bottom: 70px;
     border: 1px solid #e4e4e4;
-    width: 90%;
+    /* width: 90%; */
     border-radius: 5px 5px 0px 0px;
 }
 
@@ -125,7 +125,7 @@
     margin-top: 77px;
     /* border: 1px solid #e4e4e4; */
     order: 1px solid #e4e4e4;
-    width: 90%;
+    /* width: 90%; */
     margin-bottom: 100px;
 }
 
@@ -162,4 +162,131 @@
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+
+/* mobilel */
+
+@media screen and ( max-width: 46.1875em) {
+    .blog-content {
+        width: 100%;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    .image img {
+        height: 23.125em;
+    }
+    .titl .p1 {
+        line-height: 1.5em;
+        margin-bottom: 0;
+        padding: 1em 0.5em 0;
+    }
+    .cont {
+        text-align: justify;
+        padding: 20px 0.5em 80px;
+    }
+    .cont p {
+        margin: 0 0 0.75em;
+        line-height: 1.5em;
+        font-size: 1.0625em;
+    }
+    .related-author {
+        display: none;
+    }
+    .name-author {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 0.6em;
+    }
+    .name-author p {
+        font-size: 0.6em;
+    }
+    .infor-author .image-author {
+        margin-right: 0.6em;
+    }
+    .infor-author .image-author img {
+        width: 5em;
+        height: 5em;
+    }
+    .blog-comment {
+        width: 100%;
+    }
+    .form-row {
+        display: contents;
+        margin-right: 0%;
+        width: 100%;
+    }
+    .form-row .col {
+        padding-right: 0;
+        padding-left: 0;
+        width: 100%;
+        padding-bottom: 1em;
+    }
+    .btn {
+        padding: 0;
+    }
+    .button {
+        margin-top: 0;
+        width: 100%;
+    }
+}
+
+
+/* tablet */
+
+@media only screen and ( min-width: 46.25em) and ( max-width: 63.9375em) {
+    .blog-content {
+        width: 100%;
+    }
+    .image img {
+        height: 28.125em;
+    }
+    .titl .p1 {
+        line-height: 1.5em;
+        margin-bottom: 0;
+        padding: 1em 1em 0;
+    }
+    .cont {
+        text-align: justify;
+        padding: 20px 1em 80px;
+    }
+    .cont p {
+        margin: 0 0 0.75em;
+        line-height: 1.5em;
+        font-size: 1.0625em;
+        text-align: justify;
+    }
+    .related-author {
+        display: none;
+    }
+    .name-author {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .infor-author .image-author {
+        margin-right: 0.5em;
+    }
+    .infor-author .image-author img {
+        width: 5em;
+        height: 5em;
+    }
+    .blog-comment {
+        width: 100%;
+    }
+    .form-row {
+        display: contents;
+        margin-right: 0%;
+        width: 100%;
+    }
+    .form-row .col {
+        padding-right: 0;
+        padding-left: 0;
+        width: 100%;
+        padding-bottom: 1em;
+    }
+    .button {
+        margin-top: 0;
+    }
 }

@@ -19,3 +19,26 @@
     margin-right: 50px;
     margin-bottom: 50px;
 }
+
+
+/* mobilel */
+
+@media screen and ( max-width: 46.1875em) {
+    .row {
+        margin-right: 0;
+    }
+    .col-md-4 {
+        display: inline;
+        margin-top: 0;
+        padding-right: 0;
+    }
+}
+
+
+/* tablet */
+
+@media only screen and ( min-width: 46.25em) and ( max-width: 63.9375em) {
+    .row {
+        margin-right: 0;
+    }
+}

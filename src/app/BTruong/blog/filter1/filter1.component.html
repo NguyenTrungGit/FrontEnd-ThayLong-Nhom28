@@ -1,27 +1,41 @@
+<div class="dropdown" (click)="toglle()">
+    <a class="dropdown-toggle">
+  Danh Sách Bài Viết
+
+
+  </a>
+
+    <div *ngIf="ishow" class="drop-list">
+        <ul class="product_list_widget" *ngFor="let item of blog">
+            <li class="product-hv" routerLink='/chiase/chiasechitiet/{{item.id}}'>
+                <div class="flex">
+                    <a style="padding: 11px 0px opx 15px;">
+                        <img width="50" height="50" src="./assets/BTruong/image-mix/{{ item.imageBl}}" alt="" style="border-radius: 50%;">
+                    </a>
+                    <div class="flex-sub ">
+                        <p class="product-title ">{{item.title}}</p>
+
+                    </div>
+                </div>
+
+            </li>
+
+        </ul>
+    </div>
+</div>
 <div class="fil">
-    <!-- <div class="search">
-
-        <div class="form">
-
-            <input style="width: 218px;" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button style="background-color: #66A55F; color: #fff;" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-
-        </div>
-
-    </div> -->
-
     <div class="col4 large-3">
         <aside id="woocommerce_products-3" class="widget woocommerce widget_products">
             <div class="is-divider small">
                 <span class="widget-title shop-sidebar" style="font-size: 18px;color: #fff;margin: 0 auto;">DANH SÁCH BÀI VIẾT</span>
             </div>
             <ul class="product_list_widget" *ngFor="let item of blog">
-                <li class="product-hv" routerLink='/chiase/chiasechitiet/{{item.id}}' style="height: 70px; background-color:#fff ;border-left: 1px solid #e4e4e4 ; border-right: 1px solid #e4e4e4 ; border-bottom: 1px solid #e4e4e4 ; ">
+                <li class="product-hv" routerLink='/chiase/chiasechitiet/{{item.id}}'>
                     <div class="flex">
                         <a href="# " style="padding: 11px 0px opx 15px;">
                             <img width="50" height="50" src="./assets/BTruong/image-mix/{{ item.imageBl}}" alt="" style="border-radius: 50%;">
                         </a>
-                        <div class="flex-sub " style="margin-left: 20px;font-size: 16px; ">
+                        <div class="flex-sub ">
                             <p class="product-title ">{{item.title}}</p>
 
                         </div>

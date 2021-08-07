@@ -5,6 +5,10 @@
     justify-content: center;
 }
 
+.contact-title {
+    display: none;
+}
+
 .form-container-item {
     padding-bottom: 20px;
 }
@@ -32,7 +36,7 @@ p .map {
     margin-top: 70px;
 } */
 
-.button {
+.button-1 {
     background-color: #66A55F;
     border: none;
     color: white;
@@ -88,8 +92,94 @@ p .map {
     margin-top: 30px;
 }
 
-.btn {
+.btn-1 {
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+
+/* mobilel */
+
+@media screen and ( max-width: 46.1875em) {
+    .main {
+        display: block;
+        font-family: 'Quicksand', sans-serif;
+        margin: 1em !important;
+    }
+    .map iframe {
+        max-width: 100%;
+        width: 100%;
+    }
+    .form {
+        margin-top: 2em;
+        margin-bottom: 2 em;
+    }
+    .form_lien_he {
+        width: 100%;
+        border-radius: 0.3125em;
+    }
+    .contact-title {
+        display: block;
+        font-size: 1.25em;
+        font-family: 'Quicksand';
+        margin: 0 0 2em;
+    }
+    .button-1 {
+        width: 100%;
+        color: #fff;
+        letter-spacing: 0.0625em;
+        background-color: #66A55F;
+        border: none;
+        color: white;
+        padding: 0;
+        cursor: pointer;
+        border-radius: 0.3125em;
+        height: 2.5em;
+        margin-top: 0;
+    }
+}
+
+
+/* tablet */
+
+@media only screen and ( min-width: 46.25em) and ( max-width: 64em) {
+    .main {
+        display: block;
+        font-family: 'Quicksand', sans-serif;
+        margin: 1em !important;
+    }
+    .map iframe {
+        max-width: 100%;
+        width: 96%;
+        height: 37.5em
+    }
+    .form {
+        margin-top: 2em;
+        margin-bottom: 2 em;
+        padding: 1em;
+    }
+    .form_lien_he {
+        width: 100%;
+        border-radius: 0.3125em;
+    }
+    .contact-title {
+        display: block;
+        font-size: 1.25em;
+        font-family: 'Quicksand';
+        margin: 0 0 2em;
+    }
+    .button-1 {
+        width: 25%;
+        color: #fff;
+        letter-spacing: 0.0625em;
+        background-color: #66A55F;
+        border: none;
+        color: white;
+        padding: 0;
+        cursor: pointer;
+        border-radius: 0.3125em;
+        height: 2.5em;
+        margin-top: 0;
+    }
 }

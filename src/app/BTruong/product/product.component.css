@@ -20,7 +20,25 @@
 /* tablet */
 
 @media only screen and ( min-width: 46.25em) and ( max-width: 63.9375em) {
-    .tablet {
-        display: block;
+    .row-contai {
+        font-family: 'Quicksand', sans-serif;
+        width: 100%;
+        justify-content: flex-end;
+    }
+    .col-lg-3 {
+        max-width: 25%;
+    }
+    .col-lg-9 {
+        max-width: 75%;
+    }
+}
+
+
+/* tablet pro */
+
+@media only screen and ( min-width: 64em) and ( max-width: 81.25em) {
+    .col-lg-3 {
+        display: flex;
+        justify-content: center;
     }
 }

@@ -180,7 +180,7 @@ cart .product-small:hover .icon-hover x.icon {
 
 @media screen and ( max-width: 46.1875em) {
     .product-small {
-        height: 18.75em;
+        height: 17.75em;
     }
     .icon-hover {
         display: none;
@@ -209,7 +209,7 @@ cart .product-small:hover .icon-hover x.icon {
         margin-top: 0.625em;
     }
     .box-image {
-        height: 180px;
+        height: 10.25em;
     }
 }
 
@@ -217,7 +217,69 @@ cart .product-small:hover .icon-hover x.icon {
 /* tablet */
 
 @media only screen and ( min-width: 46.25em) and ( max-width: 63.9375em) {
-    .tablet {
+    .product-small {
+        height: 17.75em;
+    }
+    .icon-hover {
+        display: none;
+    }
+    .add-cart {
         display: block;
+        height: 37px;
+        border-radius: 0 0 10px 10px;
+        background-color: #66a55f;
+        color: #fff;
+        position: absolute;
+        top: 4.4375em;
+        width: 100%;
+        left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .add-cart .title-cart {
+        /* //  margin: 4% 5% 3% 15%; */
+        height: 1.25em;
+    }
+    .title-wrapper p {
+        margin-top: 0.625em;
+    }
+    .box-image {
+        height: 10.25em;
+    }
+}
+
+@media only screen and ( min-width: 64em) and ( max-width: 81.25em) {
+    .product-small {
+        height: 17.75em;
+    }
+    .icon-hover {
+        display: none;
+    }
+    .add-cart {
+        display: block;
+        height: 37px;
+        border-radius: 0 0 10px 10px;
+        background-color: #66a55f;
+        color: #fff;
+        position: absolute;
+        top: 4.4375em;
+        width: 100%;
+        left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .add-cart .title-cart {
+        /* //  margin: 4% 5% 3% 15%; */
+        height: 1.25em;
+    }
+    .title-wrapper p {
+        margin-top: 0.625em;
+    }
+    .box-image {
+        height: 10.25em;
     }
 }
