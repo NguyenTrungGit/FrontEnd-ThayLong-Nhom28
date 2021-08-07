@@ -1,0 +1,196 @@
+/* ==================== GOOGLE FONT ==================== */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+/* ==================== MNI RESET CSS ==================== */
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+/* Reuse CSS */
+.button__medium {
+  width: 150px;
+  height: 40px;
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.button__green {
+  background-color: hsl(114, 28%, 51%);
+}
+
+.button__green:hover {
+  background-color: hsl(114, 33%, 56%);
+}
+
+.button__green:active {
+  background-color: hsl(114, 28%, 46%);
+}
+
+.controls__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.controls__amount {
+  display: flex;
+}
+
+.button__small {
+  width: 30px;
+  height: 30px;
+  background-color: hsl(0, 0%, 98%);
+}
+
+.button__plus {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.button__minus {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.button__small:hover {
+  background-color: hsl(0, 0%, 88%);
+}
+
+.button__small:active {
+  background-color: hsl(0, 0%, 93%);
+}
+
+.input__small {
+  width: 40px;
+  height: 30px;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+/* Image */
+.img__wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.input__group{
+  display: flex;
+  gap: 0.75rem;
+}
+
+.img__list {
+  display: none;
+}
+
+.img__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid rgba(0, 0, 0, 0.05);
+  width: 96px;
+  height: 48px;
+  border-radius: 5px;
+}
+
+.img__main {
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.05);
+}
+
+.img__sub {
+  width: 32px;
+  height: 32px;
+}
+
+/* Quick info */
+.quick__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.quick__wrapper,
+.img__wrapper {
+  max-width: 350px;
+  margin: auto;
+}
+
+.quick__name {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.quick__price {
+  color: hsl(114, 28%, 51%);
+  font-weight: 500;
+}
+
+.quick__button {
+  width: 100%;
+  margin: auto;
+}
+
+.quick__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.quick__item {
+  display: flex;
+}
+
+.quick__title {
+  width: 120px;
+}
+
+.quick__content {
+  font-weight: 300;
+}
+
+.quick__icon {
+  margin-right: 0.25rem;
+}
+
+.icon__star {
+  color: hsl(34, 100%, 65%);
+}
+
+.icon__check {
+  color: hsl(214, 78%, 58%);
+}
+
+@media screen and (min-width: 768px) {
+  .info__container {
+    display: flex;
+  }
+
+  .img__list {
+    display: flex;
+    gap: 31px;
+  }
+
+  .quick__wrapper{
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+}
