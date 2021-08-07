@@ -23,10 +23,9 @@ export class Filter1Component implements OnInit {
 
     });
   }
-  // getBlogID() {
-  //   this.productService.getBlogID().subscribe((res: any) => {
-  //     this.blogID = res;
+  ishow:boolean=false;
+  toglle(){
+    this.ishow=!this.ishow;
+  }
 
-  //   });
-  //}
 }

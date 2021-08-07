@@ -1,7 +1,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
     .header9 {
-        height: 380px;
+        height: 25.625em;
         width: 100%;
         font-family: 'Quicksand', sans-serif;
     }
@@ -185,7 +185,20 @@
     /* tablet */
     
     @media only screen and ( min-width: 46.25em) and ( max-width: 63.9375em) {
-        .tablet {
-            display: block;
+        .header9 {
+            height: 14.0625em;
+        }
+        .text-center {
+            background-size: contain !important;
+            height: 11.3em;
+        }
+        .text-title {
+            font-size: 1em;
+        }
+        .text-title .text-title-sub {
+            position: absolute;
+            top: 0.7em;
+            left: 2em;
+            display: flex;
         }
     }
