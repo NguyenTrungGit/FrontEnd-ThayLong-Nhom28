@@ -28,6 +28,22 @@ export class ProductService {
     const url = `${this.REST_API_SERVER}/product?category=${category}`;
     return this.httpClient.get<Product[]>(url, this.httpOptions);
   }
+  //get product with page
+  public getProductsNomal(
+    page: number
+  ): Observable<Product[]> {
+    console.log("service báo: trang "+page)
+    const url = `${this.REST_API_SERVER}/product?_limit=12&_page=${page}`;
+    return this.httpClient.get<Product[]>(url, this.httpOptions);
+  }
+//get product with category and page
+  public getProductsByCategoryNomal(
+    category: string,
+    page: number
+  ): Observable<Product[]> {
+    const url = `${this.REST_API_SERVER}/product?category=${category}&_limit=12&_page=${page}`;
+    return this.httpClient.get<Product[]>(url, this.httpOptions);
+  }
   public getProductsByPrice(
     minPrice: number,
     maxPrice: number,

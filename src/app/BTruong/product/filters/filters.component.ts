@@ -2,7 +2,7 @@ import { AfterViewInit, Component, EventEmitter, Input, OnChanges, OnInit, Outpu
 import { Options, LabelType } from '@angular-slider/ngx-slider';
 import { ProductService } from 'src/app/Services/product.service';
 import { Product } from 'src/app/model/product.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Category } from 'src/app/model/category.model';
 
 
@@ -39,20 +39,19 @@ export class FiltersComponent implements OnInit{
   };
   selectedItemId:any;
 
-  constructor(private productService: ProductService,private actRoute: ActivatedRoute) {
+  constructor(private productService: ProductService,private actRoute: ActivatedRoute,private router:Router) {
   }
 
- 
+
   sendParent(){
-    this.messageEvent.emit({min: this.minPrice+'',max:this.maxPrice+''});
-    console.log("vao filter child")
+     this.messageEvent.emit({min: this.minPrice+'',max:this.maxPrice+''});
+    this.router.navigate([], {  queryParams: {  min:this.minPrice,max:this.maxPrice} });
     // this.messageEvent.emit(this.maxPrice);
 
   }
   getCategorys() {
     this.productService.getCategorys().subscribe((res: any) => {
       this.categorys = res;
-
     });
   }
   update(){

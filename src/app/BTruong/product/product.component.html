@@ -3,7 +3,7 @@
 <div class="row-contai">
     <div class="col-lg-3">
         <app-filters (messageEvent)="filterPrice($event)"></app-filters>
-
+        <app-filters></app-filters>
     </div>
     <div class="col-lg-9">
         <app-product-list [categoryName]="cate" [rangePrice]="rangePrice"></app-product-list>
