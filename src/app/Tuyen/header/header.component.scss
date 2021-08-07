@@ -31,7 +31,7 @@
 .navbar .navbar-nav .nav-link {
     text-transform: uppercase;
     font-weight: bold;
-    color: #000000;
+    color: inherit;
     font-size: 16px;
     position: relative;
 }
@@ -41,33 +41,81 @@
     padding-left: 0;
 }
 
-.navbar .navbar-nav .nav-link:hover {
-    cursor: pointer;
-    color: #66a55f;
+.navbar .navbar-nav .nav-item:hover .dropdown-icon {
+    -webkit-transform: rotate( 180deg);
+    transform: rotate( 180deg);
 }
 
 .navbar .navbar-nav .nav-link:hover .transform-search {
     transform: rotate(-5deg);
 }
 
-.nav-item {
+.nav-item-cuahang:hover .category {
+    display: block;
+}
+
+// .nav-item .item-category:hover .nav-left .nav-item .nav-link {
+//     border-bottom: 2px solid #000000;
+//     transition: width 1s;
+// }
+.nav-item-cuahang {
     font-size: 18px;
+    position: relative;
+    .category {
+        position: absolute;
+        width: 120px;
+        background: #fff;
+        z-index: 999;
+        padding: 0;
+        display: none;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        top: 108%;
+        .item-category {
+            list-style: none;
+            color: #000000;
+            font-size: 14px;
+            border-bottom: 0.1px solid rgb(238, 238, 238);
+            a {
+                padding: 9px 18px;
+                color: inherit;
+                display: block;
+                text-decoration: none;
+            }
+        }
+        .item-category a:hover {
+            cursor: pointer;
+            color: #66a55f;
+            background-color: #e6ffe6;
+        }
+        .item-category:last-child {
+            border-bottom: none;
+        }
+    }
 }
 
 .nav-item .nav-link {
     margin-left: 12px;
     margin-right: 12px;
+    .dropdown-icon {
+        font-size: 12px;
+    }
 }
 
-.nav-left .nav-item a {
+.nav-left .nav-item {
     border-bottom: 2px solid transparent;
 }
 
-.nav-left .nav-item a:hover {
+.nav-left .nav-item:hover {
+    transition: width 0.3s linear;
     border-bottom: 2px solid #000000;
-    transition: width 1s;
+    // transition: width 5s;
 }
 
+// .nav-item:hover {
+//     cursor: pointer;
+//     transition: width 0.3s linear;
+//     color: #66a55f;
+// }
 .nav-link {
     color: #000;
 }
@@ -134,7 +182,6 @@
     left: -30px;
     color: black;
     font-weight: 100;
-    cursor: pointer;
 }
 
 .container {
@@ -279,6 +326,9 @@
     padding-top: 8px;
     padding-bottom: 8px;
     border-bottom: 1px solid #d3d3d3;
+    .title-item .title:hover {
+        color: #66a55f;
+    }
 }
 
 .cart-home .block-minicart .minicart-content .block-products .list-products .item-cartmini .title-item {

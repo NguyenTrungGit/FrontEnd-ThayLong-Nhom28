@@ -40,6 +40,7 @@ tuyen:string='';
     this.activatedRoute.queryParams.subscribe(params => {
       let min=params['min']
       let max=params['max']
+      console.log(min+"xx"+max);
       if(min!==undefined&&max!==undefined){
         this.maxPrice=max
         this.minPrice=min

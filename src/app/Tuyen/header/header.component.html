@@ -15,9 +15,17 @@
                     <li class="nav-item">
                         <a class="nav-link" routerLink="/trangchu">Trang chủ</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" routerLink="/cuahang">Cửa hàng</a>
+                    <li class="nav-item nav-item-cuahang">
+                        <a class="nav-link" routerLink="/cuahang">Cửa hàng
+                          <i class="fa fa-chevron-down dropdown-icon"></i>
+                        </a>
+                        <ul class="category">
+                            <li class="item-category" *ngFor="let cate of categorys">
+                                <a routerLink="/cuahang/{{cate.id}}">{{cate.name}}</a>
+                            </li>
+                        </ul>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" routerLink="/gioithieu">Giới thiệu</a>
                     </li>
@@ -98,13 +106,13 @@
                                 <img class="empty-cart text-center" src="/assets/tuyen/img/cart-empty.png" alt="empty cart">
                             </ng-template>
                             <ng-template #have>
-                                <div class="list-products scrollbar scrollbar-primary pl-3 pr-3" *ngFor="let item of itemsCart">
-                                    <div class="item-cartmini">
+                                <div class="list-products scrollbar scrollbar-primary pl-3 pr-3">
+                                    <div class="item-cartmini" *ngFor="let item of itemsCart">
                                         <div class="thumb-item ">
-                                            <a href=" "><img src="/assets/BTruong/image-mix/{{item.img1}}" alt=" " width="60px " height="60px "></a>
+                                            <a routerLink='/cuahang/{{item?.category}}/chitiet/{{item?.id}}'><img src="/assets/BTruong/image-mix/{{item.img1}}" alt=" " width="60px " height="60px "></a>
                                         </div>
                                         <div class="title-item pl-2">
-                                            <a href=" " class="title">{{item.name}} </a>
+                                            <a routerLink='/cuahang/{{item?.category}}/chitiet/{{item?.id}}' class="title">{{item.name}} </a>
                                             <div><span class="quantity-item ">{{item.quantity}} </span></div>
                                         </div>
                                         <div class="remove-price">

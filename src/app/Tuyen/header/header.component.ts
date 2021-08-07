@@ -1,3 +1,4 @@
+import { Category } from './../../model/category.model';
 import { DOCUMENT } from '@angular/common';
 
 import {
@@ -32,7 +33,7 @@ export class HeaderComponent implements OnInit {
   keyword ="name";
   found ="không tìm thấy sản phẩm."
 numberItemInCart:number=0;
-
+categorys: Category[]=[];
   public nameFilter='bao';
   public nameFilterControl =  new Subject<string>();
 // scroll
@@ -43,6 +44,8 @@ numberItemInCart:number=0;
      this.cartService.cartItems.subscribe(data=>{
       this.itemsCart=data;
     })
+    this.getCategorys()
+      console.log(this.categorys)
     this.cartService.cartItems.subscribe(data=>{
         this.numberItemInCart=data.length
         this.totalCart=this.getTotal();
@@ -55,7 +58,12 @@ numberItemInCart:number=0;
     );
 
   }
+  getCategorys() {
+    this.productService.getCategorys().subscribe((res: any) => {
+      this.categorys = res;
 
+    });
+  }
   removeProduct(product:Product){
 this.cartService.removeProduct(product);
   }
