@@ -50,6 +50,7 @@ p {
     font-weight: 500;
     background-color: hsl(114, 28%, 51%);
     border-radius: 5px;
+    float: right;
 }
 
 .button__submit:hover{
@@ -60,6 +61,63 @@ p {
     background-color: hsl(114, 38%, 46%);
 }
 
+/* rating */
+.rating__label{
+  display: inline-block;
+  background-color: #ddd;
+  width: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  font-family: fontawesome;
+  transition: 0.2s;
+}
+
+.rating__label::before{
+  content: "\f005";
+  position: absolute;
+  font-size: 16px;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  transition: 0.2s;
+}
+
+.rating__label::after{
+  color: hsl(34, 100%, 65%);
+  content: "\f005";
+  position: absolute;
+  font-size: 16px;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.rating .rating__label:hover::after,
+.rating .rating__label:hover ~ .rating__label::after,
+.rating .rating__input:checked ~ .rating__label::after
+{
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+.rating{
+  direction: rtl;
+}
+
+.rating__input{
+  display: none;
+}
+
+.invalid-feedback{
+  margin: 0;
+  padding: 0;
+}
+
+textarea{
+  margin-bottom: 3rem;
+}
 
 
 @media screen and (min-width: 768px) {
@@ -74,7 +132,6 @@ p {
 }
 
 @media screen and (min-width: 1024px) {
-
   .contact__wrapper{
     margin: 0 3rem;
   }

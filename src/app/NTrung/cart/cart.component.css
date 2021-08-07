@@ -134,7 +134,7 @@ p {
   justify-content: space-between;
 }
 
-.cart__controls-amount {
+.controls__amount {
   display: flex;
 }
 

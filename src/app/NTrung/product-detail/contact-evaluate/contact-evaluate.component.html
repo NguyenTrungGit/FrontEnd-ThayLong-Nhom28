@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <div class="contact__wrapper">
     <div class="contact__wrapper">
         <ul class="contact__list">
@@ -19,20 +20,67 @@
     </div>
     
     <div class="evaluate__wrapper">
-        <form class="form__wrapper">
+        <form #form="ngForm" (ngSubmit)="onFormSubmit(form)" class="form__wrapper" [formGroup]="evaluateGroup">
+                
             <div class="evaluate__title contact__title">Viết đánh giá</div>
-            <input type="text" class="form-control" placeholder="Họ và tên">
-            <input type="text" class="form-control" placeholder="Số điện thoại">
-            <input type="text" class="form-control" placeholder="Email">
-            <div class="rating">
-                <i class="fas fa-star quick__icon icon__star"></i>
-                <i class="fas fa-star quick__icon icon__star"></i>
-                <i class="fas fa-star quick__icon icon__star"></i>
-                <i class="fas fa-star quick__icon icon__star"></i>
-                <i class="fas fa-star quick__icon icon__star"></i>
+
+            <div>
+                <input type="text" placeholder="Họ và tên" required  formControlName="fristName"  [ngClass]="{'form-control': true,'is-valid': evaluateGroup.controls.fristName.valid,'is-invalid':!evaluateGroup.controls.fristName.valid && evaluateGroup.controls.fristName.touched }">
+                <ng-container >
+                    <div *ngIf=" evaluateGroup.controls.fristName.errors?.required && evaluateGroup.controls.fristName.touched " class="invalid-feedback">
+                    Không để trống
+                    </div>
+                    <div *ngIf=" evaluateGroup.controls.fristName.errors?.minlength && evaluateGroup.controls.fristName.touched"class="invalid-feedback">
+                    Ít nhất 2 kí tự
+                    </div>
+                </ng-container>
             </div>
-            <textarea class="form-control" placeholder="Đánh giá"></textarea>
-            <input type="submit" class="button__submit">
+
+
+            <div>
+                <input type="text" placeholder="Số điện thoại" required  formControlName="phoneNum" [ngClass]="{'form-control': true,'is-valid': evaluateGroup.controls.phoneNum.valid,'is-invalid':!evaluateGroup.controls.phoneNum.valid && evaluateGroup.controls.phoneNum.touched}">
+                <ng-container>
+                    <div *ngIf=" evaluateGroup.controls.phoneNum.errors?.required && evaluateGroup.controls.phoneNum.touched " class="invalid-feedback">
+                    Không để trống
+                    </div>
+                    <div *ngIf=" evaluateGroup.controls.phoneNum.errors?.pattern && evaluateGroup.controls.phoneNum.touched" class="invalid-feedback" >
+                    Ví dụ: 0123456789 / 8412345678
+                    </div>
+                </ng-container>
+            </div>
+
+
+            <div>
+                <input type="email" placeholder="Email" required formControlName="email" [ngClass]="{'form-control': true,'is-valid': evaluateGroup.controls.email.valid, 'is-invalid':!evaluateGroup.controls.email.valid && evaluateGroup.controls.email.touched}">
+                <ng-container>
+                    <div *ngIf="evaluateGroup.controls.email.errors?.required && evaluateGroup.controls.email.touched " class="invalid-feedback" >
+                        Không để trống
+                    </div>
+                    <div *ngIf="evaluateGroup.controls.email.errors?.pattern && evaluateGroup.controls.email.touched" class="invalid-feedback" >
+                        Ví dụ: khachhang@gmail.com
+                    </div>
+                </ng-container>
+            </div>
+
+
+            <div class="rating">
+                <input formControlName="rating" class="rating__input" type="radio" name="rating" value="1" id="star-1"><label class="rating__label" for="star-1"></label>
+                <input formControlName="rating" class="rating__input" type="radio" name="rating" value="2" id="star-2"><label class="rating__label" for="star-2"></label>
+                <input formControlName="rating" class="rating__input" type="radio" name="rating" value="3" id="star-3"><label class="rating__label" for="star-3"></label>
+                <input formControlName="rating" class="rating__input" type="radio" name="rating" value="4" id="star-4"><label class="rating__label" for="star-4"></label>
+                <input formControlName="rating" class="rating__input" type="radio" name="rating" value="5" id="star-5"><label class="rating__label" for="star-5"></label>
+            </div>
+
+
+            <div>
+                <textarea placeholder="Đánh giá" required formControlName="content" [ngClass]="{'form-control': true,'is-valid': evaluateGroup.controls.content.valid, 'is-invalid':!evaluateGroup.controls.content.valid && evaluateGroup.controls.content.touched}" ></textarea>
+                <ng-container>
+                    <div *ngIf="evaluateGroup.controls.content.errors?.required && evaluateGroup.controls.content.touched " class="invalid-feedback" >
+                        Không để trống
+                    </div>
+                </ng-container>
+                <input type="submit" class="button__submit" [disabled]="evaluateGroup.invalid">
+            </div>
         </form>
     </div>
 </div>

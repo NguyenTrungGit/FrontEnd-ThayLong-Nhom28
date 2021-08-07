@@ -6,11 +6,9 @@ export class Comment {
   unlike?: boolean;
 
   constructor(
-    public surname: string,
     public name: string,
     public email: string,
     public phone: string,
-    public sex: string,
     public content: string,
     public rate: Number,
   ) {

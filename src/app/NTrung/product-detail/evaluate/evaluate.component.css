@@ -48,6 +48,7 @@
   cursor: pointer;
   transition: 0.2s;
   font-weight: 500;
+  user-select: none;
 }
 
 .evaluate__button:hover{
@@ -57,6 +58,15 @@
 .evaluate__button:active{
   transform: scale(0.9);
 }
+
+.is-like{
+  color: hsl(114, 28%, 51%);
+}
+
+.is-dislike{
+  color: hsl(1, 89%, 61%);
+}
+
 
 @media screen and (min-width: 768px) {
 

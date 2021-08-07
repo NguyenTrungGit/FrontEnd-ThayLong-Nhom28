@@ -4,6 +4,8 @@
 /* ==================== MNI RESET CSS ==================== */
 @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
 
+/* Swipper CSS */
+@import "~swiper/swiper-bundle";
 /* Reuse CSS */
 .button__medium {
   width: 150px;
@@ -78,25 +80,32 @@
   text-align: center;
 }
 
+.info__container {
+  margin: auto;
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 /* Image */
-.img__wrapper{
+.img__wrapper {
+  width: 350px;
+  height: 463px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: auto;
   gap: 1.5rem;
 }
 
-.input__group{
-  display: flex;
-  gap: 0.75rem;
-}
-
-.img__list {
+.img__nav {
   display: none;
 }
 
-.img__item {
+.img__nav-item {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -105,31 +114,18 @@
   width: 96px;
   height: 48px;
   border-radius: 5px;
-}
-
-.img__main {
-  border: 0.5px solid rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.05);
-}
-
-.img__sub {
-  width: 32px;
-  height: 32px;
+  background-color: hsl(0, 0%, 88%);
 }
 
 /* Quick info */
 .quick__wrapper {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   margin-bottom: 1.5rem;
-}
-
-.quick__wrapper,
-.img__wrapper {
-  max-width: 350px;
-  margin: auto;
 }
 
 .quick__name {
@@ -180,17 +176,119 @@
 @media screen and (min-width: 768px) {
   .info__container {
     display: flex;
+    flex-direction: row;
+    gap: 3rem;
   }
 
-  .img__list {
+  .img__nav {
     display: flex;
-    gap: 31px;
   }
 
-  .quick__wrapper{
+  .quick__wrapper {
     margin-top: 0;
   }
 }
 
 @media screen and (min-width: 1024px) {
+}
+
+/* Swipper CSS */
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.05);
+}
+
+.swiper-container {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+
+.mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Rewrite */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: hsl(0, 0%, 66%);
+  padding: 1rem 0.5rem;
+  opacity: 0.3;
+}
+
+.swiper-button-prev::after {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.swiper-button-next:after {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.img__nav-item img {
+  width: 36px;
+  height: 36px;
 }
