@@ -1,0 +1,118 @@
+<div class="info__container">   
+        <div class="img__wrapper">
+            <swiper
+            style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff"
+            [loop]="true"
+            [spaceBetween]="10"
+            [navigation]="true"
+            [thumbs]="{ swiper: thumbsSwiper }"
+            class="mySwiper2"
+          >
+            <ng-template swiperSlide
+              ><img
+                src="./assets/BTruong/image-mix/{{ productInfo?.img1 }}" /></ng-template
+            ><ng-template swiperSlide
+              ><img
+                src="./assets/BTruong/image-mix/{{ productInfo?.img2 }}" /></ng-template
+            ><ng-template swiperSlide
+              ><img
+                src="./assets/BTruong/image-mix/{{ productInfo?.img3 }}" /></ng-template
+            ><ng-template swiperSlide
+              ><img
+                src="./assets/BTruong/image-mix/{{ productInfo?.img2 }}" /></ng-template
+            >
+          </swiper>
+          <swiper
+            (swiper)="thumbsSwiper = $event"
+            [loop]="true"
+            [spaceBetween]="10"
+            [slidesPerView]="4"
+            [freeMode]="true"
+            [watchSlidesVisibility]="true"
+            [watchSlidesProgress]="true"
+            class="mySwiper img__nav"
+          >
+            <ng-template swiperSlide>
+               <div class="img__nav-item">
+                    <img src="./assets/BTruong/image-mix/{{ productInfo?.img1 }}" />
+               </div>
+            </ng-template>
+
+            <ng-template swiperSlide>
+                <div class="img__nav-item">
+                    <img src="./assets/BTruong/image-mix/{{ productInfo?.img2 }}" />
+               </div>
+            </ng-template>
+
+            <ng-template swiperSlide>
+                <div class="img__nav-item">
+                    <img src="./assets/BTruong/image-mix/{{ productInfo?.img3 }}" />
+               </div>
+            </ng-template>
+
+            <ng-template swiperSlide>
+                <div class="img__nav-item">
+                    <img src="./assets/BTruong/image-mix/{{ productInfo?.img2 }}" />
+               </div>
+            </ng-template>
+          </swiper>
+        </div>
+    
+        <!-- Quick info -->
+        <div class="quick__wrapper">
+            <p class="quick__name">{{productInfo?.name}}</p>
+            <div class="controls__wrapper">
+                <p class="quick__price">{{productInfo?.price}}&#8363;</p>
+                <div class="controls__amount">
+                    <div class="button button__small button__minus"  (click)="down(inputQuantityElementDetail,productInfo)" >
+                      <i class="fas fa-minus button__icon"></i>
+                    </div>
+      
+                    <input class="input__small" #inputQuantityElementDetail type="text" maxlength="2" value="{{ amount }}" (input)="updateQuantity(inputQuantityElementDetail)" />
+      
+                    <div class="button button__small button__plus">
+                      <i class="fas fa-plus button__icon" (click)="up(inputQuantityElementDetail,productInfo)"></i>
+                    </div>
+                  </div>
+            </div>
+    
+            <div class="quick__button button button__medium button__green" (click)="addToCart(inputQuantityElementDetail)">
+                Thêm vào giỏ
+            </div>
+    
+            <ul class="quick__list">
+                <!-- Item -->
+                <li class="quick__item">
+                    <p class="quick__title">Đánh giá:</p>
+                    <div class="quick__content">
+                        <i class="fas fa-star quick__icon icon__star"></i>
+                        <i class="fas fa-star quick__icon icon__star"></i>
+                        <i class="fas fa-star quick__icon icon__star"></i>
+                        <i class="fas fa-star quick__icon icon__star"></i>
+                        <i class="fas fa-star quick__icon icon__star"></i>
+                    </div>
+                </li>
+    
+                <!-- Item -->
+                <li class="quick__item">
+                    <p class="quick__title">Tình trạng:</p>
+                    <div class="quick__content">
+                        <i class="fas fa-check quick__icon icon__check"></i> Còn hàng
+                    </div>
+                </li>
+    
+                <!-- Item -->
+                <li class="quick__item">
+                    <p class="quick__title">Chứng nhận:</p>
+                    <div class="quick__content">Global GAP, USD, EU.</div>
+                </li>
+    
+                <!-- Item -->
+                <li class="quick__item">
+                    <p class="quick__title">Xuất xứ:</p>
+                    <div class="quick__content">{{productInfo?.origin}}</div>
+                </li>
+    
+            </ul>
+        </div>
+</div>

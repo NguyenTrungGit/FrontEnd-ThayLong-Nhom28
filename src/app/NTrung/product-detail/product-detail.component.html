@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<section class="section section__container">
+    <!-- info -->
+    <p class="section__title">Thông tin chi tiết</p>
+    <div class=" info__wrapper wrapper">
+        <app-info [idInput]="id"></app-info>
+    </div>
+
+    <p class="section__subtitle">Thông tin thêm</p>
+    <div class=" more__wrapper wrapper">
+        <ul class="more__list">
+            <li class="more__item">
+                <b>Xuất Xứ: </b>Từ trang trại nông sản <b>FRESH</b><b>VEGE</b>.
+            </li>
+
+            <li class="more__item">
+                <b>Chứng nhận: </b>Đạt chứng nhận Global GAP, chứng nhận hữu cơ USDA , chứng nhận hữu cơ EU.
+            </li>
+
+            <li class="more__item">
+                <b>Công dụng: </b>… là một loại thực phẩm rất tốt cho sức khỏe, chứa nhiều vitamin, có tác dụng thanh nhiệt...
+            </li>
+
+            <li class="more__item">
+                <b>Gợi ý sử dụng: </b>Có thể sử dụng trực tiếp hoặc làm các món sinh tố, nước giải khát.
+            </li>
+
+            <li class="more__item">
+                <b>Bảo quản: </b>Bảo quản trong ngăn mát tủ lạnh, tránh ánh nắng trực tiếp.
+            </li>
+
+            <li class="more__item">
+                <b>Hạn sử dụng: </b>3 - 6 ngày tùy điều kiện bảo quản.
+            </li>
+        </ul>
+    </div>
+
+    <p class="section__subtitle">Sản phẩm liên quan</p>
+    <div class=" related__wrapper wrapper">
+        
+    </div>
+
+    <p class="section__subtitle">Đánh giá</p>
+    <div class=" evaluate__wrapper wrapper">
+        <app-evaluate></app-evaluate>
+    </div>
+
+    <p class="section__subtitle">Liên hệ & đánh giá</p>
+    <div class=" contact-evaluate__wrapper wrapper">
+        <app-contact-evaluate></app-contact-evaluate>
+    </div>
+</section>

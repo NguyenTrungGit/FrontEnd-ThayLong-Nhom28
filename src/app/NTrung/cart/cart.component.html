@@ -1,72 +1,99 @@
-<div class="container">
-  <!-- tieu de -->
-  <div class="title font-weight-bold">
-    <p class="product">Sản phẩm</p>
-    <p class="price">Đơn giá</p>
-    <p class="amount">Số lượng</p>
-    <p class="total">Tổng</p>
-  </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!--  Thong tin san pham trong gio hang-->
-  <div class="" *ngFor="let item of items">
-    <div class="info">
-      <div class="product">
-        <a class="product-button" (click)="removeProduct(item)"></a>
-        <img
-          class="product-image"
-          src="./assets/BTruong/image-mix/{{ item.img1 }}"
-          alt=""
-        />
-        <span class="product-name font-weight-bold">{{ item.name }}</span>
-      </div>
-      <div class="price font-weight-bold">{{ item.price }} &#8363;</div>
-      <div class="amount">
-        <div class="btn minus" (click)="down(inputQuantityElement, item)"></div>
-        <input
-          #inputQuantityElement
-          type="text"
-          value="{{ item.quantity }}"
-          maxlength="2"
-          (input)="updateQuantity(inputQuantityElement, item)"
-        />
-        <div class="btn plus" (click)="up(inputQuantityElement, item)"></div>
-      </div>
-      <div class="total price font-weight-bold" style="color: #66a55f">
-        {{ item.quantity * item.price }} &#8363;
-      </div>
+<section class="section section__container">
+  
+  <div *ngIf="!items.length">
+    <p class="section__title">Giỏ hàng Trống</p>
+    <div class="cart__empty">
+      <img src="../../../assets/tuyen/img/cart-empty.png" class="img__empty">
+      <div class="button button__green button__medium continue__button" routerLink="/cuahang">Tiếp tục mua sắm</div>
     </div>
   </div>
-
-  <!-- khuyen mai -->
- <form [formGroup]="voucherGroup">
-  <div class="total">
+  <!-- Cart list -->
+  <div *ngIf="items.length">
+    <p class="section__title">Giỏ hàng của bạn</p>
+    <div class="cart__container">
+      <ul class="cart__list" >
+        <!-- Item -->
+        <li class="cart__item" *ngFor="let item of items">
+          <img src="./assets/BTruong/image-mix/{{ item.img1 }}" alt="" class="cart__img" />
+          <div class="cart__content">
+            <p class="title">{{ item.name }}</p>
+  
+           <div class="price__wrapper">
+            <div class="cart__price">{{ item.price }}&#8363; <span>/ phần</span></div>
+            <div class="cart__price hide">{{ item.quantity * item.price }}&#8363;</div>
+           </div>
+  
+            <div class="cart__controls">
+              <div class="controls__amount">
+                <div class="button button__small button__minus" (click)="down(inputQuantityElement, item)" >
+                  <i class="fas fa-minus button__icon"></i>
+                </div>
+  
+                <input type="text" class="input__small" value="{{ item.quantity }}" #inputQuantityElement (input)="updateQuantity(inputQuantityElement, item)" />
+  
+                <div class="button button__small button__plus" (click)="up(inputQuantityElement, item)" >
+                  <i class="fas fa-plus button__icon"></i>
+                </div>
+              </div>
+  
+              <div class="button button__delete"  (click)="removeProduct(item)" >
+                <i class="far fa-trash-alt button__icon icon__trash"></i> Xóa
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Cart total temp -->
     <div class="total__container">
-      <div class="total__title">Nhập mã giảm giá</div>
-      <div class="total__input">
-        <input type="text" minlength="4" maxlength="5" placeholder="Voucher" formControlName="voucherId" />
-        <input type="submit" value="Áp dụng" (click)="applyVoucher()"  [disabled]="voucherGroup.invalid"/>
+      <p class="total__note">
+        * Đơn sẽ được giao trong hôm nay hoặc ngày mai để đảm bảo chất lượng
+      </p>
+  
+      <div class="total__content">
+        <div class="total__item">
+          <div class="total__title">Nhập voucher</div>
+          <form [formGroup]="voucherGroup">
+            <div class="voucher__wrapper">
+                <input type="text" class="voucher__input" placeholder="Voucher" minlength="4" maxlength="5" formControlName="voucherId" />
+                <input class="button__green button button__apply" type="submit" value="Áp dụng" (click)="applyVoucher()" [disabled]="voucherGroup.invalid" >
+            </div>
+            <div>
+                <div class="cart__price total__price discount__price" *ngIf="discount && !voucherGroup.controls.voucherId.errors?.minlength " >- {{discount}}&#8363;</div>
+                <ng-container >
+                    <p class="notifi" *ngIf="!notifi &&
+                    voucherGroup.controls.voucherId.errors?.minlength &&
+                    voucherGroup.controls.voucherId.touched">Mời nhập lại
+                    </p>
+                    <p class="notifi" *ngIf="notifi">{{notifi}}</p>
+                </ng-container>
+            </div>
+          </form>
+        </div>
+  
+        <div class="total__item">
+          <div class="total__title">Giao hàng</div>
+          <div class="cart__price total__price">{{diliveryPrice}}&#8363;</div>
+        </div>
+  
+        <div class="total__item">
+          <div class="total__title">Tạm tính</div>
+          <div class="cart__price total__price">{{total}}&#8363;</div>
+        </div>
+  
+        <div class="total__item">
+          <div class="total__title">Tổng cộng</div>
+          <div class="cart__price total__price">{{ total - discount + diliveryPrice}}&#8363;</div>
+        </div>
       </div>
-      <div class="total__price" *ngIf="discount && !voucherGroup.controls.voucherId.errors?.minlength " >- {{discount}} &#8363;</div>
-      <ng-container >
-     <div>
-      <p *ngIf="!notifi &&
-        voucherGroup.controls.voucherId.errors?.minlength &&
-        voucherGroup.controls.voucherId.touched">Mời nhập lại</p>
-      <p *ngIf="notifi">{{notifi}}</p>
-     </div>
-      </ng-container>
-    </div>
-    <div class="total__container">
-      <div class="total__title">Tổng tiền</div>
-      <div class="total__price" style="margin-left: 400px">
-        {{ total - discount}} &#8363;
+  
+      <div class="total__controls">
+        <div class="button button__green button__medium" routerLink="/cuahang">Mua thêm</div>
+        <div class="button button__red button__medium" routerLink="/hoadon">Thanh toán</div>
       </div>
     </div>
   </div>
- </form>
-
-  <div class="control">
-    <button class="btn btn-see-more font-weight-bold">Xem thêm sản phẩm</button>
-    <button class="btn btn-pay font-weight-bold">Thanh toán</button>
-  </div>
-</div>
+</section>

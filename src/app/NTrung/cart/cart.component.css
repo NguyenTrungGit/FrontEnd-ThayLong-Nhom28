@@ -1,195 +1,353 @@
-.container {
-  width: 830px;
-  color: #4d4b4b;
-  margin-top: 30px;
-  margin-bottom: 50px;
-}
-.container .title {
-  border-bottom: #4d4d4d solid 1px;
-  display: flex;
-  justify-content: center;
-}
-.container .title .product {
-  padding-left: 55px;
-  width: 300px;
-}
-.container .title .price {
-  text-align: center;
-  width: 100px;
-}
-.container .title .amount {
-  text-align: center;
-  width: 300px;
-}
-.container .title .total {
-  text-align: center;
-  width: 100px;
-}
-.container .info {
-  margin: 20px 0px;
-  justify-content: center;
-  display: flex;
-  border-bottom: #4d4b4b dashed 1px;
-  padding-bottom: 20px;
-}
-.container .info .product {
-  width: 300px;
-  display: flex;
-}
-.container .info .product .product-button {
-  width: 25px;
-  height: 25px;
-  padding-top: 110px;
-  opacity: 0.4;
-  transition: transform 0.2s;
-  background: url(/../../../../assets/NTrungData/cancel.svg);
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.container .info .product .product-button:hover {
-  cursor: pointer;
-  opacity: 0.6;
-  transform: scale(120%);
-}
-.container .info .product .product-button:active {
-  opacity: 1;
-}
-.container .info .product .product-image {
-  width: 100px;
-  height: 100px;
-  margin: 0 20px;
-  transition: transform 0.5s;
-}
-.container .info .product .product-image:hover {
-  cursor: pointer;
-  transform: translateY(-5px);
-}
-.container .info .product .product-name {
-  padding-top: 50px;
-  width: 135px;
-}
-.container .info .price {
-  text-align: right;
-  padding-top: 50px;
-  width: 100px;
-}
-.container .info .amount {
-  width: 300px;
-  padding-top: 45px;
-  justify-content: center;
-  display: flex;
-}
-.container .info .amount input {
-  text-align: center;
-  width: 50px;
-  height: 30px;
-  border: #d7d7d7 solid 1px;
-}
-.container .info .amount .tag {
-  margin: 0 auto;
-  background-color: red;
-  width: 30px;
-  height: 30px;
-}
-.container .info .amount .btn {
-  width: 30px;
-  height: 30px;
-  opacity: 0.5;
-}
-.container .info .amount .btn:hover {
-  cursor: pointer;
-  opacity: 0.7;
-}
-.container .info .amount .btn:active {
-  opacity: 1;
-}
-.container .info .amount .minus {
-  background: url(/../../../assets/NTrungData/minus.svg);
-  background-color: #d7d7d7;
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.container .info .amount .plus {
-  background: url(/../../../assets/NTrungData/plus.svg);
-  background-color: #d7d7d7;
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.container .total {
-  width: 100%;
-}
-.container .total__container {
-  display: flex;
-  margin-bottom: 10px;
-}
-.container .total__title {
-  font-weight: bold;
-  width: 300px;
-  padding-left: 25px;
-}
-.container .total__input {
-  align-items: center;
-  display: flex;
-}
-.container .total__input input {
-  width: 100px;
-}
-.container .total__input input:nth-child(1) {
-  background: #f2f2f2;
-  text-align: center;
-  border: none;
-  outline: none;
-  padding: 2px;
-}
-.container .total__input input:nth-child(2) {
-  margin: 0 100px;
-  background: #66a55f;
-  border: none;
-  color: #fff;
-  font-weight: bold;
-  font-size: 15px;
-  padding: 5px;
-  border-radius: 20px;
-  outline: none;
-  cursor: pointer;
-}
-.container .total__input input:nth-child(2):hover {
-  background: #73ac6c;
-}
-.container .total__input input:nth-child(2):active {
-  background: #66a55f;
-}
-.container .total__price {
-  font-weight: bold;
-  color: #66a55f;
-  width: 100px;
-  text-align: right;
-  float: right;
-}
-.container .total p {
-  font-weight: bold;
-  width: 100px;
+/* ==================== GOOGLE FONT ==================== */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+/* ==================== MNI RESET CSS ==================== */
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+/* ==================== VARIABLE ==================== */
+/* --green-color: hsl(114, 28%, 51%);
+   --red-color: hsl(1, 79%, 66%);
+   --yellow-color: hsl(34, 100%, 65%);
+   --blue-color: hsl(214, 78%, 58%);
+   --pink-color: hsl(312, 90%, 54%);
+   --gray-color-dark: hsl(0, 0%, 44%);
+   --gray-color: hsl(0, 0%, 58%);
+   --gray-color-light: hsl(0, 0%, 98%);
+   --gray-color-lightten: hsl(0, 0%, 86%);
+   --white-color: hsl(0, 0%, 100%);
+   --text-color: hsl(0, 0%, 44%);
+
+   --green-color-hover: hsl(114, 33%, 56%);
+   --green-color-active: hsl(114, 38%, 46%);
+
+   
+   --red-color-hover: hsl(1, 84%, 71%);
+   --red-color-active: hsl(1, 89%, 61%);
+
+   --blue-color-hover: hsl(214, 83%, 63%);
+   --blue-color-active: hsl(214, 88%, 53%); */
+
+* {
+  padding: 0;
   margin: 0;
-  text-align: right;
-  color: red;
-  font-size: 13px;
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+  box-sizing: border-box;
+  color: hsl(0, 0%, 44%);
 }
-.container .control {
+
+p {
+  margin: 0;
+}
+
+/* Reuse CSS */
+.title,
+.total__title {
+  font-weight: 500;
+}
+
+.button {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.button__medium {
+  width: 150px;
+  height: 40px;
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Section */
+.section {
+  padding: 1.5rem;
+  max-width: 1024px;
+  margin: auto;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.section__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Cart */
+
+.cart__item {
+  display: flex;
+  padding-bottom: 1.5rem;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.cart__img {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+
+.cart__img:hover {
+  transform: scale(1.1);
+}
+
+.cart__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.price__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.cart__price,
+.cart__price span {
+  color: hsl(114, 28%, 51%);
+  font-weight: 500;
+}
+
+.cart__price span {
+  font-size: 0.75rem;
+}
+
+.cart__controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls__amount {
+  display: flex;
+}
+
+.button__small {
+  width: 30px;
+  height: 30px;
+  background-color: hsl(0, 0%, 98%);
+}
+
+.button__plus {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.button__minus {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.button__small:hover {
+  background-color: hsl(0, 0%, 88%);
+}
+
+.button__small:active {
+  background-color: hsl(0, 0%, 93%);
+}
+
+.button__delete {
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.button__delete i {
+  margin-right: 0.25rem;
+}
+
+.button__delete i,
+.button__delete {
+  color: hsl(214, 78%, 58%);
+}
+
+.button__delete:hover {
+  transform: scale(1.1);
+}
+
+.button__delete:active {
+  transform: scale(0.9);
+}
+
+.input__small {
+  width: 40px;
+  height: 30px;
+  border: none;
+  outline: none;
   text-align: center;
-  margin-top: 20px;
 }
-.container .control .btn {
-  margin: 0 20px;
-  width: 250px;
-  border-radius: 20px;
-  color: #fff;
+
+/* Total */
+.total__note {
+  color: hsl(34, 100%, 65%);
+  font-size: 0.75rem;
+  text-align: right;
+  margin-bottom: 1.5rem;
 }
-.container .control .btn-see-more {
-  background-color: #66a55f;
+
+.total__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
 }
-.container .control .btn-pay {
-  background-color: #de6663;
-}/*# sourceMappingURL=cart.component.css.map */
+
+.total__price {
+  text-align: right;
+}
+
+.total__item {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.total__item:nth-child(3) {
+  padding-bottom: 1.5rem;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.voucher__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.voucher__input {
+  width: 100px;
+  background-color: hsl(0, 0%, 88%);
+  padding: 5px;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.button__apply {
+  border: none;
+  outline: none;
+  width: 100px;
+  height: 30px;
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+}
+
+.notifi{
+  color: hsl(1, 89%, 61%);
+  font-weight: 500;
+  text-align: right;
+  margin-top: 1.5rem;
+}
+
+.discount__price{
+  margin-top: 1.5rem;
+}
+
+.total__controls {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.button__green {
+  background-color: hsl(114, 28%, 51%);
+}
+
+.button__green:hover,
+.button__apply:hover {
+  background-color: hsl(114, 33%, 56%);
+}
+
+.button__green:active,
+.button__apply:active {
+  background-color: hsl(114, 28%, 46%);
+}
+
+.button__red {
+  background-color: hsl(1, 79%, 66%);
+}
+
+.button__red:hover {
+  background-color: hsl(1, 84%, 71%);
+}
+
+.button__red:active {
+  background-color: hsl(1, 89%, 61%);
+}
+
+/* Empty Cart */
+.cart__empty{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hide {
+    visibility: visible;
+  }
+
+  .section {
+    padding: 2rem;
+  }
+
+  .cart__img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cart__content {
+    gap: 1.5rem;
+  }
+
+  .button__medium {
+    width: 200px;
+    height: 45px;
+  }
+
+  .total__note {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .voucher__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section {
+    padding: 3rem;
+  }
+
+  .section__title {
+    padding-bottom: 3rem;
+  }
+
+  .cart__img {
+    width: 120px;
+    height: 120px;
+  }
+}

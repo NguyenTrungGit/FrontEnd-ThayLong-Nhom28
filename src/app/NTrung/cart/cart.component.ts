@@ -18,6 +18,7 @@ export class CartComponent implements OnInit {
 
   total: number = 0;
   items: Product[] = [];
+  diliveryPrice:number = 20000;
 
   constructor(
     private shoppingcartService: ShoppingCartService,
@@ -28,6 +29,7 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     this.shoppingcartService.cartItems.subscribe((data) => {
       this.items = data;
+      console.log(this.items.length)
     });
     this.total = this.getTotal();
   }
