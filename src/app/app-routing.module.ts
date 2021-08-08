@@ -5,9 +5,11 @@ import { BlogContentComponent } from './BTruong/blog-content/blog-content.compon
 import { BlogComponent } from './BTruong/blog/blog.component';
 import { ContactComponent } from './BTruong/contact/contact.component';
 import { ProductComponent } from './BTruong/product/product.component';
+import { BillConfirmComponent } from './NTrung/bill-confirm/bill-confirm.component';
 import { CartComponent } from './NTrung/cart/cart.component';
-import { PayComponent } from './NTrung/pay/pay.component';
-import { ProductDetailsComponent } from './NTrung/product-details/product-details.component';
+import { FormConfirmComponent } from './NTrung/form-confirm/form-confirm.component';
+import { ProductDetailComponent } from './NTrung/product-detail/product-detail.component';
+import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component';
 import { HeaderComponent } from './Tuyen/header/header.component';
 import { SearchComponent } from './Tuyen/header/search/search.component';
 import { HomeComponent } from './Tuyen/home/home.component';
@@ -23,11 +25,13 @@ const routes: Routes = [
   { path: 'lienhe', component: ContactComponent },
   { path: 'chiase', component: BlogComponent },
   { path: 'giohang', component: CartComponent },
-  { path: 'cuahang/:cate/chitiet/:id', component: ProductDetailsComponent },
-  { path: 'pay', component: PayComponent },
+  { path: 'cuahang/:cate/chitiet/:id', component: ProductDetailComponent },
+  { path: 'thongtinnhanhang', component: FormConfirmComponent },
+  { path: 'hoadon', component: BillConfirmComponent },
   { path: '', component: HomeComponent },
   { path: 'chiase/chiasechitiet/:id', component: BlogContentComponent },
-  { path: 'search', component: SearchComponent }
+  { path: 'search', component: SearchComponent },
+  { path: 'camon', component: ThanksPageComponent },
 ];
 
 @NgModule({

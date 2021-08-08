@@ -1,0 +1,187 @@
+/* ==================== GOOGLE FONT ==================== */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+/* ==================== MNI RESET CSS ==================== */
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+  box-sizing: border-box;
+  color: hsl(0, 0%, 44%);
+}
+
+/* Section */
+.section {
+  padding: 1.5rem;
+  max-width: 768px;
+  margin: auto;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.section__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Reuse CSS */
+.button__medium {
+  width: 150px;
+  height: 40px;
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.button__green {
+  background-color: hsl(114, 28%, 51%);
+}
+
+.button__green:hover {
+  background-color: hsl(114, 33%, 56%);
+}
+
+.button__green:active {
+  background-color: hsl(114, 28%, 46%);
+}
+
+.button__red {
+  background-color: hsl(1, 79%, 66%);
+}
+
+.button__red:hover {
+  background-color: hsl(1, 84%, 71%);
+}
+
+.button__red:active {
+  background-color: hsl(1, 89%, 61%);
+}
+
+.controls__wrapper {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+/* Input */
+.confirm__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input__group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+input,
+textarea {
+  padding: 0.75rem;
+}
+
+input,
+select {
+  width: 100%;
+}
+
+select {
+  padding-left: 0.75rem;
+}
+
+.input__single {
+  margin-bottom: 1.5rem;
+}
+
+.check__dilivery {
+  margin-bottom: 3rem;
+}
+
+.input__check {
+  width: 20px;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.input__label {
+  user-select: none;
+  cursor: pointer;
+}
+
+.invalid-feedback {
+  margin-top: 0.5rem;
+  color: hsl(1, 89%, 61%);
+}
+
+.button__submit {
+  border: none;
+  outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 2rem;
+  }
+
+  input,
+  select {
+    width: 100%;
+  }
+
+  .input__group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .input__single,
+  .w100 {
+    width: 100%;
+  }
+
+  /* hard fix */
+  .input__group input,
+  .input__group select {
+    width: 340px;
+  }
+
+  .button__medium {
+    width: 200px;
+    height: 45px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section {
+    padding: 3rem;
+  }
+
+  .section__title {
+    padding-bottom: 3rem;
+  }
+
+  /* hard fix */
+  .input__group input,
+  .input__group select {
+    width: 324px;
+  }
+}

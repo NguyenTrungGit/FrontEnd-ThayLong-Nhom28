@@ -7,20 +7,16 @@ import { Comment } from 'src/app/model/comment.model';
 export class CommentService {
   listComment: Comment[] = [
     new Comment(
-      'Nguyễn',
       'Trung',
       'Nguyentrunglk9@gmail.com',
       '0339551554',
-      'nam',
       'Sản phẩm tốt, đạt chất lượng của Global GAP',
       5
     ),
     new Comment(
-      'Nguyễn',
       'Hương',
       'Nguyentrunglk9@gmail.com',
       '0339551554',
-      'nam',
       'Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP Sản phẩm tốt, đạt chất lượng của Global GAP',
       5
     ),

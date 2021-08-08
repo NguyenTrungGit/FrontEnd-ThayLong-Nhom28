@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,UAAU,CAAC;EACT,UAAU,EAAE,KAAK;EACjB,aAAa,EAAE,IAAI;EACnB,OAAO,EAAE,IAAI;CASd;;AAZD,AAIE,UAJQ,CAIR,SAAS,CAAC;EACR,KAAK,EAAE,KAAK;EACZ,YAAY,EAAE,KAAK;CACpB;;AAPH,AAQE,UARQ,CAQR,SAAS,CAAC;EAER,KAAK,EAAE,KAAK;CACb",
-    "sources": [
-        "pay.component.scss"
-    ],
-    "names": [],
-    "file": "pay.component.css"
-}

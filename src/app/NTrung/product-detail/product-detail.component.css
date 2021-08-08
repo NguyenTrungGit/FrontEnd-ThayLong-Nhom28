@@ -1,0 +1,88 @@
+/* ==================== GOOGLE FONT ==================== */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+/* ==================== MNI RESET CSS ==================== */
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+  box-sizing: border-box;
+  color: hsl(0, 0%, 44%);
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Section */
+.section {
+  padding: 1.5rem;
+  max-width: 1024px;
+  margin: auto;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.section__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+
+.section__subtitle {
+  font-weight: 600;
+  font-size: 1.25rem;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+
+.wrapper{
+  margin-bottom: 4rem;
+}
+
+/* More */
+.more__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.more__item b:nth-child(2) {
+  color: hsl(114, 28%, 51%);
+}
+
+.more__item b:nth-child(3) {
+  color: hsl(312, 90%, 54%);
+}
+
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 2rem;
+  }
+
+  .bill__title {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section {
+    padding: 3rem;
+  }
+
+  .section__title {
+    padding-bottom: 3rem;
+  }
+
+  .more__list{
+    margin: 0 3rem;
+  }
+}
