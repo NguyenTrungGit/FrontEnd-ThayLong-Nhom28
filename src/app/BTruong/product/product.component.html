@@ -10,3 +10,34 @@
 
     </div>
 </div>
+<div class="fill">
+
+
+
+    <mat-toolbar>
+        <mat-toolbar-row>
+
+            <div class="loc">
+                <div class="contair-loc" (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+                    <div class="icon"><i class="far fa-bars"></i></div>
+                    <div class="title-loc">LỌC</div>
+                </div>
+            </div>
+
+
+
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <mat-sidenav-container style="height: 50%" fxFlexFill>
+        <mat-sidenav #sidenav>
+            <mat-nav-list style=" min-width: 14em;">
+                <app-filters (messageEvent)="filterPrice($event)"></app-filters>
+
+            </mat-nav-list>
+        </mat-sidenav>
+
+        <app-product-list [categoryName]="cate" [rangePrice]="rangePrice"></app-product-list>
+
+    </mat-sidenav-container>
+</div>

@@ -307,6 +307,78 @@
 /* tablet */
 
 @media only screen and ( min-width: 46.25em) and ( max-width: 63.9375em) {
+    .dropdown {
+        display: block;
+        margin-top: 2em;
+        width: 100%;
+        border: 1px solid #d6d6d6;
+        height: 3em;
+        width: 100%;
+        z-index: 11;
+    }
+    .dropdown:hover .drop-list {
+        opacity: 1;
+        visibility: visible;
+        margin-top: 1em;
+        z-index: 111;
+    }
+    .dropdown .dropdown-toggle {
+        width: 100%;
+        background: #fff;
+        color: rgb(49, 49, 49);
+        letter-spacing: 1px;
+        font-size: 1.5em;
+        word-spacing: 3px;
+    }
+    .drop-list {
+        border: 1px solid #d6d6d6;
+        ;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s linear, visibility 0, 2s linear;
+    }
+    .fil {
+        display: none;
+    }
+    .dropdown a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-hv {
+        height: 6em;
+        border: none;
+    }
+    .product-hv .flex {
+        display: inline-flex;
+        align-items: center;
+        padding-top: 0;
+        width: 100%;
+        border-top: 1px solid #fff;
+        border-left: 1px solid #fff;
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        justify-content: end;
+    }
+    .flex a {
+        max-width: 81px;
+    }
+    .flex a img {
+        height: 4em;
+        border-radius: 50%;
+        width: 4em;
+    }
+    .flex-sub {
+        margin-left: 0.8em;
+    }
+    .product_list_widget {
+        border: none;
+    }
+    .product-hv {
+        border: none;
+    }
     .col4 {
         margin-top: 0;
         margin-left: 2%;
@@ -316,15 +388,18 @@
         height: 5em;
     }
     .product-hv {
-        height: 4em;
+        height: 6em;
     }
     .flex {
-        justify-content: center;
         align-items: center;
         padding: 10;
         padding-top: 0;
+        border: 2px solid #fff;
     }
     .flex-sub {
         margin-left: 0.8em;
+    }
+    .flex .flex-sub .product-title {
+        font-size: 1.5em;
     }
 }

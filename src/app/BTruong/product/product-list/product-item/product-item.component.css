@@ -180,7 +180,7 @@ cart .product-small:hover .icon-hover x.icon {
 
 @media screen and ( max-width: 46.1875em) {
     .product-small {
-        height: 17.75em;
+        height: 16.75em;
     }
     .icon-hover {
         display: none;
@@ -209,7 +209,7 @@ cart .product-small:hover .icon-hover x.icon {
         margin-top: 0.625em;
     }
     .box-image {
-        height: 10.25em;
+        height: 9.25em;
     }
 }
 

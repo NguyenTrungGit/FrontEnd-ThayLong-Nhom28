@@ -176,3 +176,32 @@ div.text-muted {
 .card-img-top {
     border-radius: 10px 10px 0px 0px;
 }
+
+.my-pagination /deep/ .ngx-pagination .current {
+    background: #66A55F;
+    border-radius: 50%;
+    border: 1px solid#66A55F;
+    height: 45px;
+    width: 45px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 10px;
+}
+
+.my-pagination /deep/ .ngx-pagination li {
+    background: #fff;
+    border-radius: 50%;
+    border: 1px solid gray;
+    height: 45px;
+    width: 45px;
+    color: black;
+    text-align: center;
+    padding-top: 10px;
+    margin-right: 1em;
+}
+
+.my-pagination /deep/ .ngx-pagination {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}

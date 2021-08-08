@@ -65,6 +65,11 @@ import { EvaluateComponent } from './NTrung/product-detail/evaluate/evaluate.com
 import { ContactEvaluateComponent } from './NTrung/product-detail/contact-evaluate/contact-evaluate.component';
 import { SwiperModule } from 'swiper/angular';
 
+import {  MatListModule} from '@angular/material/list';
+import {  MatSidenavModule} from '@angular/material/sidenav';
+import {  MatToolbarModule} from '@angular/material/toolbar';
+import {  MatIconModule} from '@angular/material/icon';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -128,6 +133,13 @@ import { SwiperModule } from 'swiper/angular';
     CarouselModule,
     Ng2SearchPipeModule,
     NgSelectModule,
+
+    MatListModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule
+
+
     SwiperModule
   ],
   bootstrap: [AppComponent]

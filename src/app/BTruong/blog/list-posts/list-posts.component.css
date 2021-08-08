@@ -40,5 +40,21 @@
 @media only screen and ( min-width: 46.25em) and ( max-width: 63.9375em) {
     .row {
         margin-right: 0;
+        margin-left: 0;
+    }
+    .col-md-4 {
+        display: inline;
+        margin-top: 0;
+        padding-right: 0;
+    }
+}
+
+@media only screen and ( min-width: 64em) {
+    .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .col-md-4 {
+        min-width: 50%;
     }
 }

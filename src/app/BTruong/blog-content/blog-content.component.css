@@ -30,5 +30,11 @@
 @media only screen and ( min-width: 46.25em) and ( max-width: 63.9375em) {
     .col-sm-8 {
         margin-bottom: 13%;
+        min-width: 100%;
+    }
+    .col-sm-4 {
+        display: block;
+        height: 20px;
+        min-width: 100%;
     }
 }
