@@ -33,7 +33,7 @@
 
             <!-- email -->
             <div class="input__single">
-                <input type="email" placeholder="Email" required formControlName="email" [ngClass]="{'w100':true,'form-control': true,'is-valid': billForm.controls.email.valid, 'is-invalid':!billForm.controls.email.valid && billForm.controls.email.touched}">
+                <input type="email" placeholder="Email" required formControlName="email" [ngClass]="{'form-control': true,'is-valid': billForm.controls.email.valid, 'is-invalid':!billForm.controls.email.valid && billForm.controls.email.touched}">
                 <ng-container>
                     <div *ngIf="billForm.controls.email.errors?.required && billForm.controls.email.touched " class="invalid-feedback" >
                         Không để trống
@@ -111,12 +111,12 @@
             <div class="check__dilivery">
                 <div>
                     <input class="input__check" type="radio" id="radio1" name="radio" value="option1" checked>
-                    <label for="radio1">Giao hàng tận nơi (miễn phí)</label>
+                    <label class="input__label" for="radio1">Giao hàng tận nơi (miễn phí)</label>
                 </div>
 
                 <div>
                     <input class="input__check" type="radio" id="radio2" name="radio" value="option2">
-                    <label for="radio2">Nhận hàng tại siêu thị</label>
+                    <label  class="input__label" for="radio2">Nhận hàng tại siêu thị</label>
                 </div>
             </div>
 

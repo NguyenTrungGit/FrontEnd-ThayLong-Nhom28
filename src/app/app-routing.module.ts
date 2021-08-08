@@ -9,6 +9,7 @@ import { BillConfirmComponent } from './NTrung/bill-confirm/bill-confirm.compone
 import { CartComponent } from './NTrung/cart/cart.component';
 import { FormConfirmComponent } from './NTrung/form-confirm/form-confirm.component';
 import { ProductDetailComponent } from './NTrung/product-detail/product-detail.component';
+import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component';
 import { HeaderComponent } from './Tuyen/header/header.component';
 import { SearchComponent } from './Tuyen/header/search/search.component';
 import { HomeComponent } from './Tuyen/home/home.component';
@@ -23,13 +24,14 @@ const routes: Routes = [
   { path: 'gioithieu', component: IntroduceComponent },
   { path: 'lienhe', component: ContactComponent },
   { path: 'chiase', component: BlogComponent },
-  { path: 'giohang', component:CartComponent },
+  { path: 'giohang', component: CartComponent },
   { path: 'cuahang/:cate/chitiet/:id', component: ProductDetailComponent },
-  { path: "thongtinnhanhang", component:FormConfirmComponent},
-  { path: "hoadon", component:BillConfirmComponent},
+  { path: 'thongtinnhanhang', component: FormConfirmComponent },
+  { path: 'hoadon', component: BillConfirmComponent },
   { path: '', component: HomeComponent },
   { path: 'chiase/chiasechitiet/:id', component: BlogContentComponent },
-  { path: 'search', component: SearchComponent }
+  { path: 'search', component: SearchComponent },
+  { path: 'camon', component: ThanksPageComponent },
 ];
 
 @NgModule({

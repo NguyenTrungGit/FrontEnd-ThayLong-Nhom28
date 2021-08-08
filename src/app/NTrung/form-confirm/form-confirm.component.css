@@ -82,11 +82,9 @@
 }
 
 /* Input */
-.confirm__wrapper{
+.confirm__wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .input__group {
@@ -97,21 +95,20 @@
 }
 
 input,
-textarea{
+textarea {
   padding: 0.75rem;
 }
 
 input,
 select {
-  width: 327px;
+  width: 100%;
 }
 
-select{
+select {
   padding-left: 0.75rem;
 }
 
 .input__single {
-  width: 327px;
   margin-bottom: 1.5rem;
 }
 
@@ -119,18 +116,23 @@ select{
   margin-bottom: 3rem;
 }
 
-.input__check{
+.input__check {
   width: 20px;
   margin-right: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-.invalid-feedback{
+.input__label {
+  user-select: none;
+  cursor: pointer;
+}
+
+.invalid-feedback {
   margin-top: 0.5rem;
   color: hsl(1, 89%, 61%);
 }
 
-.button__submit{
+.button__submit {
   border: none;
   outline: none;
 }
@@ -140,14 +142,26 @@ select{
     padding: 2rem;
   }
 
+  input,
+  select {
+    width: 100%;
+  }
+
   .input__group {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
-  .input__single,.w100{
+  .input__single,
+  .w100 {
     width: 100%;
+  }
+
+  /* hard fix */
+  .input__group input,
+  .input__group select {
+    width: 340px;
   }
 
   .button__medium {
@@ -163,5 +177,11 @@ select{
 
   .section__title {
     padding-bottom: 3rem;
+  }
+
+  /* hard fix */
+  .input__group input,
+  .input__group select {
+    width: 324px;
   }
 }
