@@ -43,6 +43,6 @@ export class ContactEvaluateComponent implements OnInit {
       form.value.rating
     );
     this.commentService.addComment(comment);
-    form.value.fristName = '';
+    this.evaluateGroup.reset();
   }
 }
