@@ -7,12 +7,40 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+.fill {
+    display: none;
+}
+
 
 /* mobilel */
 
 @media screen and ( max-width: 46.1875em) {
-    .col-lg-3 {
+    .fill {
+        display: block;
+    }
+    .row-contai {
         display: none;
+    }
+    .loc {
+        display: block;
+    }
+    .loc .contair-loc {
+        color: #464646;
+        font-family: 'Quicksand';
+        margin: 1em;
+        display: flex;
+        font-size: 1em;
+        justify-content: center;
+        align-items: center;
+    }
+    .loc .contair-loc .title-loc {
+        margin-left: 0.5em;
+        font-size: 1.2em;
+    }
+    mat-toolbar-row {
+        display: flex;
+        justify-content: center;
+        background: #fafafa;
     }
 }
 

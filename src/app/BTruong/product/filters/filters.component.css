@@ -636,6 +636,81 @@ body {
     display: none;
 }
 
+@media screen and ( max-width: 46.1875em) {
+    .col2,
+    .col3,
+    .col4 {
+        margin-left: 10%;
+    }
+    .col2 {
+        margin-top: 3.9375em;
+        width: 11.125em;
+    }
+    .nav_menu-2 .is-divider {
+        height: 3.9375em;
+    }
+    .is-divider {
+        height: 2.9375em;
+    }
+    .is-divider span {
+        font-size: 1em;
+    }
+    .menu {
+        height: 2em;
+    }
+    .menu li {
+        padding-top: 0.4375em;
+    }
+    .menu li a {
+        font-size: 0.8125em;
+        margin-left: 0;
+    }
+    .col3 {
+        margin-top: 3.9375em;
+        width: 11.125em;
+    }
+    .span {
+        display: flex;
+        margin-left: 0px;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+    .btn {
+        top: 2em;
+        border: none;
+        width: 3.125em;
+        height: 1.5625em;
+        position: absolute;
+        left: 0.4375em;
+    }
+    .small .price {
+        left: 4.4375em;
+        top: 2.6875em;
+        left: 5em;
+        top: 3.6em;
+    }
+    .small .cro {
+        left: 9.3125em;
+        top: 2.6875em;
+        left: 10em;
+        top: 3.6875em;
+    }
+     ::ng-deep .bottom .small .ngx-slider .ngx-slider-model-value {
+        /* top: 1.125em !important; */
+        left: 8.8125em !important;
+        font-size: 0.75em!important;
+    }
+     ::ng-deep .bottom .small .ngx-slider .ngx-slider-model-high {
+        /* top: 1.125em !important; */
+        left: 13.25em!important;
+        font-size: 0.75em !important;
+    }
+    .col4 {
+        display: none;
+    }
+}
+
 
 /* tablet */
 

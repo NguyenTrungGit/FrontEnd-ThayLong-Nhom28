@@ -55,28 +55,28 @@ export class HeaderComponent implements OnInit {
   hiden?: boolean = true;
   filterMetadata = { count: 0 };
   filtre = '';
-  ishow: boolean = false;
+  show: boolean = false;
+  nhatkhung?: boolean;
   ishiden: boolean = false;
   visibleState?: any;
+  block:any;
   onEnter(value: string) {
     this.value = value;
   }
-  toggleShow() {
-    this.isShown = true;
-    console.log('N');
-    if (this.filterMetadata.count < 4) {
-      this.ishow = false;
-        console.log(",-4");
-    }else{
-    this.ishow = true;
-    }
-  }
+
   displayValue!: '';
+
   goToSearch(key:string){
-
+    setTimeout(() => {
         this.router.navigate(['/search'],{queryParams:{'key':key}});
-        this.productService.setKeySearch(key);
+      }, 1000);
+  }
 
+  refresh(): void {
+    let currentUrl = this.router.url;
+      this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+      this.router.onSameUrlNavigation = 'reload';
+      this.router.navigate([currentUrl]);
   }
 
   ngOnInit(): void {

@@ -840,3 +840,22 @@
     border: none !important;
   }
 }
+#search + svg {
+  margin-left: -30px;
+  margin-bottom: -2px;
+}
+#search + svg {
+  visibility: hidden;
+  position: absolute;
+  top: 4.3em;
+  right: 1em;
+  height: 1.25em;
+  width: 2.8125em;
+}
+#search:placeholder-shown + svg {
+  visibility: visible;
+}
+
+
+
+

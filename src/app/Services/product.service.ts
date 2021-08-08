@@ -124,17 +124,12 @@ export class ProductService {
   }
 
 
-  public getProductsBySearch(
-   name:string
-  ): Observable<Product[]> {
+
+  public getProductsBySearch(name:string): Observable<Product[]> {
     const url = `${this.REST_API_SERVER}/product/?name_like=${name}` ;
     console.log(name,"day ne");
     return this.httpClient.get<Product[]>(url, this.httpOptions);
-  }
-  setKeySearch(keySearch:string){
-    this.keySearch=keySearch;
-  }
-  getKetSearch():string{
-    return this.keySearch;
+    console.log(this.httpClient.get<Product[]>(url, this.httpOptions));
+
   }
 }

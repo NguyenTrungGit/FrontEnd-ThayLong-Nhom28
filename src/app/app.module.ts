@@ -7,6 +7,9 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { NgSelectModule } from '@ng-select/ng-select';
 
 
+
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductDetailsComponent } from './NTrung/product-details/product-details.component';
@@ -41,7 +44,7 @@ import { ProductRelatedComponent } from './NTrung/product-details/product-relate
 import { HomeComponent } from './Tuyen/home/home.component';
 import { ProductItemHomeComponent } from './Tuyen/home/product-item-home/product-item-home.component';
 import { CartComponent } from './NTrung/cart/cart.component';
-import { MaterialModule } from './material/material.module';
+import { MaterialModule} from './material/material.module';
 import { IntroduceComponent } from './Tuyen/introduce/introduce.component';
 import { PayComponent } from './NTrung/pay/pay.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -67,6 +70,11 @@ import { BlogContentDetailsComponent } from './BTruong/blog-content/blog-content
 import { SearcgfilterPipe } from './searcgfilter.pipe';
 import { SearchComponent } from './Tuyen/header/search/search.component';
 import { FilterPipe } from './filter.pipe';
+
+import {  MatListModule} from '@angular/material/list';
+import {  MatSidenavModule} from '@angular/material/sidenav';
+import {  MatToolbarModule} from '@angular/material/toolbar';
+import {  MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -134,7 +142,11 @@ import { FilterPipe } from './filter.pipe';
     ScrollingModule,
     CarouselModule,
     Ng2SearchPipeModule,
-    NgSelectModule
+    NgSelectModule,
+    MatListModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule
 
   ],
   bootstrap: [AppComponent],

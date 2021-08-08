@@ -45,15 +45,19 @@
           </span>
                     <div class="box-search">
                         <div class="title-search">TÌM KIẾM</div>
-
                         <div class="site-search ">
                             <div class="form-search ">
-
-                                <!-- <input (keyup)="toggleShow()" #box (keyup.enter)="goToSearch(box.value)" (keyup.enter)="onEnter(box.value)" [(ngModel)]="filtre" class="form-control" type="text" name="search" autocomplete="off" placeholder="Tim kiem"> -->
-                                <input (keyup)="toggleShow()" #box (keyup.enter)="goToSearch(box.value)" (keyup.enter)="onEnter(box.value)" [(ngModel)]="filtre" class="form-control" type="text" name="search" autocomplete="off" placeholder="Tim kiem">
                             </div>
-                            <div *ngIf="isShown" class="resultsSearch ">
-                                <div id="your-data" [hidden]="visibleState" class="item-search " *ngFor="let item of search | filterList :filtre :filterMetadata :ishow : ishiden| slice:0:4">
+
+                            <form action="">
+                                <input id="Search" #box (keyup.enter)="goToSearch(box.value)" (keyup.enter)="refresh()" [(ngModel)]="filtre" class="form-control" autocomplete="off" type="search" name="search" class="form-control" placeholder="Tìm kiếm">
+
+
+                            </form>
+
+
+                            <div *ngIf="this.filtre.length>0 " class="resultsSearch ">
+                                <div id="your-data" [hidden]="visibleState" class="item-search " *ngFor="let item of search | filterList :filtre :filterMetadata :show : ishiden| slice:0:4">
                                     <div>
                                         <div class="title ">
                                             <a title="Rau muống túi 500g " routerLink='/cuahang/{{item.category}}/chitiet/{{item.id}}' [innerText]="item.name|titlecase"></a>
@@ -64,13 +68,18 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div *ngIf="ishow" class="item-more p-2 " [routerLink]="['/search']" [queryParams]="{key: filtre}"><a>Xem thêm
-                                              {{filterMetadata.count}} sản phẩm</a></div>
-                                <div *ngIf="ishiden" class="item-more p-2 "><a>Không tìm thấy sản phẩm nào</a></div>
+                                <div *ngIf="this.filterMetadata.count >4" class="item-more p-2 " [routerLink]="['/search']" [queryParams]="{key: filtre}"><a>Xem thêm
+                                            {{filterMetadata.count}} sản phẩm</a></div>
+                                <div #block>
+                                    <div *ngIf="this.filterMetadata.count <=0 " class="item-more p-2 "><a>Không tìm thấy sản phẩm nào</a></div>
+                                </div>
+
                             </div>
 
 
+
                         </div>
+
                     </div>
                 </div>
             </li>
