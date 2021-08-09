@@ -137,7 +137,7 @@ import {  MatIconModule} from '@angular/material/icon';
     MatListModule,
     MatSidenavModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
 
 
     SwiperModule
