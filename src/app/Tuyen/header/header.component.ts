@@ -1,3 +1,4 @@
+import { Category } from './../../model/category.model';
 import { DOCUMENT } from '@angular/common';
 
 import {
@@ -10,10 +11,8 @@ import {
   Inject,
   HostListener,
   Input,
-  ChangeDetectionStrategy,
-  SimpleChange,
+ChangeDetectionStrategy
 } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { Product } from 'src/app/model/product.model';
 import { ProductService } from 'src/app/Services/product.service';
@@ -29,104 +28,62 @@ export class HeaderComponent implements OnInit {
   i: any = -1;
   totalCart:number=0;
   datas: Product[] = [];
-  search: Product[] = [];
-  itemsCart: Product[] = [];
+   itemsCart: Product[] = [];
   title = 'filter';
-
-  numberItemInCart: number = 0;
-
-
-
-  // scroll
-  items = Array.from({ length: 210 }).map((_, i) => `Item #${i}`);
-  constructor(
-    @Inject(DOCUMENT) private document: any,
-    private productService: ProductService,
-    private cartService: ShoppingCartService,
-    private router: Router,
-    private activatedRouter: ActivatedRoute
-  ) {
-  }
-
-  searchText: any;
-  searchValue = '';
-  value = '';
-  isShown?: boolean = false;
-  hiden?: boolean = true;
-  filterMetadata = { count: 0 };
-  filtre = '';
-  show: boolean = false;
-  nhatkhung?: boolean;
-  ishiden: boolean = false;
-  visibleState?: any;
-  block:any;
-  onEnter(value: string) {
-    this.value = value;
-  }
-
-  displayValue!: '';
-
-  goToSearch(key:string){
-    setTimeout(() => {
-        this.router.navigate(['/search'],{queryParams:{'key':key}});
-      }, 1000);
-  }
-
-  refresh(): void {
-    let currentUrl = this.router.url;
-      this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-      this.router.onSameUrlNavigation = 'reload';
-      this.router.navigate([currentUrl]);
-  }
+  keyword ="name";
+  found ="không tìm thấy sản phẩm."
+numberItemInCart:number=0;
+categorys: Category[]=[];
+  public nameFilter='bao';
+  public nameFilterControl =  new Subject<string>();
+// scroll
+  items = Array.from({length: 210}).map((_, i) => `Item #${i}`);
+  constructor(@Inject(DOCUMENT) private document: any,
+  private productService: ProductService ,
+  private cartService:ShoppingCartService) {}
 
   ngOnInit(): void {
-    this.cartService.cartItems.subscribe(data=>{
+     this.cartService.cartItems.subscribe(data=>{
       this.itemsCart=data;
     })
+    this.getCategorys()
+      console.log(this.categorys)
     this.cartService.cartItems.subscribe(data=>{
         this.numberItemInCart=data.length
         this.totalCart=this.getTotal();
 
     })
-
     this.getProducts();
-    this.getSearch();
+    this.nameFilterControl.pipe().subscribe(value=>{ this.nameFilter = value.trim().toLowerCase();
+      console.log(value);
+    }
+    );
 
   }
-
-
-  clearListSearch(){
-    this.search=[];
+  getCategorys() {
+    this.productService.getCategorys().subscribe((res: any) => {
+      this.categorys = res;
+    });
   }
+
   removeProduct(product:Product){
 this.cartService.removeProduct(product);
-
   }
+
   getProducts() {
     this.productService.getProducts().subscribe((res: any) => {
       this.datas = res;
     });
 
   }
-  getSearch() {
-    this.productService.getProducts().subscribe((res: any) => {
-      this.search = res;
-
-    });
-  }
-
   displaySearch() {
-console.log(this.search)
     var dropdownSearch = document.querySelector(
       '.dropdown-search'
     ) as HTMLElement;
     this.i = this.i * -1;
     if (this.i === 1) {
-this.getSearch();
       dropdownSearch.style.display = 'block';
     } else {
-      this.clearListSearch();
-
       dropdownSearch.style.display = 'none';
     }
   }
@@ -139,31 +96,43 @@ this.getSearch();
   }
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    var container = document.querySelector('.container') as HTMLElement;
+   var container  = document.querySelector('.container') as HTMLElement;
     var header = document.querySelector('.header') as HTMLElement;
     var navbar = document.querySelector('.navbar') as HTMLElement;
     var topintro = document.querySelector('.top-intro') as HTMLElement;
     var logo = document.querySelector('.logo') as HTMLElement;
-    navbar.style.padding = '0';
+    navbar.style.padding="0"
     if (document.documentElement.scrollTop < 1) {
-      navbar.style.paddingTop = '4px';
-      navbar.style.paddingBottom = '4px';
+      navbar.style.paddingTop="4px"
+      navbar.style.paddingBottom="4px"
       topintro.style.display = 'block';
       logo.style.width = '170px';
       navbar.classList.remove('p-0');
     }
     if (document.documentElement.scrollTop > 200) {
       navbar.classList.add('transition-navbar');
-      container.style.height = '100px';
+      container.style.height='100px'
       header.classList.add('fixed-top');
       topintro.style.display = 'none';
       navbar.classList.add('shadow');
       logo.style.width = '160px';
       logo.style.paddingTop = '2px';
       logo.style.paddingBottom = '2px';
+
     }
   }
+  selectEvent(item:any) {
+    // do something with selected item
+  }
 
+  onChangeSearch(search: string) {
+    // fetch remote data from here
+    // And reassign the 'data' which is binded to 'data' property.
+  }
+
+  onFocused(e:any) {
+    // do something
+  }
   //filter
   getTotal():number{
     var total=0;
