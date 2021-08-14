@@ -56,6 +56,38 @@
         display: none;
         z-index: 99999;
     }
+    .search__mobile {
+        display: none;
+        z-index: 999;
+        width: 100%;
+        position: absolute;
+        bottom: 1px;
+        transform: translateY(100%);
+        background-color: #ffffff;
+        .container-search__mobile {
+            position: relative;
+            padding: 6px;
+            .box-search__mobile {
+                padding: 8px;
+                background-color: rgb(245, 245, 245);
+                border: 0.5px solid rgb(235, 235, 235);
+                width: 100%
+            }
+            .icon-search__mobile {
+                position: absolute;
+                transform: translateY(50%);
+                padding-right: 16px;
+                opacity: 70%;
+                font-size: 24px;
+                right: 0;
+                top: 0;
+            }
+            .box-search__mobile:focus {
+                outline: none;
+                border: 0.5px solid #66a55f;
+            }
+        }
+    }
 }
 
 .nav-fixed {
@@ -700,14 +732,38 @@
         .nav-item__mobile {
             list-style: none;
         }
+        .nav-item-cuahang__mobile {
+            a {
+                position: relative;
+                .dropdown-icon__mobile {
+                    position: absolute;
+                    right: 100px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            .category__mobile {
+                padding: 0;
+                .item-category__mobile {
+                    list-style: none;
+                    padding-bottom: 12px;
+                    a {
+                        color: rgb(0, 0, 0);
+                        text-decoration: none;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
     }
     .help__mobile {
         margin-top: 32px;
         text-align: center;
         .phone-help {
+            text-align: center;
             margin-top: 16px;
             display: flex;
-            margin-left: 30vw;
+            justify-content: center;
             .icon-phone__mobile {
                 margin-right: 16px;
                 width: 24px;
@@ -717,7 +773,7 @@
         .mail-help {
             margin-top: 16px;
             display: flex;
-            margin-left: 30vw;
+            justify-content: center;
             .ion-email__mobile {
                 margin-right: 18px;
                 width: 22px;
@@ -758,6 +814,9 @@
                     padding-bottom: 15px;
                 }
             }
+            .nav-item__mobile:active {
+                background-color: rgb(247, 247, 247);
+            }
         }
         .box-triangle {
             width: 22px;
@@ -787,6 +846,9 @@
         }
         padding-left: 4px;
         padding-right: 4px;
+        .search__mobile {
+            display: block;
+        }
     }
     .navbar .logo {
         flex: 1;
@@ -823,5 +885,6 @@
 // ::ng-deep .heading {
 //     background-color: #fff !important;
 //     border: none !important;
-// }   border: none !important;
+// }
+// border: none !important;
 // }

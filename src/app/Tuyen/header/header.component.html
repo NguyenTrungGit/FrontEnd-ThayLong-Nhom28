@@ -22,11 +22,15 @@
                     <li class="nav-item__mobile">
                         <a class="nav-link" routerLink="/trangchu">Trang chủ</a>
                     </li>
-                    <li class="nav-item__mobile">
+                    <li class="nav-item__mobile nav-item-cuahang__mobile">
                         <a class="nav-link" routerLink="/cuahang">Cửa hàng
                         <i class="fa fa-chevron-down dropdown-icon__mobile"></i>
                             </a>
-
+                        <ul class="category__mobile">
+                            <li class="item-category__mobile" *ngFor="let cate of categorys">
+                                <a routerLink="/cuahang/{{cate.id}}">{{cate.name}}</a>
+                            </li>
+                        </ul>
                     </li>
 
                     <li class="nav-item__mobile">
@@ -62,6 +66,7 @@
                         <a href="mailto:vegefresh@gmail.com" class="email__mobile">freshvege@gmail.com</a>
                     </div>
                 </div>
+
             </nav>
         </div>
         <!-- Brand -->
@@ -201,6 +206,14 @@
 
 
         </ul>
+        <div class="search__mobile">
+            <div class="container-search__mobile">
+                <input class="box-search__mobile" type="text" placeholder="Tìm kiếm sản phẩm..." />
+                <span class="icon-search__mobile"><i class="far fa-search"></i></span>
+
+            </div>
+
+        </div>
     </nav>
 </div>
 

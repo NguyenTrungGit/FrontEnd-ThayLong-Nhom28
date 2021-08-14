@@ -25,6 +25,10 @@
     position: relative;
 }
 
+.item-product-home .box-image a img {
+    width: 100%;
+}
+
 .item-product-home .text-title {
     font-size: 16px;
     padding-top: 4px;
@@ -46,6 +50,7 @@
 } */
 
 .appear .list-icon {
+    padding-top: 16px;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -57,6 +62,10 @@
 .appear .list-icon a {
     color: #000;
     flex: 1;
+}
+
+.appear .list-icon a i {
+    font-size: 20px;
 }
 
 .appear .list-icon a:hover {
@@ -71,6 +80,11 @@
 .appear div span {
     color: #000;
     flex: 1;
+}
+
+.box-text {
+    padding-bottom: 24px;
+    padding-top: 8px;
 }
 
 .box-text .text-price {

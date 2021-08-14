@@ -20,6 +20,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .carousel-arrow-prev {
+            left: -45px !important;
+        }
+
+        .carousel-arrow-next {
+            right: -45px !important;
+        }
+
+        .carousel {
+            z-index: 0 !important;
+        }
+
+        @media only screen and ( max-width:46.1875em) {
+            .carousel-arrow-prev {
+                left: 0px !important;
+            }
+            .carousel-arrow-next {
+                right: 0px !important;
+            }
+        }
+    </style>
 </head>
 
 <body class="mat-typography">
