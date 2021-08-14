@@ -29,15 +29,11 @@ export class HeaderComponent implements OnInit {
   totalCart:number=0;
   datas: Product[] = [];
    itemsCart: Product[] = [];
-  title = 'filter';
-  keyword ="name";
-  found ="không tìm thấy sản phẩm."
-numberItemInCart:number=0;
-categorys: Category[]=[];
-  public nameFilter='bao';
-  public nameFilterControl =  new Subject<string>();
-// scroll
-  items = Array.from({length: 210}).map((_, i) => `Item #${i}`);
+
+  numberItemInCart:number=0;
+  categorys: Category[]=[];
+
+
   constructor(@Inject(DOCUMENT) private document: any,
   private productService: ProductService ,
   private cartService:ShoppingCartService) {}
@@ -45,20 +41,23 @@ categorys: Category[]=[];
   ngOnInit(): void {
      this.cartService.cartItems.subscribe(data=>{
       this.itemsCart=data;
+      this.numberItemInCart=this.countQuantityCart(this.itemsCart)
+      this.totalCart=this.getTotal();
     })
     this.getCategorys()
-      console.log(this.categorys)
-    this.cartService.cartItems.subscribe(data=>{
-        this.numberItemInCart=data.length
-        this.totalCart=this.getTotal();
 
-    })
-    this.getProducts();
-    this.nameFilterControl.pipe().subscribe(value=>{ this.nameFilter = value.trim().toLowerCase();
-      console.log(value);
+
+
+
+
+
+  }
+  countQuantityCart(itemsCart: Product[]):number{
+    let count=0;
+    for(let i = 0; i < itemsCart.length; i++){
+    count+=itemsCart[i].quantity;
     }
-    );
-
+return count;
   }
   getCategorys() {
     this.productService.getCategorys().subscribe((res: any) => {
@@ -70,29 +69,24 @@ categorys: Category[]=[];
 this.cartService.removeProduct(product);
   }
 
-  getProducts() {
-    this.productService.getProducts().subscribe((res: any) => {
-      this.datas = res;
-    });
 
-  }
   displaySearch() {
-    var dropdownSearch = document.querySelector(
-      '.dropdown-search'
-    ) as HTMLElement;
-    this.i = this.i * -1;
-    if (this.i === 1) {
-      dropdownSearch.style.display = 'block';
-    } else {
-      dropdownSearch.style.display = 'none';
-    }
+    // var dropdownSearch = document.querySelector(
+    //   '.dropdown-search'
+    // ) as HTMLElement;
+    // this.i = this.i * -1;
+    // if (this.i === 1) {
+    //   dropdownSearch.style.display = 'block';
+    // } else {
+    //   dropdownSearch.style.display = 'none';
+    // }
   }
   hideSearch() {
-    var dropdownSearch = document.querySelector(
-      '.dropdown-search'
-    ) as HTMLElement;
-    dropdownSearch.style.display = 'none';
-    this.i = -1;
+    // var dropdownSearch = document.querySelector(
+    //   '.dropdown-search'
+    // ) as HTMLElement;
+    // dropdownSearch.style.display = 'none';
+    // this.i = -1;
   }
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -101,10 +95,13 @@ this.cartService.removeProduct(product);
     var navbar = document.querySelector('.navbar') as HTMLElement;
     var topintro = document.querySelector('.top-intro') as HTMLElement;
     var logo = document.querySelector('.logo') as HTMLElement;
-    navbar.style.padding="0"
+    navbar.style.paddingTop="0"
+    navbar.style.paddingBottom="0"
     if (document.documentElement.scrollTop < 1) {
       navbar.style.paddingTop="4px"
       navbar.style.paddingBottom="4px"
+      navbar.style.paddingLeft="8px"
+      navbar.style.paddingRight="8px"
       topintro.style.display = 'block';
       logo.style.width = '170px';
       navbar.classList.remove('p-0');
@@ -133,6 +130,8 @@ this.cartService.removeProduct(product);
   onFocused(e:any) {
     // do something
   }
+
+  
   //filter
   getTotal():number{
     var total=0;
