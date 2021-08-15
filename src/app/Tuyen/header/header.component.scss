@@ -2,6 +2,7 @@
 //pc: >=1024px
 // @media only screen and ( min-width:64em) {}
 .nav__bars-btn {
+    position: absolute;
     .bars-btn {
         display: none;
         height: 25px;
@@ -827,6 +828,7 @@
         }
     }
     .nav__bars-btn {
+        position: relative;
         padding-left: 12px;
         padding-bottom: 20px;
         padding-top: 20px;
