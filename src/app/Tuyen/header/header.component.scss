@@ -2,7 +2,7 @@
 //pc: >=1024px
 // @media only screen and ( min-width:64em) {}
 .nav__bars-btn {
-    position: absolute;
+    // position: absolute;
     .bars-btn {
         display: none;
         height: 25px;
@@ -38,8 +38,8 @@
 }
 
 .logo {
-    margin-left: 32px;
-    padding-right: 28px;
+    // margin-left: 32px;
+    // padding-right: 28px;
     .logo__mobile {
         display: none;
     }
@@ -88,6 +88,9 @@
                 border: 0.5px solid #66a55f;
             }
         }
+    }
+    .nav__pc {
+        flex: 0.9;
     }
 }
 
@@ -828,7 +831,7 @@
         }
     }
     .nav__bars-btn {
-        position: relative;
+        // position: relative;
         padding-left: 12px;
         padding-bottom: 20px;
         padding-top: 20px;
@@ -838,6 +841,9 @@
         }
     }
     .navbar {
+        .nav__pc {
+            position: absolute;
+        }
         .navbar-nav .item-search {
             display: none;
         }
@@ -853,10 +859,11 @@
         }
     }
     .navbar .logo {
-        flex: 1;
+        flex: 0.5;
         padding-right: 0;
         .logo__mobile {
             display: block;
+            max-width: none;
         }
         .logo__pc {
             display: none;
