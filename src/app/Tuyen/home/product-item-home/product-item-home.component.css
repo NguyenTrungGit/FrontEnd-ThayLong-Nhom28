@@ -32,6 +32,7 @@
 .item-product-home .text-title {
     font-size: 16px;
     padding-top: 4px;
+    height: 2.8em;
 }
 
 
@@ -83,8 +84,8 @@
 }
 
 .box-text {
-    padding-bottom: 24px;
-    padding-top: 8px;
+    padding-bottom: 8px;
+    margin: 4px;
 }
 
 .box-text .text-price {
@@ -93,4 +94,36 @@
 
 .box-text .text-discount {
     font-size: 13px;
+}
+
+.btn-cart__mobile {
+    display: block;
+    background-color: #66a55f;
+}
+
+.btn-cart__mobile a {
+    color: #fff;
+}
+
+@media only screen and ( max-width:46.1875em) {
+    .item-product-home .box-image a img {
+        height: 10.25em;
+        object-fit: cover;
+    }
+    .box-text {
+        padding-bottom: 8px;
+    }
+    .btn-cart__mobile {
+        text-decoration: none;
+        height: 100%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .btn-cart__mobile a {
+        display: block;
+        text-decoration: none;
+    }
+    .item-product-home .text-title {
+        height: 2.4em;
+    }
 }
