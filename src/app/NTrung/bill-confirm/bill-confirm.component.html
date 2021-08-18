@@ -11,31 +11,13 @@
         </div>
         <ul class="bill__list">
             <!-- Item -->
-            <li class="bill__item">
-                <p class="bill__title">Bắp cải trắng 300g</p>
+            <li class="bill__item" *ngFor="let item of items">
+                <p class="bill__title">{{item.name}}</p>
                 <div class="price__wrapper">
-                    <p class="bill__price-unit">2 x 20.000&#8363;</p>
-                    <p class="bill__price">20.000&#8363;</p>
+                    <p class="bill__price-unit">{{item.quantity}} x {{item.price}}&#8363;</p>
+                    <p class="bill__price">{{ item.quantity * item.price }}&#8363;</p>
                 </div>
-            </li>
-
-             <!-- Item -->
-             <li class="bill__item">
-                <p class="bill__title">Bắp cải trắng 300g</p>
-                <div class="price__wrapper">
-                    <p class="bill__price-unit">2 x 20.000&#8363;</p>
-                    <p class="bill__price">20.000&#8363;</p>
-                </div>
-            </li>
-
-             <!-- Item -->
-             <li class="bill__item">
-                <p class="bill__title">Bắp cải trắng 300g</p>
-                <div class="price__wrapper">
-                    <p class="bill__price-unit">2 x 20.000&#8363;</p>
-                    <p class="bill__price">20.000&#8363;</p>
-                </div>
-            </li>
+            </li>   
         </ul>
     </div>
 
@@ -44,19 +26,19 @@
             <!-- Item -->
             <li class="total__item">
                  <p class="title bill__title">Giao hàng</p>
-                 <p class="total__price bill__price">20.000&#8363;</p>
+                 <p class="total__price bill__price">{{diliveryPrice}}&#8363;</p>
             </li>
 
             <!-- Item -->
             <li class="total__item">
                  <p class="title bill__title">Giảm giá</p>
-                 <p class="total__price bill__price">- 20.000&#8363;</p>
+                 <p class="total__price bill__price">- {{discount}}&#8363;</p>
             </li>
 
             <!-- Item -->
             <li class="total__item">
                  <p class="title bill__title">Tổng tiền</p>
-                 <p class="total__price bill__price">20.000&#8363;</p>
+                 <p class="total__price bill__price">{{total - discount + diliveryPrice}}&#8363;</p>
             </li>
         </ul>
      </div>

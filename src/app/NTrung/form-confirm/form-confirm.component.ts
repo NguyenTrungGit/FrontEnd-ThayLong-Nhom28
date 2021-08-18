@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NavigationEnd, Router } from '@angular/router';
 import { AddressGroupService } from '../../Services/NTrung/address-group.service';
 
 @Component({
@@ -50,10 +51,12 @@ export class FormConfirmComponent implements OnInit {
   };
   constructor(
     private _fb: FormBuilder,
-    private addressgroup: AddressGroupService
+    private addressgroup: AddressGroupService,
+    private router:Router
   ) {}
 
   ngOnInit(): void {
+    this.scrollOnTop();
     this.showAll();
     this.onSelectCountry(this.selectedCountry.id);
   }
@@ -83,6 +86,15 @@ export class FormConfirmComponent implements OnInit {
         (res: any) => res.state_id == state_id!.value
       )),
         console.log(this.districts);
+    });
+  }
+
+  scrollOnTop() {
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+        return;
+      }
+      window.scrollTo(0, 0);
     });
   }
 }

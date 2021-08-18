@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NavigationEnd, Router } from '@angular/router';
 import { Product } from 'src/app/model/product.model';
 import { VoucherService } from 'src/app/Services/NTrung/voucher.service';
 import { ShoppingCartService } from 'src/app/Services/shopping-cart.service';
@@ -18,19 +19,23 @@ export class CartComponent implements OnInit {
 
   total: number = 0;
   items: Product[] = [];
-  diliveryPrice:number = 20000;
+  diliveryPrice: number = 20000;
+  totalTemp: number = 0;
 
   constructor(
     private shoppingcartService: ShoppingCartService,
     private voucherService: VoucherService,
-    private _fb: FormBuilder
+    private _fb: FormBuilder,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
+    this.scrollOnTop();
     this.shoppingcartService.cartItems.subscribe((data) => {
       this.items = data;
-      console.log(this.items.length)
+      console.log(this.items.length);
     });
+    this.discount = this.voucherService.getLocalVoucher() || 0;
     this.total = this.getTotal();
   }
   updateQuantity(element: any, product: Product) {
@@ -61,6 +66,7 @@ export class CartComponent implements OnInit {
     return total;
     ``;
   }
+
   removeProduct(product: Product) {
     this.shoppingcartService.removeProduct(product);
   }
@@ -69,12 +75,24 @@ export class CartComponent implements OnInit {
     let id = this.voucherGroup.controls.voucherId.value;
     this.voucherService.getVoucherById(id).subscribe((res: any) => {
       if (res.find((n: any) => n.id === id)) {
-        this.discount = res.find((n: any) => n.id === id).discount;
+        this.voucherService.setLocalVoucher(
+          res.find((n: any) => n.id === id).discount
+        );
+        this.discount = this.voucherService.getLocalVoucher();
         this.notifi = '';
       } else {
         this.notifi = 'Nhập sai';
         this.discount = 0;
       }
+    });
+  }
+
+  scrollOnTop() {
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+        return;
+      }
+      window.scrollTo(0, 0);
     });
   }
 }
