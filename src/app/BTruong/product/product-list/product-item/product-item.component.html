@@ -40,12 +40,12 @@
                       class="woocommerce-Price-amount amount ">{{productItem?.price | number }}&nbsp;<span class="woocommerce-Price-currencySymbol ">&#8363;</span></span>
                     </span>
                 </div>
-                <div class="add-cart">
+                <div style="cursor: pointer;" class="add-cart" (click)="addToCart()">
                     <div class="title-cart">
                         <p>Thêm vào giỏ</p>
                     </div>
                     <div class="icon-cart" style="color: #fff;">
-                        <a class="cart" (click)="addToCart()"><i class="far fa-shopping-cart "></i></a>
+                        <a class="cart"><i class="far fa-shopping-cart "></i></a>
 
                     </div>
                 </div>

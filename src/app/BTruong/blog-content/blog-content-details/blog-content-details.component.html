@@ -33,11 +33,62 @@
     </div>
 </div>
 <div class="blog-comment">
-    <div class="title-comment">
-        <p>Để lại bình luận</p>
-    </div>
+
     <div class="form">
-        <form>
+
+        <div class="form-container">
+            <div class="evaluate__wrapper">
+                <form #form="ngForm" (ngSubmit)="onFormSubmit(form)" class="form__wrapper" [formGroup]="evaluateGroup">
+
+                    <div class="evaluate__title contact__title">Để lại bình luận
+                    </div>
+
+                    <div class="form-container-item">
+                        <input type="text" placeholder="Họ và tên" required formControlName="fristName" [ngClass]="{'form-control': true,'is-valid': evaluateGroup.controls.fristName.valid,'is-invalid':!evaluateGroup.controls.fristName.valid && evaluateGroup.controls.fristName.touched }">
+                        <ng-container>
+                            <div *ngIf=" evaluateGroup.controls.fristName.errors?.required && evaluateGroup.controls.fristName.touched " class="invalid-feedback">
+                                Không để trống
+                            </div>
+                            <div *ngIf=" evaluateGroup.controls.fristName.errors?.minlength && evaluateGroup.controls.fristName.touched" class="invalid-feedback">
+                                Ít nhất 2 kí tự
+                            </div>
+                        </ng-container>
+                    </div>
+                    <div class="form-container-item">
+                        <input type="text" placeholder="Số điện thoại" required formControlName="phoneNum" [ngClass]="{'form-control': true,'is-valid': evaluateGroup.controls.phoneNum.valid,'is-invalid':!evaluateGroup.controls.phoneNum.valid && evaluateGroup.controls.phoneNum.touched}">
+                        <ng-container>
+                            <div *ngIf=" evaluateGroup.controls.phoneNum.errors?.required && evaluateGroup.controls.phoneNum.touched " class="invalid-feedback">
+                                Không để trống
+                            </div>
+                            <div *ngIf=" evaluateGroup.controls.phoneNum.errors?.pattern && evaluateGroup.controls.phoneNum.touched" class="invalid-feedback">
+                                Ví dụ: 0123456789 / 8412345678
+                            </div>
+                        </ng-container>
+                    </div>
+                    <div class="form-container-item">
+                        <input type="email" placeholder="Email" required formControlName="email" [ngClass]="{'form-control': true,'is-valid': evaluateGroup.controls.email.valid, 'is-invalid':!evaluateGroup.controls.email.valid && evaluateGroup.controls.email.touched}">
+                        <ng-container>
+                            <div *ngIf="evaluateGroup.controls.email.errors?.required && evaluateGroup.controls.email.touched " class="invalid-feedback">
+                                Không để trống
+                            </div>
+                            <div *ngIf="evaluateGroup.controls.email.errors?.pattern && evaluateGroup.controls.email.touched" class="invalid-feedback">
+                                Ví dụ: khachhang@gmail.com
+                            </div>
+                        </ng-container>
+                    </div>
+                    <div class="form-container-item conte">
+                        <textarea placeholder="Nội dung" required formControlName="content" [ngClass]="{'form-control': true,'is-valid': evaluateGroup.controls.content.valid, 'is-invalid':!evaluateGroup.controls.content.valid && evaluateGroup.controls.content.touched}"></textarea>
+                        <ng-container>
+                            <div *ngIf="evaluateGroup.controls.content.errors?.required && evaluateGroup.controls.content.touched " class="invalid-feedback">
+                                Không để trống
+                            </div>
+                        </ng-container>
+                        <input type="submit" class="button__submit" [disabled]="evaluateGroup.invalid">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- <form>
             <div class="form-group" style="margin-bottom: 2 rem;">
                 <label for="formGroupExampleInput" style="font-size: 15px;max-width: 1.5 rem; word-spacing: 1px;margin-left: 0.2em;">Để lại nhận
           xét và cùng chia sẻ với chúng tôi.</label>
@@ -62,11 +113,11 @@
                     <input type="text" class="form-control" placeholder="Số điện thoại">
                 </div>
             </div>
-        </form>
-        <div class="btn">
+        </form> -->
+        <!-- <div class="btn">
 
             <input type="button" class="button" value="Gửi bình luận">
 
-        </div>
+        </div> -->
     </div>
 </div>

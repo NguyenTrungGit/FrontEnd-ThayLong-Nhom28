@@ -265,6 +265,7 @@
 
 .btn {
     border-radius: 99px;
+    cursor: pointer;
 }
 
 .price {
