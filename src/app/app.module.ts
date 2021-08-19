@@ -69,7 +69,7 @@ import {  MatListModule} from '@angular/material/list';
 import {  MatSidenavModule} from '@angular/material/sidenav';
 import {  MatToolbarModule} from '@angular/material/toolbar';
 import {  MatIconModule} from '@angular/material/icon';
-
+import {IvyCarouselModule} from 'angular-responsive-carousel';
 @NgModule({
   declarations: [
     AppComponent,
@@ -137,10 +137,11 @@ import {  MatIconModule} from '@angular/material/icon';
     MatListModule,
     MatSidenavModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
 
 
-    SwiperModule
+    SwiperModule,
+    IvyCarouselModule
   ],
   bootstrap: [AppComponent]
 })

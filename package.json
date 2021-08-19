@@ -26,6 +26,7 @@
     "@syncfusion/ej2-angular-dropdowns": "^19.2.48",
     "angular-cd-timer": "^1.1.0",
     "angular-ng-autocomplete": "^2.0.5",
+    "angular-responsive-carousel": "^2.1.2",
     "angular-ui-carousel": "^0.1.10",
     "igniteui-angular": "^11.1.16",
     "mdb-ui-kit": "^3.8.1",
@@ -45,7 +46,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^12.1.2",
+    "@angular-devkit/build-angular": "^12.2.1",
     "@angular/cli": "~12.0.0",
     "@angular/compiler-cli": "~12.0.0",
     "@types/jasmine": "~3.6.0",

@@ -16,11 +16,10 @@ import { HomeComponent } from './Tuyen/home/home.component';
 import { IntroduceComponent } from './Tuyen/introduce/introduce.component';
 
 const routes: Routes = [
-  { path: 'trangchu', component: HomeComponent },
+  { path: 'trangchu', component: HomeComponent},
   { path: 'trangchu', component: HeaderComponent },
   { path: 'cuahang/:cate', component: ProductComponent },
   { path: 'cuahang', component: ProductComponent },
-
   { path: 'gioithieu', component: IntroduceComponent },
   { path: 'lienhe', component: ContactComponent },
   { path: 'chiase', component: BlogComponent },
@@ -30,6 +29,7 @@ const routes: Routes = [
   { path: 'hoadon', component: BillConfirmComponent },
   { path: '', component: HomeComponent },
   { path: 'chiase/chiasechitiet/:id', component: BlogContentComponent },
+
   { path: 'search', component: SearchComponent },
   { path: 'camon', component: ThanksPageComponent },
 ];

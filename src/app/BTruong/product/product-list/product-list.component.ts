@@ -29,62 +29,58 @@ export class ProductListComponent implements OnInit {
   ) {}
   ngOnChanges(changes: SimpleChanges): void {
     this.categoryTemp = this.categoryName;
-    this.activePage = 1;
-    this.pager = {};
+    this.pager ={}
     this.getProducts();
   }
 
   ngOnInit(): void {
     this.categoryTemp = this.categoryName;
+    this.activatedRoute.queryParams.subscribe(params => {
+     this.minPrice=params['min']
+      this.maxPrice=params['max']
+      this.activePage=params['trang']
+if(this.activePage===undefined){
+  console.log("para trang ko có")
+this.activePage=1
+}else{
+  console.log("para: "+this.activePage)
+}
+
+  });
     this.getProducts();
   }
-  getProducts() {
-    this.activatedRoute.queryParams.subscribe((params) => {
-      let min = params['min'];
-      let max = params['max'];
-      if (min !== undefined && max !== undefined) {
-        this.maxPrice = max;
-        this.minPrice = min;
-      } else {
-        this.maxPrice = Number(Object.values(this.rangePrice)[1]);
-        this.minPrice = Number(Object.values(this.rangePrice)[0]);
-      }
-    });
-    console.log(this.maxPrice, 'c', this.minPrice);
+  getProducts(){
+    console.log(this.minPrice+"_"+this.maxPrice)
+    if(this.minPrice===undefined&&this.maxPrice===undefined){
+      this.getProductWithoutParaPrice();
+    }else{
+      this.getProductWithParaPrice();
+    }
+    console.log(this.datas)
 
+  }
+  getProductWithoutParaPrice(){
     if (this.categoryName === 'tatca') {
-      this.productService
-        .getLengthByPrice(this.minPrice, this.maxPrice)
-        .subscribe((res: any) => {
+      this.productService.getProducts().subscribe((res: any) => {
           this.total_count = res.length;
         });
-      this.productService
-        .getProductsByPrice(this.minPrice, this.maxPrice, this.activePage)
-        .subscribe((res: any) => {
-          this.datas = res;
-          this.pager = this.productService.getPager(
+      this.productService.getProductsNomal(this.activePage).subscribe((res: any) => {
+            this.datas = res;
+            this.pager = this.productService.getPager(
             this.total_count,
             this.activePage
           );
         });
-      if (this.maxPrice != 99999999)
-        this.router.navigate([], {
-          queryParams: { min: this.minPrice, max: this.maxPrice },
-        });
     } else {
       this.productService
-        .getLengthByPriceAndCategory(
-          this.minPrice,
-          this.maxPrice,
+        .getProductsByCategory(
           this.categoryTemp
         )
         .subscribe((res: any) => {
           this.total_count = res.length;
         });
       this.productService
-        .getProductsByPriceAndCategory(
-          this.minPrice,
-          this.maxPrice,
+        .getProductsByCategoryNomal(
           this.categoryTemp,
           this.activePage
         )
@@ -96,10 +92,53 @@ export class ProductListComponent implements OnInit {
           );
         });
 
-      if (this.maxPrice != 99999999)
-        this.router.navigate([], {
-          queryParams: { min: this.minPrice, max: this.maxPrice },
+    }
+  }
+  getProductWithParaPrice(){
+    if (this.categoryName ==='tatca') {
+      console.log("all+ có price"+this.maxPrice)
+      this.productService
+        .getLengthByPrice(this.minPrice||0, this.maxPrice||0)
+        .subscribe((res: any) => {
+          this.total_count = res.length;
         });
+      this.productService
+        .getProductsByPrice(this.minPrice||0, this.maxPrice||0, this.activePage)
+        .subscribe((res: any) => {
+          this.datas = res;
+          this.pager = this.productService.getPager(
+            this.total_count,
+            this.activePage
+          );
+        });
+      //  this.router.navigate([], {  queryParams: {  min:this.minPrice,max:this.maxPrice} });
+    } else {
+      this.productService
+        .getLengthByPriceAndCategory(
+          this.minPrice||0,
+          this.maxPrice||0,
+          this.categoryTemp
+        )
+        .subscribe((res: any) => {
+          this.total_count = res.length;
+        });
+      this.productService
+        .getProductsByPriceAndCategory(
+          this.minPrice||0,
+          this.maxPrice||0,
+          this.categoryTemp,
+          this.activePage
+        )
+        .subscribe((res: any) => {
+          this.datas = res;
+          this.pager = this.productService.getPager(
+            this.total_count,
+            this.activePage
+          );
+        });
+
+
+       // this.router.navigate([], {  queryParams: {  min:this.minPrice,max:this.maxPrice} });
     }
   }
   sort(event: any) {
@@ -179,7 +218,11 @@ export class ProductListComponent implements OnInit {
       if (!(evt instanceof NavigationEnd)) {
         return;
       }
-      window.scrollTo(0, 0);
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+       });
     });
   }
 }

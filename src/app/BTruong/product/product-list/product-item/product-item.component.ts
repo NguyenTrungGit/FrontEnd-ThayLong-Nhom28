@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ProductPopupComponent } from 'src/app/BTruong/product-popup/product-popup.component';
 import { Product } from 'src/app/model/product.model';
@@ -11,7 +12,7 @@ import { ShoppingCartService } from 'src/app/Services/shopping-cart.service';
 })
 export class ProductItemComponent implements OnInit {
 
-  constructor(public dialog: MatDialog,private shoppingCartService:ShoppingCartService){}
+  constructor(@Inject(DOCUMENT) private document: any,public dialog: MatDialog,private shoppingCartService:ShoppingCartService){}
   openDialog(){
     this.dialog.open(ProductPopupComponent,{
       data:{
@@ -32,9 +33,16 @@ export class ProductItemComponent implements OnInit {
     this.productItem.quantity=1;
     this.shoppingCartService.addToCart(this.productItem);
     // window.alert('has been added to cart!')
+    this.scrollOnTop();
 
       }
   ngOnInit(): void {
+  }
+
+  scrollOnTop() {
+
+       window.scrollTo(0, document.documentElement.scrollTop-0.0001);
+
   }
   @Input() productItem!: Product
 }
