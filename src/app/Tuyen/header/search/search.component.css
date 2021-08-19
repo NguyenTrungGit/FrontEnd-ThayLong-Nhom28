@@ -44,6 +44,10 @@ body {
     height: 710px
 }
 
+.container {
+    max-width: 71.8125em;
+}
+
 .results {
     font-weight: 600
 }
@@ -98,6 +102,7 @@ img {
     margin-top: 5px;
     font-family: 'Quicksand';
     font-size: 17px;
+    text-align: center;
 }
 
 .btn {
@@ -108,13 +113,13 @@ img {
     color: #fdaa4b
 }
 
-div.text-muted {
+.text-muted {
     font-size: 0.9rem;
     display: flex;
     justify-content: center;
     width: 100%;
     font-family: 'Quicksand';
-    color: #66a55f;
+    color: #66a55f !important;
 }
 
 @media(max-width:372px) {
@@ -204,4 +209,56 @@ div.text-muted {
     margin-bottom: 2rem;
     display: flex;
     justify-content: center;
+}
+
+.text-muted {
+    color: #66A55F;
+}
+
+
+/* mobilel */
+
+@media screen and ( max-width: 46.24em) {
+    .container {
+        max-width: none;
+    }
+    .d-flex {
+        padding-top: 5.5rem!important;
+    }
+    .row {
+        padding-top: 0rem!important;
+    }
+    .col-lg-3 {
+        max-width: 50%;
+        margin-bottom: 0rem!important;
+        padding-top: calc(var(--bs-gutter-x) * .9);
+    }
+    .card-body .d-flex {
+        padding-top: 0rem!important;
+    }
+    .card-body .d-flex .flex-column .h6 {
+        text-align: center;
+    }
+    .card-img-top {
+        height: 12.75em;
+    }
+    .container {
+        padding-right: 0em !important;
+    }
+    .my-pagination {
+        padding-left: 0px !important;
+    }
+}
+
+
+/* tablet */
+
+@media only screen and ( min-width: 46.25em) and ( max-width: 63.9375em) {
+    .tablet {
+        display: block;
+    }
+    .col-lg-3 {
+        width: 33%;
+        margin-bottom: 1.5em !important;
+    }
 }

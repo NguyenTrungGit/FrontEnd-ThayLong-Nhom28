@@ -114,6 +114,46 @@
                       <path d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z" fill="#ffffff"></path>
                     </svg>
                   </span>
+
+                    <div class="box-search">
+                        <div class="title-search">TÌM KIẾM</div>
+                        <div class="site-search ">
+                            <div class="form-search ">
+                            </div>
+
+                            <form action="">
+                                <input id="Search" #box (keyup.enter)="goToSearch(box.value)" (keyup.enter)="refresh()" [(ngModel)]="filtre" class="form-control" autocomplete="off" type="search" name="search" class="form-control" placeholder="Tìm kiếm">
+
+
+                            </form>
+
+
+                            <div *ngIf="this.filtre.length>0 " class="resultsSearch ">
+                                <div id="your-data" [hidden]="visibleState" class="item-search " routerLink='/cuahang/{{item.category}}/chitiet/{{item.id}}' *ngFor="let item of search | filterList :filtre :filterMetadata :show : ishiden| slice:0:4">
+                                    <div>
+                                        <div class="title ">
+                                            <a style="color:black" title="Rau muống túi 500g " [innerText]="item.name|titlecase"></a>
+                                            <div class="price-item ">{{item.price| number}}</div>
+                                        </div>
+                                        <div class="thumb-search ">
+                                            <a href=" "><img src="/assets/BTruong/image-mix/{{item.img1}} " alt=" "></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div *ngIf="this.filterMetadata.count >4" class="item-more p-2 " [routerLink]="['/search']" [queryParams]="{key: filtre}"><a>Xem thêm
+                                        {{filterMetadata.count}} sản phẩm</a></div>
+                                <div #block>
+                                    <div *ngIf="this.filterMetadata.count <=0 " class="item-more p-2 "><a>Không tìm thấy sản phẩm nào</a></div>
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
                     <!-- <div class="box-search">
                         <div class="title-search">TÌM KIẾM</div>
                         <div class="ng-autocomplete">
@@ -207,51 +247,40 @@
 
         </ul>
         <div class="search__mobile">
+
             <div class="container-search__mobile">
-                <input class="box-search__mobile" type="text" placeholder="Tìm kiếm sản phẩm..." />
-                <span class="icon-search__mobile"><i class="far fa-search"></i></span>
+                <input id="Search" #box (keyup.enter)="goToSearch(box.value)" (keyup.enter)="refresh()" [(ngModel)]="filtre" class="form-control" autocomplete="off" type="search" name="search" class="form-control" placeholder="Tìm kiếm">
             </div>
             <div class="resultsSearch__mobile">
-                <!-- <div class="list-resultsSearch__mobile">
-                    <div class="item-resultsSearch__mobile">
-                        <div class="content-item">
-                            <a>Rau mồng tơi 500g</a>
-                            <p>150000đ</p>
+                <div class="box-search">
+                    <div class="site-search ">
+                        <div *ngIf="this.filtre.length>0 " class="resultsSearch ">
+                            <div id="your-data" [hidden]="visibleState" class="item-search " routerLink='/cuahang/{{item.category}}/chitiet/{{item.id}}' *ngFor="let item of search | filterList :filtre :filterMetadata :show : ishiden| slice:0:4">
+                                <div class="item-search-sub">
+                                    <div class="thumb-search ">
+                                        <a href=" "><img src="/assets/BTruong/image-mix/{{item.img1}} " alt=" "></a>
+                                    </div>
+                                    <div class="title ">
+                                        <a style="color:black" title="Rau muống túi 500g " [innerText]="item.name|titlecase"></a>
+                                        <div class="price-item ">{{item.price| number}}</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div *ngIf="this.filterMetadata.count >4" class="item-more p-2 " [routerLink]="['/search']" [queryParams]="{key: filtre}"><a>Xem thêm
+                                {{filterMetadata.count}} sản phẩm</a></div>
+                            <div #block>
+                                <div *ngIf="this.filterMetadata.count <=0 " class="item-more p-2 "><a>Không tìm thấy sản phẩm nào</a></div>
+                            </div>
+
                         </div>
-                        <img src="/assets/BTruong/image-mix/RAU020.jpg" alt="" width="70px">
+
+
+
                     </div>
-                    <div class="item-resultsSearch__mobile">
-                        <div class="content-item">
-                            <a>Rau mồng tơi 500g</a>
-                            <p>150000đ</p>
-                        </div>
-                        <img src="/assets/BTruong/image-mix/RAU020.jpg" alt="" width="70px">
-                    </div>
-                    <div class="item-resultsSearch__mobile">
-                        <div class="content-item">
-                            <a>Rau mồng tơi 500g</a>
-                            <p>150000đ</p>
-                        </div>
-                        <img src="/assets/BTruong/image-mix/RAU020.jpg" alt="" width="70px">
-                    </div>
-                    <div class="item-resultsSearch__mobile">
-                        <div class="content-item">
-                            <a>Rau mồng tơi 500g</a>
-                            <p>150000đ</p>
-                        </div>
-                        <img src="/assets/BTruong/image-mix/RAU020.jpg" alt="" width="70px">
-                    </div>
-                    <div class="item-resultsSearch__mobile">
-                        <div class="content-item">
-                            <a>Rau mồng tơi 500g</a>
-                            <p>150000đ</p>
-                        </div>
-                        <img src="/assets/BTruong/image-mix/RAU020.jpg" alt="" width="70px">
-                    </div>
-                    <div class="more-result text-center pt-2">
-                        <a href="" class=""> Hiển thị thêm 18 sản phẩm.</a>
-                    </div>
-                </div> -->
+
+                </div>
+
             </div>
         </div>
     </nav>

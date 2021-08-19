@@ -37,7 +37,7 @@
 
 /* tablet */
 
-@media only screen and ( min-width: 46.25em) and ( max-width: 63.9375em) {
+@media only screen and ( min-width: 46.25em) and ( max-width: 62.120em) {
     .row {
         margin-right: 0;
         margin-left: 0;
@@ -46,10 +46,11 @@
         display: inline;
         margin-top: 0;
         padding-right: 0;
+        margin-bottom: 2em;
     }
 }
 
-@media only screen and ( min-width: 64em) {
+@media only screen and ( min-width: 62.125) and ( max-width: 63.9375em) {
     .row {
         margin-right: 0;
         margin-left: 0;
