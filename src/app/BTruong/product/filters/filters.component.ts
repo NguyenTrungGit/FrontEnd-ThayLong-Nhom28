@@ -18,8 +18,8 @@ export class FiltersComponent implements OnInit{
   check:boolean=false;
   // @Input() categoryName:any;
   categorys: Product[] = [];
-  minValue: number = 2000;
-  maxValue: number = 715000;
+  minValue: number = 0;
+  maxValue: number = 0;
   options: Options = {
     floor: 2000,
     ceil: 715000,
@@ -46,7 +46,7 @@ export class FiltersComponent implements OnInit{
   sendParent(){
 
     this.messageEvent.emit({min: this.minPrice+'',max:this.maxPrice+''});
-    this.router.navigate([], {  queryParams: {  min:this.minPrice,max:this.maxPrice} });
+    this.router.navigate([], {  queryParams: {  min:this.minPrice,max:this.maxPrice,trang:1} });
     console.log("vao filter child")
     // this.messageEvent.emit(this.maxPrice);
 
@@ -63,6 +63,7 @@ export class FiltersComponent implements OnInit{
     }
   }
   ngOnInit(): void {
+    this.getParamsFromURL();
     this.getCategorys();
   }
   // getProducts(){
@@ -78,4 +79,21 @@ export class FiltersComponent implements OnInit{
   //     });
   //   }
   // }
+
+  getParamsFromURL(){
+    this.actRoute.queryParams.subscribe((params:any)=>{
+      let max = params['max'];
+      let min = params['min'];
+      let page = params['trang'];
+      console.log("page",page)
+
+      if(max == undefined || min == undefined){
+        this.maxValue = 715000;
+        this.minValue = 2000;
+      }else{
+        this.maxValue = max;
+        this.minValue = min;
+      }
+    })
+  }
 }

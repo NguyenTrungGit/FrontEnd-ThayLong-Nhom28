@@ -30,6 +30,8 @@ export class ProductListComponent implements OnInit {
   ) {}
   ngOnChanges(changes: SimpleChanges): void {
     this.categoryTemp = this.categoryName;
+    this.maxPrice
+    this.minPrice
     this.pager = {};
     this.getProducts();
   }
