@@ -2,7 +2,11 @@
 .main {
     display: flex;
     font-family: 'Quicksand', sans-serif;
-    justify-content: center;
+    justify-content: space-evenly;
+    width: 95%;
+    margin: 0rem!important;
+    margin-top: 3em !important;
+    margin-bottom: 5em !important;
 }
 
 .contact-title {
@@ -18,7 +22,25 @@ p .map {
 }
 
 .form {
-    flex: 1;
+    max-width: 50%;
+}
+
+.conte {
+    height: 8em;
+    margin-bottom: 2em;
+}
+
+.conte textarea {
+    height: 9em;
+}
+
+.button__submit {
+    background: #66a55f;
+    border-radius: 5px;
+    padding: 6px 26px 6px;
+    border: none;
+    color: #fff;
+    margin-top: 1em;
 }
 
 
@@ -98,6 +120,40 @@ p .map {
     justify-content: center;
 }
 
+.form-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.form-container .evaluate__wrapper {
+    width: 34em;
+    margin-right: 2em;
+}
+
+.form-container .evaluate__wrapper .evaluate__title {
+    margin-bottom: 2em;
+    font-size: 1.5em;
+    font-family: 'Quicksand';
+    letter-spacing: 2px;
+}
+
+_ngcontent-vkt-c85 {
+    margin-bottom: 2em;
+}
+
+.map {
+    margin-right: 2em;
+    width: 74%;
+    max-width: 73%;
+}
+
+.map iframe {
+    width: 100%;
+    border: 0;
+    padding-left: 5em;
+}
+
 
 /* mobilel */
 
@@ -105,7 +161,9 @@ p .map {
     .main {
         display: block;
         font-family: 'Quicksand', sans-serif;
-        margin: 1em !important;
+        margin: 0.3rem!important;
+        margin-top: 2em !important;
+        width: 98%;
     }
     .map iframe {
         max-width: 100%;
@@ -113,7 +171,7 @@ p .map {
     }
     .form {
         margin-top: 2em;
-        margin-bottom: 2 em;
+        margin-bottom: 4em;
     }
     .form_lien_he {
         width: 100%;
@@ -138,16 +196,40 @@ p .map {
         height: 2.5em;
         margin-top: 0;
     }
+    .form {
+        min-width: 100%;
+    }
+    .form .evaluate__wrapper {
+        min-width: 100%;
+    }
+    .conte .button__submit {
+        padding: 6px 10em 6px;
+        width: 100%;
+    }
+    .map {
+        min-width: 100%;
+    }
+    .map iframe {
+        width: 100%;
+        border: 0;
+        padding: 0em;
+    }
+    .form .evaluate__wrapper {
+        min-width: 100%;
+        margin: 0 auto;
+    }
 }
 
 
 /* tablet */
 
-@media only screen and ( min-width: 46.25em) and ( max-width: 64em) {
+@media only screen and ( min-width: 46.25em) and ( max-width: 63.9375em) {
     .main {
         display: block;
         font-family: 'Quicksand', sans-serif;
-        margin: 1em !important;
+        margin: 0em !important;
+        margin-left: 0.5em !important;
+        width: 98%;
     }
     .map iframe {
         max-width: 100%;
@@ -181,5 +263,28 @@ p .map {
         border-radius: 0.3125em;
         height: 2.5em;
         margin-top: 0;
+    }
+    .form {
+        margin-bottom: 4em;
+        min-width: 100%;
+    }
+    .form .evaluate__wrapper {
+        min-width: 100%;
+    }
+    .conte .button__submit {
+        padding: 6px 3em 6px;
+    }
+    .map {
+        margin-right: 2em;
+        min-width: 100%;
+    }
+    .map iframe {
+        width: 100%;
+        border: 0;
+        padding: 1em;
+    }
+    .form .evaluate__wrapper {
+        min-width: 100%;
+        margin: 0 auto;
     }
 }

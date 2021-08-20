@@ -1,7 +1,7 @@
     .container-product {
         margin-right: 70px;
     }
-
+    
     .my-pagination /deep/ .ngx-pagination .current {
         background: #66a55f;
         border-radius: 50%;
@@ -12,13 +12,13 @@
         text-align: center;
         padding-top: 10px;
     }
-
+    
     .my-pagination /deep/ .ngx-pagination {
         margin-top: 2rem;
         margin-bottom: 2rem;
         padding-left: 0px;
     }
-
+    
     .sort {
         display: flex;
         justify-content: flex-end;
@@ -26,47 +26,47 @@
         align-items: baseline;
         margin-right: 5px;
     }
-
+    
     .display {
         margin-right: 21px;
         font-size: 15px;
         font-family: "Quicksand";
     }
-
+    
     .sort-sub {
         font-size: 14px;
         font-family: "Quicksand";
     }
-
+    
     .sort-sub option {
         font-size: 14px;
         color: #212529;
         font-family: "Quicksand";
     }
-
+    
     .col-md-3 {
         margin-top: 30px;
         padding: 0px 15px 0px 15px;
     }
-
+    
     .paging-wrapper {
         justify-content: center;
         align-items: center;
         display: flex;
         margin: 30px 0;
     }
-
+    
     .paging-wrapper ul {
         padding: 0;
         margin: 0;
         gap: 10px;
         display: flex;
     }
-
+    
     .paging-wrapper ul li {
         display: flex;
     }
-
+    
     .paging-wrapper ul li a {
         display: flex;
         flex-direction: column;
@@ -86,11 +86,11 @@
         font-size: 15px;
         border: 1px solid hsla(0, 0%, 83%, 0.4);
     }
-
+    
     .paging-wrapper ul li a:hover {
         color: hsla(0, 0%, 0%, 0.7);
     }
-
+    
     .paging-wrapper ul li a:active {
         color: hsla(0, 0%, 100%, 0.8);
         background: hsl(114, 28%, 51%);
@@ -116,7 +116,7 @@
     }
 
     /* mobilel */
-
+    
     @media screen and ( max-width: 31.25em) {
         .container-product {
             margin-right: 0;
@@ -177,7 +177,7 @@
         }
     }
     /* mobile small */
-
+    
     @media screen and ( max-width: 25em) {
         .paging-wrapper ul li a {
             padding: 0.3em;
@@ -187,7 +187,7 @@
         }
     }
     /* mobile super small */
-
+    
     @media screen and ( max-width: 18.75em) {
         .paging-wrapper ul li a {
             padding: 0.2em;
@@ -197,8 +197,8 @@
         }
     }
     /* mobile super large */
-
-    @media only screen and ( min-width: 31.25em) and ( max-width: 45em) {
+    
+    @media only screen and ( min-width: 31.25em) and ( max-width: 46.2em) {
         .col-md-3 {
             margin-top: 0.5625em;
             max-width: 33%;
@@ -256,7 +256,7 @@
         }
     }
     /* tablet */
-
+    
     @media only screen and ( min-width: 46.25em) and ( max-width: 63.9375em) {
         .container-product {
             margin-right: 0;
@@ -277,10 +277,11 @@
             margin-top: 0.5625em;
             min-width: 33%;
             padding: 0px 1% 0px 1%;
+            width: 0%;
         }
     }
     /* tablet pro */
-
+    
     @media only screen and ( min-width: 64em) {
         .container-product {
             margin-right: 1.5em;

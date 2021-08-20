@@ -252,6 +252,7 @@
         visibility: visible;
         margin-top: 1em;
         z-index: 111;
+        background-color: #fff;
     }
     .dropdown .dropdown-toggle {
         width: 100%;
@@ -306,7 +307,7 @@
 
 /* tablet */
 
-@media only screen and ( min-width: 46.25em) and ( max-width: 63.9375em) {
+@media only screen and ( min-width: 46.25em) and ( max-width: 62.120em) {
     .dropdown {
         display: block;
         margin-top: 2em;
@@ -321,6 +322,7 @@
         visibility: visible;
         margin-top: 1em;
         z-index: 111;
+        background-color: #fff;
     }
     .dropdown .dropdown-toggle {
         width: 100%;
@@ -401,5 +403,14 @@
     }
     .flex .flex-sub .product-title {
         font-size: 1.5em;
+    }
+}
+
+@media only screen and ( min-width: 62.125) and ( max-width: 63.9375em) {
+    .dropdown {
+        display: none;
+    }
+    .fil {
+        display: block;
     }
 }
