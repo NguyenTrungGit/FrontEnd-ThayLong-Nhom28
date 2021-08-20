@@ -21,18 +21,16 @@
     <div class="paging-wrapper">
         <ul *ngIf="pager.pages && pager.pages.length">
             <li (click)="setPage(pager.currentPage - 1)" [ngClass]="{ 'disabled': pager.currentPage == 1 }">
-                <a href="javascript: void(0)">
-                    <<</a>
+                <a href="javascript: void(0)"> << </a>
             </li>
+
             <li *ngFor="let page of pager.pages">
-                <a href="javascript: void(0)" (click)="setPage(page)" [ngClass]="{ 'active': pager.currentPage === page }">{{ page }}</a
-        >
-      </li>
-      <li [ngClass]="{ disabled: pager.currentPage === pager.totalPages }">
-        <a  href="javascript: void(0)" (click)="setPage(pager.currentPage + 1)"
-          >>></a
-        >
-      </li>
-    </ul>
+                <a href="javascript: void(0)" (click)="setPage(page)" [ngClass]="{ 'active': pager.currentPage == page }">{{ page }}</a>
+            </li>
+            
+            <li [ngClass]="{ disabled: pager.currentPage === pager.totalPages }">
+              <a  href="javascript: void(0)" (click)="setPage(pager.currentPage + 1)" > >> </a>
+            </li>
+        </ul>
   </div>
 </div>
