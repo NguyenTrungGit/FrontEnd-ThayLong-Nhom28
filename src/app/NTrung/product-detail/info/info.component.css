@@ -88,14 +88,19 @@
 
 /* Image */
 .img__wrapper {
-  width: 350px;
-  height: 463px;
+  width: 300px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: auto;
   gap: 1.5rem;
+}
+
+.img__wrapper img {
+  width: 300px;
+  height: 300px;
 }
 
 .img__nav {
@@ -177,6 +182,16 @@
     gap: 3rem;
   }
 
+  .img__wrapper {
+    width: 320px;
+    height: auto;
+  }
+
+  .img__wrapper img {
+    width: 320px;
+    height: 320px;
+  }
+
   .img__nav {
     display: flex;
   }
@@ -187,6 +202,17 @@
 }
 
 @media screen and (min-width: 1024px) {
+
+  .img__wrapper {
+    width: 350px;
+    height: auto;
+  }
+
+  .img__wrapper img {
+    width: 350px;
+    height: 350px;
+  }
+
 }
 
 /* Swipper CSS */

@@ -1,1 +1,23 @@
-<p>related works!</p>
+<div class="product__container">
+    <ul class="product__list grid">
+        <li class="product__item grid__item" *ngFor="let item of productsRelated">
+            <div class="product__content">
+                <div class="product__img">
+                    <img src="../../../../assets/BTruong/image-mix/{{item.img1}}" alt="">
+                </div>
+                <span class="product__name">{{item.name}}</span>
+                <span class="product__logo"><b>FRESH</b><b>VEGE</b></span>
+                <div class="product__subcontent">
+                    <span class="product__price">{{item.price}}&#8363;</span>
+                    <div class="product__detail button">
+                        <i class="far fa-search product__icon icon__search"></i>
+                    </div>
+                </div>
+                
+                <div class="product__button button">
+                    Thêm vào giỏ <i class="fal fa-cart-plus button__icon product__icon"></i>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
