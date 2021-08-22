@@ -11,19 +11,22 @@ import { ProductService } from 'src/app/Services/product.service';
 })
 export class ProductDetailComponent implements OnInit {
   id: any;
-  listProduct: Product[] = [];
   productInfo?: Product;
 
   lsProductsRelated: Product[] = [];
   category: any;
   constructor(
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private productService:ProductService
   ) {}
 
   ngOnInit(): void {
     this.scrollOnTop();
     this.getParamsFromUrl();
+    this.productService.getProductsById(this.id).subscribe((res:any)=>{
+      this.productInfo = res.find((n:Product) => n.id === this.id)
+    })
   }
 
   //TODO: get id from url
