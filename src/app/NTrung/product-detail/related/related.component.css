@@ -44,16 +44,15 @@
   flex-shrink: 0;
 }
 
-/* Trung tâm đắc chỗ này vl luôn, nó làm cho cạnh dài và rộng của img bằng nhau, width = height */
 .product__img::before{
   content: "";
   padding-top: 100%;
 }
 
 .product__img img {
-  object-fit: cover;
+  /* object-fit: cover;
+  border-radius: 5px; */
   border: 1px solid hsl(0, 0%, 97%);
-  border-radius: 5px;
 }
 
 .product__name {
@@ -86,10 +85,10 @@
 }
 
 .product__logo b:first-child {
-  color: hsl(114, 28%, 51%);
+  color: hsl(340, 65%, 49%);
 }
 .product__logo b:last-child {
-  color: hsl(340, 65%, 49%);
+  color: hsl(114, 28%, 51%);
 }
 
 .button {
@@ -101,13 +100,26 @@
   user-select: none;
 }
 
-.product__button {
-  gap: 0.25em;
+.button__green{
   background-color: hsl(114, 28%, 51%);
+}
+
+.button__red{
+  background-color: hsl(1, 79%, 66%);
+}
+
+.product__button {
+  gap: 1em;
   font-size: 14px;
   padding: 8px;
   border-radius: inherit;
   color: hsl(0, 0%, 100%);
+}
+
+.button__red-border{
+  color: hsl(1, 79%, 66%);
+  background-color: hsl(0, 0%, 100%);
+  border: 0.5px solid hsl(1, 79%, 66%);
 }
 
 .product__detail {
@@ -118,18 +130,22 @@
   transition: 0.2s ease-in-out;
 }
 
-.product__button:hover,
+.product__icon{
+  font-weight: 500;
+}
+
+.button__green:hover,
 .product__detail:hover {
   background-color: hsl(114, 33%, 56%);
 }
 
-.product__button:active,
+.button__green:active,
 .product__detail:active {
   background-color: hsl(114, 38%, 46%);
 }
 
 .icon__search {
-  font-size: 12px;
+  font-size: 0.75em;
   color: hsl(0, 0%, 100%);
 }
 
@@ -149,13 +165,16 @@
 
   .product__button {
     height: 2.5em;
-    font-size: 1em;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .grid__item {
     max-width: 220px;
+  }
+
+  .product__button {
+    font-size: 1em;
   }
 
   .product__name,
@@ -165,7 +184,7 @@
   }
 
   .product__price {
-    transform: translateX(4.25em);
+    transform: translateX(4.5em);
   }
 
   .product__detail {

@@ -80,11 +80,11 @@ p {
 }
 
 .more__item b:nth-child(2) {
-  color: hsl(114, 28%, 51%);
+  color: hsl(340, 65%, 49%);
 }
 
 .more__item b:nth-child(3) {
-  color: hsl(312, 90%, 54%);
+  color: hsl(114, 28%, 51%);
 }
 
 @media screen and (min-width: 768px) {
