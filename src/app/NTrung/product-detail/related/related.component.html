@@ -9,14 +9,20 @@
                 <span class="product__logo"><b>FRESH</b><b>VEGE</b></span>
                 <div class="product__subcontent">
                     <span class="product__price">{{item.price}}&#8363;</span>
-                    <div class="product__detail button">
-                        <i class="far fa-search product__icon icon__search"></i>
+                    <div class="product__detail button" routerLink='/cuahang/{{item.category}}/chitiet/{{item.id}}'>
+                        <i class="far fa-search product__icon icon__search" routerLink='/cuahang/{{item.category}}/chitiet/{{item.id}}'></i>
                     </div>
                 </div>
                 
-                <div class="product__button button">
-                    Thêm vào giỏ <i class="fal fa-cart-plus button__icon product__icon"></i>
-                </div>
+                <ng-container >
+                    <div class="product__button button button__green" *ngIf="item.quantity" (click)="addToCart(item)">
+                        Thêm vào giỏ <i class="fal fa-cart-plus button__icon product__icon"></i>
+                    </div>
+
+                    <div class="product__button button button__red button__red-border" *ngIf="!item.quantity">
+                        Hết hàng <i class="fal fa-ban button__icon product__icon"></i>
+                    </div>
+                </ng-container>
             </div>
         </li>
     </ul>

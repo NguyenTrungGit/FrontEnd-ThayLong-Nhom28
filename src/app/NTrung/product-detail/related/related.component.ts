@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/model/product.model';
 import { ProductService } from 'src/app/Services/product.service';
+import { ShoppingCartService } from 'src/app/Services/shopping-cart.service';
 
 @Component({
   selector: 'app-related',
@@ -16,7 +17,8 @@ export class RelatedComponent implements OnInit {
   page: number = 1;
   constructor(
     private productService: ProductService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private shoppingCartService:ShoppingCartService
   ) {}
 
   ngOnInit(): void {
@@ -59,5 +61,10 @@ export class RelatedComponent implements OnInit {
       .subscribe((res: any) => {
         this.productsRelated = res;
       });
+  }
+
+  addToCart(item:Product){
+    item.quantity = 1;
+    this.shoppingCartService.addToCart(item);
   }
 }
