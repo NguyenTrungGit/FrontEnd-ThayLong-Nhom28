@@ -26,6 +26,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent implements OnInit {
+  checkcart:number=-1;
   i: any = -1;
   totalCart:number=0;
   datas: Product[] = [];
@@ -108,7 +109,9 @@ return count;
   }
 
   removeProduct(product:Product){
+   
 this.cartService.removeProduct(product);
+
   }
 
 
@@ -131,27 +134,36 @@ this.cartService.removeProduct(product);
   //   // this.i = -1;
   // }
   displaySearch() {
-    console.log(this.search)
-        var dropdownSearch = document.querySelector(
-          '.dropdown-search'
-        ) as HTMLElement;
-        this.i = this.i * -1;
-        if (this.i === 1) {
-    this.getSearch();
-          dropdownSearch.style.display = 'block';
-        } else {
-          this.clearListSearch();
 
-          dropdownSearch.style.display = 'none';
-        }
+    // var dropdownSearch = document.querySelector(
+    //   '.dropdown-search'
+    // ) as HTMLElement;
+    // this.i = this.i * -1;
+    // if (this.i === 1) {
+    //   dropdownSearch.style.display = 'block';
+    // } else {
+    //   dropdownSearch.style.display = 'none';
+    // }
+  }
+  hideSearch() {
+    // var dropdownSearch = document.querySelector(
+    //   '.dropdown-search'
+    // ) as HTMLElement;
+    // dropdownSearch.style.display = 'none';
+    // this.i = -1;
+  }
+  showcart(){
+    var cart = document.querySelector(
+        '.block-minicart'
+      ) as HTMLElement;
+      this.i = this.i * -1;
+      if (this.i === 1) {
+        cart.style.display = 'block';
+      } else {
+        cart.style.display = 'none';
       }
-      hideSearch() {
-        var dropdownSearch = document.querySelector(
-          '.dropdown-search'
-        ) as HTMLElement;
-        dropdownSearch.style.display = 'none';
-        this.i = -1;
-      }
+  }
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
    var container  = document.querySelector('.container') as HTMLElement;
