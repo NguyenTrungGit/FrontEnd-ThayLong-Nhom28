@@ -4,6 +4,10 @@
         box-sizing: border-box;
     }
 
+    .content-product__item-home:last-child {
+        display: none;
+    }
+
     .banner {
         text-align: center;
         color: #fff;
@@ -77,7 +81,7 @@
     }
 
     .btn-success {
-        background-color: #99ce93;
+        background-color: #66a55f;
         border-color: #66a55f;
     }
     /* .row {
@@ -449,5 +453,21 @@
         }
         .countdown-value .number-discount {
             width: 60px;
+        }
+    }
+
+    @media only screen and ( min-width:46.25em) and (max-width:63.9375em) {
+        .input-form .email-input {
+            width: 50%;
+        }
+        .list-product-featured .container-list-product {
+            margin-left: 80px;
+            margin-right: 80px;
+        }
+        .content-product__item-home:last-child {
+            display: block;
+        }
+        .content-discount {
+            margin-right: 8%;
         }
     }

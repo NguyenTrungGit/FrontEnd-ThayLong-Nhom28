@@ -1,129 +1,115 @@
 .item-product-home {
+    padding-bottom: 20px;
+    text-align: center;
     width: 100%;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 }
 
-.item-product-home img {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.item-product-home:hover img {
+.item-product-home:hover .box-img img {
     transform: scale(1.1);
     transition: all .4s linear
+}
+
+.item-product-home .box-detail {
+    position: relative;
+}
+
+.item-product-home .box-detail .cart__mobile {
+    background-color: #66A55F;
+    display: none;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 8px 0;
+}
+
+.item-product-home:hover .appear-icon {
+    display: flex;
+}
+
+.item-product-home:hover .appear-icon span {
+    display: inline;
+    border-left: 2px solid rgb(129, 129, 129);
+}
+
+.item-product-home:hover .appear-icon span {
+    flex: 0;
+}
+
+.appear-icon i {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+
+.appear-icon a:hover i {
+    color: #66A55F;
+    transform: scale(1.1);
+    font-weight: 500;
+}
+
+.item-product-home:hover .appear-icon a {
+    flex: 1;
+}
+
+.appear-icon {
+    display: none;
+    position: absolute;
+    right: 0;
+    left: 0;
 }
 
 .item-product-home:hover {
     box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 22%);
 }
 
-.item-product-home .box-image {
-    display: block;
-    overflow: hidden;
-    position: relative;
+.item-product-home .box-detail {
+    padding-top: 32px;
 }
 
-.item-product-home .box-image a img {
-    width: 100%;
+.item-product-home .box-detail .box-infor .name-product {
+    padding: 32px 8px 8px;
 }
 
-.item-product-home .text-title {
-    font-size: 16px;
-    padding-top: 4px;
-    height: 2.8em;
-}
-
-
-/* .appear {
-    opacity: 0%;
-    position: absolute;
-}
-.item-product-home:hover .appear {
-    opacity: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    transition: 1s;
-} */
-
-.appear .list-icon {
-    padding-top: 16px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: space-around;
-    background-color: rgb(255, 255, 255);
-}
-
-.appear .list-icon a {
-    color: #000;
-    flex: 1;
-}
-
-.appear .list-icon a i {
-    font-size: 20px;
-}
-
-.appear .list-icon a:hover {
-    color: #66a55f;
-    font-size: 20px;
-}
-
-.appear .list-icon span {
-    flex: 0.3;
-}
-
-.appear div span {
-    color: #000;
-    flex: 1;
-}
-
-.box-text {
-    padding-bottom: 8px;
-    margin: 4px;
-}
-
-.box-text .text-price {
-    color: #66a55f;
-}
-
-.box-text .text-discount {
-    font-size: 13px;
-}
-
-.btn-cart__mobile {
-    display: block;
-    background-color: #66a55f;
-}
-
-.btn-cart__mobile a {
-    color: #fff;
+.item-product-home .box-detail .box-infor .price {
+    color: #66A55F;
+    padding: 8px;
+    font-weight: 700;
 }
 
 @media only screen and ( max-width:46.1875em) {
-    .item-product-home .box-image a img {
-        height: 10.25em;
-        object-fit: cover;
-    }
-    .box-text {
-        padding-bottom: 8px;
-    }
-    .btn-cart__mobile {
-        text-decoration: none;
-        height: 100%;
-        padding-top: 8px;
-        padding-bottom: 8px;
-    }
-    .btn-cart__mobile a {
+    .item-product-home .box-detail .cart__mobile {
         display: block;
-        text-decoration: none;
     }
-    .item-product-home .text-title {
-        height: 2.4em;
+    .item-product-home {
+        padding-bottom: 0px;
+    }
+    .item-product-home:hover .appear-icon {
+        display: none;
+    }
+    .item-product-home .box-detail {
+        padding-top: 8px;
+    }
+    .item-product-home .box-detail .box-infor .name-product {
+        padding: 8px 8px 8px;
+    }
+}
+
+@media only screen and ( min-width:46.25em) and (max-width:63.9375em) {
+    .item-product-home .box-detail .cart__mobile {
+        display: block;
+    }
+    .item-product-home {
+        padding-bottom: 0px;
+    }
+    .item-product-home:hover .appear-icon {
+        display: none;
+    }
+    .item-product-home .box-detail {
+        padding-top: 8px;
+    }
+    .item-product-home .box-detail .box-infor .name-product {
+        padding: 8px 8px 8px;
     }
 }

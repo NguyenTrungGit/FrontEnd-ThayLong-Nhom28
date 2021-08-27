@@ -25,6 +25,7 @@ import { ShoppingCartService } from 'src/app/Services/shopping-cart.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent implements OnInit {
+  checkcart:number=-1;
   i: any = -1;
   totalCart:number=0;
   datas: Product[] = [];
@@ -66,7 +67,9 @@ return count;
   }
 
   removeProduct(product:Product){
+   
 this.cartService.removeProduct(product);
+
   }
 
 
@@ -87,6 +90,17 @@ this.cartService.removeProduct(product);
     // ) as HTMLElement;
     // dropdownSearch.style.display = 'none';
     // this.i = -1;
+  }
+  showcart(){
+    var cart = document.querySelector(
+        '.block-minicart'
+      ) as HTMLElement;
+      this.i = this.i * -1;
+      if (this.i === 1) {
+        cart.style.display = 'block';
+      } else {
+        cart.style.display = 'none';
+      }
   }
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -131,7 +145,7 @@ this.cartService.removeProduct(product);
     // do something
   }
 
-  
+
   //filter
   getTotal():number{
     var total=0;

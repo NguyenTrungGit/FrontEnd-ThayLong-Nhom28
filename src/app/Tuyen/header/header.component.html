@@ -81,8 +81,8 @@
                     <li class="nav-item">
                         <a class="nav-link" routerLink="/trangchu">Trang chủ</a>
                     </li>
-                    <li class="nav-item nav-item-cuahang">
-                        <a class="nav-link" routerLink="/cuahang">Cửa hàng
+                    <li class="nav-item nav-item-cuahang" routerLink="/cuahang">
+                        <a class="nav-link">Cửa hàng
                         <i class="fa fa-chevron-down dropdown-icon"></i>
                       </a>
                         <ul class="category">
@@ -147,42 +147,42 @@
             <li class="nav-item ">
                 <a class="nav-link" href="" type="button" data-toggle="modal" data-target="#popupModal"><i class="far fa-user "></i></a>
             </li>
-            <li class="nav-item cart-home" (mouseover)="hideSearch()">
-                <a class="nav-link " routerLink="/giohang"><i class="far fa-shopping-cart "></i></a>
+            <li class="nav-item cart-home">
+                <a class="nav-link" (click)="showcart()"><i class="far fa-shopping-cart "></i></a>
                 <span class="quantity ">{{numberItemInCart}}</span>
                 <div class="block-minicart ">
                     <span class="box-triangle ">
                   <svg viewBox="0 0 20 9 " role="presentation ">
                     <path d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z
-                                          " fill="#ffffff "></path>
+                " fill="#ffffff "></path>
                   </svg>
                 </span>
                     <div class="minicart-content ">
                         <!-- <div class="minicart-close ">
                     <button type="button " class="close pr-3 pl-3 pt-1 pb-1 "><span>×</span></button>
                 </div> -->
-                        <div class="block-products">
-                            <div class="title-block-minicart ">
+                        <div class="block-products ">
+                            <div class="title-block-minicart" title="Đến giỏ hàng" routerLink="/giohang" (click)="showcart()">
                                 Giỏ hàng
                             </div>
-                            <div *ngIf="numberItemInCart!==0; then have else empty"></div>
+                            <div *ngIf="numberItemInCart!==0; then have else empty "></div>
                             <ng-template #empty>
-                                <div class="title-empty-cart text-center mt-3">Giỏ hàng trống</div>
-                                <img class="empty-cart text-center" src="/assets/tuyen/img/cart-empty.png" alt="empty cart">
+                                <div class="title-empty-cart text-center mt-3 ">Giỏ hàng trống</div>
+                                <img class="empty-cart text-center " src="/assets/tuyen/img/cart-empty.png " alt="empty cart ">
                             </ng-template>
                             <ng-template #have>
-                                <div class="list-products scrollbar scrollbar-primary pl-3 pr-3">
-                                    <div class="item-cartmini" *ngFor="let item of itemsCart">
+                                <div class="list-products scrollbar scrollbar-primary pl-3 pr-3 ">
+                                    <div class="item-cartmini " *ngFor="let item of itemsCart ">
                                         <div class="thumb-item ">
-                                            <a routerLink='/cuahang/{{item?.category}}/chitiet/{{item?.id}}'><img src="/assets/BTruong/image-mix/{{item.img1}}" alt=" " width="60px " height="60px "></a>
+                                            <a routerLink='/cuahang/{{item?.category}}/chitiet/{{item?.id}}'><img src="/assets/BTruong/image-mix/{{item.img1}} " alt=" " width="60px " height="60px "></a>
                                         </div>
-                                        <div class="title-item pl-2">
-                                            <a routerLink='/cuahang/{{item?.category}}/chitiet/{{item?.id}}' class="title">{{item.name}} </a>
+                                        <div class="title-item pl-2 ">
+                                            <a routerLink='/cuahang/{{item?.category}}/chitiet/{{item?.id}}' class="title ">{{item.name}} </a>
                                             <div><span class="quantity-item ">{{item.quantity}} </span></div>
                                         </div>
-                                        <div class="remove-price">
-                                            <div class="mb-2 pb-2"><a (click)="removeProduct(item)" class="remove "><i class="fas fa-times "></i></a></div>
-                                            <div class="price"><span></span>{{item.price}} </div>
+                                        <div class="remove-price ">
+                                            <div class="mb-2 pb-2 "><a (click)="removeProduct(item) " class="remove "><i class="fas fa-times "></i></a></div>
+                                            <div class="price "><span></span>{{item.price}} </div>
                                         </div>
                                     </div>
                                 </div>
@@ -206,50 +206,50 @@
 
 
         </ul>
-        <div class="search__mobile">
-            <div class="container-search__mobile">
-                <input class="box-search__mobile" type="text" placeholder="Tìm kiếm sản phẩm..." />
-                <span class="icon-search__mobile"><i class="far fa-search"></i></span>
+        <div class="search__mobile ">
+            <div class="container-search__mobile ">
+                <input class="box-search__mobile " type="text " placeholder="Tìm kiếm sản phẩm... " />
+                <span class="icon-search__mobile "><i class="far fa-search "></i></span>
             </div>
-            <div class="resultsSearch__mobile">
-                <!-- <div class="list-resultsSearch__mobile">
-                    <div class="item-resultsSearch__mobile">
-                        <div class="content-item">
+            <div class="resultsSearch__mobile ">
+                <!-- <div class="list-resultsSearch__mobile ">
+                    <div class="item-resultsSearch__mobile ">
+                        <div class="content-item ">
                             <a>Rau mồng tơi 500g</a>
                             <p>150000đ</p>
                         </div>
-                        <img src="/assets/BTruong/image-mix/RAU020.jpg" alt="" width="70px">
+                        <img src="/assets/BTruong/image-mix/RAU020.jpg " alt=" " width="70px ">
                     </div>
-                    <div class="item-resultsSearch__mobile">
-                        <div class="content-item">
+                    <div class="item-resultsSearch__mobile ">
+                        <div class="content-item ">
                             <a>Rau mồng tơi 500g</a>
                             <p>150000đ</p>
                         </div>
-                        <img src="/assets/BTruong/image-mix/RAU020.jpg" alt="" width="70px">
+                        <img src="/assets/BTruong/image-mix/RAU020.jpg " alt=" " width="70px ">
                     </div>
-                    <div class="item-resultsSearch__mobile">
-                        <div class="content-item">
+                    <div class="item-resultsSearch__mobile ">
+                        <div class="content-item ">
                             <a>Rau mồng tơi 500g</a>
                             <p>150000đ</p>
                         </div>
-                        <img src="/assets/BTruong/image-mix/RAU020.jpg" alt="" width="70px">
+                        <img src="/assets/BTruong/image-mix/RAU020.jpg " alt=" " width="70px ">
                     </div>
-                    <div class="item-resultsSearch__mobile">
-                        <div class="content-item">
+                    <div class="item-resultsSearch__mobile ">
+                        <div class="content-item ">
                             <a>Rau mồng tơi 500g</a>
                             <p>150000đ</p>
                         </div>
-                        <img src="/assets/BTruong/image-mix/RAU020.jpg" alt="" width="70px">
+                        <img src="/assets/BTruong/image-mix/RAU020.jpg " alt=" " width="70px ">
                     </div>
-                    <div class="item-resultsSearch__mobile">
-                        <div class="content-item">
+                    <div class="item-resultsSearch__mobile ">
+                        <div class="content-item ">
                             <a>Rau mồng tơi 500g</a>
                             <p>150000đ</p>
                         </div>
-                        <img src="/assets/BTruong/image-mix/RAU020.jpg" alt="" width="70px">
+                        <img src="/assets/BTruong/image-mix/RAU020.jpg " alt=" " width="70px ">
                     </div>
-                    <div class="more-result text-center pt-2">
-                        <a href="" class=""> Hiển thị thêm 18 sản phẩm.</a>
+                    <div class="more-result text-center pt-2 ">
+                        <a href=" " class=" "> Hiển thị thêm 18 sản phẩm.</a>
                     </div>
                 </div> -->
             </div>
@@ -257,6 +257,6 @@
     </nav>
 </div>
 
-<div class="modal fade" id="popupModal" tabindex="-1 " role="dialog" aria-hidden="true">
+<div class="modal fade" id="popupModal" tabindex="-1 " role="dialog" aria-hidden="true" style="padding-right:0 ">
     <app-popup-login></app-popup-login>
 </div>

@@ -116,9 +116,9 @@
     box-shadow: 0 0 0 .2em rgb(102, 165, 95, 0.3);
 } */
 
-@media (min-width: 576px) {
+@media only screen and ( max-width:46.1875em) {
     .modal-dialog {
-        max-width: 420px;
+        max-width: 100%;
         margin: 1.75rem auto;
     }
 }
@@ -126,3 +126,5 @@
 .footer-modal {
     font-size: 14px;
 }
+
+@media only screen and ( min-width:46.25em) and (max-width:63.9375em) {}

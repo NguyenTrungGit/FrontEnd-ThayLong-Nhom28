@@ -199,7 +199,7 @@
 }
 
 .navbar-nav .quantity {
-    margin-top: 100px;
+    position: absolute;
     margin-left: 36px;
     padding-left: 8px;
     padding-right: 8px;
@@ -330,15 +330,14 @@
     width: 22px;
     height: 15px;
     position: absolute;
-    right: 5.7%;
+    right: 18%;
     bottom: 100%;
 }
 
-.cart-home:hover .block-minicart {
-    transition: all 1s linear;
-    display: block;
-}
-
+// .cart-home:active .block-minicart {
+//     transition: all 1s linear;
+//     display: block;
+// }
 .cart-home {
     .block-minicart {
         background-color: white;
@@ -350,15 +349,26 @@
     }
 }
 
-.cart-home .block-minicart .minicart-content .block-products .title-block-minicart {
-    margin: 18px 18px 8px;
-    background-color: #f0f0f0;
-    height: 32px;
-    text-align: center;
-    line-height: 32px;
-    font-size: 16px;
-    color: #353535;
-    font-weight: 1000;
+.cart-home {
+    .block-minicart {
+        .minicart-content {
+            .block-products {
+                .title-block-minicart {
+                    margin: 18px 18px 8px;
+                    background-color: #f0f0f0;
+                    height: 32px;
+                    text-align: center;
+                    line-height: 32px;
+                    font-size: 16px;
+                    color: #353535;
+                    font-weight: 1000;
+                }
+                .title-block-minicart:hover {
+                    background-color: #e6e6e6;
+                }
+            }
+        }
+    }
 }
 
 .cart-home .block-minicart .minicart-content .block-products {
@@ -788,6 +798,23 @@
 }
 
 @media only screen and ( max-width:46.1875em) {
+    .cart-home {
+        .block-minicart {
+            .minicart-content {
+                .block-products {
+                    .title-block-minicart:hover {
+                        background-color: #f0f0f0;
+                    }
+                    .title-block-minicart:active {
+                        background-color: #dfdfdf;
+                    }
+                }
+            }
+        }
+    }
+    .modal-dialog {
+        top: 0;
+    }
     .nav-input:checked~.nav-overlay {
         transition: all 1s linear;
         display: block;
@@ -845,6 +872,7 @@
     }
     .navbar {
         .nav__pc {
+            display: none;
             position: absolute;
         }
         .navbar-nav .item-search {
@@ -910,10 +938,140 @@
             }
         }
     }
+    .block-minicart .box-triangle {
+        right: 5%;
+    }
 }
 
 // tablet: width>=740px and width <1024px
-@media only screen and ( min-width:46.25em) and (max-width:63.9375em) {}
+@media only screen and ( min-width:46.25em) and (max-width:63.9375em) {
+    .block-minicart .box-triangle {
+        right: 2.5%;
+    }
+    .nav-input:checked~.nav-overlay {
+        transition: all 1s linear;
+        display: block;
+    }
+    .nav-input:checked~.nav__mobile {
+        transition: all 1s linear;
+        display: block;
+    }
+    .nav-input:checked~.bars-btn .bars {
+        transition: all 1s linear;
+        display: none;
+    }
+    .nav-input:checked~.bars-btn .times {
+        transition: all 1s linear;
+        display: block;
+    }
+    .nav__mobile {
+        .nav__mobile-list {
+            padding-left: 0;
+            border-bottom: 1px solid rgb(230, 230, 230);
+            .dropdown-icon__mobile {
+                font-size: 10px;
+            }
+            .nav-item__mobile {
+                .nav-link {
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                }
+            }
+            .nav-item__mobile:active {
+                background-color: rgb(247, 247, 247);
+            }
+        }
+        .box-triangle {
+            width: 22px;
+            height: 15px;
+            position: absolute;
+            left: 15px;
+            bottom: 100%;
+        }
+    }
+    .nav__bars-btn {
+        // position: relative;
+        padding-left: 12px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        flex: 1;
+        .bars-btn {
+            transition: all 1s linear;
+            display: block;
+        }
+    }
+    .navbar {
+        .nav__pc {
+            display: none;
+            position: absolute;
+        }
+        .navbar-nav .item-search {
+            display: none;
+        }
+        .nav-right {
+            flex: 1;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+        padding-left: 4px;
+        padding-right: 4px;
+        .search__mobile {
+            display: block;
+        }
+    }
+    .navbar .logo {
+        flex: 0.3;
+        padding-right: 0;
+        .logo__mobile {
+            display: block;
+            max-width: none;
+        }
+        .logo__pc {
+            display: none;
+        }
+    }
+    .cart-home {
+        .block-minicart {
+            transform: none;
+            left: 0;
+            top: 72px;
+            width: 100%;
+        }
+    }
+    .resultsSearch__mobile {
+        .list-resultsSearch__mobile {
+            margin: 12px;
+            .item-resultsSearch__mobile {
+                padding-bottom: 8px;
+                border-bottom: 1px solid rgb(233, 233, 233);
+                display: flex;
+                justify-content: space-between;
+                .content-item {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    a {
+                        display: block;
+                    }
+                    p {
+                        color: #66a55f;
+                        font-weight: 800;
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+            .more-result {
+                a {
+                    color: #66a55f;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
 
 // ::ng-deep .suggestions-container {
 //     height: 350px !important;
