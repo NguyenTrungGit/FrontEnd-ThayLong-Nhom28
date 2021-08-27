@@ -8,33 +8,58 @@
         </div>
     </div>
     <div class="form text-center">
-        <div class="contact-title">
-            <p>Liên hệ với chúng tôi</p>
-        </div>
+
         <div class="form-container">
-            <div class="form-container-item">
-                <span class="wpcf7-form-control-wrap text-name"><input type="text" name="text-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form_lien_he" id="text-name" aria-required="true" aria-invalid="false" placeholder="Họ và tên" /></span>
-            </div>
-            <div class="form-container-item">
-                <span class="wpcf7-form-control-wrap email-contact"><input type="email" name="email-contact" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form_lien_he" id="email-contact" aria-required="true" aria-invalid="false" placeholder="Email" /></span>
-            </div>
-            <div class="form-container-item">
-                <span class="wpcf7-form-control-wrap tel-contact"><input type="tel" name="tel-contact" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form_lien_he" id="tel-contact" aria-required="true" aria-invalid="false" placeholder="Số điện thoại" /></span>
-            </div>
-            <div class="form-container-item">
-                <span class="wpcf7-form-control-wrap text-address"><input type="text" name="text-address" value="" size="40" class="wpcf7-form-control wpcf7-text form_lien_he" id="text-address" aria-invalid="false" placeholder="Tiêu đề" /></span>
-            </div>
-            <div class="form-container-item">
-                <span class="wpcf7-form-control-wrap textarea-noidung"><textarea name="textarea-noidung" cols="40" rows="20" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form_lien_he" id="textarea-noidung" aria-required="true" aria-invalid="false" placeholder="Nội dung" style="height: 120px;"></textarea></span>
-            </div>
-            <div class="btn-1">
+            <div class="evaluate__wrapper">
+                <form #form="ngForm" (ngSubmit)="onFormSubmit(form)" class="form__wrapper" [formGroup]="evaluateGroup">
 
-                <input type="button" class="button-1" value="Gửi liên hệ">
+                    <div class="evaluate__title contact__title">Liên hệ với chúng tôi</div>
 
+                    <div class="form-container-item">
+                        <input type="text" placeholder="Họ và tên" required formControlName="fristName" [ngClass]="{'form-control': true,'is-valid': evaluateGroup.controls.fristName.valid,'is-invalid':!evaluateGroup.controls.fristName.valid && evaluateGroup.controls.fristName.touched }">
+                        <ng-container>
+                            <div *ngIf=" evaluateGroup.controls.fristName.errors?.required && evaluateGroup.controls.fristName.touched " class="invalid-feedback">
+                                Không để trống
+                            </div>
+                            <div *ngIf=" evaluateGroup.controls.fristName.errors?.minlength && evaluateGroup.controls.fristName.touched" class="invalid-feedback">
+                                Ít nhất 2 kí tự
+                            </div>
+                        </ng-container>
+                    </div>
+                    <div class="form-container-item">
+                        <input type="text" placeholder="Số điện thoại" required formControlName="phoneNum" [ngClass]="{'form-control': true,'is-valid': evaluateGroup.controls.phoneNum.valid,'is-invalid':!evaluateGroup.controls.phoneNum.valid && evaluateGroup.controls.phoneNum.touched}">
+                        <ng-container>
+                            <div *ngIf=" evaluateGroup.controls.phoneNum.errors?.required && evaluateGroup.controls.phoneNum.touched " class="invalid-feedback">
+                                Không để trống
+                            </div>
+                            <div *ngIf=" evaluateGroup.controls.phoneNum.errors?.pattern && evaluateGroup.controls.phoneNum.touched" class="invalid-feedback">
+                                Ví dụ: 0123456789 / 8412345678
+                            </div>
+                        </ng-container>
+                    </div>
+                    <div class="form-container-item">
+                        <input type="email" placeholder="Email" required formControlName="email" [ngClass]="{'form-control': true,'is-valid': evaluateGroup.controls.email.valid, 'is-invalid':!evaluateGroup.controls.email.valid && evaluateGroup.controls.email.touched}">
+                        <ng-container>
+                            <div *ngIf="evaluateGroup.controls.email.errors?.required && evaluateGroup.controls.email.touched " class="invalid-feedback">
+                                Không để trống
+                            </div>
+                            <div *ngIf="evaluateGroup.controls.email.errors?.pattern && evaluateGroup.controls.email.touched" class="invalid-feedback">
+                                Ví dụ: khachhang@gmail.com
+                            </div>
+                        </ng-container>
+                    </div>
+                    <div class="form-container-item conte">
+                        <textarea placeholder="Nội dung" required formControlName="content" [ngClass]="{'form-control': true,'is-valid': evaluateGroup.controls.content.valid, 'is-invalid':!evaluateGroup.controls.content.valid && evaluateGroup.controls.content.touched}"></textarea>
+                        <ng-container>
+                            <div *ngIf="evaluateGroup.controls.content.errors?.required && evaluateGroup.controls.content.touched " class="invalid-feedback">
+                                Không để trống
+                            </div>
+                        </ng-container>
+                        <input type="submit" class="button__submit" [disabled]="evaluateGroup.invalid">
+                    </div>
+                </form>
             </div>
-
-
-
         </div>
+
     </div>
 </div>

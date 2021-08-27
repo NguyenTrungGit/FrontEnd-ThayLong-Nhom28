@@ -17,6 +17,7 @@ import { Subject } from 'rxjs';
 import { Product } from 'src/app/model/product.model';
 import { ProductService } from 'src/app/Services/product.service';
 import { ShoppingCartService } from 'src/app/Services/shopping-cart.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -30,14 +31,45 @@ export class HeaderComponent implements OnInit {
   totalCart:number=0;
   datas: Product[] = [];
    itemsCart: Product[] = [];
-
+   search: Product[] = [];
   numberItemInCart:number=0;
   categorys: Category[]=[];
 
 
   constructor(@Inject(DOCUMENT) private document: any,
   private productService: ProductService ,
-  private cartService:ShoppingCartService) {}
+  private cartService:ShoppingCartService,
+  private router: Router) {}
+  searchText: any;
+  searchValue = '';
+  value = '';
+  isShown?: boolean = false;
+  hiden?: boolean = true;
+  filterMetadata = { count: 0 };
+  filtre = '';
+  show: boolean = false;
+
+  ishiden: boolean = false;
+  visibleState?: any;
+  block:any;
+  onEnter(value: string) {
+    this.value = value;
+  }
+
+  displayValue!: '';
+
+  goToSearch(key:string){
+    setTimeout(() => {
+        this.router.navigate(['/search'],{queryParams:{'key':key}});
+      }, 1000);
+  }
+
+  refresh(): void {
+    let currentUrl = this.router.url;
+      this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+      this.router.onSameUrlNavigation = 'reload';
+      this.router.navigate([currentUrl]);
+  }
 
   ngOnInit(): void {
      this.cartService.cartItems.subscribe(data=>{
@@ -47,11 +79,21 @@ export class HeaderComponent implements OnInit {
     })
     this.getCategorys()
 
+    this.getSearch();
 
 
 
 
+  }
 
+  clearListSearch(){
+    this.search=[];
+  }
+  getSearch() {
+    this.productService.getProducts().subscribe((res: any) => {
+      this.search = res;
+
+    });
   }
   countQuantityCart(itemsCart: Product[]):number{
     let count=0;
@@ -73,7 +115,26 @@ this.cartService.removeProduct(product);
   }
 
 
+  // displaySearch() {
+  //   // var dropdownSearch = document.querySelector(
+  //   //   '.dropdown-search'
+  //   // ) as HTMLElement;
+  //   // this.i = this.i * -1;
+  //   // if (this.i === 1) {
+  //   //   dropdownSearch.style.display = 'block';
+  //   // } else {
+  //   //   dropdownSearch.style.display = 'none';
+  //   // }
+  // }
+  // hideSearch() {
+  //   // var dropdownSearch = document.querySelector(
+  //   //   '.dropdown-search'
+  //   // ) as HTMLElement;
+  //   // dropdownSearch.style.display = 'none';
+  //   // this.i = -1;
+  // }
   displaySearch() {
+
     // var dropdownSearch = document.querySelector(
     //   '.dropdown-search'
     // ) as HTMLElement;
@@ -102,6 +163,7 @@ this.cartService.removeProduct(product);
         cart.style.display = 'none';
       }
   }
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
    var container  = document.querySelector('.container') as HTMLElement;

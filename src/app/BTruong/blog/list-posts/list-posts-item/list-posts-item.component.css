@@ -109,7 +109,8 @@
     @media only screen and ( min-width: 46.25em) and ( max-width: 63.9375em) {
         .blog-item {
             width: 100%;
-            margin-bottom: 2em;
+            margin-bottom: 0em;
+            height: 100%;
         }
         .des {
             width: 100%;

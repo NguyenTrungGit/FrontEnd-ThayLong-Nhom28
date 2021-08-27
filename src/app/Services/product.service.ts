@@ -10,7 +10,7 @@ import * as _ from 'underscore';
   providedIn: 'root',
 })
 export class ProductService {
-  private keySearch='';
+  private keySearch = '';
   private REST_API_SERVER = 'http://localhost:3000';
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
@@ -31,14 +31,12 @@ export class ProductService {
   }
 
   //get product with page
-  public getProductsNomal(
-    page: number
-  ): Observable<Product[]> {
-    console.log("service báo: trang "+page)
+  public getProductsNomal(page: number): Observable<Product[]> {
+    // console.log('service báo: trang ' + page);
     const url = `${this.REST_API_SERVER}/product?_limit=12&_page=${page}`;
     return this.httpClient.get<Product[]>(url, this.httpOptions);
   }
-//get product with category and page
+  //get product with category and page
   public getProductsByCategoryNomal(
     category: string,
     page: number
@@ -46,7 +44,7 @@ export class ProductService {
     const url = `${this.REST_API_SERVER}/product?category=${category}&_limit=12&_page=${page}`;
     return this.httpClient.get<Product[]>(url, this.httpOptions);
   }
-  
+
   public getProductsByPrice(
     minPrice: number,
     maxPrice: number,
@@ -103,24 +101,30 @@ export class ProductService {
 
   public getPager(
     totalItems: number,
-    currentPage: number = 1,
+    currentPage: any = 1,
     pageSize: number = 12
   ) {
     let totalPages = Math.ceil(totalItems / pageSize);
+
     let startPage: number, endPage: number;
-    if (totalPages <= 6) {
+
+    const limitPages = 6;
+
+    if (totalPages <= limitPages) {
       startPage = 1;
       endPage = totalPages;
     } else {
-      if (currentPage <= 3) {
+      if (currentPage <= limitPages / 2 + 1) {
         startPage = 1;
-        endPage = 6;
-      } else if (currentPage + 3 >= totalPages) {
-        startPage = totalPages - 5;
-        endPage = totalPages;
+        endPage = limitPages;
       } else {
-        startPage = currentPage - 3;
-        endPage = currentPage + 2;
+        if (currentPage * 1 + (limitPages / 2 - 1) > totalPages) {
+          startPage = totalPages - limitPages + 1;
+          endPage = totalPages;
+        } else {
+          startPage = currentPage - limitPages / 2;
+          endPage = currentPage * 1 + (limitPages / 2 - 1);
+        }
       }
     }
 
@@ -139,15 +143,13 @@ export class ProductService {
       endIndex: endIndex,
       pages: pages,
     };
+    // https://www.youtube.com/watch?v=nyZEHCpG4-Y
   }
 
-
-
-  public getProductsBySearch(name:string): Observable<Product[]> {
-    const url = `${this.REST_API_SERVER}/product/?name_like=${name}` ;
-    console.log(name,"day ne");
+  public getProductsBySearch(name: string): Observable<Product[]> {
+    const url = `${this.REST_API_SERVER}/product/?name_like=${name}`;
+    // console.log(name, 'day ne');
     return this.httpClient.get<Product[]>(url, this.httpOptions);
-    console.log(this.httpClient.get<Product[]>(url, this.httpOptions));
-
+    // console.log(this.httpClient.get<Product[]>(url, this.httpOptions));
   }
 }
