@@ -26,8 +26,8 @@ import { ActivatedRoute, Router } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent implements OnInit {
-  checkcart:number=-1;
-  i: any = -1;
+  vSearch:number=-1;
+  vCart: any = -1;
   totalCart:number=0;
   datas: Product[] = [];
    itemsCart: Product[] = [];
@@ -109,7 +109,7 @@ return count;
   }
 
   removeProduct(product:Product){
-   
+
 this.cartService.removeProduct(product);
 
   }
@@ -134,36 +134,57 @@ this.cartService.removeProduct(product);
   //   // this.i = -1;
   // }
   displaySearch() {
-
-    // var dropdownSearch = document.querySelector(
-    //   '.dropdown-search'
-    // ) as HTMLElement;
-    // this.i = this.i * -1;
-    // if (this.i === 1) {
-    //   dropdownSearch.style.display = 'block';
-    // } else {
-    //   dropdownSearch.style.display = 'none';
-    // }
+this.hideCart();
+    var dropdownSearch = document.querySelector(
+      '.dropdown-search'
+    ) as HTMLElement;
+    this.vSearch = this.vSearch * -1;
+    if (this.vSearch === 1) {
+      dropdownSearch.style.display = 'block';
+    } else {
+     // this.clearListSearch();
+      dropdownSearch.style.display = 'none';
+    }
   }
   hideSearch() {
-    // var dropdownSearch = document.querySelector(
-    //   '.dropdown-search'
-    // ) as HTMLElement;
-    // dropdownSearch.style.display = 'none';
-    // this.i = -1;
+    var dropdownSearch = document.querySelector(
+      '.dropdown-search'
+    ) as HTMLElement;
+    dropdownSearch.style.display = 'none';
+    this.vSearch = -1;
+  }
+  hideCart() {
+    var cart = document.querySelector(
+      '.block-minicart'
+    ) as HTMLElement;
+    cart.style.display = 'none';
+    this.vCart = -1;
   }
   showcart(){
+    this.hideSearch();
     var cart = document.querySelector(
         '.block-minicart'
       ) as HTMLElement;
-      this.i = this.i * -1;
-      if (this.i === 1) {
+      this.vCart = this.vCart * -1;
+      if (this.vCart === 1) {
         cart.style.display = 'block';
       } else {
         cart.style.display = 'none';
       }
   }
+closeAll(){
+  this.hideSearch();
+  this.hideCart();
+  var navmobile = document.querySelector(
+    '.nav-input'
+  ) as HTMLElement;
+  this.onSaveUsernameChanged(false);
+}
+public saveUsername:any;
 
+public onSaveUsernameChanged(value:boolean){
+    this.saveUsername = value;
+}
   @HostListener('window:scroll', [])
   onWindowScroll() {
    var container  = document.querySelector('.container') as HTMLElement;
