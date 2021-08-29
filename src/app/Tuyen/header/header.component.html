@@ -6,7 +6,7 @@
 
         <div class="nav__bars-btn">
 
-            <input type="checkbox" name="" class="nav-input" id="nav-input__mobile">
+            <input id="checkNavMobile" #checkNavMobile [checked]="saveUsername" (change)="onSaveUsernameChanged(checkNavMobile.checked)" type="checkbox" name="" class="nav-input" id="nav-input__mobile">
             <label for="nav-input__mobile" class="bars-btn">
             <i class="far fa-bars bars"></i>
             <i class="fal fa-times times"></i>
@@ -19,10 +19,10 @@
               </svg>
             </span>
                 <ul class="nav__mobile-list">
-                    <li class="nav-item__mobile">
+                    <li class="nav-item__mobile" (click)="closeAll()">
                         <a class="nav-link" routerLink="/trangchu">Trang chủ</a>
                     </li>
-                    <li class="nav-item__mobile nav-item-cuahang__mobile">
+                    <li class="nav-item__mobile nav-item-cuahang__mobile" (click)="closeAll()">
                         <a class="nav-link" routerLink="/cuahang">Cửa hàng
                         <i class="fa fa-chevron-down dropdown-icon__mobile"></i>
                             </a>
@@ -33,13 +33,13 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item__mobile">
+                    <li class="nav-item__mobile" (click)="closeAll()">
                         <a class="nav-link" routerLink="/gioithieu">Giới thiệu</a>
                     </li>
-                    <li class="nav-item__mobile">
+                    <li class="nav-item__mobile" (click)="closeAll()">
                         <a class="nav-link" routerLink="/lienhe">Liên hệ</a>
                     </li>
-                    <li class="nav-item__mobile">
+                    <li class="nav-item__mobile" (click)="closeAll()">
                         <a class="nav-link" routerLink="/chiase">Chia sẻ</a>
                     </li>
                 </ul>
@@ -117,8 +117,8 @@
 
                     <div class="box-search">
                         <div class="title-search">TÌM KIẾM</div>
-                        <div class="site-search ">
-                            <div class="form-search ">
+                        <div class="site-search">
+                            <div class="form-search">
                             </div>
 
                             <form action="">
@@ -129,18 +129,18 @@
 
 
                             <div *ngIf="this.filtre.length>0 " class="resultsSearch ">
-                                <div id="your-data" [hidden]="visibleState" class="item-search " routerLink='/cuahang/{{item.category}}/chitiet/{{item.id}}' *ngFor="let item of search | filterList :filtre :filterMetadata :show : ishiden| slice:0:4">
-                                    <div>
+                                <div id="your-data" [hidden]="visibleState" class="item-search" (click)="displaySearch()" routerLink='/cuahang/{{item.category}}/chitiet/{{item.id}}' *ngFor="let item of search | filterList :filtre :filterMetadata :show : ishiden| slice:0:4">
+                                    <div class="content__search">
                                         <div class="title ">
-                                            <a style="color:black" title="Rau muống túi 500g " [innerText]="item.name|titlecase"></a>
+                                            <a style="color:black" title="" [innerText]="item.name|titlecase"></a>
                                             <div class="price-item ">{{item.price| number}}</div>
                                         </div>
-                                        <div class="thumb-search ">
+                                        <div class="thumb-search">
                                             <a href=" "><img src="/assets/BTruong/image-mix/{{item.img1}} " alt=" "></a>
                                         </div>
                                     </div>
                                 </div>
-                                <div *ngIf="this.filterMetadata.count >4" class="item-more p-2 " [routerLink]="['/search']" [queryParams]="{key: filtre}"><a>Xem thêm
+                                <div (click)="displaySearch()" *ngIf="this.filterMetadata.count >4" class="item-more p-2 " [routerLink]="['/search']" [queryParams]="{key: filtre}"><a>Xem thêm
                                         {{filterMetadata.count}} sản phẩm</a></div>
                                 <div #block>
                                     <div *ngIf="this.filterMetadata.count <=0 " class="item-more p-2 "><a>Không tìm thấy sản phẩm nào</a></div>
@@ -185,7 +185,7 @@
                 </div>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="" type="button" data-toggle="modal" data-target="#popupModal"><i class="far fa-user "></i></a>
+                <a class="nav-link" (click)="closeAll()" href="" type="button" data-toggle="modal" data-target="#popupModal"><i class="far fa-user "></i></a>
             </li>
             <li class="nav-item cart-home">
                 <a class="nav-link" (click)="showcart()"><i class="far fa-shopping-cart "></i></a>
@@ -253,7 +253,7 @@
                 <input id="Search" #box (keyup.enter)="goToSearch(box.value)" (keyup.enter)="refresh()" [(ngModel)]="filtre" class="form-control" autocomplete="off" type="search" name="search" class="form-control" placeholder="Tìm kiếm">
             </div>
             <div class="resultsSearch__mobile">
-                <div class="box-search">
+                <!-- <div class="box-search">
                     <div class="site-search ">
                         <div *ngIf="this.filtre.length>0 " class="resultsSearch ">
                             <div id="your-data" [hidden]="visibleState" class="item-search " routerLink='/cuahang/{{item.category}}/chitiet/{{item.id}}' *ngFor="let item of search | filterList :filtre :filterMetadata :show : ishiden| slice:0:4">
@@ -265,7 +265,6 @@
                                         <a style="color:black" title="Rau muống túi 500g " [innerText]="item.name|titlecase"></a>
                                         <div class="price-item ">{{item.price| number}}</div>
                                     </div>
-
                                 </div>
                             </div>
                             <div *ngIf="this.filterMetadata.count >4" class="item-more p-2 " [routerLink]="['/search']" [queryParams]="{key: filtre}"><a>Xem thêm
@@ -275,19 +274,29 @@
                             </div>
 
                         </div>
+                    </div>
+                </div> -->
+                <div class="list-resultsSearch__mobile" *ngIf="this.filtre.length>0">
+                    <div class="item-resultsSearch__mobile" id="your-data" [hidden]="visibleState" routerLink='/cuahang/{{item.category}}/chitiet/{{item.id}}' *ngFor="let item of search | filterList :filtre :filterMetadata :show : ishiden| slice:0:4">
+                        <div class="content-item ">
+                            <a [innerText]="item.name|titlecase"></a>
+                            <p>{{item.price| number}}</p>
+                        </div>
+                        <img src="/assets/BTruong/image-mix/{{item.img1}}" alt=" " width="70px ">
+                    </div>
 
-
-
-
+                    <div *ngIf="this.filterMetadata.count >4" class="more-result text-center pt-2 " [routerLink]="['/search']" [queryParams]="{key: filtre}"><a>Xem thêm
+                      {{filterMetadata.count}} sản phẩm</a></div>
+                    <div #block>
+                        <div *ngIf="this.filterMetadata.count <=0 " class="more-result text-center pt-2 "><a>Không tìm thấy sản phẩm nào</a></div>
                     </div>
 
                 </div>
-
             </div>
         </div>
     </nav>
 </div>
 
-<div class="modal fade" id="popupModal" tabindex="-1 " role="dialog" aria-hidden="true" style="padding-right:0 ">
+<div class="modal fade" id="popupModal" tabindex="-1" role="dialog" aria-hidden="true" style="padding-right:0">
     <app-popup-login></app-popup-login>
 </div>
