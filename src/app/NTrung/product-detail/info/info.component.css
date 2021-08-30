@@ -6,6 +6,33 @@
 
 /* Swipper CSS */
 @import "~swiper/swiper-bundle";
+
+/* Link */
+.link__list {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  background-color: #f5f5f5;
+  display: block;
+}
+
+.link__item {
+  display: inline;
+  line-height: 1.5;
+  cursor: pointer;
+  user-select: none;
+}
+
+.link__item:hover {
+  color: hsl(214, 78%, 58%);
+}
+
+.link__item:nth-child(2),
+.link__item:nth-child(4) {
+  padding: 0 0.5rem;
+  pointer-events: none;
+}
+
 /* Reuse CSS */
 .button__medium {
   width: 150px;
