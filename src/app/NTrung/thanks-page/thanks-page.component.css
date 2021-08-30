@@ -147,7 +147,7 @@
 }
 
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:48em) {
   .section{
     padding: 3em;
     padding-bottom: 6em;
@@ -179,7 +179,7 @@
   }
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:64em) {
   .section{
     margin-top: 3em;
     margin-bottom: 8em;

@@ -133,7 +133,7 @@
 .input__single {
   max-width: 500px;
   width: 60%;
-  height: 74px;
+  height: 72px;
 }
 
 .input__email {
@@ -451,6 +451,17 @@
     margin-right: 12px;
   }
 
+  .input__single{
+    height: 66px;
+  }
+
+  .input__email{
+    height: 42px;
+  }
+
+  .button__submit{
+    height: 42px;
+  }
 
   .content-discount {
     margin-right: 0;

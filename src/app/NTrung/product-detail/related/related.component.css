@@ -149,7 +149,7 @@
   color: hsl(0, 0%, 100%);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .grid__item {
     max-width: 200px;
   }
@@ -168,7 +168,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
   .grid__item {
     max-width: 220px;
   }
