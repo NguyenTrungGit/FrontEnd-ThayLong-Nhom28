@@ -201,21 +201,21 @@ export class ProductListComponent implements OnInit {
     return this.datas;
   }
 
-  scrollOnTop() {
-    this.router.events.subscribe((evt) => {
-      if (!(evt instanceof NavigationEnd)) {
-        return;
-      }
-      window.scroll({
-        top: 0,
-        left: 0,
-        behavior: 'smooth',
-      });
-    });
-  }
+  // scrollOnTop() {
+  //   this.router.events.subscribe((evt) => {
+  //     if (!(evt instanceof NavigationEnd)) {
+  //       return;
+  //     }
+  //     window.scroll({
+  //       top: 0,
+  //       left: 0,
+  //       behavior: 'smooth',
+  //     });
+  //   });
+  // }
 
   setPage(page: number) {
-    this.scrollOnTop();
+    // this.scrollOnTop();
     // send param to url
     if (this.maxPrice !== 99999999 && this.minPrice !== 0) {
       this.router.navigate([], {

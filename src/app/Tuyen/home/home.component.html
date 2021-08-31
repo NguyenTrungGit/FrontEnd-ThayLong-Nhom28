@@ -29,7 +29,7 @@
                         <div class="banner-sub-heading">
                             Sản phẩm hữu cơ chất lượng cao
                         </div>
-                        <button type="button" class="btn btn-success text-light btn-banner">Mua ngay</button>
+                        <button routerLink="/cuahang" type="button" class="btn btn-banner">Mua ngay</button>
                     </div>
                 </div>
             </div>
@@ -44,14 +44,14 @@
                         <div class="banner-sub-heading">
                             Sản phẩm hữu cơ chất lượng cao
                         </div>
-                        <button type="button" class="btn btn-success text-light btn-banner">Mua ngay</button>
+                        <button routerLink="/cuahang" type="button" class="btn btn-banner">Mua ngay</button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="carousel-item">
-            <div class="banner banner3">
-                <div class="container">
+            <a routerLink="/cuahang" class="banner banner3">
+                <!-- <div class="container">
                     <div class="banner-text">
                         <div class="banner-heading">
                             THỰC PHẨM SẠCH
@@ -61,8 +61,8 @@
                         </div>
                         <button type="button" class="btn btn-success text-light btn-banner">Mua ngay</button>
                     </div>
-                </div>
-            </div>
+                </div> -->
+            </a>
         </div>
     </div>
 
@@ -116,44 +116,14 @@
         </div> -->
         <carousel>
 
-            <div class="carousel-cell">
-                <a href="#" class="item-cate-carousel" title="a">
-                    <img src="/assets/tuyen/img/collection1.1.jpg" alt="">
+            <div class="carousel-cell" *ngFor="let c of listCategorys">
+                <a href="#" class="item-cate-carousel" title="{{c.name}}">
+                    <img src="/assets/tuyen/img/{{c.id}}.jpg" alt="">
                 </a>
             </div>
-            <div class="carousel-cell">
-                <a href="#" class="item-cate-carousel" title="a">
-                    <img src="/assets/tuyen/img/collection1.2.jpg" alt="">
-                </a>
-            </div>
-            <div class="carousel-cell">
-                <a href="#" class="item-cate-carousel" title="a">
-                    <img src="/assets/tuyen/img/collection1.3.jpg" alt="">
-                </a>
-            </div>
-            <div class="carousel-cell">
-                <a href="#" class="item-cate-carousel" title="a">
-                    <img src="/assets/tuyen/img/collection1.5.jpg" alt="">
-                </a>
-            </div>
-            <div class="carousel-cell">
-                <a href="#" class="item-cate-carousel" title="a">
-                    <img src="/assets/tuyen/img/collection1.6.jpg" alt="">
-                </a>
-            </div>
-            <div class="carousel-cell">
-                <a href="#" class="item-cate-carousel" title="a">
-                    <img src="/assets/tuyen/img/collection1.6.jpg" alt="">
-                </a>
-            </div>
-            <div class="carousel-cell">
-                <a href="#" class="item-cate-carousel" title="a">
-                    <img src="/assets/tuyen/img/collection1.6.jpg" alt="">
-                </a>
-            </div>
-            <div class="carousel-cell">
-                <a href="#" class="item-cate-carousel" title="a">
-                    <img src="/assets/tuyen/img/collection1.6.jpg" alt="">
+            <div class="carousel-cell" *ngFor="let c of listCategorys">
+                <a href="#" class="item-cate-carousel" title="{{c.name}}">
+                    <img src="/assets/tuyen/img/{{c.id}}1.jpg" alt="">
                 </a>
             </div>
 
@@ -169,8 +139,8 @@
     <div class="list-product-featured">
         <div class="container-list-product">
             <div class="row row-list-product">
-                <div class="col-6 col-sm-4 col-md-4 col-xl-3 pb-4 content-product__item-home" *ngFor="let i of [1,2,3,4,5,6,7,8,9]">
-                    <app-product-item-home class=""></app-product-item-home>
+                <div class="col-6 col-sm-4 col-md-4 col-xl-3 pb-4 content-product__item-home" *ngFor="let i of listFeatured">
+                    <app-product-item-home [item]="i" class=""></app-product-item-home>
                 </div>
             </div>
         </div>
@@ -180,7 +150,7 @@
 
 </div>
 <div class="text-center pb-5">
-    <a href="#" class="see-more">
+    <a routerLink="/cuahang" class="see-more">
         XEM THÊM
         </a>
 </div>

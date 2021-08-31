@@ -37,7 +37,7 @@
                 </div>
                 <div class="price-wrapper" style="margin-bottom: 15px; ">
                     <span class="price "><span style="color: #66A55F; font-size: 18px;font-weight: 500; "
-                      class="woocommerce-Price-amount amount ">{{productItem?.price | number }}&nbsp;<span class="woocommerce-Price-currencySymbol ">&#8363;</span></span>
+                      class="woocommerce-Price-amount amount ">{{productItem?.price | currency: "VND" }}</span>
                     </span>
                 </div>
                 <div style="cursor: pointer;" class="add-cart" (click)="addToCart()">

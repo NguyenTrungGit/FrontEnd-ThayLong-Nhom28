@@ -10,6 +10,7 @@ import { CartComponent } from './NTrung/cart/cart.component';
 import { FormConfirmComponent } from './NTrung/form-confirm/form-confirm.component';
 import { ProductDetailComponent } from './NTrung/product-detail/product-detail.component';
 import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HeaderComponent } from './Tuyen/header/header.component';
 import { SearchComponent } from './Tuyen/header/search/search.component';
 import { HomeComponent } from './Tuyen/home/home.component';
@@ -27,15 +28,17 @@ const routes: Routes = [
   { path: 'cuahang/:cate/chitiet/:id', component: ProductDetailComponent },
   { path: 'thongtinnhanhang', component: FormConfirmComponent },
   { path: 'hoadon', component: BillConfirmComponent },
-  { path: '', component: HomeComponent },
+  // { path: '', component: HomeComponent },
   { path: 'chiase/chiasechitiet/:id', component: BlogContentComponent },
-
+  { path: '**', redirectTo:"trangchu",pathMatch: 'full', },
   { path: 'search', component: SearchComponent },
   { path: 'camon', component: ThanksPageComponent },
 ];
 
 @NgModule({
+
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
+

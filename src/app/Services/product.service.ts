@@ -29,7 +29,10 @@ export class ProductService {
     const url = `${this.REST_API_SERVER}/product?category=${category}`;
     return this.httpClient.get<Product[]>(url, this.httpOptions);
   }
-
+public getFeatured(): Observable<Product[]> {
+  const url = `${this.REST_API_SERVER}/product?_limit=9`;
+  return this.httpClient.get<Product[]>(url, this.httpOptions);
+}
   //get product with page
   public getProductsNomal(page: number): Observable<Product[]> {
     // console.log('service báo: trang ' + page);
