@@ -8,11 +8,7 @@
 
             </div>
             <div class="row py-5">
-                <div class="col-lg-3 col-md-6 offset-md-0 offset-sm-1 col-sm-10 offset-sm-1 my-lg-0 my-2" *ngFor="let item of listProduct |
-                paginate: { itemsPerPage: 12,
-                   currentPage: page,
-                  totalItems:totalLenght
-                 }">
+                <div class="col-lg-3 col-md-6 offset-md-0 offset-sm-1 col-sm-10 offset-sm-1 my-lg-0 my-2" *ngFor="let item of listProduct">
                     <div class="card"> <img class="card-img-top" src="/assets/BTruong/image-mix/{{item.img1}} ">
                         <div class="card-body">
                             <div class="d-flex align-items-start justify-content-between">
@@ -25,13 +21,27 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </div>
+</div>
+      
 
+<div class="paging-wrapper">
+    <ul *ngIf="pager.pages && pager.pages.length">
+        <li *ngIf="pager.currentPage != 1">
+            <a href="javascript: void(0)" (click)="setPage(pager.currentPage * 1 - 1)"> << </a>
+        </li>
+
+        <li *ngFor="let page of pager.pages">
+            <a href="javascript: void(0)" (click)="setPage(page)" [ngClass]="{ 'selected': pager.currentPage == page }">{{ page }}</a>
+        </li>
+        
+        <li>
+          <a href="javascript: void(0)" (click)="setPage(pager.currentPage * 1 + 1)" *ngIf=" pager.currentPage != pager.totalPages"> >> </a>
+          <a class="disabled" *ngIf=" pager.currentPage == pager.totalPages"> Hết </a>
+        </li>
+    </ul>
 </div>
 
 
-<pagination-controls class="text-center my-pagination circle1" (pageChange)="page = $event" previousLabel="" nextLabel=""></pagination-controls>

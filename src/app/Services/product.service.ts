@@ -146,7 +146,19 @@ export class ProductService {
     // https://www.youtube.com/watch?v=nyZEHCpG4-Y
   }
 
-  public getProductsBySearch(name: string): Observable<Product[]> {
+  public getProductsBySearch(
+    name: string,
+    page: number
+  ): Observable<Product[]> {
+    const url = `${this.REST_API_SERVER}/product/?name_like=${name}&_limit=12&_page=${page}`;
+    // console.log(name, 'day ne');
+    return this.httpClient.get<Product[]>(url, this.httpOptions);
+    // console.log(this.httpClient.get<Product[]>(url, this.httpOptions));
+  }
+
+  public getlengthBySearch(
+    name: string
+  ): Observable<Product[]> {
     const url = `${this.REST_API_SERVER}/product/?name_like=${name}`;
     // console.log(name, 'day ne');
     return this.httpClient.get<Product[]>(url, this.httpOptions);

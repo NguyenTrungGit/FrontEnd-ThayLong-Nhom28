@@ -1,6 +1,7 @@
 // import { CdTimerModule } from 'angular-cd-timer';
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, Input, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 
 
@@ -20,17 +21,30 @@ export class HomeComponent implements OnInit {
     {'image': 'https://picsum.photos/seed/picsum/1200/300'}
   ];
 
-  constructor(@Inject(DOCUMENT) private document: any) {
+  constructor(@Inject(DOCUMENT) private document: any,private _fb: FormBuilder) {
 
   }
 
   ngOnInit(): void {
 
   }
-AfterViewInit(){
-  var arrowprev  = document.querySelector('.carousel-arrow-prev[_ngcontent-igh-c149]') as HTMLElement;
-    var arrownext = document.querySelector('.carousel-arrow-next[_ngcontent-igh-c149]') as HTMLElement;
-    arrowprev.style.left='-45px'
-    arrownext.style.right='-45px'
-}
+
+  AfterViewInit(){
+    var arrowprev  = document.querySelector('.carousel-arrow-prev[_ngcontent-igh-c149]') as HTMLElement;
+      var arrownext = document.querySelector('.carousel-arrow-next[_ngcontent-igh-c149]') as HTMLElement;
+      arrowprev.style.left='-45px'
+      arrownext.style.right='-45px'
+  }
+
+  promotionalForm = this._fb.group({
+    email: [
+      null,
+      [
+        Validators.required,
+        Validators.pattern(
+          /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        ),
+      ],
+    ],
+  });
 }

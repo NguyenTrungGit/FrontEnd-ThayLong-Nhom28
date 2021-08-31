@@ -301,7 +301,7 @@ p {
   gap: 3rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .hide {
     visibility: visible;
   }
@@ -337,7 +337,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
   .section {
     padding: 3rem;
   }

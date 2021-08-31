@@ -137,7 +137,7 @@ select {
   outline: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .section {
     padding: 2rem;
   }
@@ -170,7 +170,7 @@ select {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
   .section {
     padding: 3rem;
   }
