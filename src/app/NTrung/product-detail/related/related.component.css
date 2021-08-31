@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 /* ==================== MNI RESET CSS ==================== */
-@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+/* @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css"); */
 
 .grid {
   display: grid;
@@ -50,8 +50,10 @@
 }
 
 .product__img img {
-  /* object-fit: cover;
-  border-radius: 5px; */
+  object-fit: cover;
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
   border: 1px solid hsl(0, 0%, 97%);
 }
 
