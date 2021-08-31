@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 /* ==================== MNI RESET CSS ==================== */
-@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+/* @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css"); */
 
 .grid {
   display: grid;
@@ -50,8 +50,10 @@
 }
 
 .product__img img {
-  /* object-fit: cover;
-  border-radius: 5px; */
+  object-fit: cover;
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
   border: 1px solid hsl(0, 0%, 97%);
 }
 
@@ -149,7 +151,7 @@
   color: hsl(0, 0%, 100%);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .grid__item {
     max-width: 200px;
   }
@@ -168,7 +170,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
   .grid__item {
     max-width: 220px;
   }

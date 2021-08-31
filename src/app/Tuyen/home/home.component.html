@@ -197,14 +197,20 @@
         <p class="font-weight-bold h4">ĐĂNG KÍ NGAY</p>
         <p class="font-weight-bold h2" style="color: #82AE46;">NHẬN KHUYẾN MÃI 30%</p>
     </div>
-    <div class="input-promotional mt-3">
-        <form action="">
-            <div class="input-form text-center">
-                <input type="email" class="email-input" required placeholder="Email của bạn">
-                <button type="submit" class="btn btn-primary">Đăng ký</button>
-            </div>
+    <div class="promotional__form mt-3">
+        <form action="" [formGroup]="promotionalForm"class="input__wrapper">
+                <div class="input__single">
+                    <input type="email" class="input__email" placeholder="Nhập email của bạn ..." required formControlName="email" [ngClass]="{'form-control': true,'is-valid': promotionalForm.controls.email.valid, 'is-invalid':!promotionalForm.controls.email.valid && promotionalForm.controls.email.touched}">
+                    <ng-container>
+                        <div *ngIf="promotionalForm.controls.email.errors?.required && promotionalForm.controls.email.touched " class="invalid-feedback" >
+                             Không để trống
+                        </div>
+                        <div *ngIf="promotionalForm.controls.email.errors?.pattern && promotionalForm.controls.email.touched" class="invalid-feedback" >
+                            Ví dụ: khachhang@gmail.com
+                        </div>
+                    </ng-container>
+                </div>
+                <button class="button__submit" [disabled]="promotionalForm.invalid">ĐĂNG KÝ</button>
         </form>
-
-
     </div>
 </div>

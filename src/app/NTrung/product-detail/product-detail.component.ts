@@ -14,7 +14,6 @@ export class ProductDetailComponent implements OnInit {
   productInfo?: Product;
 
   lsProductsRelated: Product[] = [];
-  category: any;
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
@@ -33,7 +32,6 @@ export class ProductDetailComponent implements OnInit {
   getParamsFromUrl() {
     this.activatedRoute.paramMap.subscribe((response: any) => {
       this.id = response.get('id');
-      this.category = response.get('cate');
     });
   }
 

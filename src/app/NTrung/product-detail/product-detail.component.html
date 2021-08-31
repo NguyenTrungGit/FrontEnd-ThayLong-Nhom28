@@ -3,16 +3,6 @@
 <section class="section section__container">
     <!-- info -->
     <p class="section__title">Thông tin chi tiết</p>
- 
-    <div class="link__wrapper">
-       <ul class="link__list">
-            <li class="link__item" routerLink="/cuahang">Cửa hàng</li>
-            <li class="link__item">/</li>
-            <li class="link__item" routerLink="/cuahang/{{category}}">{{category}}</li>
-            <li class="link__item">/</li>
-            <li class="link__item">{{productInfo?.name}}</li>
-       </ul>
-    </div>
 
     <div class=" info__wrapper wrapper">
         <app-info [idInput]="id"></app-info>

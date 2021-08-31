@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 /* ==================== MNI RESET CSS ==================== */
-@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+/* @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css"); */
 
 p {
   margin: 0;
@@ -120,7 +120,7 @@ textarea{
 }
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .contact__wrapper{
     display: flex;
     justify-content: space-between;
@@ -131,7 +131,7 @@ textarea{
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
   .contact__wrapper{
     margin: 0 3rem;
   }
