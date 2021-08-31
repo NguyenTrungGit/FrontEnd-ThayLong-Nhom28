@@ -17,7 +17,7 @@ import { Subject } from 'rxjs';
 import { Product } from 'src/app/model/product.model';
 import { ProductService } from 'src/app/Services/product.service';
 import { ShoppingCartService } from 'src/app/Services/shopping-cart.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -72,6 +72,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+     this.scrollOnTop();
      this.cartService.cartItems.subscribe(data=>{
       this.itemsCart=data;
       this.numberItemInCart=this.countQuantityCart(this.itemsCart)
@@ -114,25 +115,6 @@ this.cartService.removeProduct(product);
 
   }
 
-
-  // displaySearch() {
-  //   // var dropdownSearch = document.querySelector(
-  //   //   '.dropdown-search'
-  //   // ) as HTMLElement;
-  //   // this.i = this.i * -1;
-  //   // if (this.i === 1) {
-  //   //   dropdownSearch.style.display = 'block';
-  //   // } else {
-  //   //   dropdownSearch.style.display = 'none';
-  //   // }
-  // }
-  // hideSearch() {
-  //   // var dropdownSearch = document.querySelector(
-  //   //   '.dropdown-search'
-  //   // ) as HTMLElement;
-  //   // dropdownSearch.style.display = 'none';
-  //   // this.i = -1;
-  // }
   displaySearch() {
 this.hideCart();
     var dropdownSearch = document.querySelector(
@@ -187,7 +169,7 @@ public onSaveUsernameChanged(value:boolean){
 }
   @HostListener('window:scroll', [])
   onWindowScroll() {
-   var container  = document.querySelector('.container') as HTMLElement;
+
     var header = document.querySelector('.header') as HTMLElement;
     var navbar = document.querySelector('.navbar') as HTMLElement;
     var topintro = document.querySelector('.top-intro') as HTMLElement;
@@ -195,6 +177,7 @@ public onSaveUsernameChanged(value:boolean){
     navbar.style.paddingTop="0"
     navbar.style.paddingBottom="0"
     if (document.documentElement.scrollTop < 1) {
+      header.classList.remove('fixed-top');
       navbar.style.paddingTop="4px"
       navbar.style.paddingBottom="4px"
       navbar.style.paddingLeft="8px"
@@ -205,7 +188,7 @@ public onSaveUsernameChanged(value:boolean){
     }
     if (document.documentElement.scrollTop > 200) {
       navbar.classList.add('transition-navbar');
-      container.style.height='100px'
+
       header.classList.add('fixed-top');
       topintro.style.display = 'none';
       navbar.classList.add('shadow');
@@ -227,7 +210,18 @@ public onSaveUsernameChanged(value:boolean){
   onFocused(e:any) {
     // do something
   }
-
+  scrollOnTop() {
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+        return;
+      }
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      });
+    });
+  }
 
   //filter
   getTotal():number{

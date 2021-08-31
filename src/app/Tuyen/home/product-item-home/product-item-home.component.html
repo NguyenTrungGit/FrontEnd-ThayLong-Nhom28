@@ -1,22 +1,22 @@
 <div class="item-product-home">
     <div class="container-product-home">
         <div class="box-img">
-            <a href=""><img src="/assets/BTruong/image-mix/RAU022.jpg" alt="" width="100%"></a>
+            <a href=""><img src="/assets/BTruong/image-mix/{{item?.img1}}" alt="" width="100%"></a>
         </div>
         <div class="box-detail">
             <div class="appear-icon">
-                <a href=""><i class="fal fa-shopping-cart"></i></a> <span></span>
-                <a href=""><i class="far fa-search"></i></a>
+                <a (click)="addToCart()"><i class="fal fa-shopping-cart"></i></a> <span></span>
+                <a (click)="openDialog()"><i class="far fa-search"></i></a>
             </div>
             <div class="box-infor">
                 <div class="name-product">
-                    Xà Lách Búp Mỡ Thuỷ Canh 300G
+                    {{item?.name|titlecase}}
                 </div>
                 <div class="price">
-                    20.000đ
+                    {{item?.price| currency: "VND"}}
                 </div>
             </div>
-            <a class="cart__mobile" href="">Thêm vào giỏ <i class="fal fa-shopping-cart"></i></a>
+            <a class="cart__mobile" (click)="addToCart()">Thêm vào giỏ <i class="fal fa-shopping-cart"></i></a>
         </div>
 
 

@@ -1,7 +1,12 @@
 // import { CdTimerModule } from 'angular-cd-timer';
-import { DOCUMENT } from '@angular/common';
+
 import { Component, Inject, Input, OnInit } from '@angular/core';
+
+import { Category } from 'src/app/model/category.model';
+import { Product } from 'src/app/model/product.model';
+import { ProductService } from 'src/app/Services/product.service';
 import { FormBuilder, Validators } from '@angular/forms';
+
 
 
 
@@ -13,28 +18,33 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 
 export class HomeComponent implements OnInit {
-  slides = [
-    {'image': 'https://picsum.photos/seed/picsum/1200/300'},
-    {'image': 'https://picsum.photos/seed/picsum/1200/300'},
-    {'image': 'https://picsum.photos/seed/picsum/1200/300'},
-    {'image': 'https://picsum.photos/seed/picsum/1200/300'},
-    {'image': 'https://picsum.photos/seed/picsum/1200/300'}
-  ];
+
+listFeatured:Product[] = [];
+listCategorys:Category[]=[]
+
 
   constructor(@Inject(DOCUMENT) private document: any,private _fb: FormBuilder) {
 
   }
 
   ngOnInit(): void {
-
+this.getFeatured();
+this.getCategorys();
+console.log(this.listFeatured)
+  }
+  getFeatured() {
+    this.productService.getFeatured().subscribe((res: any) => {
+      this.listFeatured = res;
+    });
+  }
+  getCategorys() {
+    this.productService.getCategorys().subscribe((res: any) => {
+      this.listCategorys = res;
+    });
   }
 
-  AfterViewInit(){
-    var arrowprev  = document.querySelector('.carousel-arrow-prev[_ngcontent-igh-c149]') as HTMLElement;
-      var arrownext = document.querySelector('.carousel-arrow-next[_ngcontent-igh-c149]') as HTMLElement;
-      arrowprev.style.left='-45px'
-      arrownext.style.right='-45px'
-  }
+
+
 
   promotionalForm = this._fb.group({
     email: [
@@ -47,4 +57,5 @@ export class HomeComponent implements OnInit {
       ],
     ],
   });
+
 }

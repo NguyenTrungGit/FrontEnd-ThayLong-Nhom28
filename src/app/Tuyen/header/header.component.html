@@ -2,7 +2,7 @@
     <div class="w-100 top-intro">
         <div class="text-white text-center title-top-intro">Cửa hàng rau sạch hữu cơ FRESHVEGE</div>
     </div>
-    <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+    <nav class="navbar navbar-expand-sm justify-content-center">
 
         <div class="nav__bars-btn">
 
@@ -19,10 +19,10 @@
               </svg>
             </span>
                 <ul class="nav__mobile-list">
-                    <li class="nav-item__mobile" (click)="closeAll()">
+                    <li [routerLinkActive]="['active']" class="nav-item__mobile" (click)="closeAll()">
                         <a class="nav-link" routerLink="/trangchu">Trang chủ</a>
                     </li>
-                    <li class="nav-item__mobile nav-item-cuahang__mobile" (click)="closeAll()">
+                    <li [routerLinkActive]="['active']" class="nav-item__mobile nav-item-cuahang__mobile" (click)="closeAll()">
                         <a class="nav-link" routerLink="/cuahang">Cửa hàng
                         <i class="fa fa-chevron-down dropdown-icon__mobile"></i>
                             </a>
@@ -33,13 +33,13 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item__mobile" (click)="closeAll()">
+                    <li [routerLinkActive]="['active']" class="nav-item__mobile" (click)="closeAll()">
                         <a class="nav-link" routerLink="/gioithieu">Giới thiệu</a>
                     </li>
-                    <li class="nav-item__mobile" (click)="closeAll()">
+                    <li [routerLinkActive]="['active']" class="nav-item__mobile" (click)="closeAll()">
                         <a class="nav-link" routerLink="/lienhe">Liên hệ</a>
                     </li>
-                    <li class="nav-item__mobile" (click)="closeAll()">
+                    <li [routerLinkActive]="['active']" class="nav-item__mobile" (click)="closeAll()">
                         <a class="nav-link" routerLink="/chiase">Chia sẻ</a>
                     </li>
                 </ul>
@@ -78,11 +78,11 @@
         <nav class="nav__pc">
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav nav-left">
-                    <li class="nav-item">
+                    <li [routerLinkActive]="['active']" class="nav-item nav-item-home">
                         <a class="nav-link" routerLink="/trangchu">Trang chủ</a>
                     </li>
-                    <li class="nav-item nav-item-cuahang" routerLink="/cuahang">
-                        <a class="nav-link">Cửa hàng
+                    <li [routerLinkActive]="['active']" class="nav-item nav-item-cuahang">
+                        <a class="nav-link" routerLink="/cuahang">Cửa hàng
                         <i class="fa fa-chevron-down dropdown-icon"></i>
                       </a>
                         <ul class="category">
@@ -92,14 +92,14 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item">
+                    <li [routerLinkActive]="['active']" class="nav-item nav-item-intro">
                         <a class="nav-link" routerLink="/gioithieu">Giới thiệu</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/lienhe">Liên hệ</a>
+                    <li [routerLinkActive]="['active']" class="nav-item">
+                        <a class="nav-link nav-item-contact" routerLink="/lienhe">Liên hệ</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/chiase">Chia sẻ</a>
+                    <li [routerLinkActive]="['active']" class="nav-item">
+                        <a class="nav-link nav-item-share" routerLink="/chiase">Chia sẻ</a>
                     </li>
                 </ul>
             </div>
@@ -233,10 +233,10 @@
 
                             <div class="total-cartmini mb-3 ml-3 pt-2 ">
                                 <div href=" " class="title ">Tổng tiền:</div>
-                                <div class="total-number "><span>{{totalCart}}</span></div>
+                                <div class="total-number "><span>{{totalCart| currency: "VND"}}</span></div>
                             </div>
                             <div class="text-center m-3 ">
-                                <button type="button " class="btn-checkout vvv ">THANH TOÁN</button>
+                                <button type="button" routerLink="/hoadon" (click)="closeAll()" class="btn-checkout vvv ">THANH TOÁN</button>
 
                             </div>
                         </div>

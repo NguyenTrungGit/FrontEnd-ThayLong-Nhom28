@@ -43,7 +43,7 @@ import { MaterialModule } from './material/material.module';
 import { IntroduceComponent } from './Tuyen/introduce/introduce.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ContainerComponent } from './Tuyen/container/container.component';
+
 import { TestdataComponent } from './Tuyen/testdata/testdata.component';
 
 import { ThanksPageComponent } from './NTrung/thanks-page/thanks-page.component';
@@ -70,6 +70,7 @@ import {  MatSidenavModule} from '@angular/material/sidenav';
 import {  MatToolbarModule} from '@angular/material/toolbar';
 import {  MatIconModule} from '@angular/material/icon';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -100,7 +101,7 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     ProductItemHomeComponent,
     CartComponent,
     IntroduceComponent,
-    ContainerComponent,
+    
     TestdataComponent,
     ThanksPageComponent,
     PopupLoginComponent,
@@ -116,7 +117,8 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     InfoComponent,
     RelatedComponent,
     EvaluateComponent,
-    ContactEvaluateComponent
+    ContactEvaluateComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
