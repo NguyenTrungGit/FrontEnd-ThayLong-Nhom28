@@ -6,6 +6,7 @@ import { Category } from 'src/app/model/category.model';
 import { Product } from 'src/app/model/product.model';
 import { ProductService } from 'src/app/Services/product.service';
 import { FormBuilder, Validators } from '@angular/forms';
+import { DOCUMENT } from '@angular/common';
 
 
 
@@ -23,7 +24,7 @@ listFeatured:Product[] = [];
 listCategorys:Category[]=[]
 
 
-  constructor(@Inject(DOCUMENT) private document: any,private _fb: FormBuilder) {
+  constructor(@Inject(DOCUMENT) private document: any,private _fb: FormBuilder,private productService: ProductService) {
 
   }
 
