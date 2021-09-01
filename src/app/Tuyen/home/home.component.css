@@ -485,3 +485,57 @@
             margin-right: 8%;
         }
     }
+
+    .input__wrapper {
+        display: flex;
+        justify-content: center;
+        column-gap: 14px;
+    }
+
+    .input__single {
+        max-width: 500px;
+        width: 60%;
+        height: 72px;
+    }
+
+    .input__email {
+        padding: 14px;
+        border-radius: 50px;
+        height: 50px;
+        font-size: 16px;
+        border: 1px solid rgb(168, 168, 168);
+    }
+
+    .input__email:focus {
+        outline: none;
+        border: 1px solid #66a55f;
+        box-shadow: none;
+    }
+
+    .invalid-feedback {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .button__submit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 14px 20px;
+        border-radius: 50px;
+        outline: none;
+        height: 50px;
+        color: #fff;
+        font-weight: 700;
+        background-color: #66a55f;
+        box-shadow: none;
+        border: none;
+    }
+
+    .button__submit:hover {
+        background-color: hsl(114, 33%, 56%);
+    }
+
+    .button__submit:active {
+        background-color: hsl(114, 38%, 46%);
+    }
