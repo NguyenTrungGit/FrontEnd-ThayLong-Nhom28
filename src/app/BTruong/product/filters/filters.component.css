@@ -263,9 +263,14 @@
     position: relative;
 }
 
-.btn {
+.small .btn {
+    background-color: #666;
     border-radius: 99px;
     cursor: pointer;
+}
+
+.small .btn:hover {
+    background-color: #66a55f;
 }
 
 .price {
@@ -677,7 +682,7 @@ body {
         width: 100%;
         align-items: center;
     }
-    .btn {
+    .small .btn {
         top: 2em;
         border: none;
         width: 3.125em;
@@ -752,7 +757,7 @@ body {
         width: 100%;
         align-items: center;
     }
-    .btn {
+    .small .btn {
         top: 2em;
         border: none;
         width: 3.125em;
@@ -827,7 +832,7 @@ body {
         width: 100%;
         align-items: center;
     }
-    .btn {
+    .small .btn {
         top: 2em;
         border: none;
         width: 3.125em;

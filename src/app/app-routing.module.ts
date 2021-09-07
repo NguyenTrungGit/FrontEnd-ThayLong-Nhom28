@@ -28,9 +28,9 @@ const routes: Routes = [
   { path: 'cuahang/:cate/chitiet/:id', component: ProductDetailComponent },
   { path: 'thongtinnhanhang', component: FormConfirmComponent },
   { path: 'hoadon', component: BillConfirmComponent },
-  // { path: '', component: HomeComponent },
+   { path: '', component: HomeComponent },
   { path: 'chiase/chiasechitiet/:id', component: BlogContentComponent },
-  { path: '**', redirectTo:"trangchu",pathMatch: 'full', },
+  // { path: '**', redirectTo:"trangchu",pathMatch: 'full', },
   { path: 'search', component: SearchComponent },
   { path: 'camon', component: ThanksPageComponent },
 ];

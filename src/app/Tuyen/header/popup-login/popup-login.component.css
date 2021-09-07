@@ -64,13 +64,21 @@
     color: black;
 }
 
+.section-popup .btn-primary:disabled:hover {
+    color: white;
+}
+
 .section-popup .btn-primary:hover::before {
     z-index: -1;
     width: 100%;
     left: 0;
-    /*change here*/
     right: auto;
-    /*change here*/
+}
+
+.section-popup .btn-primary:disabled:hover::before {
+    width: 0%;
+    left: 0;
+    right: auto;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active,
