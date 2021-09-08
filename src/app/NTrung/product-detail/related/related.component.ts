@@ -4,6 +4,8 @@ import { Product } from 'src/app/model/product.model';
 import { ProductService } from 'src/app/Services/product.service';
 import { ShoppingCartService } from 'src/app/Services/shopping-cart.service';
 
+import { MatDialog } from '@angular/material/dialog';
+import { ProductPopupComponent } from 'src/app/BTruong/product-popup/product-popup.component';
 @Component({
   selector: 'app-related',
   templateUrl: './related.component.html',
@@ -18,7 +20,8 @@ export class RelatedComponent implements OnInit {
   constructor(
     private productService: ProductService,
     private route: ActivatedRoute,
-    private shoppingCartService:ShoppingCartService
+    private shoppingCartService: ShoppingCartService,
+    public dialog: MatDialog,
   ) {}
 
   ngOnInit(): void {
@@ -63,8 +66,25 @@ export class RelatedComponent implements OnInit {
       });
   }
 
-  addToCart(item:Product){
+  addToCart(item: Product) {
     item.quantity = 1;
     this.shoppingCartService.addToCart(item);
+  }
+
+  openDialog(item:Product) {
+    this.dialog.open(ProductPopupComponent, {
+      data: {
+        id: item.id,
+        name: item.name,
+        price: item.price,
+        quantity: item.quantity,
+        category: item.category,
+        origin: item.origin,
+        img1: item.img1,
+        img2: item.img2,
+        img3: item.img3,
+        description: item.description,
+      },
+    });
   }
 }
