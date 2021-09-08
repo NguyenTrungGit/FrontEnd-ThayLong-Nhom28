@@ -117,12 +117,12 @@
         <carousel>
 
             <div class="carousel-cell" *ngFor="let c of listCategorys">
-                <a href="#" class="item-cate-carousel" title="{{c.name}}">
+                <a routerLink="/cuahang/{{c.id}}" class="item-cate-carousel" title="{{c.name}}">
                     <img src="/assets/tuyen/img/{{c.id}}.jpg" alt="">
                 </a>
             </div>
             <div class="carousel-cell" *ngFor="let c of listCategorys">
-                <a href="#" class="item-cate-carousel" title="{{c.name}}">
+                <a routerLink="/cuahang/{{c.id}}" class="item-cate-carousel" title="{{c.name}}">
                     <img src="/assets/tuyen/img/{{c.id}}1.jpg" alt="">
                 </a>
             </div>

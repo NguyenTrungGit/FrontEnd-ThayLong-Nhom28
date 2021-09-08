@@ -98,3 +98,20 @@ span {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+@media screen and ( max-width: 46.1875em) {
+    .content h2 {
+        margin-bottom: 0;
+        font-size: 2.625em;
+        letter-spacing: 0.0625em;
+    }
+}
+
+
+/* tablet */
+
+@media only screen and ( min-width: 46.25em) and ( max-width: 63.9375em) {
+    .title-page {
+        padding-top: 50px;
+    }
+}

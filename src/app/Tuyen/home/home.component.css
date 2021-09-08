@@ -533,9 +533,13 @@
     }
 
     .button__submit:hover {
-        background-color: hsl(114, 33%, 56%);
+        background-color: #599452;
     }
 
     .button__submit:active {
         background-color: hsl(114, 38%, 46%);
+    }
+
+    .button__submit:disabled:hover {
+        background-color: #66a55f;
     }

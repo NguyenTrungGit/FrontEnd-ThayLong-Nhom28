@@ -59,9 +59,7 @@ export class HeaderComponent implements OnInit {
   displayValue!: '';
 
   goToSearch(key:string){
-    setTimeout(() => {
-        this.router.navigate(['/search'],{queryParams:{'key':key}});
-      }, 1000);
+    this.router.navigate(['/search'],{queryParams:{'key':key}});
   }
 
   refresh(): void {

@@ -1,26 +1,25 @@
 ﻿{
-    "voucher": [
-        {
-          "id": "vc20",
-          "discount": 20000
+    "voucher": [{
+            "id": "vc20",
+            "discount": 20000
         },
         {
-          "id": "vc30",
-          "discount": 30000
+            "id": "vc30",
+            "discount": 30000
         },
         {
-          "id": "vc40",
-          "discount": 40000
+            "id": "vc40",
+            "discount": 40000
         },
         {
-          "id": "vc50",
-          "discount": 50000
+            "id": "vc50",
+            "discount": 50000
         },
         {
-          "id": "vc60",
-          "discount": 60000
+            "id": "vc60",
+            "discount": 60000
         }
-      ],
+    ],
 
     "blogID": [{
         "id": "BLOG001",
@@ -999,7 +998,7 @@
             "name": "Nấm Đông Cô Hữu Cơ 500G",
             "price": 40000,
             "quantity": "50",
-            "category": "rau",
+            "category": "nam",
             "origin": "Việt Nam",
             "img1": "RAU217.jpg",
             "img2": "RAU218.jpg",
@@ -1011,7 +1010,7 @@
             "name": "Nấm Ngọc Thạch Hộp 250g",
             "price": 59000,
             "quantity": "50",
-            "category": "rau",
+            "category": "nam",
             "origin": "Việt Nam",
             "img1": "RAU220.jpg",
             "img2": "RAU221.jpg",
