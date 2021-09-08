@@ -1,4 +1,4 @@
-<div class="product__container">
+<!-- <div class="product__container">
     <ul class="product__list grid">
         <li class="product__item grid__item" *ngFor="let item of productsRelated">
             <div class="product__content">
@@ -26,4 +26,10 @@
             </div>
         </li>
     </ul>
+</div> -->
+
+<div class="product__list grid">
+    <div  *ngFor="let product of productsRelated">
+        <app-product-item class="grid__item" [productItem]="product"></app-product-item>
+    </div>
 </div>
