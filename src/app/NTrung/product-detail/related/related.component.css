@@ -1,226 +1,177 @@
-/* ==================== GOOGLE FONT ==================== */
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  justify-items: center;
-  gap: 0.5em;
-}
-/* 
-.grid__item {
-  max-width: 180px;
-  min-width: 180px;
-} */
-/* 
-
-.product__item {
-  display: flex;
+/* base */
+*,
+p {
+  padding: 0;
+  margin: 0;
 }
 
-.product__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  row-gap: 1.25em;
+ul {
+  list-style: none;
+}
+
+img {
   width: 100%;
   height: auto;
-  padding: 0.5em 0.5em 1.5em 0.5em;
-  border-radius: 5px;
-  border: 0.5px solid hsla(114, 28%, 51%, 0.3);
+  object-fit: cover;
+}
+
+/* layout */
+.grid {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 0.5em;
+}
+
+/* related css */
+.related__item {
+  display: flex;
+  justify-content: center;
+  max-width: 220px;
+  width: 100%;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.05);
   transition: 0.2s;
 }
 
-.product__content:hover {
-  box-shadow: 0 0 10px 2px hsl(0, 0%, 90%);
-  border-color: hsla(114, 28%, 51%, 0.5);
+.related__item:hover .related__img-box img{
+  transform: scale(1.1);
 }
 
-.product__img {
+.related__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.related__img-box {
   display: flex;
   cursor: pointer;
   width: 100%;
+  height: auto;
   flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 1em 1em 0 0;
 }
 
-.product__img::before{
+.related__img-box::before {
   content: "";
   padding-top: 100%;
 }
 
-.product__img img {
-  object-fit: cover;
-  border-radius: 5px;
+.related__img-box img {
+  max-width: 220px;
+  max-height: 220px;
   width: 100%;
   height: auto;
-  border: 1px solid hsl(0, 0%, 97%);
+  border-radius: 1em 1em 0 0;
+  flex-shrink: 0;
+  transition: 0.2s;
 }
 
-.product__name {
-  font-weight: 300;
+.related__controls {
+  display: none;
+}
+
+.related__name {
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
   flex: 1;
-  transition: 0.2s;
+  padding-top: 0.5em;
+}
+
+.related__price {
+  width: 100%;
   text-align: center;
-}
-
-.product__subcontent {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: 0.2s;
-}
-
-.product__price {
+  padding-bottom: 0.5em;
   font-weight: 500;
   color: hsl(114, 28%, 51%);
-  transition: 0.2s;
 }
 
-.product__logo {
-  transition: 0.2s;
-  text-align: center;
+.pd-0-5 {
+  padding: 0.5em;
 }
 
-.product__logo b {
-  font-weight: 500;
-}
-
-.product__logo b:first-child {
-  color: hsl(340, 65%, 49%);
-}
-.product__logo b:last-child {
-  color: hsl(114, 28%, 51%);
-}
-
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.related__button {
   cursor: pointer;
   user-select: none;
-}
-
-.button__green{
-  background-color: hsl(114, 28%, 51%);
-}
-
-.button__red{
-  background-color: hsl(1, 79%, 66%);
-}
-
-.product__button {
-  gap: 1em;
-  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
   padding: 8px;
-  border-radius: inherit;
-  color: hsl(0, 0%, 100%);
-}
-
-.button__red-border{
-  color: hsl(1, 79%, 66%);
-  background-color: hsl(0, 0%, 100%);
-  border: 0.5px solid hsl(1, 79%, 66%);
-}
-
-.product__detail {
-  width: 25px;
-  height: 25px;
+  gap: 4px;
+  height: 40px;
   background-color: hsl(114, 28%, 51%);
-  border-radius: 50%;
-  transition: 0.2s ease-in-out;
+  color: hsl(0, 0%, 100%);
+  border-radius: 0 0 1em 1em;
+  overflow: hidden;
 }
 
-.product__icon{
-  font-weight: 500;
-}
-
-.button__green:hover,
-.product__detail:hover {
+.related__button:hover{
   background-color: hsl(114, 33%, 56%);
 }
 
-.button__green:active,
-.product__detail:active {
+.related__button:active{
   background-color: hsl(114, 38%, 46%);
 }
 
-.icon__search {
-  font-size: 0.75em;
-  color: hsl(0, 0%, 100%);
+/* mobile 375px*/
+@media screen and (min-width: 23.4375em) {
 }
 
 @media screen and (min-width: 48em) {
-  .grid__item {
-    max-width: 200px;
-  }
-
-  .product__detail {
-    width: 2em;
-    height: 2em;
-  }
-
-  .icon__search {
-    font-size: 1em;
-  }
-
-  .product__button {
-    height: 2.5em;
-  }
 }
 
 @media screen and (min-width: 64em) {
-  .grid__item {
-    max-width: 220px;
+  .grid{
+    gap: 1em;
   }
 
-  .product__button {
-    font-size: 1em;
-  }
-
-  .product__name,
-  .product__subcontent,
-  .product__logo {
-    transform: translateY(2em);
-  }
-
-  .product__price {
-    transform: translateX(4.5em);
-  }
-
-  .product__detail {
-    transform: translateX(0.5em);
+  .related__controls {
+    display: flex;
     opacity: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 0.2s;
+    padding-top: 0.5em;
   }
 
-  .product__button {
-    transform: translateY(1.5em);
-    opacity: 0;
+  .related-icon{
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
   }
 
-
-  .product__item:hover .product__name,
-  .product__item:hover .product__subcontent,
-  .product__item:hover .product__logo {
-    transform: translateY(0);
+  .related-icon:hover{
+    transform: scale(1.1);
+    color: hsl(114, 28%, 51%);
   }
 
-  .product__item:hover .product__price {
-    transform: translateX(1em);
+  .related-icon:active{
+    transform: rotate(-20deg);
   }
 
-  .product__item:hover .product__detail {
-    transform: translateX(-1em);
+  .related__price {
+    padding-bottom: 1.5em;
+  }
+
+  .related__button {
+    display: none;
+  }
+
+  .related__item:hover{
+    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .related__item:hover .related__controls{
     opacity: 1;
+    transform: scale(1.1);
   }
-
-  .product__item:hover .product__button {
-    transform: translateY(0);
-    opacity: 1;
-  }
-} */
-
-@media screen and (min-width:25em) {
-    .grid{
-      gap: 1.5em;
-    }
 }

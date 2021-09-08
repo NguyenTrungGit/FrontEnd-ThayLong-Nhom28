@@ -1,35 +1,28 @@
-<!-- <div class="product__container">
-    <ul class="product__list grid">
-        <li class="product__item grid__item" *ngFor="let item of productsRelated">
-            <div class="product__content">
-                <div class="product__img">
-                    <img src="../../../../assets/BTruong/image-mix/{{item.img1}}" alt="">
+<div class="related related__container">
+    <ul class="related__list grid">
+        <li class="related__item grid__item" *ngFor="let product of productsRelated">
+            <div class="related__content">
+                <div class="related__img-box">
+                    <img src="/assets/BTruong/image-mix/{{product.img1}}" alt="" class="">
                 </div>
-                <span class="product__name">{{item.name}}</span>
-                <span class="product__logo"><b>FRESH</b><b>VEGE</b></span>
-                <div class="product__subcontent">
-                    <span class="product__price">{{item.price}}&#8363;</span>
-                    <div class="product__detail button" routerLink='/cuahang/{{item.category}}/chitiet/{{item.id}}'>
-                        <i class="far fa-search product__icon icon__search" routerLink='/cuahang/{{item.category}}/chitiet/{{item.id}}'></i>
-                    </div>
+                <div class="related__controls">
+                    <i class="far fa-shopping-cart related-icon" (click)="addToCart(product)"></i>
+                    <span>|</span>
+                    <i class="far fa-search related-icon" (click)="openDialog(product)"></i>
                 </div>
-                
-                <ng-container >
-                    <div class="product__button button button__green" *ngIf="item.quantity" (click)="addToCart(item)">
-                        Thêm vào giỏ <i class="fal fa-cart-plus button__icon product__icon"></i>
-                    </div>
-
-                    <div class="product__button button button__red button__red-border" *ngIf="!item.quantity">
-                        Hết hàng <i class="fal fa-ban button__icon product__icon"></i>
-                    </div>
-                </ng-container>
+                <span class="related__name">{{product.name}}</span>
+                <span class="related__price">{{ product.price}}&#8363; </span>
+                <div class="related__button">
+                    Thêm vào giỏ <i class="far fa-shopping-cart"></i>
+                </div>
             </div>
         </li>
     </ul>
-</div> -->
+</div>
 
-<div class="product__list grid">
+
+<!-- <div class="product__list grid">
     <div  *ngFor="let product of productsRelated">
         <app-product-item class="grid__item" [productItem]="product"></app-product-item>
     </div>
-</div>
+</div> -->
