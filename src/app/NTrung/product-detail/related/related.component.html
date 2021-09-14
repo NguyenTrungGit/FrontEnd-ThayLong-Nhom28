@@ -1,7 +1,7 @@
 <div class="related related__container">
     <ul class="related__list grid">
         <li class="related__item grid__item" *ngFor="let product of productsRelated">
-            <div class="related__content">
+            <div class="related__content" routerLink='/cuahang/{{product.category}}/chitiet/{{product.id}}'>
                 <div class="related__img-box">
                     <img src="/assets/BTruong/image-mix/{{product.img1}}" alt="" class="">
                 </div>
