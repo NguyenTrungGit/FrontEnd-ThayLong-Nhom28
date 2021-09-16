@@ -28,7 +28,7 @@
                             </a>
                         <ul class="category__mobile">
                             <li [routerLinkActive]="['active']" class="item-category__mobile" *ngFor="let cate of categorys">
-                                <a routerLink="/cuahang/{{cate.id}}">{{cate.name}}</a>
+                                <a class="name_cate__mobile" routerLink="/cuahang/{{cate.id}}">{{cate.name}}</a>
                             </li>
                         </ul>
                     </li>
