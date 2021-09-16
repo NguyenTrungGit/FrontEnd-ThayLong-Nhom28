@@ -1,5 +1,11 @@
-import { Component, OnInit,ViewEncapsulation,Input, SimpleChanges } from '@angular/core';
-import SwiperCore, { Navigation, Thumbs } from "swiper/core";
+import {
+  Component,
+  OnInit,
+  ViewEncapsulation,
+  Input,
+  SimpleChanges,
+} from '@angular/core';
+import SwiperCore, { Navigation, Thumbs } from 'swiper/core';
 // install Swiper modules
 SwiperCore.use([Navigation, Thumbs]);
 import { Product } from 'src/app/model/product.model';
@@ -18,48 +24,48 @@ export class InfoComponent implements OnInit {
 
   // TODO: receive data from product details
   // @Input() productInfo?: Product;
-  @Input() idInput:any
-  productInfo!:Product
-  id:any;
+  @Input() idInput: any;
+  productInfo!: Product;
+  id: any;
 
-
-  
-    addToCart(element:any){
-    if(this.productInfo!==undefined){
-    this.productInfo.quantity=Number(element.value);
-    this.shoppingCartService.addToCart(this.productInfo)
-}
-
-}
-  up(element:any,product?:Product) {
-    element.value++;
-    this.updateQuantity(element)
+  addToCart(element: any) {
+    if (this.productInfo !== undefined) {
+      if(element.value == 0 || element.value == null){
+        element.value = 1;
+      }
+      this.productInfo.quantity = Number(element.value);
+      this.shoppingCartService.addToCart(this.productInfo);
+    }
   }
-  constructor(private shoppingCartService: ShoppingCartService, private productService: ProductService,) {}
+  up(element: any, product?: Product) {
+    element.value++;
+    this.updateQuantity(element);
+  }
+  constructor(
+    private shoppingCartService: ShoppingCartService,
+    private productService: ProductService
+  ) {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.id = this.idInput
+    this.id = this.idInput;
     this.getProductById();
   }
   ngOnInit(): void {
-    this.id = this.idInput
+    this.id = this.idInput;
     this.getProductById();
   }
 
-
-
-  down(element:any,product?:Product) {
-    if(Number(element.value)>=2)
-  element.value--;
-  this.updateQuantity(element)
+  down(element: any, product?: Product) {
+    if (Number(element.value) >= 2) element.value--;
+    this.updateQuantity(element);
   }
 
-  updateQuantity(element:any){
-    var quantity=element.value;
-    if(!Number(quantity) ||Number(quantity)<0){
-      quantity="1";
+  updateQuantity(element: any) {
+    var quantity = element.value;
+    if (!Number(quantity) || Number(quantity) < 0) {
+      quantity = '1';
     }
-    }
+  }
 
   getProductById() {
     // TODO: return a array, in array have 1 product has this.id and find product by id (Optimized)
@@ -67,5 +73,4 @@ export class InfoComponent implements OnInit {
       this.productInfo = res.find((n: any) => n.id === this.id);
     });
   }
-
 }

@@ -25,9 +25,13 @@ product?:Product;
     }
 
   }
-  addToCart(){
-      this.product!.quantity=Number(this.quantity);
-      this.shoppingCartService.addToCart(this.product!)
-
+  addToCart(element: any){
+    if (this.product !== undefined) {
+      if(element.value == 0 || element.value == null){
+        element.value = 1;
+      }
+      this.product.quantity = Number(element.value);
+      this.shoppingCartService.addToCart(this.product);
+    }
     }
 }

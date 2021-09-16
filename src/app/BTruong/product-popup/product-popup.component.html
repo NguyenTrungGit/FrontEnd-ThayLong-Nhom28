@@ -52,12 +52,12 @@
                 <div class="cart">
                     <div class="col-4 col-sm-4 col-md-4">
                         <div class="quantity" style="border-radius: 10px;">
-                            <input #InputQuantityElementPopup (input)="getValue(InputQuantityElementPopup)" type="number" maxlength="2" step="1" max="99" min="1" value="1" title="Qty" class="qty">
+                            <input #InputQuantityElementPopup (input)="getValue(InputQuantityElementPopup)" type="text" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" maxlength="3" step="1" max="99" min="1" value="1" title="Qty" class="qty">
                         </div>
                     </div>
                 </div>
                 <div class=" btn-cart-1 "></div>
-                <button type="button " class="btn btn-success " style=" background-color: #66a55f; height: 40px; font-size: 16px; width: 147px; border-radius: 10px; " (click)="addToCart() ">
+                <button type="button " class="btn btn-success " style=" background-color: #66a55f; height: 40px; font-size: 16px; width: 147px; border-radius: 10px; " (click)="addToCart(InputQuantityElementPopup) ">
           <i class="fas fa-cart-plus "></i> Add to cart
         </button>
             </div>
