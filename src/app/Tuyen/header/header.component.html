@@ -27,7 +27,7 @@
                         <i class="fa fa-chevron-down dropdown-icon__mobile"></i>
                             </a>
                         <ul class="category__mobile">
-                            <li class="item-category__mobile" *ngFor="let cate of categorys">
+                            <li [routerLinkActive]="['active']" class="item-category__mobile" *ngFor="let cate of categorys">
                                 <a routerLink="/cuahang/{{cate.id}}">{{cate.name}}</a>
                             </li>
                         </ul>
@@ -86,8 +86,8 @@
                         <i class="fa fa-chevron-down dropdown-icon"></i>
                       </a>
                         <ul class="category">
-                            <li class="item-category" *ngFor="let cate of categorys">
-                                <a routerLink="/cuahang/{{cate.id}}">{{cate.name}}</a>
+                            <li class="item-category" *ngFor="let cate of categorys" [routerLinkActive]="['active']">
+                                <a class="nameCate" routerLink="/cuahang/{{cate.id}}">{{cate.name}}</a>
                             </li>
                         </ul>
                     </li>
@@ -122,7 +122,7 @@
                             </div>
 
                             <form action="">
-                                <input id="Search" #box (keyup.enter)="goToSearch(box.value)" (keyup.enter)="refresh()" [(ngModel)]="filtre" class="form-control" autocomplete="off" type="search" name="search" class="form-control" placeholder="Tìm kiếm">
+                                <input id="Search" #box (keyup.enter)="goToSearch(box)" (keyup.enter)="refresh()" [(ngModel)]="filtre" class="form-control" autocomplete="off" type="search" name="search" class="form-control" placeholder="Tìm kiếm">
 
 
                             </form>
@@ -217,12 +217,12 @@
                                             <a routerLink='/cuahang/{{item?.category}}/chitiet/{{item?.id}}'><img src="/assets/BTruong/image-mix/{{item.img1}} " alt=" " width="60px " height="60px "></a>
                                         </div>
                                         <div class="title-item pl-2 ">
-                                            <a routerLink='/cuahang/{{item?.category}}/chitiet/{{item?.id}}' class="title ">{{item.name}} </a>
+                                            <a routerLink='/cuahang/{{item?.category}}/chitiet/{{item?.id}}' class="title ">{{item.name| titlecase }} </a>
                                             <div><span class="quantity-item ">{{item.quantity}} </span></div>
                                         </div>
                                         <div class="remove-price ">
                                             <div class="mb-2 pb-2 "><a (click)="removeProduct(item) " class="remove "><i class="fas fa-times "></i></a></div>
-                                            <div class="price "><span></span>{{item.price}} </div>
+                                            <div class="price "><span></span>{{item.price| currency: "VND"}} </div>
                                         </div>
                                     </div>
                                 </div>

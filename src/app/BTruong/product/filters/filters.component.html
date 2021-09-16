@@ -5,7 +5,7 @@
                 <span class="widget-title shop-sidebar " style="margin :0 auto; margin-top: 12px; color: #fff; font-size: 18px;">DANH MỤC</span>
             </div>
             <div class="menu-danh-muc-san-pham-vertical-menu-container ">
-                <ul class="menu " routerLink="/cuahang/{{item.id}}" *ngFor="let item of categorys" [ngClass]="{'active': selectedItemId === item.id}" (click)="selectedItemId = item.id">
+                <ul class="menu " [routerLinkActive]="['active']" routerLink="/cuahang/{{item.id}}" *ngFor="let item of categorys">
                     <li class="menu-sub ">
                         <a class="span-font menu1a ">{{item.name}}</a>
                     </li>

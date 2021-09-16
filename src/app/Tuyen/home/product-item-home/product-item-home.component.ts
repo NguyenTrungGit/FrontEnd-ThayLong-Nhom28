@@ -28,12 +28,25 @@ export class ProductItemHomeComponent implements OnInit {
       }
     });
   }
+  showcart(){
+    var cart = document.querySelector(
+        '.block-minicart'
+      ) as HTMLElement;
+        cart.style.display = 'block';
+  }
+  hiddenSearch(){
+     var dropdownSearch = document.querySelector(
+      '.dropdown-search'
+    ) as HTMLElement;
+    dropdownSearch.style.display = 'none';
+  }
   addToCart(){
     this.item.quantity=1;
     this.shoppingCartService.addToCart(this.item);
     // window.alert('has been added to cart!')
-
-
+     window.scrollTo(0, document.documentElement.scrollTop-0.0001);
+      this.showcart();
+      this.hiddenSearch();
       }
   ngOnInit(): void {
 
