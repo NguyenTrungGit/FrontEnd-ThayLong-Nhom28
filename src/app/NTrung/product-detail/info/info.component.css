@@ -21,10 +21,11 @@
   line-height: 1.5;
   cursor: pointer;
   user-select: none;
+  font-weight: 500;
 }
 
 .link__item:hover {
-  color: hsl(214, 78%, 58%);
+  color: hsl(114, 28%, 51%);
 }
 
 .link__item:nth-child(2),

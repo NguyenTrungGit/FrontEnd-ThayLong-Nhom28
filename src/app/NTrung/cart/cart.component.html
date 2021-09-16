@@ -30,7 +30,7 @@
                                     <i class="fas fa-minus button__icon"></i>
                                 </div>
 
-                                <input type="text" class="input__small" value="{{ item.quantity }}" #inputQuantityElement (input)="updateQuantity(inputQuantityElement, item)" />
+                                <input class="input__small" type="text" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" maxlength="3" value="{{ item.quantity }}" #inputQuantityElement (input)="updateQuantity(inputQuantityElement, item)" />
 
                                 <div class="button button__small button__plus" (click)="up(inputQuantityElement, item)">
                                     <i class="fas fa-plus button__icon"></i>
