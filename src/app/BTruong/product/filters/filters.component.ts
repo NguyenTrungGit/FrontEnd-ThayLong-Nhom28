@@ -44,7 +44,6 @@ export class FiltersComponent implements OnInit{
 
 
   sendParent(){
-
     this.messageEvent.emit({min: this.minPrice+'',max:this.maxPrice+''});
     this.router.navigate([], {  queryParams: {  min:this.minPrice,max:this.maxPrice,trang:1} });
     console.log("vao filter child")
