@@ -69,6 +69,7 @@ export class CartComponent implements OnInit {
 
   removeProduct(product: Product) {
     this.shoppingcartService.removeProduct(product);
+    this.total = this.getTotal();
   }
 
   applyVoucher() {
