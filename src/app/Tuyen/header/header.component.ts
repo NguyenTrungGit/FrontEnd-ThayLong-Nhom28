@@ -1,6 +1,12 @@
 import { Category } from './../../model/category.model';
 import { DOCUMENT } from '@angular/common';
-import {Component,OnInit,Inject,HostListener,ChangeDetectionStrategy} from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Inject,
+  HostListener,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { Subject } from 'rxjs';
 import { Product } from 'src/app/model/product.model';
 import { ProductService } from 'src/app/Services/product.service';
@@ -13,20 +19,21 @@ import { NavigationEnd, Router } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent implements OnInit {
-  vSearch:number=-1;
+  vSearch: number = -1;
   vCart: any = -1;
-  totalCart:number=0;
+  totalCart: number = 0;
   datas: Product[] = [];
   itemsCart: Product[] = [];
   search: Product[] = [];
-  numberItemInCart:number=0;
-  categorys: Category[]=[];
+  numberItemInCart: number = 0;
+  categorys: Category[] = [];
 
-
-  constructor(@Inject(DOCUMENT) private document: any,
-  private productService: ProductService ,
-  private cartService:ShoppingCartService,
-  private router: Router) {}
+  constructor(
+    @Inject(DOCUMENT) private document: any,
+    private productService: ProductService,
+    private cartService: ShoppingCartService,
+    private router: Router
+  ) {}
   searchText: any;
   searchValue = '';
   value = '';
@@ -38,64 +45,68 @@ export class HeaderComponent implements OnInit {
 
   ishiden: boolean = false;
   visibleState?: any;
-  block:any;
+  block: any;
   onEnter(value: string) {
     this.value = value;
   }
 
   displayValue!: '';
 
-  goToSearch(element:any){
-    this.router.navigate(['/search'],{queryParams:{'key':element.value}});
+  goToSearch(element: any) {
+    setTimeout(() => {
+      this.router.navigate(['/search'], {
+        queryParams: { key: element.value },
+      });
+    }, 1000);
   }
 
   refresh(): void {
     let currentUrl = this.router.url;
-      this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-      this.router.onSameUrlNavigation = 'reload';
-      this.router.navigate([currentUrl]);
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this.router.onSameUrlNavigation = 'reload';
+    this.router.navigate([currentUrl]);
   }
 
   ngOnInit(): void {
-      this.scrollOnTop();
-      this.cartService.cartItems.subscribe(data=>{
-      this.itemsCart=data;
-      this.numberItemInCart=this.countQuantityCart(this.itemsCart)
-      this.totalCart=this.getTotal();
-    })
-    this.getCategorys()
+    this.scrollOnTop();
+    this.cartService.cartItems.subscribe((data) => {
+      this.itemsCart = data;
+      this.numberItemInCart = this.countQuantityCart(this.itemsCart);
+      this.totalCart = this.getTotal();
+    });
+    this.getCategorys();
     this.getSearch();
   }
 
-  clearListSearch(){
-    this.search=[];
+  clearListSearch() {
+    this.search = [];
   }
   getSearch() {
     this.productService.getProducts().subscribe((res: any) => {
-    this.search = res;
+      this.search = res;
     });
   }
-  countQuantityCart(itemsCart: Product[]):number{
-    let count=0;
-    for(let i = 0; i < itemsCart.length; i++){
-    count+=itemsCart[i].quantity;
+  countQuantityCart(itemsCart: Product[]): number {
+    let count = 0;
+    for (let i = 0; i < itemsCart.length; i++) {
+      count += itemsCart[i].quantity;
     }
     return count;
   }
   getCategorys() {
-      this.productService.getCategorys().subscribe((res: any) => {
+    this.productService.getCategorys().subscribe((res: any) => {
       this.categorys = res;
     });
   }
-    removeProduct(product:Product){
+  removeProduct(product: Product) {
     this.cartService.removeProduct(product);
   }
-clearListSearchDirect(){
-  this.clearListSearch()
-  this.displaySearch()
-}
+  clearListSearchDirect() {
+    this.clearListSearch();
+    this.displaySearch();
+  }
   displaySearch() {
-this.hideCart();
+    this.hideCart();
     var dropdownSearch = document.querySelector(
       '.dropdown-search'
     ) as HTMLElement;
@@ -103,7 +114,7 @@ this.hideCart();
     if (this.vSearch === 1) {
       dropdownSearch.style.display = 'block';
     } else {
-     // this.clearListSearch();
+      // this.clearListSearch();
       dropdownSearch.style.display = 'none';
     }
   }
@@ -116,52 +127,45 @@ this.hideCart();
     this.vSearch = -1;
   }
   hideCart() {
-    var cart = document.querySelector(
-      '.block-minicart'
-    ) as HTMLElement;
+    var cart = document.querySelector('.block-minicart') as HTMLElement;
     cart.style.display = 'none';
     this.vCart = -1;
   }
-  showcart(){
+  showcart() {
     this.hideSearch();
-    var cart = document.querySelector(
-        '.block-minicart'
-      ) as HTMLElement;
-      this.vCart = this.vCart * -1;
-      if (this.vCart === 1) {
-        cart.style.display = 'block';
-      } else {
-        cart.style.display = 'none';
-      }
+    var cart = document.querySelector('.block-minicart') as HTMLElement;
+    this.vCart = this.vCart * -1;
+    if (this.vCart === 1) {
+      cart.style.display = 'block';
+    } else {
+      cart.style.display = 'none';
+    }
   }
-closeAll(){
-  this.hideSearch();
-  this.hideCart();
-  var navmobile = document.querySelector(
-    '.nav-input'
-  ) as HTMLElement;
-  this.onSaveUsernameChanged(false);
-}
-public saveUsername:any;
+  closeAll() {
+    this.hideSearch();
+    this.hideCart();
+    var navmobile = document.querySelector('.nav-input') as HTMLElement;
+    this.onSaveUsernameChanged(false);
+  }
+  public saveUsername: any;
 
-public onSaveUsernameChanged(value:boolean){
+  public onSaveUsernameChanged(value: boolean) {
     this.saveUsername = value;
-}
+  }
   @HostListener('window:scroll', [])
   onWindowScroll() {
-
     var header = document.querySelector('.header') as HTMLElement;
     var navbar = document.querySelector('.navbar') as HTMLElement;
     var topintro = document.querySelector('.top-intro') as HTMLElement;
     var logo = document.querySelector('.logo') as HTMLElement;
-    navbar.style.paddingTop="0"
-    navbar.style.paddingBottom="0"
+    navbar.style.paddingTop = '0';
+    navbar.style.paddingBottom = '0';
     if (document.documentElement.scrollTop < 1) {
       header.classList.remove('fixed-top');
-      navbar.style.paddingTop="4px"
-      navbar.style.paddingBottom="4px"
-      navbar.style.paddingLeft="8px"
-      navbar.style.paddingRight="8px"
+      navbar.style.paddingTop = '4px';
+      navbar.style.paddingBottom = '4px';
+      navbar.style.paddingLeft = '8px';
+      navbar.style.paddingRight = '8px';
       topintro.style.display = 'block';
       logo.style.width = '170px';
       navbar.classList.remove('p-0');
@@ -175,10 +179,9 @@ public onSaveUsernameChanged(value:boolean){
       logo.style.width = '160px';
       logo.style.paddingTop = '2px';
       logo.style.paddingBottom = '2px';
-
     }
   }
-  selectEvent(item:any) {
+  selectEvent(item: any) {
     // do something with selected item
   }
 
@@ -187,7 +190,7 @@ public onSaveUsernameChanged(value:boolean){
     // And reassign the 'data' which is binded to 'data' property.
   }
 
-  onFocused(e:any) {
+  onFocused(e: any) {
     // do something
   }
   scrollOnTop() {
@@ -204,10 +207,10 @@ public onSaveUsernameChanged(value:boolean){
   }
 
   //filter
-  getTotal():number{
-    var total=0;
+  getTotal(): number {
+    var total = 0;
     for (let index = 0; index < this.itemsCart.length; index++) {
-      total+=this.itemsCart[index].price*this.itemsCart[index].quantity
+      total += this.itemsCart[index].price * this.itemsCart[index].quantity;
     }
     return total;
   }
