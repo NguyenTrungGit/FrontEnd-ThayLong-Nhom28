@@ -35,6 +35,13 @@ p {
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
 }
 
+.cart__empty{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
 /* Reuse CSS */
 .button__medium {
   width: 150px;
