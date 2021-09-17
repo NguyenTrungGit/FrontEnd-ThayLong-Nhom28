@@ -7,7 +7,7 @@
             <div *ngIf="categoryId!=='tatca'; then tem "></div>
             <ng-template #tem>
                 <span>/</span>
-                <p class="p2" [routerLink]="['/cuahang']">{{cateName}}</p>
+                <p class="p2" [routerLink]="['/{{categoryId}}']">{{cateName}}</p>
             </ng-template>
 
         </div>
