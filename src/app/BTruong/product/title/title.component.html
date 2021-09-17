@@ -4,6 +4,12 @@
             <p class="p1" [routerLink]="['/trangchu']">Trang Chủ</p>
             <span>/</span>
             <p class="p2" [routerLink]="['/cuahang']">Sản Phẩm</p>
+            <div *ngIf="categoryId!=='tatca'; then tem "></div>
+            <ng-template #tem>
+                <span>/</span>
+                <p class="p2" [routerLink]="['/{{categoryId}}']">{{cateName}}</p>
+            </ng-template>
+
         </div>
     </div>
     <div class="text-center bg-breadcrumb" style="background-image : url('./assets/BTruong/image/bach.jpg') ; background-position : center; background-size: cover;">

@@ -36,6 +36,21 @@ export class InfoComponent implements OnInit {
       this.productInfo.quantity = Number(element.value);
       this.shoppingCartService.addToCart(this.productInfo);
     }
+    window.scrollTo(0, document.documentElement.scrollTop-0.0001);
+    this.showcart();
+    this.hiddenSearch();
+  }
+  showcart(){
+    var cart = document.querySelector(
+        '.block-minicart'
+      ) as HTMLElement;
+        cart.style.display = 'block';
+  }
+  hiddenSearch(){
+     var dropdownSearch = document.querySelector(
+      '.dropdown-search'
+    ) as HTMLElement;
+    dropdownSearch.style.display = 'none';
   }
   up(element: any, product?: Product) {
     element.value++;

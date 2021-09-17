@@ -34,11 +34,23 @@ export class ProductItemComponent implements OnInit {
     this.shoppingCartService.addToCart(this.productItem);
     // window.alert('has been added to cart!')
     this.scrollOnTop();
-
+this.hiddenSearch();
+this.showcart();
       }
   ngOnInit(): void {
   }
-
+  showcart(){
+    var cart = document.querySelector(
+        '.block-minicart'
+      ) as HTMLElement;
+        cart.style.display = 'block';
+  }
+  hiddenSearch(){
+     var dropdownSearch = document.querySelector(
+      '.dropdown-search'
+    ) as HTMLElement;
+    dropdownSearch.style.display = 'none';
+  }
   scrollOnTop() {
 
        window.scrollTo(0, document.documentElement.scrollTop-0.0001);

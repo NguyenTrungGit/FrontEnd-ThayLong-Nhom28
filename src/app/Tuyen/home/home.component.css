@@ -143,6 +143,10 @@
         border: 1px solid #66a55f;
     }
 
+    .input-form .email-input:disabled:hover {
+        opacity: 0.2;
+    }
+
     .input-form .btn-register {
         background-color: #66a55f;
     }

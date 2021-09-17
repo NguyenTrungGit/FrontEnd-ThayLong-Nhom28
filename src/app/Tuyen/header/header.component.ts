@@ -1,24 +1,11 @@
 import { Category } from './../../model/category.model';
 import { DOCUMENT } from '@angular/common';
-
-import {
-  Component,
-  ElementRef,
-  OnInit,
-  ViewChild,
-  AfterViewInit,
-  AfterContentInit,
-  Inject,
-  HostListener,
-  Input,
-ChangeDetectionStrategy
-} from '@angular/core';
+import {Component,OnInit,Inject,HostListener,ChangeDetectionStrategy} from '@angular/core';
 import { Subject } from 'rxjs';
 import { Product } from 'src/app/model/product.model';
 import { ProductService } from 'src/app/Services/product.service';
 import { ShoppingCartService } from 'src/app/Services/shopping-cart.service';
 import { NavigationEnd, Router } from '@angular/router';
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -30,8 +17,8 @@ export class HeaderComponent implements OnInit {
   vCart: any = -1;
   totalCart:number=0;
   datas: Product[] = [];
-   itemsCart: Product[] = [];
-   search: Product[] = [];
+  itemsCart: Product[] = [];
+  search: Product[] = [];
   numberItemInCart:number=0;
   categorys: Category[]=[];
 
@@ -58,8 +45,8 @@ export class HeaderComponent implements OnInit {
 
   displayValue!: '';
 
-  goToSearch(key:string){
-    this.router.navigate(['/search'],{queryParams:{'key':key}});
+  goToSearch(element:any){
+    this.router.navigate(['/search'],{queryParams:{'key':element.value}});
   }
 
   refresh(): void {
@@ -70,19 +57,14 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-     this.scrollOnTop();
-     this.cartService.cartItems.subscribe(data=>{
+      this.scrollOnTop();
+      this.cartService.cartItems.subscribe(data=>{
       this.itemsCart=data;
       this.numberItemInCart=this.countQuantityCart(this.itemsCart)
       this.totalCart=this.getTotal();
     })
     this.getCategorys()
-
     this.getSearch();
-
-
-
-
   }
 
   clearListSearch(){
@@ -90,8 +72,7 @@ export class HeaderComponent implements OnInit {
   }
   getSearch() {
     this.productService.getProducts().subscribe((res: any) => {
-      this.search = res;
-
+    this.search = res;
     });
   }
   countQuantityCart(itemsCart: Product[]):number{
@@ -99,20 +80,20 @@ export class HeaderComponent implements OnInit {
     for(let i = 0; i < itemsCart.length; i++){
     count+=itemsCart[i].quantity;
     }
-return count;
+    return count;
   }
   getCategorys() {
-    this.productService.getCategorys().subscribe((res: any) => {
+      this.productService.getCategorys().subscribe((res: any) => {
       this.categorys = res;
     });
   }
-
-  removeProduct(product:Product){
-
-this.cartService.removeProduct(product);
-
+    removeProduct(product:Product){
+    this.cartService.removeProduct(product);
   }
-
+clearListSearchDirect(){
+  this.clearListSearch()
+  this.displaySearch()
+}
   displaySearch() {
 this.hideCart();
     var dropdownSearch = document.querySelector(
@@ -126,6 +107,7 @@ this.hideCart();
       dropdownSearch.style.display = 'none';
     }
   }
+
   hideSearch() {
     var dropdownSearch = document.querySelector(
       '.dropdown-search'

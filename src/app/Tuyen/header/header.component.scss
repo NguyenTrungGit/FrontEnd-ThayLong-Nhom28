@@ -145,6 +145,12 @@
         display: none;
         box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
         top: 108%;
+        .active {
+            .nameCate {
+                color: #66a55f;
+                background-color: #e6ffe6;
+            }
+        }
         .item-category {
             list-style: none;
             color: #000000;
@@ -775,6 +781,11 @@
                 }
             }
             .category__mobile {
+                .active {
+                    .name_cate__mobile {
+                        color: #66a55f;
+                    }
+                }
                 padding: 0;
                 .item-category__mobile {
                     list-style: none;
